@@ -32,10 +32,14 @@
         </div>
     </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="d-flex flex-column min-vh-100">
+        <div class="flex-grow-1">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted bg-dark text-white">

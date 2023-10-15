@@ -1,7 +1,15 @@
+html, body {
+    height: 100%
+}
+
 html {
     font-size: 14px;
     font-family: Kokoro;
     text-align:center;
+}
+
+.footer {
+    position: static !important;
 }
 
 h1 {
