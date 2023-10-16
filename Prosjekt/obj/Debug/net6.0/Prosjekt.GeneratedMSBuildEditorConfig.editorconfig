@@ -9,45 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Prosjekt
 build_property.RootNamespace = Prosjekt
-build_property.ProjectDir = C:\Users\ANDRI\Documents\repo\Prosjekt\Prosjekt\
+build_property.ProjectDir = C:\Users\AnnaM\Documents\Prosjekt\Prosjekt\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ANDRI\Documents\repo\Prosjekt\Prosjekt
+build_property.MSBuildProjectDirectory = C:\Users\AnnaM\Documents\Prosjekt\Prosjekt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/Error.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/Index.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRkFRLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/KontaktOss.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/KontaktOss.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS29udGFrdE9zcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/kredit.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/kredit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNca3JlZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/Privacy.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/_ViewImports.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/_ViewStart.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Prosjekt/Pages/Shared/_Layout.cshtml]
+[C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8ody8tk1d6
