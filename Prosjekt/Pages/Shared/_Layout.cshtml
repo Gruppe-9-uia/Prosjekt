@@ -13,26 +13,27 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 border-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" asp-area="" asp-page="/Index">Nøsted</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto ">
-              <li class="nav-item dropdown">
-                <a class="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   <img src="~/icons/icons8-menu-50.png" alt="menu ikon">
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" asp-area="" asp-page="/Privacy">Privacy</a></li>
-                  <li><a class="dropdown-item" asp-area="" asp-page="/KontaktOss">Kontakt oss</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Nøsted</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="~/icons/icons8-menu-50.png" alt="menu ikon">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Privacy">Privacy</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/KontaktOss">Kontakt oss</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Notifikasjon">Notifikasjon</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <div class="d-flex flex-column min-vh-100">
         <div class="flex-grow-1">
@@ -46,35 +47,35 @@
 
     <footer class="border-top footer text-muted bg-dark text-white">
         <div class="container p-4">
-              <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Konktat oss - FAQ</span>
-        </div>
-        <!-- Left -->
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Konktat oss - FAQ</span>
+                </div>
+                <!-- Left -->
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
 
-        <!-- Right -->
-        <div>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-google"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-           
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+  
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

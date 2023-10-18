@@ -100,11 +100,25 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "/Users/vinhvuainguyen/.nuget/packages/": {}
+=======
     "C:\\Users\\AnnaM\\.nuget\\packages\\": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj",
+      "projectName": "Prosjekt",
+      "projectPath": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj",
+      "packagesPath": "/Users/vinhvuainguyen/.nuget/packages/",
+      "outputPath": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/vinhvuainguyen/.nuget/NuGet/NuGet.Config"
+=======
       "projectUniqueName": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
       "projectName": "Prosjekt",
       "projectPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
@@ -114,12 +128,16 @@
       "configFilePaths": [
         "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> main
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+<<<<<<< HEAD
+=======
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> main
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -162,7 +180,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
