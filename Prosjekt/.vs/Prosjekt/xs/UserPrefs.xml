@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{45268D66-6F76-4E06-9121-EBA1E42F032A}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Notifikasjon.cshtml">
+    <Files>
+      <File FileName="Pages/_ViewStart.cshtml" />
+      <File FileName="Pages/Notifikasjon.cshtml" Line="37" Column="1" />
+      <File FileName="Program.cs" Line="13" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Prosjekt" expanded="True">
+            <Node name="Prosjekt" expanded="True" selected="True">
+              <Node name="Pages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
