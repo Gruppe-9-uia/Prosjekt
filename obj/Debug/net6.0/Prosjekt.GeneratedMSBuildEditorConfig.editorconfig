@@ -20,16 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Views/Home/KontaktOss.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLb250YWt0T3NzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ANDRI/Documents/Prosjekt/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Views/Home/View.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3LmNzaHRtbA==
+[C:/Users/ANDRI/Documents/Prosjekt/Views/Home/Sjekkliste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTamVra2xpc3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/Prosjekt/Views/Kontakt/KontaktOss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29udGFrdFxLb250YWt0T3NzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ANDRI/Documents/Prosjekt/Views/Shared/Error.cshtml]

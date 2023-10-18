@@ -1,4 +1,5 @@
-﻿@{
+﻿@model KontaktFormModell;
+@{
     ViewData["Title"] = "Kontakt oss";
 }
 
@@ -146,35 +147,34 @@
 
 <h1>Hvordan kan vi hjelpe deg?</h1>
 <div class="card border-primary p-3 m-1">
-    <form class="form-inline">
+    <form method="post" class="form-inline" asp-controller="Kontakt" asp-action="SumbitKontaktForm">
         <div class="form-group">
           <label for="navn">Navn:</label>
-          <input type="text" class="form-control" id="navn">
+            <input type="text" class="form-control" id="navn" asp-for="navn" required>
         </div>
 
         <div class="form-group">
           <label for="telefon">Telefon:</label>
-          <input type="text" class="form-control" id="telefon">
+            <input type="text" class="form-control" id="telefon" asp-for="telefon" required>
         </div>
 
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="text" class="form-control" id="email">
+            <input type="text" class="form-control" id="email" asp-for="email" required>
         </div>
 
         <div class="form-group">
           <label for="region">Region:</label>
-          <input type="text" class="form-control" id="region">
+            <input type="text" class="form-control" id="region" asp-for="region" required>
         </div>
 
         <div class="form-group">
           <label for="melding">Melding:</label>
-          <textarea class="form-control" rows="5" id="melding"></textarea>
+            <textarea class="form-control" rows="5" id="melding" asp-for="melding" required></textarea>
         </div>
 
+        <div class="d-grid gap-2 col-2 mx-auto m-3">
+            <button class="btn btn-primary" type="submit">Send</button>
+        </div>
     </form>
-</div>
-
-<div class="d-grid gap-2 col-2 mx-auto m-3">
-  <button class="btn btn-primary" type="button">Send</button>
 </div>
