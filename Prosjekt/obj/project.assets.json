@@ -100,11 +100,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/Users/vinhvuainguyen/.nuget/packages/": {}
+=======
+    "C:\\Users\\AnnaM\\.nuget\\packages\\": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj",
       "projectName": "Prosjekt",
       "projectPath": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj",
@@ -113,11 +118,26 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vinhvuainguyen/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
+      "projectName": "Prosjekt",
+      "projectPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
+      "packagesPath": "C:\\Users\\AnnaM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> main
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+<<<<<<< HEAD
+=======
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> main
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
