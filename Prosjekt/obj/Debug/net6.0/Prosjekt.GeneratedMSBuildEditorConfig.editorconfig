@@ -10,6 +10,58 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Prosjekt
 build_property.RootNamespace = Prosjekt
 <<<<<<< HEAD
+build_property.ProjectDir = /Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/KontaktOss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvS29udGFrdE9zcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/kredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMva3JlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/serviceordre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvc2VydmljZW9yZHJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/serviceskjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvc2VydmljZXNramVtYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-a4got3kr90
+=======
+<<<<<<< HEAD
 build_property.ProjectDir = /Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -103,4 +155,5 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/AnnaM/Documents/Prosjekt/Prosjekt/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8ody8tk1d6
+>>>>>>> main
 >>>>>>> main

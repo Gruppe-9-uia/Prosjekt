@@ -2,6 +2,22 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+    "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/ineantonsen/.nuget/packages/",
+        "outputPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ineantonsen/.nuget/NuGet/NuGet.Config"
+=======
+<<<<<<< HEAD
     "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj": {}
   },
   "projects": {
@@ -33,6 +49,7 @@
           "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
 >>>>>>> main
+>>>>>>> main
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -40,7 +57,10 @@
         "sources": {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> main
 >>>>>>> main
           "https://api.nuget.org/v3/index.json": {}
         },
