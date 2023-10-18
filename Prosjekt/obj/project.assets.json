@@ -100,11 +100,20 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/Users/ineantonsen/.nuget/packages/": {}
+=======
+<<<<<<< HEAD
+    "/Users/vinhvuainguyen/.nuget/packages/": {}
+=======
+    "C:\\Users\\AnnaM\\.nuget\\packages\\": {}
+>>>>>>> main
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Prosjekt.csproj",
       "projectName": "Prosjekt",
       "projectPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt/Prosjekt.csproj",
@@ -113,11 +122,40 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ineantonsen/.nuget/NuGet/NuGet.Config"
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj",
+      "projectName": "Prosjekt",
+      "projectPath": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/Prosjekt.csproj",
+      "packagesPath": "/Users/vinhvuainguyen/.nuget/packages/",
+      "outputPath": "/Users/vinhvuainguyen/Nøsted/Prosjekt/Prosjekt/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/vinhvuainguyen/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
+      "projectName": "Prosjekt",
+      "projectPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
+      "packagesPath": "C:\\Users\\AnnaM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> main
+>>>>>>> main
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> main
+>>>>>>> main
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

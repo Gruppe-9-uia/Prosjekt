@@ -1,0 +1,32 @@
+﻿
+.notifikasjon-div.alert {
+    border-color: #1F1F1F;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.bookmark-icon.bi-bookmark-fill {
+    color: orange !important;
+}
+
+.bookmark-icon.bi-bookmark {
+    color: inherit !important; 
+    border-color: orange !important;
+
+}
+
+.merknad-button:hover {
+    color: #FF4500 !important;
+    border-color: #FF4500 !important;
+    background-color: transparent !important;
+}
+
+.merknad-button:active, .merknad-button:focus {
+    color: black;
+    border-color: orange !important;
+    background-color: transparent;
+    box-shadow: 0 0 2px #FFFFFF, 0 0 2px #FF4500 !important;
+    outline: none !important;
+}
