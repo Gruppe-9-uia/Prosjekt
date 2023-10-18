@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1lS8YFvh8d5Ur3586ILvpN1TUl8pjdXEEeKplkdGftkHLk2CsCmSr3NA7RUd8qbvsX51vDlF5MbChooY+gr1nw==",
+  "dgSpecHash": "PQKnxQ3dB4+t0apmnjDjMCfogyFETOjmeQIq5iMEPQJrps5jF2o21WU9eDhbVN3UABvv3yBli4jnW8s+p6+fNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt.csproj",
+  "projectFilePath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ANDRI\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\ANDRI\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

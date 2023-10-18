@@ -23,8 +23,6 @@ namespace Prosjekt.Controllers
             return View();
         }
 
-        public IActionResult Sjekkelist() { return View(); }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

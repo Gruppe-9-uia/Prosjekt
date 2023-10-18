@@ -2,9 +2,46 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center bg-dark">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
 
-<button type="button" >Primary</button>
+    <section class="header">
+        <!-- dette skal være på _layout.html
+        <nav class="nav">
+            <a href="homepage.html"><img src="images/logoIgland.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HJEM</a></li>
+                    <li><a href="">OM OSS</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">KONTAKT OSS</a></li>
+                    <li><a href="">LOGG INN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        --->
+
+        <div class="text-box">
+            <h1>Verdenskjent Varemerke</h1>
+            <p>
+                IGLAND er et verdenskjent varemerke innen utstyr til landbruk og skogbruk.
+                <br>IGLAND produktene omfatter skogsvinsjer, tømmervogner, utstyr for snørydding,
+                løft og vedlikehold til vei.
+            </p>
+            <a href="" class="hero-btn">Mer Informasjon</a>
+        </div>
+    </section>
+
+
+    <!-----JavaScript for Toggle Menu, skal ikek bruke javascrip? ----->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>

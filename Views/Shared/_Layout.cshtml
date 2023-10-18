@@ -6,6 +6,11 @@
     <title>@ViewData["Title"] - Prosjekt</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/FAQ.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomePage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/serviceordre.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/serviceskjema.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/notifikasjon.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Prosjekt.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -25,7 +30,13 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
                                 <li><a class="dropdown-item" asp-controller="Kontakt" asp-action="KontaktOss">Kontakt oss</a></li>
-                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Sjekkelist">Sjekkelist</a></li>
+                                <li><a class="dropdown-item" asp-controller="Sjekklist" asp-action="Sjekklist">Sjekkelist</a></li>
+                                <li><a class="dropdown-item" asp-controller="FAQ" asp-action="FAQ">FAQ</a></li>
+                                <li><a class="dropdown-item" asp-controller="Login" asp-action="Login">Login</a></li>
+                                <li><a class="dropdown-item" asp-controller="Notifikasjon" asp-action="Notifikasjon">Notifikasjon</a></li>
+                                <li><a class="dropdown-item" asp-controller="Serviceordre" asp-action="Serviceordre">Service ordre</a></li>
+                                <li><a class="dropdown-item" asp-controller="Serviceskjema" asp-action="Serviceskjema">Serviceskjema</a></li>
+
                             </ul>
                         </li>
                     </ul>

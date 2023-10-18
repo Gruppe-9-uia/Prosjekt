@@ -9638,11 +9638,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt.csproj",
+      "projectUniqueName": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
       "projectName": "Prosjekt",
-      "projectPath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt.csproj",
+      "projectPath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
       "packagesPath": "C:\\Users\\ANDRI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\obj\\",
+      "outputPath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ANDRI\\AppData\\Roaming\\NuGet\\NuGet.Config",
