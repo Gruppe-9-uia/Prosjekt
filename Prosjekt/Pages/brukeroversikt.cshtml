@@ -19,29 +19,41 @@
 
     <main>
         <h2>Brukere</h2>
-        <form action="/search" method="get">
+
+        <form class="searchbar" action="/search" method="get">
             <input type="search" name="q" id="search-box" placeholder="AnsattID, Fullt navn, Stilling...">
-            <input type="submit" value="Search"> <!-- søkeknapp- må finne ut hvordan man kan filtrere søkene -->
+            <div class="search">
+                <input type="submit" value="Søk" id="searchbutton"><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene -->
+            </div>
         </form>
 
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col">AnsattID</th>
-                    <th scope="col">Fullt navn</th>
-                    <th scope="col">Stilling</th>
-                    <th scope="col">Rettigheter</th>
-                </tr>
-            </thead>
+        <div style="overflow-x:auto;">
 
-            <tbody>
-                <tr>
-                    <td colspan="1">1111</td>
-                    <td>Atle Antonsen</td>
-                    <td>Administrator</td>
-                    <td>Legge til/fjerne brukere</td>
-                </tr>
-        </table>
+            <table id="brukere">
+                <thead>
+                    <tr>
+                        <th scope="col">AnsattID</th>
+                        <th scope="col">Fullt navn</th>
+                        <th scope="col">Stilling</th>
+                        <th scope="col">Rettigheter</th>
+                        <th>
+                            <a href="brukerregistrering.html">
+                                <input type="button" class="adduser" value="Legg til bruker">
+                            </a>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td colspan="1">1111</td>
+                        <td>Atle Antonsen</td>
+                        <td>Administrator</td>
+                        <td>Legge til/fjerne brukere</td>
+                    </tr>
+            </table>
+
+        </div>
     </main>
 </body>
 </html>
