@@ -19,15 +19,17 @@ namespace Prosjekt.Models
         public string comment_str {  get; set; }
 
         //Hydraulic model
+        public string hydraulic_cylinder { get; set; }
+        public string Hoses { get; set; }
         public string Hydraulic_block { get; set; }
         public string Oil_tank { get; set; }
         public string Oil_gearbox_box { get; set; }
         public string Ringe_cylinder_and_replace_seals { get; set; }
+        public string Brake_cylinder_and_replace_seals { get; set; }
 
         //Electro model
         public string Wiring_on_winch { get; set; }
-        public string Pg_test_radio { get; set; }
-        public string Oil_gearbox { get; set; }
+        public string Test_radio { get; set; }
         public string Button_box { get; set; }
 
         //Mechanical model
