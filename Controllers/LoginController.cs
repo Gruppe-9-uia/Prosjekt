@@ -1,12 +1,45 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Prosjekt.Models;
 
-namespace Prosjekt.Controllers
+public class AccountController : Controller
 {
-    public class LoginController : Controller
+    private AppDbContext db = new AppDbContext();
+
+    public ActionResult Register()
     {
-        public IActionResult Login()
+        return View();
+    }
+
+    [HttpPost]
+    public ActionResult Register(User user)
+    {
+        if (ModelState.IsValid)
         {
-            return View();
+            // i virkeligheten ville hashet og saltet dette passordet.
+            db.Users.Add(user);
+            db.SaveChanges();
+            return RedirectToAction("Login");
         }
+        return View(user);
+    }
+
+    public ActionResult Login()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public ActionResult Login(User user)
+    {
+        var registeredUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
+        if (registeredUser != null)
+        {
+            // Brukeren er innlogget. Implementer en innlogging/logg ut mekanisme.
+            return RedirectToAction("Index", "Home");
+        }
+
+        ModelState.AddModelError("", "Feil brukernavn eller passord.");
+        return View(user);
     }
 }
+

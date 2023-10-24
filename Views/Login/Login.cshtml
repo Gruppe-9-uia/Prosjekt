@@ -3,13 +3,14 @@
     ViewData["Title"] = "Login";
 }
 
-
-
 <div class="login-container">
     <h2>Velkommen til Nøsted &</h2>
-        <form action="YOUR_SERVER_ENDPOINT" method="post">
-            <input type="text" name="username" placeholder="Brukernavn" required class="login-input">
-            <input type="password" name="password" placeholder="Passord" required class="login-input">
-            <button type="submit" class="login-button">Logg inn</button>
-        </form>
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <form action="@Url.Action("Login", "Account")" method="post">
+        <input type="text" name="Username" placeholder="Brukernavn" required class="login-input" value="@Model.Username">
+        <input type="password" name="Password" placeholder="Passord" required class="login-input">
+        <button type="submit" class="login-button">Logg inn</button>
+    </form>
 </div>
