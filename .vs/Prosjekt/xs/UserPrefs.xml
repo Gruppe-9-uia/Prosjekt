@@ -1,35 +1,32 @@
 ﻿<Properties StartupConfiguration="{53A57DEE-B3CE-4790-BB18-AECD399273E3}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/ServiceordreController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Models/ServiceOrderModell.cs" Line="14" Column="45" />
-      <File FileName="Controllers/ServiceordreController.cs" Line="27" Column="1" />
-      <File FileName="Views/Serviceordre/Serviceordre.cshtml" Line="39" Column="23" />
-      <File FileName="Controllers/KontaktController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/ServiceordreController.cs" />
+      <File FileName="Views/Serviceskjema/Serviceskjema.cshtml" />
+      <File FileName="Views/Serviceordre/Serviceordre.cshtml" />
+      <File FileName="wwwroot/css/serviceordre.css" />
+      <File FileName="Models/ServiceOrdreModell.cs" />
+      <File FileName="Views/Shared/_Layout.cshtml" />
+      <File FileName="Program.cs" Line="30" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prosjekt">
-            <Node name="Prosjekt">
-              <Node name="Controllers" expanded="True" selected="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Serviceordre" expanded="True" />
-              </Node>
+            <Node name="Prosjekt" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
