@@ -2,12 +2,18 @@
 @{
     ViewData["Title"] = "Serviceordre";
 }
+<!--"color" er bakgrunnsfargen på sjemaet-->
 <div class="color">
     <fieldset>
         <legend>Ny Serviceordre</legend>
+
+        <!--lager et form som samler inn brukerinnspill, asp-action -> påkalle metoden Save, asp-controller
+            -> spesifisere hvilke kontroller som inneholder Save, method Post -> brukes når man skal sende inn en form for å lagre store dataer-->
         <form asp-action="Save" asp-controller="ServiceOrder" method="post">
+
+            <!--delt opp serviceordre i bokser for å kunne kontrollere innholdet bedre -->
             <div class="first">
-                <div class="Row1">
+                <div class="kolonne">
                     <div class="one">
                         <label id="produktype" name="produkttype">Produkttype</label>
                         <br />
@@ -21,7 +27,7 @@
                     </div>
 
                 </div>
-                <div class="Row1">
+                <div class="Kolonne">
                     <div class="one">
                         <label id="mottattDato" name="mottattdato">Mottatt dato</label>
                         <br />
@@ -45,7 +51,7 @@
                 <input type="text" for="adresse" asp-for="adresse" required>
             </div>
             <div class="first">
-                <div class="Row1">
+                <div class="Kolonne">
                     <div class="one">
                         <label id="sted" name="sted">Sted</label>
                         <br />
@@ -59,7 +65,7 @@
                     </div>
 
                 </div>
-                <div class="Row1">
+                <div class="Kolonne">
                     <div class="one">
                         <label id="postnummer" name="postnummer">Postnummer</label>
                         <br />
@@ -73,14 +79,14 @@
                 </div>
             </div>
             <div class="first">
-                <div class="Row1">
+                <div class="Kolonne">
                     <div class="one">
                         <label id="garanti" name="garanti">Garanti</label>
                         <br />
                         <input for="garanti" type="text" asp-for="garanti"/>
                     </div>
                 </div>
-                <div class="Row1">
+                <div class="Kolonne">
                     <div class="one">
                         <label id="service" name="service">Service/rep</label>
                         <br />
