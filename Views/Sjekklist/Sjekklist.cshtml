@@ -2,10 +2,328 @@
     ViewData["Title"] = "Sjekkliste";
 }
 
-<div class="card border-primary p-3 m-1">
-    <div class="card-body">
-        <h5 class="card-title"></h5>
 
+<div class="p-3">
+    <h2>Nøsted&, avd. Jåbekk</h2>
+    <h3>Kvalitetsskring</h3>
+    <h3>Registrering</h3>
+</div>
+
+<div class="container p-3">
+    <div class="row">
+        <div class="col-sm">
+            <h4>Prosedyre:</h4>
+            <p>Servicesjekkliste vinsjer</p>
+        </div>
+        <div class="col-sm">
+            <h4>Dokumenter number:</h4>
+            <!-- Det skal bli hente fra database når man lager nytt sjekkliste -->
+            <p>IG-IN-104-01-01</p>
+        </div>
+        <div class="col-sm">
+            <h4>Dato</h4>
+            <!-- Dette skal også bli hente fra databasen -->
+            <p>24.20.2023</p>
+        </div>
+        <div class="col-sm">
+            <h4>Utarbeidet av:</h4>
+            <!-- Dette skal også bli hente fra databasen -->
+            <p>JBS</p>
+        </div>
     </div>
 </div>
 
+<div class="p-3">
+    <form>
+        <h5>Vinsje informasjon</h5>
+        <div class="form-group">
+          <label for="serieNr">Serie Number:</label>
+            <input type="text" class="form-control" id="serieNr">
+        </div>
+
+        <div class="form-group">
+           <label for="type">Type:</label>
+          <input type="text" class="form-control" id="type">
+        </div>
+
+        <h5>Trykk settninger</h5>
+        <div class="form-group">
+            <label for="xx-bar">xx-Bar:</label>
+            <input type="text" class="form-control" id="xx-bar">
+        </div>
+
+        <h5>Trykk settninger</h5>
+        <div class="form-group">
+            <label for="test-vnsj">Test vinsj og kjør alle funskjoner:</label>
+            <input type="text" class="form-control" id="test-vnsj">
+        </div>
+        <div class="form-group">
+            <label for="rekkratt">I rekkratt KN:</label>
+            <input type="text" class="form-control" id="rekkratt">
+        </div>
+        <div class="form-group">
+            <label for="bremseKraft">Bremse kraft KN:</label>
+            <input type="text" class="form-control" id="bremseKraft">
+        </div>
+
+        <div class="form-group">
+            <label for="kommentar"><h5>Kommentar:</h5></label>
+            <textarea class="form-control" rows="5" id="kommentar"></textarea>
+        </div>
+    </form>
+</div>
+
+<div class="p-3">
+    <form>
+        <h5>Mekansik</h5>
+        
+    </form>
+</div>
+
+<div class="p-3">
+    <form>
+        <h5>Hydraulisk</h5>
+
+    </form>
+</div>
+
+<div class="p-3">
+    <h5>Mekanisk</h5>
+    <form>
+        <div class="form-group">
+            <h7>Sjekk Clutch lammer for slitjase</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk bremser. Bånd/pal</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk lager for trommel</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk kjedestrammer</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk wire</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk pinion lager</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk kile på kjedehjul</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="p-3">
+    <h5>Hydraulisk</h5>
+    <form>
+        <div class="form-group">
+            <h7>Sjekk hydraulikk sylinder for lekkasje</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk slanger for skader og lekkasje</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Test hydralikkblokk i testbenk</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk olje i tank</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk olje på gir boks</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk Ringsylinder åpne og skift tetninger</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk bremse sylinder åpne og skrifft tetninger</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="p-3">
+    <h5>Elektro</h5>
+    <form>
+        <div class="form-group">
+            <h7>Sjekk ledningsnett på vinsj</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk og test radio</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h7>Sjekk og test knappekasse</h7>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="OK" autocomplete="off">
+                <label class="btn btn-outline-primary" for="OK">OK</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="skiftes" autocomplete="off">
+                <label class="btn btn-outline-primary" for="skiftes">Bør skiftes</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="Defekt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Defekt">Defekt</label>
+            </div>
+        </div>
+    </form>
+</div>
