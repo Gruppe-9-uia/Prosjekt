@@ -7,16 +7,19 @@
 .container {
     width: 100%;
     margin-bottom: 20px;
+    
 }
 
-
+/*søkebar under styling:*/
 
 .search {
+    
     position: relative;
     box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 }
 
     .search input {
+       
         height: 50px;
         text-indent: 25px;
         border: 2px solid #d6d4d4;
@@ -32,6 +35,7 @@
         position: absolute;
         top: 20px;
         left: 16px;
+        
     }
 
     .search button {
@@ -39,14 +43,14 @@
         top: 5px;
         right: 5px;
         height: 40px;
-        width: 110px;
+        width: 100px;
         background: #e7792b;
         border-radius: 5px;
         border: none;
-        margin-right: 8px;
+        margin-right: 0px;
     }
 
-/**/
+/*brukerinput under styling:*/
 
 textarea {
     width: 100%;
@@ -55,14 +59,14 @@ textarea {
     margin-bottom: 0;
     padding-bottom: 0;
     height: 80px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
     position: relative;
 }
 
 .title {
     width: 100%;
     margin-bottom: 0;
-    background-color: rgba(122, 143, 154);
+    background-color: rgba(71, 86, 94, 0.9);
     padding-top: 10px;
     margin-top: 0;
 }
@@ -80,6 +84,8 @@ label {
     font-family: 'Lato', sans-serif;
     font-size: 15px;
     color: white;
+    margin-top: 2px;
+
 }
 
 
@@ -96,17 +102,17 @@ input {
     margin: auto;
     display: flex;
     justify-content: center;
-    border: 1px solid rgba(122, 143, 154, 0.4);
+    border: 1px solid rgba(71, 86, 94, 0.9);
 }
 
 .innhold {
     width: 100%;
-    border: 1px solid rgba(122, 143, 154, 0.4);
-    background-color: rgba(122, 143, 154);
-    padding-top: 10px;
+    border: 1px solid rgba(71, 86, 94, 0.2);
+    background-color: rgba(71, 86, 94, 0.9);
+    padding-top: 5px;
+    
+
 }
-
-
 
 .send {
     padding-top: 20px;
@@ -114,14 +120,14 @@ input {
     display: flex !important;
     justify-content: center !important;
     text-align: center !important;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
     .send input {
         width: 100px;
         height: 35px;
         border-radius: 5px;
-        background-color: #395b7a;
+        background-color: rgba(71, 86, 94, 0.9); 
         color: white;
         transition: background-color 0.3s, color 0.3s, border-color 0.3s;
         cursor: pointer;
@@ -139,5 +145,6 @@ input {
 
 .buttons {
     display: flex;
-    justify-content: left;
+    justify-content: right;
+    
 }
