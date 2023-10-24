@@ -12,7 +12,9 @@ namespace Prosjekt.Models
         public DateOnly Starting_Date { get; set; }
         public string Prepared_by_str { get; set; }
         public string xx_Bar_str { get; set; }
+        public string Brake_force { get; set; }
         public string Traction_force_Kn { get; set; }
+        public string Test_winch { get; set; }
         public string comment_str {  get; set; }
     }
 }

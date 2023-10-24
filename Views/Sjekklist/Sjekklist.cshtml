@@ -35,41 +35,41 @@
 </div>
 
 <div class="p-3">
-    <form>
+    <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="generelForm">
         <h5>Vinsje informasjon</h5>
         <div class="form-group">
           <label for="serieNr">Serie Number:</label>
-            <input type="text" class="form-control" id="serieNr">
+            <input type="text" class="form-control" id="serieNr" asp-for="Serial_number_str">
         </div>
 
         <div class="form-group">
            <label for="type">Type:</label>
-          <input type="text" class="form-control" id="type">
+            <input type="text" class="form-control" id="type" asp-for="Type_str">
         </div>
 
         <h5>Trykk settninger</h5>
         <div class="form-group">
-            <label for="xx-bar">xx-Bar:</label>
-            <input type="text" class="form-control" id="xx-bar">
+            <label for="xx_bar">xx-Bar:</label>
+            <input type="text" class="form-control" id="xx_bar" asp-for="xx_Bar_str">
         </div>
 
         <h5>Trykk settninger</h5>
         <div class="form-group">
             <label for="test-vnsj">Test vinsj og kjør alle funskjoner:</label>
-            <input type="text" class="form-control" id="test-vnsj">
+            <input type="text" class="form-control" id="test-vnsj" asp-for="Test_winch">
         </div>
         <div class="form-group">
             <label for="rekkratt">I rekkratt KN:</label>
-            <input type="text" class="form-control" id="rekkratt">
+            <input type="text" class="form-control" id="rekkratt" asp-for="Traction_force_Kn">
         </div>
         <div class="form-group">
             <label for="bremseKraft">Bremse kraft KN:</label>
-            <input type="text" class="form-control" id="bremseKraft">
+            <input type="text" class="form-control" id="bremseKraft" asp-for="Brake_force">
         </div>
 
         <div class="form-group">
             <label for="kommentar"><h5>Kommentar:</h5></label>
-            <textarea class="form-control" rows="5" id="kommentar"></textarea>
+            <textarea class="form-control" rows="5" id="kommentar" asp-for="comment_str"></textarea>
         </div>
     </form>
 </div>
