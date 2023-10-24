@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="~/css/serviceskjema.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/notifikasjon.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Prosjekt.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/FAQ.css" asp-append-version="true">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 border-bottom">
             <div class="container-fluid">
+                <!-- <a href="homepage.html"><img src="images/logoIgland.png"></a> -->
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Nøsted</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -87,26 +89,4 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-
-
-<head>
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" type="text/css" href="HomePage.css">
-</head>
-<body>
-    <nav class="nav">
-        <a href="homepage.html"><img src="images/logoIgland.png"></a>
-        <div class="nav-links" id="navLinks">
-            <ul>
-                <li><a href="">HJEM</a></li>
-                <li><a href="">OM OSS</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">KONTAKT OSS</a></li>
-                <li><a href="">LOGG INN</a></li>
-            </ul>
-        </div>
-    </nav>
-    @RenderBody() 
-</body>
-
 </html>
