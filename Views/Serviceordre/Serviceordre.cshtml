@@ -15,82 +15,82 @@
             <div class="first">
                 <div class="Row1">
                     <div class="one">
-                        <label id="produktype" name="produkttype">Produkttype</label>
+                        <label for="produkttype" name="produkttype">Produkttype</label>
                         <br />
-                        <input for="produkttype" type="text" asp-for="produkttype" required />
+                        <input id="produktype" type="text" asp-for="produkttype" required />
                     </div>
 
                     <div class="one">
-                        <label id="årsmodell" name="årsmodell">Årsmodell</label>
+                        <label for="årsmodell" name="årsmodell">Årsmodell</label>
                         <br />
-                        <input for="årsmodell" type="text" asp-for="årsmodell" required />
+                        <input id="årsmodell" type="text" asp-for="årsmodell" required />
                     </div>
 
                 </div>
                 <div class="Row1">
                     <div class="one">
-                        <label id="mottattDato" name="mottattdato">Mottatt dato</label>
+                        <label for="mottattDato"name="mottattdato">Mottatt dato</label>
                         <br />
-                        <input for="mottattDato" type="date" asp-for="mottattDato" required />
+                        <input id="mottattDato" type="date" asp-for="mottattDato" required />
                     </div>
                     <div class="one">
-                        <label id="serienummer" name="serienummer">Serienummer</label>
+                        <label for="serienummer" name="serienummer">Serienummer</label>
                         <br />
-                        <input for="serienummer" type="text" asp-for="serienummer" required />
+                        <input id="serienummer"  type="text" asp-for="serienummer" required />
                     </div>
                 </div>
             </div>
             <div class="Row3">
-                <label id="navn" navn="navn">Fullt navn</label>
+                <label for="navn" navn="navn">Fullt navn</label>
                 <br />
-                <input type="text" for="navn" asp-for="fulltNavn" required>
+                <input type="text" id="navn" asp-for="fulltNavn" required>
             </div>
             <div class="Row3">
-                <label id="adresse" navn="adresse">Adresse</label>
+                <label for="adresse" navn="adresse">Adresse</label>
                 <br />
-                <input type="text" for="adresse" asp-for="adresse" required>
+                <input type="text" id="adresse"  asp-for="adresse" required>
             </div>
             <div class="first">
                 <div class="Row1">
                     <div class="one">
-                        <label id="sted" name="sted">Sted</label>
+                        <label for="sted" name="sted">Sted</label>
                         <br />
-                        <input for="sted" type="text" asp-for="sted" required/>
+                        <input id="sted" type="text" asp-for="sted" required/>
                     </div>
 
                     <div class="one">
-                        <label id="epost" name="epost">Epost</label>
+                        <label for="epost" name="epost">Epost</label>
                         <br />
-                        <input for="epost" type="email" asp-for="epost" required />
+                        <input id="epost" type="email" asp-for="epost" required />
                     </div>
 
                 </div>
                 <div class="Row1">
                     <div class="one">
-                        <label id="postnummer" name="postnummer">Postnummer</label>
+                        <label for="postnummer" name="postnummer">Postnummer</label>
                         <br />
-                        <input for="postnummer" type="number" asp-for="postnummer" required />
+                        <input id="postnummer"  type="number" asp-for="postnummer" required />
                     </div>
                     <div class="one">
-                        <label id="mobilnummer" name="mobilnummer">Mobilnummer</label>
+                        <label for="mobilnummer" name="mobilnummer">Mobilnummer</label>
                         <br />
-                        <input for="mobilnummer" type="tel" asp-for="mobilnummer" required />
+                        <input id="mobilnummer" type="tel" asp-for="mobilnummer" required />
                     </div>
                 </div>
             </div>
             <div class="first">
                 <div class="Row1">
                     <div class="one">
-                        <label id="garanti" name="garanti">Garanti</label>
+                        <label for="garanti" name="garanti">Garanti</label>
                         <br />
-                        <input for="garanti" type="text" asp-for="garanti"/>
+                        <input id="garanti" type="text" asp-for="garanti"/>
                     </div>
                 </div>
                 <div class="Row1">
                     <div class="one">
-                        <label id="service" name="service">Service/rep</label>
+                        <label for="service" name="service">Service/rep</label>
                         <br />
-                        <input for="service" type="text" asp-for="service_rep" />
+                        <input id="service" type="text" asp-for="service_rep" />
                     </div>
                 </div>
             </div>
@@ -99,9 +99,10 @@
                 <br />
                 <textarea id="beskrivelse" name="beskrivelse" asp-for="avtaleBeskrivelse" required></textarea>
             </div>
-            <div class="send">
-                <input type="submit" id="submit" value="Send inn">
+            <div class="submit_order">
+                <input type="submit" id="submit_order" value="Send inn" />
             </div>
+           
 
         </form>
     </fieldset>
