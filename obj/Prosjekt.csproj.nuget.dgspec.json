@@ -2,6 +2,19 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+    "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/vinhvuainguyen/.nuget/packages/",
+        "outputPath": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/",
+=======
     "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj": {}
   },
   "projects": {
@@ -13,6 +26,7 @@
         "projectPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj",
         "packagesPath": "/Users/ineantonsen/.nuget/packages/",
         "outputPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
     "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj": {}
@@ -46,7 +60,11 @@
         ],
         "configFilePaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+          "/Users/vinhvuainguyen/.nuget/NuGet/NuGet.Config"
+=======
           "/Users/ineantonsen/.nuget/NuGet/NuGet.Config"
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +109,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< HEAD
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+=======
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -98,6 +123,7 @@
             "Microsoft.Extensions.Caching.Memory": {
               "target": "Package",
               "version": "[7.0.0, )"
+>>>>>>> main
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
@@ -106,6 +132,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

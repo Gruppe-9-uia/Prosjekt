@@ -1,5 +1,21 @@
 ﻿<Properties StartupConfiguration="{53A57DEE-B3CE-4790-BB18-AECD399273E3}|Default">
   <MultiItemStartupConfigurations />
+<<<<<<< HEAD
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LoginController.cs">
+    <Files>
+      <File FileName="Controllers/LoginController.cs" Line="8" Column="9" />
+      <File FileName="Controllers/NotifikasjonController.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Views/Notifikasjon/Notifikasjon.cshtml" />
+      <File FileName="Models/KontaktFormModell.cs" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="Controllers/KontaktController.cs" />
+      <File FileName="Controllers/ServiceordreController.cs" />
+    </Files>
+=======
   <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/notifikasjon.css">
     <FloatingWindows>
@@ -11,10 +27,16 @@
         </Files>
       </FloatingWindow>
     </FloatingWindows>
+>>>>>>> main
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prosjekt">
+<<<<<<< HEAD
+            <Node name="Prosjekt" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="LoginController.cs" selected="True" />
+=======
             <Node name="Prosjekt">
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
@@ -26,16 +48,22 @@
                 <Node name="css" expanded="True">
                   <Node name="notifikasjon.css" selected="True" />
                 </Node>
+>>>>>>> main
               </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+<<<<<<< HEAD
+  <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/Applications/Google Chrome.app" />
+=======
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+>>>>>>> main
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Prosjekt</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+ <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/FAQ.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/HomePage.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/serviceordre.css" asp-append-version="true" />
@@ -20,6 +22,7 @@
     <link rel="stylesheet" href="~/css/Om_Oss.css" asp-append-version="true" />
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 border-bottom">
@@ -29,8 +32,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto ">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" asp-controller="Notifikasjon" asp-action="Notifikasjon" role="button">
+                                <i class="bi-bell" style="font-size: 32px; color: orange;"></i>
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="~/icons/icons8-menu-50.png" alt="menu ikon">
@@ -44,10 +52,13 @@
                                 <li><a class="dropdown-item" asp-controller="Notifikasjon" asp-action="Notifikasjon">Notifikasjon</a></li>
                                 <li><a class="dropdown-item" asp-controller="Serviceordre" asp-action="Serviceordre">Service ordre</a></li>
                                 <li><a class="dropdown-item" asp-controller="Serviceskjema" asp-action="Serviceskjema">Serviceskjema</a></li>
+<<<<<<< HEAD
+=======
                                 <li><a class="dropdown-item" asp-controller="Brukeroversikt" asp-action="Brukeroversikt">Brukeroversikt</a></li>
                                 <li><a class="dropdown-item" asp-controller="Brukerregistrering" asp-action="Brukerregistrering">Brukerregistrering</a></li>
                                 <li><a class="dropdown-item" asp-controller="Om_Oss" asp-action="Om_Oss">Om Oss</a></li>
 
+>>>>>>> main
                             </ul>
                         </li>
                     </ul>
@@ -55,6 +66,7 @@
             </div>
         </nav>
     </header>
+
     <div class="d-flex flex-column min-vh-100">
         <div class="flex-grow-1">
             <div class="container">
@@ -67,14 +79,10 @@
 
     <footer class="border-top footer text-muted bg-dark text-white">
         <div class="container p-4">
-            <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <!-- Left -->
                 <div class="me-5 d-none d-lg-block">
                     <span>Konktat oss - FAQ</span>
                 </div>
-                <!-- Left -->
-                <!-- Right -->
                 <div>
                     <a href="" class="me-4 text-reset">
                         <i class="fab fa-facebook-f"></i>
@@ -86,16 +94,18 @@
                         <i class="fab fa-google"></i>
                     </a>
                 </div>
-                <!-- Right -->
             </section>
-
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<<<<<<< HEAD
+
 </html>
+=======
+</html>
+>>>>>>> main

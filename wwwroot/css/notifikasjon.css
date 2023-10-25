@@ -1,32 +1,99 @@
-﻿
-.notifikasjon-div.alert {
-    border-color: #1F1F1F;
+﻿/* Generell stil for kortet */
+.card {
+    margin-top: 30px;
+    border-radius: 8px;
 }
 
-.bold-text {
-    font-weight: bold;
+.card-header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.bookmark-icon.bi-bookmark-fill {
-    color: orange !important;
+.card-body {
+    padding: 20px 20px; 
 }
 
-.bookmark-icon.bi-bookmark {
-    color: inherit !important; 
-    border-color: orange !important;
-
+/* Stil for formen */
+.form-label {
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 
-.merknad-button:hover {
-    color: #FF4500 !important;
-    border-color: #FF4500 !important;
-    background-color: transparent !important;
+.form-control {
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-.merknad-button:active, .merknad-button:focus {
-    color: black;
-    border-color: orange !important;
-    background-color: transparent;
-    box-shadow: 0 0 2px #FFFFFF, 0 0 2px #FF4500 !important;
-    outline: none !important;
+
+.btn {
+    background-color: orange;
+    margin-top: 24px;
+    border: none; /*hjelper å se penere ut*/
+    padding: 8px 15px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.alert .mb-0 {
+    text-align: left;
+    margin-top: 25px;
+}
+
+/* Spesifikk stil for notifikasjon */
+
+
+.alert {
+    padding: 15px;
+    border: 3px solid #e0e0e0;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 25px; /* legger til en overlegen margin */
+    font-size: 14px;
+}
+
+
+
+ .alert .badge {
+        padding: 3px 8px;
+        font-size: 12.5px;
+        border-radius: 5px;
+
+    }
+
+
+.icon-size {
+    font-size: 15px; /* eller hvilken som helst annen størrelse du ønsker */
+}
+
+.division-icon {
+    font-size: 15px; /* setter ikonstørrelsen til 24px */
+    margin-left: 10px; /* legger til litt høyre margin */
+}
+
+
+
+.alert .btn-close {
+        margin-left: 8px; /* legger til litt plass til venstre for lukkeknappen */
+    }
+
+
+    /*bokmerke*/
+
+
+.bi-bookmark-fill {
+    color: orange !important; /* riktig */
+    font-size: 16px;
+}
+
+
+.form-label, select.form-control, input.form-control {
+    font-family: sans-serif;
+}
+
+.division-icon {
+    font-family: sans-serif;
 }

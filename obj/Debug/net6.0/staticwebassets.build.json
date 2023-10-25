@@ -1,7 +1,11 @@
 {
   "Version": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+  "Hash": "pG61NRSVKrmKlDRQ+F/CuJ9X3eGSsrZuHxXT5jZvuM4=",
+=======
   "Hash": "aXkBWlxFaROmoSmUqqzN41Lk48QhclRhov/Tz8yXuOc=",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,7 +27,11 @@
       "Name": "Prosjekt/wwwroot",
       "Source": "Prosjekt",
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,10 +50,17 @@
   "Assets": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css",
       "SourceId": "Prosjekt",
       "SourceType": "Computed",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +92,15 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "OriginalItemSpec": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css"
+    },
+    {
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/",
+=======
       "OriginalItemSpec": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css"
     },
     {
@@ -84,6 +108,7 @@
       "SourceId": "Prosjekt",
       "SourceType": "Computed",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,6 +149,15 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "OriginalItemSpec": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/FAQ.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "OriginalItemSpec": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
     },
     {
@@ -131,6 +165,7 @@
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,10 +255,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/HomePage.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/HomePage.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,10 +300,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/notifikasjon.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/notifikasjon.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -313,10 +362,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/serviceordre.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/serviceordre.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -368,10 +424,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/serviceskjema.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/serviceskjema.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -406,10 +469,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/site.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/site.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,10 +514,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/favicon.ico",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/favicon.ico",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -482,10 +559,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-email-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-email-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -520,10 +604,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-facebook-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-facebook-48.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -558,10 +649,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-headset-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-headset-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -596,10 +694,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-instagram-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-instagram-48.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,10 +739,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-linkedin-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-linkedin-48.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -672,10 +784,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-map-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-map-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -710,10 +829,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-menu-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-menu-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -748,10 +874,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/Images/kontaktoss.jpeg",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/Images/kontaktoss.jpeg",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -830,10 +963,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/js/site.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/js/site.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -897,10 +1037,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1071,10 +1218,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1109,10 +1263,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1147,10 +1308,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1185,10 +1353,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1223,10 +1398,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1261,10 +1443,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1299,10 +1488,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1337,10 +1533,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1375,10 +1578,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1413,10 +1623,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1451,10 +1668,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1489,10 +1713,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1527,10 +1758,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1565,10 +1803,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1603,10 +1848,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1641,10 +1893,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1679,10 +1938,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1717,10 +1983,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1755,10 +2028,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1793,10 +2073,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1831,10 +2118,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1869,10 +2163,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1907,10 +2208,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1945,10 +2253,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1982,10 +2297,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
@@ -2013,10 +2335,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
@@ -2044,10 +2373,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
@@ -2075,10 +2411,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
@@ -2106,10 +2449,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
@@ -2137,10 +2487,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
@@ -2168,10 +2525,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
@@ -2199,10 +2563,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
@@ -2231,10 +2602,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2269,10 +2647,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2307,10 +2692,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2345,10 +2737,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2383,10 +2782,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2421,10 +2827,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2459,10 +2872,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2497,10 +2917,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2535,10 +2962,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2573,10 +3007,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2611,10 +3052,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2649,10 +3097,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/LICENSE",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2687,10 +3142,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2878,10 +3340,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2916,10 +3385,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2954,10 +3430,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.js",
@@ -2985,10 +3468,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
@@ -3016,10 +3506,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
@@ -3047,10 +3544,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
@@ -3078,10 +3582,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation/LICENSE.md",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/LICENSE.md",
@@ -3109,10 +3620,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery/dist/jquery.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/dist/jquery.js",
@@ -3140,10 +3658,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.js",
@@ -3171,10 +3696,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.map",
@@ -3202,10 +3734,17 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery/LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
+=======
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
       "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/LICENSE.txt",
