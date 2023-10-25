@@ -10349,24 +10349,32 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\AnnaM\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\ANDRI\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
+      "projectUniqueName": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj",
       "projectName": "Prosjekt",
-      "projectPath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
-      "packagesPath": "C:\\Users\\ANDRI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\obj\\",
+      "projectPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj",
+      "packagesPath": "C:\\Users\\AnnaM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
+        "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "C:\\Users\\ANDRI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> main
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
