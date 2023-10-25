@@ -15,6 +15,22 @@
             },
             "Patterns": null
           },
+          "Brukeroversikt.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/Brukeroversikt.css"
+            },
+            "Patterns": null
+          },
+          "Brukerregistrering.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/Brukerregistrering.css"
+            },
+            "Patterns": null
+          },
           "FAQ.css": {
             "Children": null,
             "Asset": {
@@ -44,6 +60,14 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "css/notifikasjon.css"
+            },
+            "Patterns": null
+          },
+          "Om_Oss.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/Om_Oss.css"
             },
             "Patterns": null
           },
@@ -147,6 +171,14 @@
       },
       "Images": {
         "Children": {
+          "fram.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "Images/fram.png"
+            },
+            "Patterns": null
+          },
           "igland.png": {
             "Children": null,
             "Asset": {
@@ -168,6 +200,14 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "Images/logoIgland.png"
+            },
+            "Patterns": null
+          },
+          "trygg.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "Images/trygg.png"
             },
             "Patterns": null
           }

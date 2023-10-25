@@ -31,18 +31,8 @@
       "environmentVariables": {
         "ASPNETCORE_URLS": "https://+:443;http://+:80"
       },
-<<<<<<< HEAD
-      "useSSL": true,
-      "publishAllPorts": true
-=======
-<<<<<<< HEAD
-      "useSSL": true,
-      "publishAllPorts": true
-=======
       "publishAllPorts": true,
       "useSSL": true
->>>>>>> main
->>>>>>> main
     }
   }
 }
