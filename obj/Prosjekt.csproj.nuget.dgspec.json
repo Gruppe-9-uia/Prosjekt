@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\Prosjekt.csproj": {}
   },
   "projects": {
@@ -12,21 +13,104 @@
         "projectPath": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\Prosjekt.csproj",
         "packagesPath": "C:\\Users\\ANDRI\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/vinhvuainguyen/.nuget/packages/",
+        "outputPath": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/",
+=======
+    "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/ineantonsen/.nuget/packages/",
+        "outputPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/",
+>>>>>>> main
+=======
+<<<<<<< HEAD
+    "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj",
+        "packagesPath": "C:\\Users\\AnnaM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\",
+=======
+    "/Users/MariaUiA/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/MariaUiA/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/MariaUiA/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/MariaUiA/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/MariaUiA/.nuget/packages/",
+        "outputPath": "/Users/MariaUiA/Prosjekt/obj/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
+>>>>>>> main
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
+<<<<<<< HEAD
+          "/Users/vinhvuainguyen/.nuget/NuGet/NuGet.Config"
+=======
+          "/Users/ineantonsen/.nuget/NuGet/NuGet.Config"
+>>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
           "C:\\Users\\ANDRI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "/Users/MariaUiA/.nuget/NuGet/NuGet.Config"
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
+>>>>>>> main
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +129,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< HEAD
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
@@ -52,6 +137,23 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.12, )"
+=======
+<<<<<<< HEAD
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+=======
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+>>>>>>> main
+>>>>>>> main
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
@@ -60,6 +162,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -73,6 +179,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.22, 6.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[6.0.22, 6.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.22, 6.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +201,19 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
+>>>>>>> main
         }
       }
     }

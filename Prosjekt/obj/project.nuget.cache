@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ULtwjT3Ka0SGMo9aB2jR8uyfWit69CuaBrIY8bUdmgE6F/RvKr+wM8S4x8P7OlyVQ0zhK+zUjpePaxG6Jfz39A==",
+  "success": true,
+  "projectFilePath": "/Users/MariaUiA/Prosjekt/Prosjekt/Prosjekt.csproj",
+  "expectedPackageFiles": [
+    "/Users/MariaUiA/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.19.4/microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
+    "/Users/MariaUiA/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.22/microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
+    "/Users/MariaUiA/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.22/microsoft.netcore.app.host.osx-x64.6.0.22.nupkg.sha512",
+    "/Users/MariaUiA/.nuget/packages/microsoft.netcore.app.ref/6.0.22/microsoft.netcore.app.ref.6.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

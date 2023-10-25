@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Prosjekt.Models.ServiceOrdre;
 
 namespace Prosjekt.Controllers
 {
@@ -8,5 +9,18 @@ namespace Prosjekt.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Save(ServiceOrdreModell model)
+        {
+            if (ModelState.IsValid)
+            {
+                var s = "ineedabreakpoint";
+
+            }
+            return View("Serviceordre", model);
+        }
     }
 }
+
