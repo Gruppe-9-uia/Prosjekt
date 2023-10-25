@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Brukeroversikt";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nøsted & Brukeroversikt</title>
+    <link href="brukeroversikt.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- logo + meny -->
+
+        <h1>Brukeroversikt</h1>
+    </header>
+
+    <main>
+        <h2>Brukere</h2>
+
+        <form class="searchbar" action="/search" method="get">
+            <input type="search" name="q" id="search-box" placeholder="AnsattID, Fullt navn, Stilling...">
+            <div class="search">
+                <input type="submit" value="Søk" id="searchbutton"><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene -->
+            </div>
+        </form>
+
+        <div style="overflow-x:auto;">
+
+            <table id="brukere">
+                <thead>
+                    <tr>
+                        <th scope="col">AnsattID</th>
+                        <th scope="col">Fullt navn</th>
+                        <th scope="col">Stilling</th>
+                        <th scope="col">Rettigheter</th>
+                        <th>
+                            <a href="brukerregistrering.html">
+                                <input type="button" class="adduser" value="Legg til bruker">
+                            </a>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td colspan="1">1111</td>
+                        <td>Atle Antonsen</td>
+                        <td>Administrator</td>
+                        <td>Legge til/fjerne brukere</td>
+                    </tr>
+            </table>
+
+        </div>
+    </main>
+</body>
+</html>
+

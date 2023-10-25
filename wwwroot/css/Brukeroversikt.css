@@ -1,0 +1,85 @@
+﻿#brukere {
+    border: 1px solid;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#brukere tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* FIKSE */
+#brukere tr:hover {
+    background-color: #ddd;
+}
+
+.adduser:hover {
+    background-color: rgb(199, 86, 45);
+}
+
+#brukere td, #brukere th {
+    padding: 20px;
+}
+
+#brukere th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    background-color: rgb(237, 106, 58);
+    color: white;
+}
+
+.searchbar {
+    text-align: center;
+}
+
+    .searchbar form {
+        display: flex;
+        flex-direction: column;
+    }
+
+#searchbutton {
+    margin-top: 10px;
+    padding: 10px;
+    border-color: none;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 70px;
+    background-color: white;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#search-box {
+    width: 300px;
+    height: 25px;
+    text-align: center;
+    background-color: white;
+}
+
+.adduser {
+    background-color: rgb(181, 73, 33);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 7px;
+    font-weight: bold;
+    width: 140px;
+}

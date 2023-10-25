@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Brukeroversikt";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nøsted & Brukeroversikt</title>
+    <link href="Brukeroversikt.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Brukeroversikt</h1>
+    </header>
+
+    <main>
+        <h2>Brukere</h2>
+
+        <form class="searchbar" action="/search" method="get">
+            @Html.AntiForgeryToken()
+            <input type="search" name="q" id="search-box" placeholder="AnsattID, Fullt navn, Stilling...">
+            <div class="search">
+                <input type="submit" value="Søk" id="searchbutton"><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
+            </div>
+        </form>
+
+        <div style="overflow-x:auto;">
+
+            <table id="brukere">
+                <thead>
+                    <tr>
+                        <th scope="col">AnsattID</th>
+                        <th scope="col">Fullt navn</th>
+                        <th scope="col">Stilling</th>
+                        <th scope="col">Rettigheter</th>
+                        <th>
+                            <!-- <a href="/Brukerregistrering/Brukerregistrering.cshtml"> -->
+                            <input type="button" value="Legg til bruker" class="adduser" onClick='redirectOnClick()' />
+                            <script>
+                                function redirectOnClick() {
+                                    document.location = 'Brukeroversikt';
+                                }</script>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td colspan="1">1111</td>
+                        <td>Atle Antonsen</td>
+                        <td>Administrator</td>
+                        <td>Legge til/fjerne brukere</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+</body>
+   
+
+</html>
