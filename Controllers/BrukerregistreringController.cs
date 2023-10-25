@@ -15,6 +15,12 @@ namespace Prosjekt.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult registreingFrom()
+        {
+            return View();
+        }
     }
 }
 

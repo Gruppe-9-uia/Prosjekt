@@ -9,102 +9,104 @@
 
         <!--lager et form som samler inn brukerinnspill, asp-action -> påkalle metoden Save, asp-controller
             -> spesifisere hvilke kontroller som inneholder Save, method Post -> brukes når man skal sende inn en form for å lagre store dataer-->
-        <form asp-action="Save" asp-controller="ServiceOrder" method="post">
+        @using (Html.BeginForm("Save", "ServiceOrder"))
+                    {
+                            @Html.AntiForgeryToken()
 
             <!--delt opp serviceordre i bokser for å kunne kontrollere innholdet bedre -->
             <div class="first">
                 <div class="Row1">
                     <div class="one">
-                        <label for="produkttype" name="produkttype">Produkttype</label>
+                        <label class="label-i" for="produkttype" name="produkttype">Produkttype</label>
                         <br />
-                        <input id="produktype" type="text" asp-for="produkttype" required />
+                        <input class="input-i" id="produktype" type="text" asp-for="produkttype" required />
                     </div>
 
                     <div class="one">
                         <label for="årsmodell" name="årsmodell">Årsmodell</label>
                         <br />
-                        <input id="årsmodell" type="text" asp-for="årsmodell" required />
+                        <input class="input-i" id="årsmodell" type="text" asp-for="årsmodell" required />
                     </div>
 
                 </div>
                 <div class="Row1">
                     <div class="one">
-                        <label for="mottattDato"name="mottattdato">Mottatt dato</label>
+                        <label class="label-i" for="mottattDato" name="mottattdato">Mottatt dato</label>
                         <br />
-                        <input id="mottattDato" type="date" asp-for="mottattDato" required />
+                        <input class="input-i" id="mottattDato" type="date" asp-for="mottattDato" required />
                     </div>
                     <div class="one">
                         <label for="serienummer" name="serienummer">Serienummer</label>
                         <br />
-                        <input id="serienummer"  type="text" asp-for="serienummer" required />
+                        <input class="input-i" id="serienummer" type="text" asp-for="serienummer" required />
                     </div>
                 </div>
             </div>
             <div class="Row3">
-                <label for="navn" navn="navn">Fullt navn</label>
+                <label class="label-i" for="navn" navn="navn">Fullt navn</label>
                 <br />
-                <input type="text" id="navn" asp-for="fulltNavn" required>
+                <input class="input-i" type="text" id="navn" asp-for="fulltNavn" required>
             </div>
             <div class="Row3">
-                <label for="adresse" navn="adresse">Adresse</label>
+                <label class="label-i" for="adresse" navn="adresse">Adresse</label>
                 <br />
-                <input type="text" id="adresse"  asp-for="adresse" required>
+                <input class="input-i" type="text" id="adresse" asp-for="adresse" required>
             </div>
             <div class="first">
                 <div class="Row1">
                     <div class="one">
-                        <label for="sted" name="sted">Sted</label>
+                        <label class="label-i" for="sted" name="sted">Sted</label>
                         <br />
-                        <input id="sted" type="text" asp-for="sted" required/>
+                        <input class="input-i" id="sted" type="text" asp-for="sted" required />
                     </div>
 
                     <div class="one">
-                        <label for="epost" name="epost">Epost</label>
+                        <label class="label-i" for="epost" name="epost">Epost</label>
                         <br />
-                        <input id="epost" type="email" asp-for="epost" required />
+                        <input class="input-i" id="epost" type="email" asp-for="epost" required />
                     </div>
 
                 </div>
                 <div class="Row1">
                     <div class="one">
-                        <label for="postnummer" name="postnummer">Postnummer</label>
+                        <label class="label-i" for="postnummer" name="postnummer">Postnummer</label>
                         <br />
-                        <input id="postnummer"  type="number" asp-for="postnummer" required />
+                        <input class="input-i" id="postnummer" type="number" asp-for="postnummer" required />
                     </div>
                     <div class="one">
-                        <label for="mobilnummer" name="mobilnummer">Mobilnummer</label>
+                        <label class="label-i" for="mobilnummer" name="mobilnummer">Mobilnummer</label>
                         <br />
-                        <input id="mobilnummer" type="tel" asp-for="mobilnummer" required />
+                        <input class="input-i" id="mobilnummer" type="tel" asp-for="mobilnummer" required />
                     </div>
                 </div>
             </div>
             <div class="first">
                 <div class="Row1">
                     <div class="one">
-                        <label for="garanti" name="garanti">Garanti</label>
+                        <label class="label-i" for="garanti" name="garanti">Garanti</label>
                         <br />
-                        <input id="garanti" type="text" asp-for="garanti"/>
+                        <input class="input-i" id="garanti" type="text" asp-for="garanti" />
                     </div>
                 </div>
                 <div class="Row1">
                     <div class="one">
-                        <label for="service" name="service">Service/rep</label>
+                        <label class="label-i" for="service" name="service">Service/rep</label>
                         <br />
-                        <input id="service" type="text" asp-for="service_rep" />
+                        <input class="input-i" id="service" type="text" asp-for="service_rep" />
                     </div>
                 </div>
             </div>
             <div class="textboxs">
-                <label for="beskrivelse"> Hva som er avtalt med kunden:</label>
+                <label class="label-i" for="beskrivelse"> Hva som er avtalt med kunden:</label>
                 <br />
-                <textarea id="beskrivelse" name="beskrivelse" asp-for="avtaleBeskrivelse" required></textarea>
+                <textarea class="textarea-i" id="beskrivelse" name="beskrivelse" asp-for="avtaleBeskrivelse" required></textarea>
             </div>
             <div class="submit_order">
                 <input type="submit" id="submit_order" value="Send inn" />
             </div>
            
 
-        </form>
+        }
     </fieldset>
 </div>
 

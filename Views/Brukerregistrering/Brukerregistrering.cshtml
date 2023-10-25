@@ -16,7 +16,8 @@
     </header>
 
     <main>
-        <form action="post">
+        @using (Html.BeginForm("Brukerregistrering", "registreingFrom"))
+        {
             @Html.AntiForgeryToken()
             <!-- BYTTE ACTION? MÅ FIKSE KONTROLLER -->
             <div class="container">
@@ -105,13 +106,13 @@
                     </div>
                 </div>
             </div>
-        </form>
 
         <div class="button">
             <a href="Brukeroversikt.cshtml">
                 <input type="submit" value="Fullfør" class="leggtilbruker">
             </a>
         </div>
+        }
     </main>
 </body>
 </html>

@@ -1,24 +1,18 @@
-﻿.main {
+﻿.main-i {
     width: 60%;
     margin: auto;
     margin-top: 100px;
 }
 
-.container {
-    width: 100%;
-    margin-bottom: 20px;
-    
-}
-
 /*søkebar under styling:*/
 
-.search {
+.search-i {
     
     position: relative;
     box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 }
 
-    .search input {
+    .search-i input {
        
         height: 50px;
         text-indent: 25px;
@@ -26,19 +20,19 @@
     }
 
 
-        .search input:focus {
+        .search-i input:focus {
             box-shadow: none;
             border: 2px solid blue;
         }
 
-    .search .fa-search {
+    .search-i .fa-search-i {
         position: absolute;
         top: 20px;
         left: 16px;
         
     }
 
-    .search button {
+    .search-i button {
         position: absolute;
         top: 5px;
         right: 5px;
@@ -52,7 +46,7 @@
 
 /*brukerinput under styling:*/
 
-textarea {
+.textarea-i1 {
     width: 100%;
     resize: vertical;
     margin-top: 0;
@@ -77,7 +71,7 @@ textarea {
     box-sizing: border-box;
 }
 
-label {
+.label-i1 {
     margin-left: 5px;
     width: 100%;
     margin-bottom: 20px;
@@ -90,7 +84,7 @@ label {
 
 
 
-input {
+.input-skjema {
     width: 99%;
     margin-left: 1px;
     box-sizing: border-box;
