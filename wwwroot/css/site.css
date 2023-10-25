@@ -58,6 +58,10 @@ p {
     border-color: rgba(55, 146, 165, 0.90) !important;
 }
 
+.border-color {
+    border-color: #FB8B24 !important;
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;

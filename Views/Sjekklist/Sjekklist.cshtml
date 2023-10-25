@@ -46,41 +46,39 @@
         </div>
         <div class="line"></div>
         <div class="step" data-target="#Mekanisk">
-            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste2" aria-controls="test-l-2">
+            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste2" aria-controls="Mekanisk">
                 <span class="bs-stepper-circle">2</span>
                 <span class="bs-stepper-label">Mekanisk</span>
             </button>
         </div>
         <div class="line"></div>
         <div class="step" data-target="#Hydraulisk">
-            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste3" aria-controls="test-l-3">
+            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste3" aria-controls="Hydraulisk">
                 <span class="bs-stepper-circle">3</span>
                 <span class="bs-stepper-label">Hydraulisk</span>
             </button>
         </div>
         <div class="line"></div>
         <div class="step" data-target="#Elektro">
-            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste4" aria-controls="test-l-4">
+            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste4" aria-controls="Elektro">
                 <span class="bs-stepper-circle">4</span>
                 <span class="bs-stepper-label">Elektro</span>
             </button>
         </div>
         <div class="line"></div>
         <div class="step" data-target="#Signering">
-            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste5" aria-controls="test-l-5">
+            <button type="button" class="btn btn-link step-trigger" role="tab" id="stepperSjekkliste5" aria-controls="Signering">
                 <span class="bs-stepper-circle">5</span>
                 <span class="bs-stepper-label">Signering</span>
             </button>
         </div>
     </div>
     <div class="bs-stepper-content">
-        <form novalidate>
-
             <!-- Generell informasjon som er ikke avhengig av avdeling-->
             <div id="Generell" role="tabpanel" class="bs-stepper-pane active dstepper-block" aria-labelledby="stepperSjekkliste1">
                 <div class="form-group">
                     <div class="p-3">
-                        <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="generelForm">
+                    <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="Sjekklist">
                             <h5>Vinsje informasjon</h5>
                             <div class="form-group">
                                 <label for="serieNr">Serie Number:</label>
@@ -116,45 +114,33 @@
                                 <label for="kommentar"><h5>Kommentar:</h5></label>
                                 <textarea class="form-control" rows="5" id="kommentar" asp-for="comment_str"></textarea>
                             </div>
+                        <button type="submit" class="btn btn-primary">Oppdater</button>
+                        <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
                         </form>
                     </div>
                 </div>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Please provide a valid email.
-                </div>
-                <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
             </div>
 
             <!-- Form for den mekaniske avdelingen -->
             <div id="Mekanisk" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste2">
                 <div class="p-3">
-                    <h5>Mekanisk</h5>
                     <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="MekaniskForm">
                         <div class="form-group">
                             <fieldset class="btn-group w-100" role="group" aria-label="ClutchMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>>Sjekk Clutch lammer for slitjase</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk Clutch lammer for slitjase</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ClutchMekanisk" id="Clutch1" autocomplete="off" value="Ok" asp-for="Clutch_Plate">
-                                            <label for="Clutch1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ClutchMekanisk" id="Clutch1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Clutch_Plate">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Clutch1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ClutchMekanisk" id="Clutch2" autocomplete="off" value="Bor _skiftes" asp-for="Clutch_Plate">
-                                            <label for="Clutch2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ClutchMekanisk" id="Clutch2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Clutch_Plate">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Clutch2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ClutchMekanisk" id="Clutch3" autocomplete="off" value="Defekt" asp-for="Clutch_Plate">
-                                            <label for="Clutch3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ClutchMekanisk" id="Clutch3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Clutch_Plate">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Clutch3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -163,23 +149,17 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="BrakesMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk bremser. Bånd/pal</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk bremser. Bånd/pal</h6>
                                         </div>
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BrakesMekanisk" id="Brake1" autocomplete="off" value="Ok" asp-for="Brakes">
-                                            <label for="Brake1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BrakesMekanisk" id="Brake1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Brakes">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Brake1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BrakesMekanisk" id="Brake2" autocomplete="off" value="Bor _skiftes" asp-for="Brakes">
-                                            <label for="Brake2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BrakesMekanisk" id="Brake2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Brakes">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Brake2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BrakesMekanisk" id="Brake3" autocomplete="off" value="Defekt" asp-for="Brakes">
-                                            <label for="Brake3">Defekt</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="BrakesMekanisk" id="Brake3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Brakes">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Brake3">Defekt</label>
 
                                     </div>
                                 </div>
@@ -189,24 +169,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="BearingDrumMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk lager for trommel</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk lager for trommel</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BearingDrumMekanisk" id="Bearing1" autocomplete="off" value="Ok" asp-for="Bearing_drum">
-                                            <label for="Bearing1">OK</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="BearingDrumMekanisk" id="Bearing1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Bearing_drum">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Bearing1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BearingDrumMekanisk" id="Bearing2" autocomplete="off" value="Bor _skiftes" asp-for="Bearing_drum">
-                                            <label for="Bearing3">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BearingDrumMekanisk" id="Bearing2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Bearing_drum">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Bearing2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BearingDrumMekanisk" id="Bearing3" autocomplete="off" value="Defekt" asp-for="Bearing_drum">
-                                            <label for="Bearing3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BearingDrumMekanisk" id="Bearing3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Bearing_drum">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Bearing3">Defekt</label>
                                     </div>    
                                 </div>
                             </fieldset>
@@ -215,24 +189,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="PTOStorageMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk PTO og opplagring</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk PTO og opplagring</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="PTOStorageMekanisk" id="PTOStorage1" autocomplete="off" value="Ok" asp-for="PTO_and_storage">
-                                            <label for="PTOStorage1">OK</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="PTOStorageMekanisk" id="PTOStorage1" autocomplete="off" value="Ok" asp-for="mechanicalModel.PTO_and_storage">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="PTOStorage1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="PTOStorageMekanisk" id="PTOStorage2" autocomplete="off" value="Bor _skiftes" asp-for="PTO_and_storage">
-                                            <label for="PTOStorage2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="PTOStorageMekanisk" id="PTOStorage2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.PTO_and_storage">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="PTOStorage2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="PTOStorageMekanisk" id="PTOStorage3" autocomplete="off" value="Defekt" asp-for="PTO_and_storage">
-                                            <label for="PTOStorage3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="PTOStorageMekanisk" id="PTOStorage3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.PTO_and_storage">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="PTOStorage3">Defekt</label>
                                     </div>    
                                 </div>
                             </fieldset>
@@ -241,23 +209,17 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="ChainTensionersMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk kjedestrammer</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk kjedestrammer</h6>
                                         </div>
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ChainTensionersMekanisk" id="ChainTensioners1" autocomplete="off" value="Ok" asp-for="Chain_tensioners">
-                                            <label for="ChainTensioners1">OK</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="ChainTensionersMekanisk" id="ChainTensioners1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Chain_tensioners">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="ChainTensioners1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ChainTensionersMekanisk" id="ChainTensioners2" autocomplete="off" value="Bor _skiftes" asp-for="Chain_tensioners">
-                                            <label for="ChainTensioners2">Bør skiftes</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="ChainTensionersMekanisk" id="ChainTensioners2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Chain_tensioners">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="ChainTensioners2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ChainTensionersMekanisk" id="ChainTensioners3" autocomplete="off" value="Defekt" asp-for="Chain_tensioners">
-                                            <label for="ChainTensioners3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ChainTensionersMekanisk" id="ChainTensioners3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Chain_tensioners">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="ChainTensioners3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -266,24 +228,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="WireMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk wire</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk wire</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WireMekanisk" id="Wire1" autocomplete="off" value="Ok" asp-for="Wire">
-                                            <label  for="Wire1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WireMekanisk" id="Wire1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Wire">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Wire1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WireMekanisk" id="Wire2" autocomplete="off" value="Bor _skiftes" asp-for="Wire">
-                                            <label for="Wire2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WireMekanisk" id="Wire2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Wire">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Wire2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WireMekanisk" id="Wire3" autocomplete="off" value="Defekt" asp-for="Wire">
-                                            <label for="Wire3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WireMekanisk" id="Wire3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Wire">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Wire3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -292,24 +248,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="PinionBearingMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk pinion lager</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk pinion lager</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="PinionBearingMekanisk" id="PinionBearing1" autocomplete="off" value="Ok" asp-for="Pinion_bearing">
-                                            <label for="PinionBearing1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="PinionBearingMekanisk" id="PinionBearing1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Pinion_bearing">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="PinionBearing1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="PinionBearingMekanisk" id="PinionBearing2" autocomplete="off" value="Bor _skiftes" asp-for="Pinion_bearing">
-                                            <label for="PinionBearing2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="PinionBearingMekanisk" id="PinionBearing2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Pinion_bearing">
+                                            <label class="col-sm btn btn-outline-primary rounded-0"  for="PinionBearing2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="PinionBearingMekanisk" id="PinionBearing3" autocomplete="off" value="Defekt" asp-for="Pinion_bearing">
-                                            <label for="PinionBearing3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="PinionBearingMekanisk" id="PinionBearing3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Pinion_bearing">
+                                            <label class="col-sm btn btn-outline-primary rounded-0"  for="PinionBearing3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -318,23 +268,17 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="WedgeMekanisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk kile på kjedehjul</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk kile på kjedehjul</h6>
                                         </div>
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WedgeMekanisk" id="Wedge1" autocomplete="off" value="Ok" asp-for="Wedge_on_sprocket">
-                                            <label for="Wedge1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WedgeMekanisk" id="Wedge1" autocomplete="off" value="Ok" asp-for="mechanicalModel.Wedge_on_sprocket">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Wedge1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WedgeMekanisk" id="Wedge2" autocomplete="off" value="Bor _skiftes" asp-for="Wedge_on_sprocket">
-                                            <label for="Wedge2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WedgeMekanisk" id="Wedge2" autocomplete="off" value="Bor _skiftes" asp-for="mechanicalModel.Wedge_on_sprocket">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Wedge2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WedgeMekanisk" id="Wedge3" autocomplete="off" value="Defekt" asp-for="Wedge_on_sprocket">
-                                            <label for="Wedge3">Defekt</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="WedgeMekanisk" id="Wedge3" autocomplete="off" value="Defekt" asp-for="mechanicalModel.Wedge_on_sprocket">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Wedge3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -345,39 +289,34 @@
                         <div class="invalid-feedback">
                             Please provide a valid email.
                         </div>
+                    <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
+                    <button type="submit" class="btn btn-primary">Oppdater</button>
+                    <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
+
                     </form>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
             </div>
 
             <!-- Form for Hydraulisk avdeling -->
             <div id="Hydraulisk" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste3">
                 <div class="p-3">
-                    <h5>Hydraulisk</h5>
                     <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="HydrauliskForm">
                         <div class="form-group">
                             <fieldset class="btn-group w-100" role="group" aria-label="HydraulicCylinderHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk hydraulikk sylinder for lekkasje</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk hydraulikk sylinder for lekkasje</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder1" autocomplete="off" value="Ok" asp-for="hydraulic_cylinder">
-                                            <label for="HydraulicCylinder1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder1" autocomplete="off" value="Ok" asp-for="hydralicModel.hydraulic_cylinder">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="HydraulicCylinder1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder2" autocomplete="off" value="Bor _skiftes" asp-for="hydraulic_cylinder">
-                                            <label for="HydraulicCylinder2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.hydraulic_cylinder">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="HydraulicCylinder2">Bør skiftes</label>
 
-                                        <div class="col-sm  btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder3" autocomplete="off" value="Defekt" asp-for="hydraulic_cylinder">
-                                            <label for="HydraulicCylinder3">Defekt</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder3" autocomplete="off" value="Defekt" asp-for="hydralicModel.hydraulic_cylinder">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="HydraulicCylinder3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -386,24 +325,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="HosesHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk slanger for skader og lekkasje</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk slanger for skader og lekkasje</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HosesHydraulisk" id="Hoses1" autocomplete="off" value="Ok" asp-for="Hoses">
-                                            <label for="Hoses1">OK</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="HosesHydraulisk" id="Hoses1" autocomplete="off" value="Ok" asp-for="hydralicModel.Hoses">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Hoses1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HosesHydraulisk" id="Hoses2" autocomplete="off" value="Bor _skiftes" asp-for="Hoses">
-                                            <labe for="Hoses2">Bør skiftes</labe>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="HosesHydraulisk" id="Hoses2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.Hoses">
+                                    <labe class="col-sm btn btn-outline-primary rounded-0" for="Hoses2">Bør skiftes</labe>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HosesHydraulisk" id="Hoses3" autocomplete="off" value="Defekt" asp-for="Hoses">
-                                            <label for="Hoses3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="HosesHydraulisk" id="Hoses3" autocomplete="off" value="Defekt" asp-for="hydralicModel.Hoses">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="Hoses3">Defekt</label>
                                     </div>    
                                 </div>                            
                             </fieldset>
@@ -412,24 +345,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="HydraulicBlockHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Test hydralikkblokk i testbenk</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Test hydralikkblokk i testbenk</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HydraulicBlockHydraulisk" id="HydraulicBlock1" autocomplete="off" value="Ok" asp-for="Hydraulic_block">
-                                            <label for="HydraulicBlock1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="HydraulicBlockHydraulisk" id="HydraulicBlock1" autocomplete="off" value="Ok" asp-for="hydralicModel.Hydraulic_block">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="HydraulicBlock1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HydraulicBlockHydraulisk" id="HydraulicBlock2" autocomplete="off" value="Bor _skiftes" asp-for="Hydraulic_block">
-                                            <label for="HydraulicBlock2">Bør skiftes</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="HydraulicBlockHydraulisk" id="HydraulicBlock2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.Hydraulic_block">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="HydraulicBlock2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="HydraulicBlockHydraulisk" id="HydraulicBlock3" autocomplete="off" value="Defekt" asp-for="Hydraulic_block">
-                                            <label for="HydraulicBlock3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="HydraulicBlockHydraulisk" id="HydraulicBlock3" autocomplete="off" value="Defekt" asp-for="hydralicModel.Hydraulic_block">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="HydraulicBlock3">Defekt</label>
                                     </div>    
                                 </div>
                             </fieldset>
@@ -438,24 +365,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="OilTankHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk olje i tank</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk olje i tank</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="OilTankHydraulisk" id="OilTank1" autocomplete="off" value="Ok" asp-for="Oil_tank">
-                                            <label for="OilTank1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="OilTankHydraulisk" id="OilTank1" autocomplete="off" value="Ok" asp-for="hydralicModel.Oil_tank">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="OilTank1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="OilTankHydraulisk" id="OilTank2" autocomplete="off" value="Bor _skiftes" asp-for="Oil_tank">
-                                            <label for="OilTank2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="OilTankHydraulisk" id="OilTank2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.Oil_tank">
+                                    <label class="col-sm btn btn-outline-primary rounded-0" for="OilTank2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="OilTankHydraulisk" id="OilTank3" autocomplete="off" value="Defekt" asp-for="Oil_tank">
-                                            <label for="OilTank3">Defekt</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="OilTankHydraulisk" id="OilTank3" autocomplete="off" value="Defekt" asp-for="hydralicModel.Oil_tank">
+                                            <label class="col-sm btn btn-outline-primary rounded-0"  for="OilTank3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -464,24 +385,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="OilGearboxBoxHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk olje på gir boks</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk olje på gir boks</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="OilGearboxBoxHydraulisk" id="OilGearboxBox1" autocomplete="off" value="Ok" asp-for="Oil_gearbox_box">
-                                            <label for="OilGearboxBox1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="OilGearboxBoxHydraulisk" id="OilGearboxBox1" autocomplete="off" value="Ok" asp-for="hydralicModel.Oil_gearbox_box">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="OilGearboxBox1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="OilGearboxBoxHydraulisk" id="OilGearboxBox2" autocomplete="off" value="Bor _skiftes" asp-for="Oil_gearbox_box">
-                                            <label for="OilGearboxBox2">Bør skiftes</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="OilGearboxBoxHydraulisk" id="OilGearboxBox2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.Oil_gearbox_box">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="OilGearboxBox2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="OilGearboxBoxHydraulisk" id="OilGearboxBox3" autocomplete="off" value="Defekt" asp-for="Oil_gearbox_box">
-                                            <label for="OilGearboxBox3">Defekt</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="OilGearboxBoxHydraulisk" id="OilGearboxBox3" autocomplete="off" value="Defekt" asp-for="hydralicModel.Oil_gearbox_box">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="OilGearboxBox3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -490,24 +405,18 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="RingeCylinderHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk Ringsylinder åpne og skift tetninger</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk Ringsylinder åpne og skift tetninger</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="RingeCylinderHydraulisk" id="RingeCylinder1" autocomplete="off" value="Ok" asp-for="Ringe_cylinder_and_replace_seals">
-                                            <label for="RingeCylinder1">OK</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="RingeCylinderHydraulisk" id="RingeCylinder1" autocomplete="off" value="Ok" asp-for="hydralicModel.Ringe_cylinder_and_replace_seals">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="RingeCylinder1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="RingeCylinderHydraulisk" id="RingeCylinder2" autocomplete="off" value="Bor _skiftes" asp-for="Ringe_cylinder_and_replace_seals">
-                                            <label for="RingeCylinder2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="RingeCylinderHydraulisk" id="RingeCylinder2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.Ringe_cylinder_and_replace_seals">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="RingeCylinder2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="RingeCylinderHydraulisk" id="RingeCylinder3" autocomplete="off" value="Defekt" asp-for="Ringe_cylinder_and_replace_seals">
-                                            <label for="RingeCylinder3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="RingeCylinderHydraulisk" id="RingeCylinder3" autocomplete="off" value="Defekt" asp-for="hydralicModel.Ringe_cylinder_and_replace_seals">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="RingeCylinder3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -516,67 +425,49 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="BrakeCylinderHydraulisk">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk bremse sylinder åpne og skrifft tetninger</h6>
+                                        <div class="col-sm-4">
+                                            <h6 class="p-2">Sjekk bremse sylinder åpne og skrifft tetninger</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BrakeCylinderHydraulisk" id="BrakeCylinder1" autocomplete="off" value="Ok" asp-for="Brake_cylinder_and_replace_seals">
-                                            <label for="BrakeCylinder1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BrakeCylinderHydraulisk" id="BrakeCylinder1" autocomplete="off" value="Ok" asp-for="hydralicModel.Brake_cylinder_and_replace_seals">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="BrakeCylinder1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BrakeCylinderHydraulisk" id="BrakeCylinder2" autocomplete="off" value="Bor _skiftes" asp-for="Brake_cylinder_and_replace_seals">
-                                            <label for="BrakeCylinder2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BrakeCylinderHydraulisk" id="BrakeCylinder2" autocomplete="off" value="Bor _skiftes" asp-for="hydralicModel.Brake_cylinder_and_replace_seals">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="BrakeCylinder2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="BrakeCylinderHydraulisk" id="BrakeCylinder3" autocomplete="off" value="Defekt" asp-for="Brake_cylinder_and_replace_seals">
-                                            <label for="BrakeCylinder3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="BrakeCylinderHydraulisk" id="BrakeCylinder3" autocomplete="off" value="Defekt" asp-for="hydralicModel.Brake_cylinder_and_replace_seals">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="BrakeCylinder3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
+                    <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
+                    <button type="submit" class="btn btn-primary">Oppdater</button>
+                    <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
                     </form>
-                    <div class="valid-feedback">
-                        Form Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Form invalid
-                    </div>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
             </div>
 
             <!-- form for Elektro avdeling -->
             <div id="Elektro" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste4">
                 <div class="p-3">
-                    <h5>Elektro</h5>
                     <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="ElektroForm">
                         <div class="form-group">
                             <fieldset class="btn-group w-100" role="group" aria-label="WiringWinchElektro">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk ledningsnett på vinsj</h6>
+                                        <div class="col-sm-4 rounded-0">
+                                            <h6 class="p-2">Sjekk ledningsnett på vinsj</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WiringWinchElektro" id="WiringWinch1" autocomplete="off" value="Ok" asp-for="Wiring_on_winch">
-                                            <label for="WiringWinch1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WiringWinchElektro" id="WiringWinch1" autocomplete="off" value="Ok" asp-for="electroModel.Wiring_on_winch">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="WiringWinch1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WiringWinchElektro" id="WiringWinch2" autocomplete="off" value="Bor _skiftes" asp-for="Wiring_on_winch">
-                                            <label for="WiringWinch2">Bør skiftes</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="WiringWinchElektro" id="WiringWinch2" autocomplete="off" value="Bor _skiftes" asp-for="electroModel.Wiring_on_winch">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="WiringWinch2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="WiringWinchElektro" id="WiringWinch3" autocomplete="off" value="Defekt" asp-for="Wiring_on_winch">
-                                            <label for="WiringWinch3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="WiringWinchElektro" id="WiringWinch3" autocomplete="off" value="Defekt" asp-for="electroModel.Wiring_on_winch">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="WiringWinch3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -585,65 +476,48 @@
                             <fieldset class="btn-group w-100" role="group" aria-label="TestRadioElektro">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk og test radio</h6>
+                                        <div class="col-sm-4 rounded-0">
+                                            <h6 class="p-2">Sjekk og test radio</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="TestRadioElektro" id="TestRadio1" autocomplete="off" value="Ok" asp-for="Test_radio">
-                                            <label for="TestRadio1">OK</label>
-                                        </div>
+                                            <input type="radio" class="btn-check" name="TestRadioElektro" id="TestRadio1" autocomplete="off" value="Ok" asp-for="electroModel.Test_radio">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="TestRadio1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="TestRadioElektro" id="TestRadio2" autocomplete="off" value="Bor _skiftes" asp-for="Test_radio">
-                                            <label for="TestRadio2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="TestRadioElektro" id="TestRadio2" autocomplete="off" value="Bor _skiftes" asp-for="electroModel.Test_radio">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="TestRadio2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="TestRadioElektro" id="TestRadio3" autocomplete="off" value="Defekt" asp-for="Test_radio">
-                                            <label for="TestRadio3">Defekt</label>
-                                        </div>
+
+                                    <input type="radio" class="btn-check" name="TestRadioElektro" id="TestRadio3" autocomplete="off" value="Defekt" asp-for="electroModel.Test_radio">
+                                        <label class="col-sm btn btn-outline-primary rounded-0" for="TestRadio3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="form-group">
-                            <fieldset class="btn-group w-100" role="group" aria-label="ButtonBoxElektro">
+                            <fieldset class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-4 border border-primary rounded-0">
-                                            <h6>Sjekk og test knappekasse</h6>
+                                        <div class="col-sm-4 rounded-0">
+                                            <h6 class="p-2">Sjekk og test knappekasse</h6>
                                         </div>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ButtonBoxElektro" id="ButtonBox1" autocomplete="off" value="Ok" asp-for="Button_box">
-                                            <label for="ButtonBox1">OK</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ButtonBoxElektro" id="ButtonBox1" autocomplete="off" value="Ok" asp-for="electroModel.Button_box">
+                                            <label class="col-sm btn btn-outline-primary rounded-0" for="ButtonBox1">OK</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ButtonBoxElektro" id="ButtonBox2" autocomplete="off" value="Bor _skiftes" asp-for="Button_box">
-                                            <label for="ButtonBox2">Bør skiftes</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ButtonBoxElektro" id="ButtonBox2" autocomplete="off" value="Bor _skiftes" asp-for="electroModel.Button_box">
+                                            <label class="col-sm btn btn-outline-primary rounded-0" for="ButtonBox2">Bør skiftes</label>
 
-                                        <div class="col-sm btn btn-outline-primary rounded-0">
-                                            <input type="radio" class="btn-check" name="ButtonBoxElektro" id="ButtonBox3" autocomplete="off" value="Defekt" asp-for="Button_box">
-                                            <label for="ButtonBox3">Defekt</label>
-                                        </div>
+                                    <input type="radio" class="btn-check" name="ButtonBoxElektro" id="ButtonBox3" autocomplete="off" value="Defekt" asp-for="electroModel.Button_box">
+                                            <label class="col-sm btn btn-outline-primary rounded-0" for="ButtonBox3">Defekt</label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
+                    <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
+                    <button type="submit" class="btn btn-primary">Oppdater</button>
+                    <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
                     </form>
                 </div>
-                
-                <div class="valid-feedback">
-                    Form Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Form invalid
-                </div>
-                <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
             </div>
             <div id="Signering" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste5">
                 <div class="valid-feedback">
@@ -652,10 +526,10 @@
                 <div class="invalid-feedback">
                     Form invalid
                 </div>
-                <button type="button" class="btn btn-primary mt-5" onclick="stepper1.previous()">Previous</button>
-                <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
+            <button type="submit" class="btn btn-primary">Oppdater</button>
+            <button type="submit" class="btn btn-primary">Fullfør</button>
             </div>
-        </form>
     </div>
 </div>
 
