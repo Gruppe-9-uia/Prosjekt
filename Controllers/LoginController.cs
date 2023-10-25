@@ -1,17 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Models;
 
-public class AccountController : Controller
+public class LoginController : Controller
 {
     private const string IsLoggedInCookie = "IsLoggedIn";
 
-
-        [HttpGet]
-        public ActionResult Login() { 
-        return View();
-    }
+        public IActionResult Login() { 
+            return View();
+        }
         [HttpPost]
-        public ActionResult LoginFrom(LoginModell user)
+        public ActionResult LoginFrom(LoginModel user)
         {
             // Forenklet logikk: bruker samme brukernavn og passord
             // koble mot en database

@@ -4,7 +4,7 @@
 }
 
 
-<h1 class ="m-3">Kontakt oss</h1>
+<h1 class="m-3">Kontakt oss</h1>
 <p>Kom i kontakt med en av våre globale kontorer</p>
 
 <div class="d-flex flex-wrap justify-content-center">
@@ -13,7 +13,7 @@
         <div>
             <p>
                 <img src="~/icons/icons8-map-50.png" alt="kart ikon">
-                    Doneheia 17
+                Doneheia 17
             </p>
         </div>
         <div>
@@ -35,7 +35,7 @@
         <div>
             <p>
                 <img src="~/icons/icons8-map-50.png" alt="kart ikon">
-                   Grønviksveien 8, 4515 Mandal, Norway
+                Grønviksveien 8, 4515 Mandal, Norway
             </p>
         </div>
         <div>
@@ -57,7 +57,7 @@
         <div>
             <p>
                 <img src="~/icons/icons8-map-50.png" alt="kart ikon">
-                   Industriveien 2 3766 Sannidal, Norway
+                Industriveien 2 3766 Sannidal, Norway
             </p>
         </div>
         <div>
@@ -79,7 +79,7 @@
         <div>
             <p>
                 <img src="~/icons/icons8-map-50.png" alt="kart ikon">
-                    J. Basanavičiaus str. 114, LT-28214 Utena. Ph, Lithuania
+                J. Basanavičiaus str. 114, LT-28214 Utena. Ph, Lithuania
             </p>
         </div>
         <div>
@@ -101,7 +101,7 @@
         <div>
             <p>
                 <img src="~/icons/icons8-map-50.png" alt="kart ikon">
-                    PO Box 869 Bonners Ferry, ID 83805 USA
+                PO Box 869 Bonners Ferry, ID 83805 USA
             </p>
         </div>
         <div>
@@ -123,7 +123,7 @@
         <div>
             <p>
                 <img src="~/icons/icons8-map-50.png" alt="kart ikon">
-                    5495, rue Saint-Roch Drummondville (Quebec) J2B 6V4 Canada
+                5495, rue Saint-Roch Drummondville (Quebec) J2B 6V4 Canada
             </p>
         </div>
         <div>
@@ -148,28 +148,28 @@
 <h1>Hvordan kan vi hjelpe deg?</h1>
 <div class="card border-primary p-3 m-1">
     <form method="post" class="form-inline" asp-controller="Kontakt" asp-action="SumbitKontaktForm">
-        <div class="form-group">
-          <label for="navn">Navn:</label>
+        <div class="form-group ">
+            <label class ="text-primary" for="navn">Navn:</labelclass>
             <input type="text" class="form-control" id="navn" asp-for="navn" required>
         </div>
 
         <div class="form-group">
-          <label for="telefon">Telefon:</label>
+            <label class="text-primary" for="telefon">Telefon:</label>
             <input type="text" class="form-control" id="telefon" asp-for="telefon" required>
         </div>
 
         <div class="form-group">
-          <label for="email">Email:</label>
+            <label class="text-primary" for="email">Email:</label>
             <input type="text" class="form-control" id="email" asp-for="email" required>
         </div>
 
         <div class="form-group">
-          <label for="region">Region:</label>
+            <label class="text-primary" for="region">Region:</label>
             <input type="text" class="form-control" id="region" asp-for="region" required>
         </div>
 
         <div class="form-group">
-          <label for="melding">Melding:</label>
+            <label class="text-primary" for="melding">Melding:</label>
             <textarea class="form-control" rows="5" id="melding" asp-for="melding" required></textarea>
         </div>
 
