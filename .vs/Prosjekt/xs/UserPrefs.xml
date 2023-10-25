@@ -1,85 +1,35 @@
-﻿<Properties StartupConfiguration="{2BF1DECB-EEC9-4775-B74B-C320AA5FE458}|Default">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Prosjekt/Pages/serviceskjema.cshtml">
+﻿<Properties StartupConfiguration="{53A57DEE-B3CE-4790-BB18-AECD399273E3}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LoginController.cs">
     <Files>
-      <File FileName="Prosjekt/Pages/Index.cshtml" Line="11" Column="1" />
-      <File FileName="Prosjekt/Pages/Shared/_Layout.cshtml" Line="8" Column="43" />
-      <File FileName="Prosjekt/Pages/KontaktOss.cshtml" Line="8" Column="1" />
-      <File FileName="Prosjekt/Pages/serviceordre.cshtml" Line="5" Column="2" />
-      <File FileName="Prosjekt/wwwroot/css/ine.css" Line="1" Column="1" />
-      <File FileName="Prosjekt/wwwroot/css/serviceskjema.css" Line="1" Column="1" />
-      <File FileName="Prosjekt/Pages/serviceskjema.cshtml" Line="7" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Prosjekt/Pages/Notifikasjon.cshtml">
-    <Files>
-      <File FileName="Prosjekt/Pages/Shared/_Layout.cshtml" Line="76" Column="5" />
-      <File FileName="Prosjekt/Pages/Error.cshtml" Line="17" Column="14" />
-      <File FileName="Prosjekt/Pages/Index.cshtml" Line="11" Column="1" />
-      <File FileName="Prosjekt/Pages/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="Prosjekt/Pages/kredit.cshtml" Line="1" Column="1" />
-      <File FileName="Prosjekt/Pages/Privacy.cshtml" />
-      <File FileName="Prosjekt/Pages/KontaktOss.cshtml" Line="8" Column="1" />
-      <File FileName="Prosjekt/Dockerfile" />
-      <File FileName="Prosjekt/Program.cs" />
-      <File FileName="Prosjekt/Pages/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Prosjekt/Pages/_ViewImports.cshtml" />
-      <File FileName="Prosjekt/Pages/Notifikasjon.cshtml" Line="41" Column="43" />
-      <File FileName="Prosjekt/Properties/launchSettings.json" />
-      <File FileName="Prosjekt/wwwroot/css/notifikasjon.css" Line="8" Column="2" />
-      <File FileName="Prosjekt/wwwroot/css/site.css" Line="32" Column="1" />
-      <File FileName="Prosjekt/obj/Debug/net6.0/Prosjekt.AssemblyInfo.cs" />
-      <File FileName="Prosjekt/wwwroot/js/site.js" />
->>>>>>> main
+      <File FileName="Controllers/LoginController.cs" Line="8" Column="9" />
+      <File FileName="Controllers/NotifikasjonController.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Views/Notifikasjon/Notifikasjon.cshtml" />
+      <File FileName="Models/KontaktFormModell.cs" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="Controllers/KontaktController.cs" />
+      <File FileName="Controllers/ServiceordreController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prosjekt">
-<<<<<<< HEAD
-            <Node name="Prosjekt">
-              <Node name="Pages">
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" expanded="True" />
-                </Node>
-                <Node name="serviceskjema.cshtml" selected="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-=======
             <Node name="Prosjekt" expanded="True">
-              <Node name="ConnectedServicesFolder" selected="True" />
-              <Node name="Pages" expanded="True">
-                <Node name="Shared" expanded="True" />
-                <Node name="Privacy.cshtml" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="LoginController.cs" selected="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="Images" expanded="True" />
-                <Node name="js" expanded="True" />
->>>>>>> main
-              </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-=======
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Prosjekt PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
->>>>>>> main
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
