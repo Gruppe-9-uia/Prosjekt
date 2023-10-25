@@ -7,7 +7,6 @@ namespace Prosjekt.Models
     {
         public string Document_nr_str { get; set; }
         public string Serial_number_str { get; set; }
-        public string Department_ID { get; set; }
         public string Type_str { get; set; }
         public string Procedure_str { get; set; }
         public DateOnly Starting_Date { get; set; }
@@ -26,5 +25,8 @@ namespace Prosjekt.Models
 
         //Mechanical model
         public MechanicalModel mechanicalModel { get; set; } = new MechanicalModel();
+
+        //Sign model
+        public SginModel sginModel { get; set; } = new SginModel();
     }
 }

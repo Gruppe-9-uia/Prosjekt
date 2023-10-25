@@ -1,7 +1,10 @@
-﻿namespace Prosjekt.Models
+﻿using Microsoft.Build.Framework;
+
+namespace Prosjekt.Models
 {
     public class HydralicModel
     {
+        [Required]
         public string Document_nr_str { get; set; }
         public string Department_ID { get; set; } = string.Empty;
         public string hydraulic_cylinder { get; set; }

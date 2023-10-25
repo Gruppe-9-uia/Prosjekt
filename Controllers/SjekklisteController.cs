@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Models;
 
+//TODO: prøve å fikse som modelstate sjekke kan kjøre
+
 namespace Prosjekt.Controllers
 {
     public class SjekklistController : Controller
@@ -14,8 +16,16 @@ namespace Prosjekt.Controllers
         [HttpPost]
         public IActionResult GenerrellForm(SjekklisteModel Sjekkliste)
         {
+            //For teste formål, blir fjerne når databasen blir lagt til
+            Sjekkliste.Document_nr_str = "IG-IN-104-01-01";
+            Sjekkliste.Starting_Date = new DateOnly(2023, 10, 24);
+            Sjekkliste.Serial_number_str = "77777-test";
+            Sjekkliste.Prepared_by_str = "JBS";
+            Sjekkliste.Procedure_str = "Servicesjekkliste vinsjer";
+
             //Funskjonalt er avhengig av database for å sende den inn som blir lagret
-            if (!ModelState.IsValid) return View();
+            // Vil ikke kjøre det sinde er mest sannsynlig null verdier i modellen, 
+            //if (!ModelState.IsValid) { return View();
             try
             {
                 var Type_str = Sjekkliste.Type_str;
@@ -54,6 +64,16 @@ namespace Prosjekt.Controllers
         }
         [HttpPost]
         public IActionResult ElektroForm(SjekklisteModel Sjekkliste)
+        {
+            //Funskjonalt er avhengig av database for å sende den inn som blir lagret
+            if (!ModelState.IsValid) return View();
+
+            return RedirectToAction("Sjekklist");
+
+        }
+
+        [HttpPost]
+        public IActionResult SignForm(SjekklisteModel Sjekkliste)
         {
             //Funskjonalt er avhengig av database for å sende den inn som blir lagret
             if (!ModelState.IsValid) return View();

@@ -78,8 +78,9 @@
             <div id="Generell" role="tabpanel" class="bs-stepper-pane active dstepper-block" aria-labelledby="stepperSjekkliste1">
                 <div class="form-group">
                     <div class="p-3">
-                    <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="Sjekklist">
-                            <h5>Vinsje informasjon</h5>
+                    @using (Html.BeginForm("GenerrellForm", "Sjekklist"))
+                    {
+                            @Html.AntiForgeryToken()
                             <div class="form-group">
                                 <label for="serieNr">Serie Number:</label>
                                 <input type="text" class="form-control" id="serieNr" asp-for="Serial_number_str">
@@ -114,9 +115,11 @@
                                 <label for="kommentar"><h5>Kommentar:</h5></label>
                                 <textarea class="form-control" rows="5" id="kommentar" asp-for="comment_str"></textarea>
                             </div>
-                        <button type="submit" class="btn btn-primary">Oppdater</button>
-                        <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
-                        </form>
+                    <div class="row p-3 w-50 align-items-center">
+                            <button type="submit" class="col-sm btn btn-primary m-2">Oppdater</button>
+                            <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.next()">Next</button>
+                    </div>
+                       }    
                     </div>
                 </div>
             </div>
@@ -124,7 +127,9 @@
             <!-- Form for den mekaniske avdelingen -->
             <div id="Mekanisk" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste2">
                 <div class="p-3">
-                    <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="MekaniskForm">
+                @using (Html.BeginForm("MekaniskForm", "Sjekklist"))
+                    {
+                            @Html.AntiForgeryToken()
                         <div class="form-group">
                             <fieldset class="btn-group w-100" role="group" aria-label="ClutchMekanisk">
                                 <div class="container">
@@ -289,18 +294,22 @@
                         <div class="invalid-feedback">
                             Please provide a valid email.
                         </div>
-                    <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                    <button type="submit" class="btn btn-primary">Oppdater</button>
-                    <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
+                    <div class="row p-3 w-50 align-items-center">
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.previous()">Previous</button>
+                        <button type="submit" class="col-sm btn btn-primary m-2">Oppdater</button>
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.next()">Next</button>
+                    </div>
 
-                    </form>
+                    }
                 </div>
             </div>
 
             <!-- Form for Hydraulisk avdeling -->
             <div id="Hydraulisk" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste3">
                 <div class="p-3">
-                    <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="HydrauliskForm">
+                           @using (Html.BeginForm("HydrauliskForm", "Sjekklist"))
+                    {
+                            @Html.AntiForgeryToken()
                         <div class="form-group">
                             <fieldset class="btn-group w-100" role="group" aria-label="HydraulicCylinderHydraulisk">
                                 <div class="container">
@@ -441,17 +450,22 @@
                                 </div>
                             </fieldset>
                         </div>
-                    <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                    <button type="submit" class="btn btn-primary">Oppdater</button>
-                    <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
-                    </form>
+                    <div class="row p-3 w-50 align-items-center">
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.previous()">Previous</button>
+                        <button type="submit" class="col-sm btn btn-primary m-2">Oppdater</button>
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.next()">Next</button>
+                    </div>
+                    }
                 </div>
             </div>
 
             <!-- form for Elektro avdeling -->
             <div id="Elektro" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste4">
                 <div class="p-3">
-                    <form method="post" class="form-inline" asp-controller="Sjekklist" asp-action="ElektroForm">
+
+                    @using (Html.BeginForm("ElektroForm", "Sjekklist"))
+                    {
+                            @Html.AntiForgeryToken()
                         <div class="form-group">
                             <fieldset class="btn-group w-100" role="group" aria-label="WiringWinchElektro">
                                 <div class="container">
@@ -513,22 +527,35 @@
                                 </div>
                             </fieldset>
                         </div>
-                    <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                    <button type="submit" class="btn btn-primary">Oppdater</button>
-                    <button type="button" class="btn btn-primary" onclick="stepper1.next()">Next</button>
-                    </form>
+
+                    <div class="row p-3 w-50 align-items-center">
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.previous()">Previous</button>
+                        <button type="submit" class="col-sm btn btn-primary m-2">Oppdater</button>
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.next()">Next</button>
+                    </div>
+                    }
                 </div>
             </div>
             <div id="Signering" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste5">
-                <div class="valid-feedback">
-                    Form Looks good!
+
+            <div class="align-items-center p-3">
+            <!-- Må kanskje flyttet som tar med alle formene og kan sjekke den-->
+            @using (Html.BeginForm("SignForm", "Sjekklist"))
+                    {
+                            @Html.AntiForgeryToken()
+                            <div class="p-3">
+
+                    <div class="form-group">
+                        <label for="EmployeeName">Signerte av:</label>
+                        <input type="text" class="form-control" id="EmployeeName" asp-for="sginModel.Employee_name">
+                    </div>
+                    <div class="row p-3 w-50 align-items-center">
+                        <button type="button" class="col-sm btn btn-primary m-2" onclick="stepper1.previous()">Previous</button>
+                        <button type="submit" class="col-sm btn btn-primary m-2">Fullfør</button>
+                 </div>
                 </div>
-                <div class="invalid-feedback">
-                    Form invalid
+                    }
                 </div>
-            <button type="button" class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-            <button type="submit" class="btn btn-primary">Oppdater</button>
-            <button type="submit" class="btn btn-primary">Fullfør</button>
             </div>
     </div>
 </div>
