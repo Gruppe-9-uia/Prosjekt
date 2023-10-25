@@ -9,37 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Prosjekt
 build_property.RootNamespace = Prosjekt
-build_property.ProjectDir = C:\Users\ANDRI\Documents\Prosjekt\Prosjekt\
+build_property.ProjectDir = C:\Users\ANDRI\Documents\repo\Prosjekt\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ANDRI\Documents\Prosjekt\Prosjekt
+build_property.MSBuildProjectDirectory = C:\Users\ANDRI\Documents\repo\Prosjekt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/Home/Index.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Arbeidsdokument/Arbeidsdokument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJiZWlkc2Rva3VtZW50XEFyYmVpZHNkb2t1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/FAQ/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEZBUS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/Home/Privacy.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Home/kredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxrcmVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/Shared/Error.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Kontakt/KontaktOss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29udGFrdFxLb250YWt0T3NzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Notifikasjon/Notifikasjon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2Fzam9uXE5vdGlmaWthc2pvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Serviceordre/Serviceordre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZW9yZHJlXFNlcnZpY2VvcmRyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Serviceskjema/Serviceskjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNramVtYVxTZXJ2aWNlc2tqZW1hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/_ViewImports.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Sjekklist/Sjekklist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2pla2tsaXN0XFNqZWtrbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/_ViewStart.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/Prosjekt/Prosjekt/Views/Shared/_Layout.cshtml]
+[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6dagi50jiu

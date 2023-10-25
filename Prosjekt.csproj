@@ -4,12 +4,30 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>3e1fbf2a-24d9-4ba6-b909-7d9c6ff53a67</UserSecretsId>
+    <UserSecretsId>756e05df-fa67-48f9-ae60-b423dbee4e77</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <None Include="wwwroot\css\FAQ.css" />
+    <None Include="wwwroot\css\HomePage.css" />
+    <None Include="wwwroot\css\notifikasjon.css" />
+    <None Include="wwwroot\css\serviceordre.css" />
+    <None Include="wwwroot\css\serviceskjema.css" />
+    <None Include="wwwroot\css\Login.css" />
+    <None Include="wwwroot\css\Arbeidsdokument.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\FAQ %28copy%29.css" />
+    <Content Remove="wwwroot\css\FAQ %28another copy%29.css" />
+  </ItemGroup>
 </Project>

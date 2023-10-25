@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj": {}
+    "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj": {
+    "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
+        "projectUniqueName": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
         "projectName": "Prosjekt",
-        "projectPath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj",
+        "projectPath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\Prosjekt.csproj",
         "packagesPath": "C:\\Users\\ANDRI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\obj\\",
+        "outputPath": "C:\\Users\\ANDRI\\Documents\\repo\\Prosjekt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,9 +45,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
