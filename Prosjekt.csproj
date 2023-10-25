@@ -15,11 +15,19 @@
     <None Include="wwwroot\css\notifikasjon.css" />
     <None Include="wwwroot\css\serviceordre.css" />
     <None Include="wwwroot\css\serviceskjema.css" />
+    <None Include="wwwroot\css\Login.css" />
+    <None Include="wwwroot\css\Arbeidsdokument.css" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\css\FAQ %28copy%29.css" />
+    <Content Remove="wwwroot\css\FAQ %28another copy%29.css" />
+  </ItemGroup>
 </Project>
