@@ -1,6 +1,18 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "aXkBWlxFaROmoSmUqqzN41Lk48QhclRhov/Tz8yXuOc=",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "Hash": "szakc5zuOug8K8hrkQ9F1o1F2VhHIlnzdUJVkdRYf24=",
+=======
+  "Hash": "XoztECOoUk2WAg0mMB87tTrj/5Lm0p09Vs6OubRdQzE=",
+>>>>>>> main
+=======
+  "Hash": "AbdCPubhPs2BERqnZxPE1RWbUjjj5PGaakhsMuNWII8=",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
   "Source": "Prosjekt",
   "BasePath": "_content/Prosjekt",
   "Mode": "Default",
@@ -10,17 +22,50 @@
     {
       "Name": "Prosjekt/wwwroot",
       "Source": "Prosjekt",
+<<<<<<< HEAD
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css",
       "SourceId": "Prosjekt",
       "SourceType": "Computed",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Prosjekt.styles.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "Prosjekt.styles.css",
       "AssetKind": "All",
@@ -31,6 +76,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css"
     },
     {
@@ -38,6 +84,35 @@
       "SourceId": "Prosjekt",
       "SourceType": "Computed",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Prosjekt.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Prosjekt.bundle.scp.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css"
+    },
+    {
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/",
+>>>>>>> main
+=======
+      "OriginalItemSpec": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "Prosjekt.bundle.scp.css",
       "AssetKind": "All",
@@ -48,6 +123,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
     },
     {
@@ -55,6 +131,81 @@
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Prosjekt.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\css\\FAQ.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "OriginalItemSpec": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/Arbeidsdokument.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/Arbeidsdokument.css",
+=======
+      "OriginalItemSpec": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/Brukeroversikt.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/Brukeroversikt.css",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot/css/Arbeidsdokument.css"
+    },
+    {
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/FAQ.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "OriginalItemSpec": "wwwroot/css/Brukeroversikt.css"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/Brukerregistrering.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/Brukerregistrering.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Brukerregistrering.css"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/FAQ.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/FAQ.css",
       "AssetKind": "All",
@@ -68,10 +219,31 @@
       "OriginalItemSpec": "wwwroot/css/FAQ.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/HomePage.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\css\\HomePage.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/HomePage.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/HomePage.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/HomePage.css",
       "AssetKind": "All",
@@ -85,10 +257,48 @@
       "OriginalItemSpec": "wwwroot/css/HomePage.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/notifikasjon.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\css\\notifikasjon.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/Login.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Login.css"
+    },
+    {
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/notifikasjon.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/notifikasjon.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/notifikasjon.css",
       "AssetKind": "All",
@@ -102,10 +312,48 @@
       "OriginalItemSpec": "wwwroot/css/notifikasjon.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/serviceordre.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\css\\serviceordre.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/serviceordre.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/Om_Oss.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/Om_Oss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Om_Oss.css"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/serviceordre.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/serviceordre.css",
       "AssetKind": "All",
@@ -119,10 +367,31 @@
       "OriginalItemSpec": "wwwroot/css/serviceordre.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/serviceskjema.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\css\\serviceskjema.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/serviceskjema.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/serviceskjema.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/serviceskjema.css",
       "AssetKind": "All",
@@ -136,10 +405,31 @@
       "OriginalItemSpec": "wwwroot/css/serviceskjema.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/site.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\css\\site.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/css/site.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/css/site.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -153,10 +443,31 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/favicon.ico",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\favicon.ico",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/favicon.ico",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/favicon.ico",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -170,10 +481,31 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-email-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-email-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-email-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-email-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-email-50.png",
       "AssetKind": "All",
@@ -187,10 +519,31 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-email-50.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-facebook-48.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-facebook-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-facebook-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-facebook-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-facebook-48.png",
       "AssetKind": "All",
@@ -204,10 +557,31 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-facebook-48.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-headset-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-headset-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-headset-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-headset-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-headset-50.png",
       "AssetKind": "All",
@@ -221,10 +595,31 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-headset-50.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-instagram-48.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-instagram-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-instagram-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-instagram-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-instagram-48.png",
       "AssetKind": "All",
@@ -238,10 +633,31 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-instagram-48.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-linkedin-48.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-linkedin-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-linkedin-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-linkedin-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-linkedin-48.png",
       "AssetKind": "All",
@@ -255,10 +671,31 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-linkedin-48.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-map-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-map-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-map-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-map-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-map-50.png",
       "AssetKind": "All",
@@ -272,10 +709,31 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-map-50.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/icons/icons8-menu-50.png",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\icons\\icons8-menu-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/icons/icons8-menu-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/icons/icons8-menu-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-menu-50.png",
       "AssetKind": "All",
@@ -289,10 +747,75 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-menu-50.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/Images/kontaktoss.jpeg",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\Images\\igland.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/Images/fram.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "Images/fram.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/fram.png"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/Images/igland.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "Images/igland.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\Images\\igland.png"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\Images\\kontaktoss.jpeg",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/Images/kontaktoss.jpeg",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "OriginalItemSpec": "wwwroot/Images/igland.png"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/Images/kontaktoss.jpeg",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "Images/kontaktoss.jpeg",
       "AssetKind": "All",
@@ -306,10 +829,60 @@
       "OriginalItemSpec": "wwwroot/Images/kontaktoss.jpeg"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/js/site.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\Images\\logoIgland.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "Images/logoIgland.png",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/Images/trygg.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "Images/trygg.png",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\Images\\logoIgland.png"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\js\\site.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/js/site.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "OriginalItemSpec": "wwwroot/Images/trygg.png"
+    },
+    {
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/js/site.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -323,10 +896,167 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -340,10 +1070,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -357,10 +1108,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -374,10 +1146,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -391,10 +1184,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -408,10 +1222,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -425,10 +1260,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -442,10 +1298,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -459,10 +1336,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -476,10 +1374,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -493,10 +1412,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -510,10 +1450,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -527,10 +1488,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -544,10 +1526,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -561,10 +1564,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -578,10 +1602,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -595,10 +1640,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -612,10 +1678,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -629,10 +1716,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -646,10 +1754,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -663,10 +1792,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -680,10 +1830,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -697,10 +1868,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -714,10 +1906,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -731,10 +1944,30 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -748,10 +1981,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -765,10 +2012,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -782,10 +2043,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -799,10 +2074,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -816,10 +2105,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -833,10 +2136,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -850,10 +2167,24 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -867,10 +2198,25 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -884,10 +2230,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -901,10 +2268,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -918,10 +2306,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -935,10 +2344,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -952,10 +2382,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -969,10 +2420,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -986,10 +2458,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1003,10 +2496,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1020,10 +2534,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1037,10 +2572,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1054,10 +2610,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1071,10 +2648,31 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/bootstrap/LICENSE",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/bootstrap/LICENSE",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1088,10 +2686,184 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery/dist/jquery.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery/dist/jquery.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery/dist/jquery.min.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery/LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "lib/jquery-validation/LICENSE.md",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1105,10 +2877,31 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1122,10 +2915,31 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+=======
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+>>>>>>> main
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1139,10 +2953,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1156,10 +2984,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1173,10 +3015,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1190,10 +3046,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1207,10 +3077,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery-validation/LICENSE.md",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery-validation/LICENSE.md",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1224,10 +3108,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/dist/jquery.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery/dist/jquery.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1241,10 +3139,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1258,10 +3170,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery/dist/jquery.min.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1275,10 +3201,24 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
+=======
+<<<<<<< HEAD
+      "Identity": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/lib/jquery/LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
+=======
+      "Identity": "/Users/MariaUiA/Prosjekt/wwwroot/lib/jquery/LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
