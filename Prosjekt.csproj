@@ -10,6 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Brukeroversikt\" />
+    <None Remove="Views\Brukerregistrering\" />
+    <None Remove="Views\Om_Oss\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\css\FAQ.css" />
     <None Include="wwwroot\css\HomePage.css" />
     <None Include="wwwroot\css\notifikasjon.css" />
@@ -22,4 +27,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Brukeroversikt\" />
+    <Folder Include="Views\Brukerregistrering\" />
+    <Folder Include="Views\Om_Oss\" />
+  </ItemGroup>
 </Project>
