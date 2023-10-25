@@ -22,6 +22,7 @@ namespace Prosjekt.Controllers
 
             try
             {
+                //Hentet fra https://stackoverflow.com/questions/17962784/using-mailmessage-to-send-emails-in-c-sharp
                 MailMessage mail = new MailMessage();
 
                 //mail addressen den sender fra
@@ -45,6 +46,8 @@ namespace Prosjekt.Controllers
                 smtp.Credentials = new NetworkCredential("gruppe9Uia@outlook.com", "UiaProsjekt");
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.EnableSsl = true;
+
+                //hentet fra https://stackoverflow.com/questions/2859790/the-request-was-aborted-could-not-create-ssl-tls-secure-channel
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 smtp.Send(mail);
@@ -61,4 +64,3 @@ namespace Prosjekt.Controllers
         }
     }
 }
-//smtp.Credentials = new NetworkCredential("gruppe9Uia@outlook.com", "UiaProsjekt");

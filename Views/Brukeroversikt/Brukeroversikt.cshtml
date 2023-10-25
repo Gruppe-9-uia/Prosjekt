@@ -19,13 +19,16 @@
     <main>
         <h2 class="h2-m"> Brukere</h2>
 
-        <form class="searchbar" action="/search" method="get">
+            @using (Html.BeginForm("", ""))
+             {
             @Html.AntiForgeryToken()
-            <input type="search" name="q" id="search-box" placeholder="AnsattID, Fullt navn, Stilling...">
-            <div class="search">
-                <input type="submit" value="Søk" id="searchbutton"><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
-            </div>
-        </form>
+            <form class="searchbar" action="/search" method="get">
+                <input type="search" name="q" id="search-box" placeholder="AnsattID, Fullt navn, Stilling...">
+                <div class="search">
+                    <input type="submit" value="Søk" id="searchbutton"><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
+                </div>
+            </form>
+             }
 
         <div style="overflow-x:auto;">
 

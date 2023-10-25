@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.Owin.Security.OAuth": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.4, )"

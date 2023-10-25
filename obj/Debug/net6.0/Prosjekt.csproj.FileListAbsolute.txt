@@ -244,3 +244,7 @@ C:\Users\ANDRI\Documents\2\Prosjekt\obj\Debug\net6.0\refint\Prosjekt.dll
 C:\Users\ANDRI\Documents\2\Prosjekt\obj\Debug\net6.0\Prosjekt.pdb
 C:\Users\ANDRI\Documents\2\Prosjekt\obj\Debug\net6.0\Prosjekt.genruntimeconfig.cache
 C:\Users\ANDRI\Documents\2\Prosjekt\obj\Debug\net6.0\ref\Prosjekt.dll
+C:\Users\ANDRI\Documents\2\Prosjekt\bin\Debug\net6.0\Microsoft.Owin.dll
+C:\Users\ANDRI\Documents\2\Prosjekt\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+C:\Users\ANDRI\Documents\2\Prosjekt\bin\Debug\net6.0\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ANDRI\Documents\2\Prosjekt\bin\Debug\net6.0\Owin.dll
