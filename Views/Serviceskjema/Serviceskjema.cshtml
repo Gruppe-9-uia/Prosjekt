@@ -1,13 +1,98 @@
-﻿@{
+﻿@model Prosjekt.Models.ServiceSkjema.ServiceSkjemaModell;
+@{
     ViewData["Title"] = "Serviceskjema";
 }
 
+ <div class="main">
+        <form asp-action="Save" asp-controller="ServiceOrder" method="post">
+            <div class="container">
+                <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="col-md-8">
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control" placeholder="Søk på serinummer, ordrenummer...">
+                            <button class="btn btn-primary">Søk</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="serviceordre">
+            </div>
+            <div class="serviceskjema">
+                <div class="firstSection">
+                    <div class="title">
+                        <label for="reperasjonsbeskrivelse">Reperasjons beskrivelse:</label>
+                    </div>
 
+                    <div class="textbox">
+                        <textarea id="reperasjonsbeskrivelse" name="reperasjonsbeskrivelse" asp-for="reperasjonsbeskrivelse" required></textarea>
+                    </div>
+                </div>
+                <div class="secondSection">
+                    <div class="title">
+                        <label for="MedgåtteDeler">Medgåtte deler:</label>
+                    </div>
 
-<div class="card border-primary p-3 m-1">
-    <div class="card-body">
-        <h5 class="card-title"></h5>
-
+                    <div class="textbox">
+                        <textarea id="MedgåtteDeler" name="medgåttedeler" asp-for="medgåtteDeler"></textarea>
+                    </div>
+                </div>
+                <div class="thirdSection">
+                    <div class="kol1">
+                        <div class="innhold">
+                            <label for="ferdigDato">Ferdigstilt dato:</label>
+                            <input type="date" id="ferdigDato" name="ferdigDato" asp-for="ferdigstiltdato" />
+                        </div>
+                        <div class="innhold">
+                            <label for="avtaltLeveringDato">Avtalt levering dato:</label>
+                            <input type="date" id="avtaltLeveringDato" name="avatalt leving dato" asp-for="avtaltLeveringDato" />
+                        </div>
+                        <div class="innhold">
+                            <label for="booketServiceUke">Booket service uke:</label>
+                            <input type="number" id="booketServiceUke" name="booketServiceUke" asp-for="booketServiceUke" />
+                        </div>
+                        <div class="innhold">
+                            <label for="utskiftetDelerRetur">Utskiftet deler returnert:</label>
+                            <input type="text" id="utskiftetDelerRetur" name="utskiftetDelerRetur" asp-for="utskiftetDelerRetur" />
+                        </div>
+                        <div class="innhold">
+                            <label for="signKunde">Sign.Kunde:</label>
+                            <input type="text" id="signKunde" name="signKunde" />
+                        </div>
+                    </div>
+                    <div class="kol2">
+                        <div class="innhold">
+                            <label for="serviceFerdigDato">Service ferdig dato:</label>
+                            <input type="date" id="serviceFerdigDato" name="serviceFerdigDato" asp-for="serivceFerdigDato" />
+                        </div>
+                        <div class="innhold">
+                            <label for="Produktmottatdato">Produkt mottat dato:</label>
+                            <input type="date" id="Produktmottatdato" name="Produktmottatdato" asp-for="produktMotattDato" />
+                        </div>
+                        <div class="innhold">
+                            <label for="arbeidstimer">Arbeidstimer:</label>
+                            <input type="number" id="arbeidstimer" name="arbeidstimer" asp-for="Arbeidstimer" />
+                        </div>
+                        <div class="innhold">
+                            <label for="forsendelsemåte">Forsendelsemåte:</label>
+                            <input type="text" id="forsendelsemåte" name="forsendelsemåte" asp-for="forsendelsemåte" />
+                        </div>
+                        <div class="innhold">
+                            <label for="signRep">Sign.Reperatør:</label>
+                            <input type="text" id="signRep" name="signReperatør" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="send">
+                    <input type="submit" id="submit" value="Endre">
+                </div>
+                <div class="send">
+                    <input type="submit" id="submit" value="Lagre">
+                </div>
+            </div>
+        </form>
     </div>
-</div>
+
 

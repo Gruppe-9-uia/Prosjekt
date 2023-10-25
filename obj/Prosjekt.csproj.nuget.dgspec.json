@@ -2,6 +2,7 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj": {}
   },
   "projects": {
@@ -13,6 +14,19 @@
         "projectPath": "/Users/vinhvuainguyen/gruppe9/Prosjekt/Prosjekt.csproj",
         "packagesPath": "/Users/vinhvuainguyen/.nuget/packages/",
         "outputPath": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/",
+=======
+    "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/ineantonsen/.nuget/packages/",
+        "outputPath": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/",
+>>>>>>> main
 =======
 <<<<<<< HEAD
     "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj": {}
@@ -46,7 +60,11 @@
         ],
         "configFilePaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
           "/Users/vinhvuainguyen/.nuget/NuGet/NuGet.Config"
+=======
+          "/Users/ineantonsen/.nuget/NuGet/NuGet.Config"
+>>>>>>> main
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
