@@ -10,6 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Brukeroversikt\" />
+    <None Remove="Views\Brukerregistrering\" />
+    <None Remove="Views\Om_Oss\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\css\FAQ.css" />
     <None Include="wwwroot\css\HomePage.css" />
     <None Include="wwwroot\css\notifikasjon.css" />
@@ -27,7 +32,13 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Content Remove="wwwroot\css\FAQ %28copy%29.css" />
     <Content Remove="wwwroot\css\FAQ %28another copy%29.css" />
+=======
+    <Folder Include="Views\Brukeroversikt\" />
+    <Folder Include="Views\Brukerregistrering\" />
+    <Folder Include="Views\Om_Oss\" />
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
   </ItemGroup>
 </Project>

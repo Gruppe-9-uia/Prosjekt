@@ -9,6 +9,7 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Prosjekt
 build_property.RootNamespace = Prosjekt
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\AnnaM\Documents\Prosjekt\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -79,3 +80,87 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/AnnaM/Documents/Prosjekt/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6dagi50jiu
+=======
+build_property.ProjectDir = /Users/MariaUiA/Prosjekt/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/MariaUiA/Prosjekt
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/MariaUiA/Prosjekt/Views/Arbeidsdokument/Arbeidsdokument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJiZWlkc2Rva3VtZW50L0FyYmVpZHNkb2t1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Brukeroversikt/Brukeroversikt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJ1a2Vyb3ZlcnNpa3QvQnJ1a2Vyb3ZlcnNpa3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Brukerregistrering/Brukerregistrering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJ1a2VycmVnaXN0cmVyaW5nL0JydWtlcnJlZ2lzdHJlcmluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/FAQ/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRkFRL0ZBUS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Home/kredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9rcmVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Kontakt/KontaktOss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29udGFrdC9Lb250YWt0T3NzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Notifikasjon/Notifikasjon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90aWZpa2Fzam9uL05vdGlmaWthc2pvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Om_Oss/Om_Oss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT21fT3NzL09tX09zcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Serviceordre/Serviceordre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZW9yZHJlL1NlcnZpY2VvcmRyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Serviceskjema/Serviceskjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZXNramVtYS9TZXJ2aWNlc2tqZW1hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Sjekklist/Sjekklist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2pla2tsaXN0L1NqZWtrbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/MariaUiA/Prosjekt/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5e7uvbkee3
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
