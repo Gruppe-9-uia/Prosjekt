@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj": {}
   },
   "projects": {
@@ -12,11 +13,25 @@
         "projectPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\Prosjekt.csproj",
         "packagesPath": "C:\\Users\\AnnaM\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\obj\\",
+=======
+    "/Users/MariaUiA/Prosjekt/Prosjekt.csproj": {}
+  },
+  "projects": {
+    "/Users/MariaUiA/Prosjekt/Prosjekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/MariaUiA/Prosjekt/Prosjekt.csproj",
+        "projectName": "Prosjekt",
+        "projectPath": "/Users/MariaUiA/Prosjekt/Prosjekt.csproj",
+        "packagesPath": "/Users/MariaUiA/.nuget/packages/",
+        "outputPath": "/Users/MariaUiA/Prosjekt/obj/",
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
 <<<<<<< HEAD
           "C:\\Users\\AnnaM\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
@@ -24,13 +39,19 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
 >>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "/Users/MariaUiA/.nuget/NuGet/NuGet.Config"
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+<<<<<<< HEAD
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,6 +98,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.22, 6.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[6.0.22, 6.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.22, 6.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +120,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+>>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
         }
       }
     }
