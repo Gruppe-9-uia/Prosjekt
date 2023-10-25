@@ -1,12 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Prosjekt.Models.ServiceSkjema;
 
 namespace Prosjekt.Controllers
 {
-    public class ServiceskjemaController : Controller
+    public class ServiceSkjemaController : Controller
     {
-        public IActionResult Serviceskjema()
+        public IActionResult ServiceSkjema()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Save(ServiceSkjemaModell model)
+        {
+            if (ModelState.IsValid)
+            {
+                var s = "ineedabreakpoint";
+
+            }
+            return View("Serviceskjema", model);
         }
     }
 }
