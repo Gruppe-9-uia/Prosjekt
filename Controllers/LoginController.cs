@@ -1,45 +1,53 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Models;
 
-public class AccountController : Controller
+namespace Prosjekt.Controllers
 {
-    private AppDbContext db = new AppDbContext();
-
-    public ActionResult Register()
+    public class AccountController : Controller
     {
-        return View();
-    }
+        private const string IsLoggedInCookie = "IsLoggedIn";
 
-    [HttpPost]
-    public ActionResult Register(User user)
-    {
-        if (ModelState.IsValid)
+        [HttpGet]
+        public ActionResult Login()
         {
-            // i virkeligheten ville hashet og saltet dette passordet.
-            db.Users.Add(user);
-            db.SaveChanges();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginModel user)
+        {
+            // Forenklet logikk: bruker samme brukernavn og passord
+            // koble mot en database
+            if (user.Username == "test" && user.Password == "passord")
+            {
+                // Opprett en cookie for å indikere brukeren er logget inn
+                Response.Cookies.Append(IsLoggedInCookie, "true");
+
+                return RedirectToAction("Welcome");
+            }
+
+            ModelState.AddModelError("", "Invalid username or password.");
+            return View();
+        }
+
+        public ActionResult Logout()
+        {
+            // Fjern cookien
+            Response.Cookies.Delete(IsLoggedInCookie);
+
             return RedirectToAction("Login");
         }
-        return View(user);
-    }
 
-    public ActionResult Login()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public ActionResult Login(User user)
-    {
-        var registeredUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
-        if (registeredUser != null)
+        public ActionResult Welcome()
         {
-            // Brukeren er innlogget. Implementer en innlogging/logg ut mekanisme.
-            return RedirectToAction("Index", "Home");
-        }
+            // Sjekk cookien for å avgjøre om brukeren er logget inn
+            var isLoggedIn = Request.Cookies[IsLoggedInCookie];
+            if (string.IsNullOrEmpty(isLoggedIn) || isLoggedIn != "true")
+            {
+                return RedirectToAction("Login");
+            }
 
-        ModelState.AddModelError("", "Feil brukernavn eller passord.");
-        return View(user);
+            return View();
+        }
     }
 }
-

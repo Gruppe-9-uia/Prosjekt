@@ -10,9 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\Login\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="wwwroot\css\FAQ.css" />
     <None Include="wwwroot\css\HomePage.css" />
     <None Include="wwwroot\css\notifikasjon.css" />
@@ -27,7 +24,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Login\" />
-  </ItemGroup>
 </Project>
