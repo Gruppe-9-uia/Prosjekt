@@ -1,4 +1,4 @@
-﻿@model LoginModel;
+﻿@model LoginModell;
 @{
     ViewData["Title"] = "Login";
 }
@@ -6,11 +6,11 @@
 <div class="login-container">
     <h2>Velkommen til Nøsted &</h2>
 
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <!--    @Html.ValidationSummary(true, "", new { @class = "text-danger" })  -->
 
-    <form action="@Url.Action("Login", "Account")" method="post">
-        <input type="text" name="Username" placeholder="Brukernavn" required class="login-input" value="@Model.Username">
-        <input type="password" name="Password" placeholder="Passord" required class="login-input">
+    <form asp-controller="Login" asp-action="LoginFrom" method="post">
+        <input type="text" name="Username" placeholder="Brukernavn" required class="login-input" asp-for="Username" >
+        <input type="password" name="Password" placeholder="Passord" required class="login-input" asp-for="Password">
         <button type="submit" class="login-button">Logg inn</button>
     </form>
 </div>

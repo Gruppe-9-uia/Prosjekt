@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Prosjekt.Models
 {
-    public class LoginModel
+    public class LoginModell
     {
         [Required]
         public string Username { get; set; }

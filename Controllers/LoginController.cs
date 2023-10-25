@@ -3,9 +3,10 @@ using Prosjekt.Models;
 
 namespace Prosjekt.Controllers
 {
-    public class AccountController : Controller
+    public class LoginController : Controller
     {
         private const string IsLoggedInCookie = "IsLoggedIn";
+
 
         [HttpGet]
         public ActionResult Login()
@@ -14,7 +15,7 @@ namespace Prosjekt.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(LoginModel user)
+        public ActionResult LoginFrom(LoginModell user)
         {
             // Forenklet logikk: bruker samme brukernavn og passord
             // koble mot en database
