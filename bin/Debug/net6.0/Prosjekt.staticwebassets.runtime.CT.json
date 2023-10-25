@@ -7,6 +7,14 @@
     "Children": {
       "css": {
         "Children": {
+          "arbeidsdokument.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/arbeidsdokument.css"
+            },
+            "Patterns": null
+          },
           "FAQ.css": {
             "Children": null,
             "Asset": {
@@ -20,6 +28,14 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "css/HomePage.css"
+            },
+            "Patterns": null
+          },
+          "login.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/login.css"
             },
             "Patterns": null
           },

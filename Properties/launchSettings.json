@@ -35,8 +35,13 @@
       "useSSL": true,
       "publishAllPorts": true
 =======
+<<<<<<< HEAD
+      "useSSL": true,
+      "publishAllPorts": true
+=======
       "publishAllPorts": true,
       "useSSL": true
+>>>>>>> main
 >>>>>>> main
     }
   }

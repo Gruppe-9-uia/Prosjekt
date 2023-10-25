@@ -1,6 +1,9 @@
 {
   "Version": 1,
 <<<<<<< HEAD
+  "Hash": "jrG+J4xVCB0OzdUTyDFPQXqXnDpBvB9n5RKjlifxNms=",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   "Hash": "pG61NRSVKrmKlDRQ+F/CuJ9X3eGSsrZuHxXT5jZvuM4=",
 =======
@@ -17,6 +20,7 @@
   "Hash": "AbdCPubhPs2BERqnZxPE1RWbUjjj5PGaakhsMuNWII8=",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
   "Source": "Prosjekt",
   "BasePath": "_content/Prosjekt",
   "Mode": "Default",
@@ -26,6 +30,9 @@
     {
       "Name": "Prosjekt/wwwroot",
       "Source": "Prosjekt",
+<<<<<<< HEAD
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "ContentRoot": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/",
@@ -43,12 +50,19 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Prosjekt.styles.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css",
@@ -81,6 +95,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "Prosjekt.styles.css",
       "AssetKind": "All",
@@ -91,6 +106,15 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Prosjekt.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Prosjekt.bundle.scp.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "OriginalItemSpec": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/bundle/Prosjekt.styles.css"
@@ -138,6 +162,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "Prosjekt.bundle.scp.css",
       "AssetKind": "All",
@@ -148,6 +173,17 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Prosjekt.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\arbeidsdokument.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/arbeidsdokument.css",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "OriginalItemSpec": "/Users/vinhvuainguyen/gruppe9/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
@@ -197,6 +233,7 @@
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/Brukeroversikt.css",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -205,6 +242,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\css\\arbeidsdokument.css"
+    },
+    {
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\FAQ.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
       "OriginalItemSpec": "wwwroot/css/Arbeidsdokument.css"
     },
@@ -241,6 +287,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/FAQ.css",
       "AssetKind": "All",
@@ -254,6 +301,12 @@
       "OriginalItemSpec": "wwwroot/css/FAQ.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\HomePage.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/HomePage.css",
@@ -286,6 +339,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/HomePage.css",
       "AssetKind": "All",
@@ -299,6 +353,14 @@
       "OriginalItemSpec": "wwwroot/css/HomePage.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\login.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+      "BasePath": "_content/Prosjekt",
+      "RelativePath": "css/login.css",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/notifikasjon.css",
@@ -325,6 +387,7 @@
       "ContentRoot": "/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Endelig-prosjekt/Prosjekt/wwwroot/",
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/Login.css",
+>>>>>>> main
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -333,6 +396,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\notifikasjon.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "OriginalItemSpec": "wwwroot/css/Login.css"
     },
     {
@@ -348,6 +420,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/notifikasjon.css",
       "AssetKind": "All",
@@ -361,6 +434,12 @@
       "OriginalItemSpec": "wwwroot/css/notifikasjon.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\serviceordre.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/serviceordre.css",
@@ -410,6 +489,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/serviceordre.css",
       "AssetKind": "All",
@@ -423,6 +503,12 @@
       "OriginalItemSpec": "wwwroot/css/serviceordre.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\serviceskjema.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/serviceskjema.css",
@@ -455,6 +541,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/serviceskjema.css",
       "AssetKind": "All",
@@ -468,6 +555,12 @@
       "OriginalItemSpec": "wwwroot/css/serviceskjema.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\css\\site.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/css/site.css",
@@ -500,6 +593,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -513,6 +607,12 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\favicon.ico",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/favicon.ico",
@@ -545,6 +645,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -558,6 +659,12 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-email-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-email-50.png",
@@ -590,6 +697,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-email-50.png",
       "AssetKind": "All",
@@ -603,6 +711,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-email-50.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-facebook-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-facebook-48.png",
@@ -635,6 +749,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-facebook-48.png",
       "AssetKind": "All",
@@ -648,6 +763,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-facebook-48.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-headset-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-headset-50.png",
@@ -680,6 +801,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-headset-50.png",
       "AssetKind": "All",
@@ -693,6 +815,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-headset-50.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-instagram-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-instagram-48.png",
@@ -725,6 +853,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-instagram-48.png",
       "AssetKind": "All",
@@ -738,6 +867,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-instagram-48.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-linkedin-48.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-linkedin-48.png",
@@ -770,6 +905,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-linkedin-48.png",
       "AssetKind": "All",
@@ -783,6 +919,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-linkedin-48.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-map-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-map-50.png",
@@ -815,6 +957,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-map-50.png",
       "AssetKind": "All",
@@ -828,6 +971,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-map-50.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\icons\\icons8-menu-50.png",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/icons/icons8-menu-50.png",
@@ -860,6 +1009,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "icons/icons8-menu-50.png",
       "AssetKind": "All",
@@ -873,6 +1023,12 @@
       "OriginalItemSpec": "wwwroot/icons/icons8-menu-50.png"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\Images\\kontaktoss.jpeg",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/Images/kontaktoss.jpeg",
@@ -949,6 +1105,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "Images/kontaktoss.jpeg",
       "AssetKind": "All",
@@ -962,6 +1119,12 @@
       "OriginalItemSpec": "wwwroot/Images/kontaktoss.jpeg"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\js\\site.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/js/site.js",
@@ -1023,6 +1186,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1036,6 +1200,12 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
@@ -1055,6 +1225,7 @@
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1068,10 +1239,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1085,10 +1263,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1102,10 +1287,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1119,10 +1311,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1136,10 +1335,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1153,10 +1359,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1170,10 +1383,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1187,6 +1407,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
@@ -1204,6 +1430,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1217,6 +1444,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
@@ -1249,6 +1482,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1262,6 +1496,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
@@ -1294,6 +1534,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1307,6 +1548,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
@@ -1339,6 +1586,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1352,6 +1600,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
@@ -1384,6 +1638,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1397,6 +1652,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
@@ -1429,6 +1690,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1442,6 +1704,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
@@ -1474,6 +1742,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1487,6 +1756,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
@@ -1519,6 +1794,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1532,6 +1808,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
@@ -1564,6 +1846,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1577,6 +1860,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
@@ -1609,6 +1898,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1622,6 +1912,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
@@ -1654,6 +1950,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1667,6 +1964,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
@@ -1699,6 +2002,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1712,6 +2016,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
@@ -1744,6 +2054,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1757,6 +2068,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
@@ -1789,6 +2106,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1802,6 +2120,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
@@ -1834,6 +2158,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1847,6 +2172,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
@@ -1879,6 +2210,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1892,6 +2224,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
@@ -1924,6 +2262,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1937,6 +2276,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
@@ -1969,6 +2314,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1982,6 +2328,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
@@ -2014,6 +2366,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2027,6 +2380,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
@@ -2059,6 +2418,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2072,6 +2432,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
@@ -2104,6 +2470,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2117,6 +2484,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
@@ -2149,6 +2522,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2162,6 +2536,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
@@ -2194,6 +2574,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2207,6 +2588,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
@@ -2239,6 +2626,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2252,6 +2640,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
@@ -2588,6 +2982,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2601,6 +2996,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
@@ -2633,6 +3034,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2646,6 +3048,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
@@ -2678,6 +3086,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2691,6 +3100,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
@@ -2723,6 +3138,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2736,6 +3152,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
@@ -2768,6 +3190,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2781,6 +3204,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
@@ -2813,6 +3242,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2826,6 +3256,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
@@ -2858,6 +3294,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2871,6 +3308,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
@@ -2903,6 +3346,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2916,6 +3360,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
@@ -2948,6 +3398,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2961,6 +3412,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
@@ -2993,6 +3450,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -3006,6 +3464,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
@@ -3038,6 +3502,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -3051,6 +3516,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
@@ -3083,6 +3554,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -3096,6 +3568,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/bootstrap/LICENSE",
@@ -3128,6 +3606,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -3141,6 +3620,12 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
@@ -3160,6 +3645,7 @@
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3173,10 +3659,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3190,10 +3683,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3207,10 +3707,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3224,10 +3731,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3241,10 +3755,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3258,10 +3779,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3275,10 +3803,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3292,10 +3827,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\",
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3309,6 +3851,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
       "Identity": "C:\\Users\\AnnaM\\Documents\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
@@ -3326,6 +3874,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3339,6 +3888,12 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
@@ -3371,6 +3926,7 @@
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
 >>>>>>> main
+>>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3384,6 +3940,12 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "Prosjekt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ANDRI\\Documents\\HejlpeMappe\\Prosjekt\\wwwroot\\",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Identity": "/Users/vinhvuainguyen/gruppe9/Prosjekt/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
@@ -3415,6 +3977,7 @@
       "SourceType": "Discovered",
       "ContentRoot": "/Users/MariaUiA/Prosjekt/wwwroot/",
 >>>>>>> 578413a2eec41afadcf66c46be996df5cf6446f9
+>>>>>>> main
 >>>>>>> main
       "BasePath": "_content/Prosjekt",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
