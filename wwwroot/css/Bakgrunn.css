@@ -1,0 +1,19 @@
+﻿body, html {
+    height: 100%;
+    background-color: #FCEFD9;
+}
+
+.navbar, .footer {
+    background-color: #060623 !important;
+}
+
+.border-bottom {
+    border-bottom: solid 4px #FF6700!important;
+}
+
+.border-top {
+    border-top: solid 4px #FF6700 !important;
+}
+a:link {
+    text-decoration: none;
+}

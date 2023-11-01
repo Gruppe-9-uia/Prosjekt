@@ -15,6 +15,14 @@
             },
             "Patterns": null
           },
+          "Bakgrunn.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/Bakgrunn.css"
+            },
+            "Patterns": null
+          },
           "Brukeroversikt.css": {
             "Children": null,
             "Asset": {
@@ -28,6 +36,14 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "css/Brukerregistrering.css"
+            },
+            "Patterns": null
+          },
+          "buttons.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/buttons.css"
             },
             "Patterns": null
           },
