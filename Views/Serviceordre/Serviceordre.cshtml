@@ -3,17 +3,43 @@
     ViewData["Title"] = "Serviceordre";
 }
 <!--"color" er bakgrunnsfargen på sjemaet-->
-<div class="color">
+<div class="container mx-auto w-100">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+
+<!--
     <fieldset>
         <legend>Ny Serviceordre</legend>
 
         <!--lager et form som samler inn brukerinnspill, asp-action -> påkalle metoden Save, asp-controller
             -> spesifisere hvilke kontroller som inneholder Save, method Post -> brukes når man skal sende inn en form for å lagre store dataer-->
-        @using (Html.BeginForm("Save", "ServiceOrder"))
-                    {
-                            @Html.AntiForgeryToken()
-
+     
             <!--delt opp serviceordre i bokser for å kunne kontrollere innholdet bedre -->
+    <!--
             <div class="first">
                 <div class="Row1">
                     <div class="one">
@@ -27,86 +53,86 @@
                         <br />
                         <input class="input-i" id="årsmodell" type="text" asp-for="årsmodell" required />
                     </div>
+                    <!--
+                    </div>
+                    <div class="Row1">
+                        <div class="one">
+                            <label class="label-i" for="mottattDato" name="mottattdato">Mottatt dato</label>
+                            <br />
+                            <input class="input-i" id="mottattDato" type="date" asp-for="mottattDato" required />
+                        </div>
+                        <div class="one">
+                            <label for="serienummer" name="serienummer">Serienummer</label>
+                            <br />
+                            <input class="input-i" id="serienummer" type="text" asp-for="serienummer" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="Row3">
+                    <label class="label-i" for="navn" navn="navn">Fullt navn</label>
+                    <br />
+                    <input class="input-i" type="text" id="navn" asp-for="fulltNavn" required>
+                </div>
+                <div class="Row3">
+                    <label class="label-i" for="adresse" navn="adresse">Adresse</label>
+                    <br />
+                    <input class="input-i" type="text" id="adresse" asp-for="adresse" required>
+                </div>
+                <div class="first">
+                    <div class="Row1">
+                        <div class="one">
+                            <label class="label-i" for="sted" name="sted">Sted</label>
+                            <br />
+                            <input class="input-i" id="sted" type="text" asp-for="sted" required />
+                        </div>
 
-                </div>
-                <div class="Row1">
-                    <div class="one">
-                        <label class="label-i" for="mottattDato" name="mottattdato">Mottatt dato</label>
-                        <br />
-                        <input class="input-i" id="mottattDato" type="date" asp-for="mottattDato" required />
-                    </div>
-                    <div class="one">
-                        <label for="serienummer" name="serienummer">Serienummer</label>
-                        <br />
-                        <input class="input-i" id="serienummer" type="text" asp-for="serienummer" required />
-                    </div>
-                </div>
-            </div>
-            <div class="Row3">
-                <label class="label-i" for="navn" navn="navn">Fullt navn</label>
-                <br />
-                <input class="input-i" type="text" id="navn" asp-for="fulltNavn" required>
-            </div>
-            <div class="Row3">
-                <label class="label-i" for="adresse" navn="adresse">Adresse</label>
-                <br />
-                <input class="input-i" type="text" id="adresse" asp-for="adresse" required>
-            </div>
-            <div class="first">
-                <div class="Row1">
-                    <div class="one">
-                        <label class="label-i" for="sted" name="sted">Sted</label>
-                        <br />
-                        <input class="input-i" id="sted" type="text" asp-for="sted" required />
-                    </div>
+                        <div class="one">
+                            <label class="label-i" for="epost" name="epost">Epost</label>
+                            <br />
+                            <input class="input-i" id="epost" type="email" asp-for="epost" required />
+                        </div>
 
-                    <div class="one">
-                        <label class="label-i" for="epost" name="epost">Epost</label>
-                        <br />
-                        <input class="input-i" id="epost" type="email" asp-for="epost" required />
                     </div>
+                    <div class="Row1">
+                        <div class="one">
+                            <label class="label-i" for="postnummer" name="postnummer">Postnummer</label>
+                            <br />
+                            <input class="input-i" id="postnummer" type="number" asp-for="postnummer" required />
+                        </div>
+                        <div class="one">
+                            <label class="label-i" for="mobilnummer" name="mobilnummer">Mobilnummer</label>
+                            <br />
+                            <input class="input-i" id="mobilnummer" type="tel" asp-for="mobilnummer" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div class="Row1">
+                        <div class="one">
+                            <label class="label-i" for="garanti" name="garanti">Garanti</label>
+                            <br />
+                            <input class="input-i" id="garanti" type="text" asp-for="garanti" />
+                        </div>
+                    </div>
+                    <div class="Row1">
+                        <div class="one">
+                            <label class="label-i" for="service" name="service">Service/rep</label>
+                            <br />
+                            <input class="input-i" id="service" type="text" asp-for="service_rep" />
+                        </div>
+                    </div>
+                </div>
+                <div class="textboxs">
+                    <label class="label-i" for="beskrivelse"> Hva som er avtalt med kunden:</label>
+                    <br />
+                    <textarea class="textarea-i" id="beskrivelse" name="beskrivelse" asp-for="avtaleBeskrivelse" required></textarea>
+                </div>
+                <div class="submit_order">
+                    <input type="submit" id="submit_order" value="Send inn" />
+                </div>
 
-                </div>
-                <div class="Row1">
-                    <div class="one">
-                        <label class="label-i" for="postnummer" name="postnummer">Postnummer</label>
-                        <br />
-                        <input class="input-i" id="postnummer" type="number" asp-for="postnummer" required />
-                    </div>
-                    <div class="one">
-                        <label class="label-i" for="mobilnummer" name="mobilnummer">Mobilnummer</label>
-                        <br />
-                        <input class="input-i" id="mobilnummer" type="tel" asp-for="mobilnummer" required />
-                    </div>
-                </div>
-            </div>
-            <div class="first">
-                <div class="Row1">
-                    <div class="one">
-                        <label class="label-i" for="garanti" name="garanti">Garanti</label>
-                        <br />
-                        <input class="input-i" id="garanti" type="text" asp-for="garanti" />
-                    </div>
-                </div>
-                <div class="Row1">
-                    <div class="one">
-                        <label class="label-i" for="service" name="service">Service/rep</label>
-                        <br />
-                        <input class="input-i" id="service" type="text" asp-for="service_rep" />
-                    </div>
-                </div>
-            </div>
-            <div class="textboxs">
-                <label class="label-i" for="beskrivelse"> Hva som er avtalt med kunden:</label>
-                <br />
-                <textarea class="textarea-i" id="beskrivelse" name="beskrivelse" asp-for="avtaleBeskrivelse" required></textarea>
-            </div>
-            <div class="submit_order">
-                <input type="submit" id="submit_order" value="Send inn" />
-            </div>
-           
 
-        }
-    </fieldset>
-</div>
+            }
+        </fieldset>
 
+    -->
