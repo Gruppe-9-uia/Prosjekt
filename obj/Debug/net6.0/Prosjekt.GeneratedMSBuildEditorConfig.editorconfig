@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Prosjekt
 build_property.RootNamespace = Prosjekt
-build_property.ProjectDir = C:\Users\ANDRI\Documents\repo\Prosjekt\
+build_property.ProjectDir = /Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ANDRI\Documents\repo\Prosjekt
+build_property.MSBuildProjectDirectory = /Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Arbeidsdokument/Arbeidsdokument.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJiZWlkc2Rva3VtZW50XEFyYmVpZHNkb2t1bWVudC5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Arbeidsdokument/Arbeidsdokument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJiZWlkc2Rva3VtZW50L0FyYmVpZHNkb2t1bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Brukeroversikt/Brukeroversikt.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJ1a2Vyb3ZlcnNpa3RcQnJ1a2Vyb3ZlcnNpa3QuY3NodG1s
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Brukeroversikt/Brukeroversikt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJ1a2Vyb3ZlcnNpa3QvQnJ1a2Vyb3ZlcnNpa3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Brukerregistrering/Brukerregistrering.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJ1a2VycmVnaXN0cmVyaW5nXEJydWtlcnJlZ2lzdHJlcmluZy5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Brukerregistrering/Brukerregistrering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJ1a2VycmVnaXN0cmVyaW5nL0JydWtlcnJlZ2lzdHJlcmluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/FAQ/FAQ.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEZBUS5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/FAQ/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRkFRL0ZBUS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Home/kredit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxrcmVkaXQuY3NodG1s
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Home/kredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9rcmVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Kontakt/KontaktOss.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29udGFrdFxLb250YWt0T3NzLmNzaHRtbA==
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Kontakt/KontaktOss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29udGFrdC9Lb250YWt0T3NzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Login/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Notifikasjon/Notifikasjon.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2Fzam9uXE5vdGlmaWthc2pvbi5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Notifikasjon/Notifikasjon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90aWZpa2Fzam9uL05vdGlmaWthc2pvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Om_Oss/Om_Oss.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT21fT3NzXE9tX09zcy5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Om_Oss/Om_Oss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT21fT3NzL09tX09zcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Oversikt/Oversikt.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3ZlcnNpa3RcT3ZlcnNpa3QuY3NodG1s
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Oversikt/Oversikt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3ZlcnNpa3QvT3ZlcnNpa3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Serviceordre/Serviceordre.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZW9yZHJlXFNlcnZpY2VvcmRyZS5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Serviceordre/Serviceordre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZW9yZHJlL1NlcnZpY2VvcmRyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Serviceskjema/Serviceskjema.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNramVtYVxTZXJ2aWNlc2tqZW1hLmNzaHRtbA==
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Serviceskjema/Serviceskjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZXNramVtYS9TZXJ2aWNlc2tqZW1hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Sjekklist/Sjekklist.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2pla2tsaXN0XFNqZWtrbGlzdC5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Sjekklist/Sjekklist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2pla2tsaXN0L1NqZWtrbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ANDRI/Documents/repo/Prosjekt/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-6dagi50jiu
+[/Users/johannehaakenstad/IT/Semester3/IS-202/Programeringsprosjekt/Ferdiggjøre2/Prosjekt/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5e7uvbkee3
