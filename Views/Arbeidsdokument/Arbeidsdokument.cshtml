@@ -3,129 +3,58 @@
     ViewData["Title"] = "Arbeidsdokument";
 }
 
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <table tableHeader>
-        <thead>
-            <tr>
-                <th>
-                    BOOKET
-                    SERVICE
-                    TIL UKE:
-                </th>
-                <th>
-                    Hendelse
-                    mottat og reg.
-                    ddmmåå
-                </th>
-                <th>Ordrenr.</th>
-                <th>Produkttype</th>
-                <th>
-                    Beskrivelse fra
-                    kunde
-                </th>
-                <th>Kundeinfo</th>
-                <th>
-                    Avtalt levering
-                    ddmmåå
-                </th>
-                <th>
-                    Produkt mottatt
-                    ddmmåå
-                </th>
-                <th>
-                    Avtalt
-                    ferdigstillelse
-                    innen ddmmåå
-                </th>
-                <th>
-                    Service ferdig
-                    ddmmåå
-                </th>
-                <th>
-                    Antall timer på
-                    utført service
-                </th>
-                <th>
-                    Service
-                    skjema
-                    JA/NEI
-                </th>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeidsdokument</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arbeidsdokument</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Avtalt levering ddmmåå</th>
+                    <th>Hendelse mottat og reg. ddmmåå</th>
+                    <th>Ordrenr.</th>
+                    <th>Produkttype</th>
+                    <th>Beskrivelse fra kunde</th>
+                    <th>Kundeinfo</th>
+                    <th>Produkt mottatt ddmmåå</th>
+                    <th>Avtalt ferdigstillelse innen ddmmåå</th>
+                    <th>Service ferdig ddmmåå</th>
+                    <th>Antall timer på utført service</th>
+                    <th>Service skjema JA/NEI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Legg til serviceordredata her -->
+                <tr>
+                    <td>01-11-23</td>
+                    <td>02-11-23</td>
+                    <td>12345</td>
+                    <td>Produkt A</td>
+                    <td>Beskrivelse av ordren fra kunde A</td>
+                    <td>Kundeinfo A</td>
+                    <td>03-11-23</td>
+                    <td>05-11-23</td>
+                    <td>06-11-23</td>
+                    <td>2 timer</td>
+                    <td>JA</td>
+                </tr>
+                <tr>
+                    <!-- Legg til flere rader etter behov -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr>
-                <td>Uke 1</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 2</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 3</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 4</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 5</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <!-- Fortsett med resten av ukene -->
-        </tbody>
-    </table>
-</div>
+    <!-- Include Bootstrap JS (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
