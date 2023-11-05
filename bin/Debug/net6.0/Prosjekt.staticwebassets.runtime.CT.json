@@ -110,6 +110,14 @@
               "SubPath": "css/site.css"
             },
             "Patterns": null
+          },
+          "Sjekklist.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/Sjekklist.css"
+            },
+            "Patterns": null
           }
         },
         "Asset": null,
@@ -216,6 +224,14 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "Images/logoIgland.png"
+            },
+            "Patterns": null
+          },
+          "map.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "Images/map.jpg"
             },
             "Patterns": null
           },

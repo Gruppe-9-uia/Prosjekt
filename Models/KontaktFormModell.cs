@@ -11,7 +11,7 @@ namespace Prosjekt.Models
         [Required]
         public string email { get; set; }
         [Required]
-        public string region {  get; set; }
+        public string land {  get; set; }
         [Required]
         public string melding { get; set; }
     }
