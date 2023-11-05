@@ -1,17 +1,32 @@
-﻿@model LoginModel;
+﻿
 @{
     ViewData["Title"] = "Login";
 }
 
-<div class="login-container">
-    <h2>Velkommen til Nøsted &</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="~/css/login.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Velkommen til Nøsted &</h2>
+            <input type="text" class="form-control" name="Brukernavn" placeholder="Email" required="" autofocus="" />
+            <input type="password" class="form-control" name="passord" placeholder="Passord" required="" />
+            <label class="checkbox">
+                <input type="checkbox" value="husk-meg" id="huskMeg" name="huskMeg"> Husk meg
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
+        </form>
+        </div>   
+</body>
+</html>
 
-    <!--    @Html.ValidationSummary(true, "", new { @class = "text-danger" })  -->
-    @using (Html.BeginForm("LoginFrom", "Login"))
-                    {
-                            @Html.AntiForgeryToken()
-        <input type="text" name="Username" placeholder="Brukernavn" required class="login-input" asp-for="Username" >
-        <input type="password" name="Password" placeholder="Passord" required class="login-input" asp-for="Password">
-        <button type="submit" class="login-button">Logg inn</button>
-                    }
-</div>
+
+
+
+
+

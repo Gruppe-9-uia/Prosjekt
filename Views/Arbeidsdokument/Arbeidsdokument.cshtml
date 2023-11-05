@@ -9,17 +9,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arbeidsdokument</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/arbeidsdokument.css">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Arbeidsdokument</h1>
+        <input type="text" id="searchInput" placeholder="...">
+        <button id="søkSearch">søk</button>
+
+
+
+
+
         <table class="table table-striped">
             <thead>
                 <tr>
-                   <th>Booket service uke</th>
+                    <th>Booket service uke</th>
                     <th>Avtalt levering ddmmåå</th>
                     <th>Hendelse mottat og reg. ddmmåå</th>
                     <th>Ordrenr.</th>
@@ -36,9 +43,9 @@
             <tbody>
                 <!-- Legg til serviceordredata her -->
                 <tr>
-                    <th> 1</th>
-                    <td>01-11-23</td>
+                    <td>44</td>
                     <td>02-11-23</td>
+                    <td>01-11-23</td>
                     <td>12345</td>
                     <td>Produkt A</td>
                     <td>Beskrivelse av ordren fra kunde A</td>
@@ -50,13 +57,76 @@
                     <td>JA</td>
                 </tr>
                 <tr>
-                    <!-- Legg til flere rader etter behov -->
+                    <td>44</td>
+                    <td>02-11-23</td>
+                    <td>01-11-23</td>
+                    <td>12345</td>
+                    <td>Produkt B</td>
+                    <td>Beskrivelse av ordren fra kunde B</td>
+                    <td>Kundeinfo A</td>
+                    <td>03-11-23</td>
+                    <td>05-11-23</td>
+                    <td>06-11-23</td>
+                    <td>8 timer</td>
+                    <td>NEI</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <!-- Include Bootstrap JS (optional) -->
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <!-- kode for søkerfelt-->
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const søkSearch = document.getElementById("søkSearch");
+
+            søkSearch.addEventListener("click", function () {
+                searchInput.value = "";
+                søkSearch.style.display = "none";
+                søkTable();
+            });
+
+            searchInput.addEventListener("input", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+                søkSearch.style.display = searchTerm.length > 0 ? "inline" : "none";
+                filterTable(searchTerm);
+            });
+
+            function søkTable() {
+                const tableRows = document.querySelectorAll("tbody tr");
+                tableRows.forEach((row) => {
+                    row.style.display = "";
+                    row.querySelectorAll("td").forEach((cell) => {
+                        cell.innerHTML = cell.textContent;
+                    });
+                });
+            }
+
+            function filterTable(searchTerm) {
+                const tableRows = document.querySelectorAll("tbody tr");
+                tableRows.forEach((row) => {
+                    let hasMatch = false;
+                    row.querySelectorAll("td").forEach((cell) => {
+                        const cellText = cell.textContent.toLowerCase();
+                        if (cellText.includes(searchTerm)) {
+                            hasMatch = true;
+                            const highlightedText = cellText.replace(new RegExp(searchTerm, "gi"), (match) => {
+                                return `<span class="highlight">${match}</span>`;
+                            });
+                            cell.innerHTML = highlightedText;
+                        } else {
+                            cell.innerHTML = cellText;
+                        }
+                    });
+                    row.style.display = hasMatch ? "" : "none";
+                });
+            }
+        });</script>
+
+
+
 </body>
 </html>
