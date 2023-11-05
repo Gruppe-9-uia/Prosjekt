@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/Images/trygg.png"
     },
     {
+      "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Arbeidsdokument.css",
+      "PackagePath": "staticwebassets/css/Arbeidsdokument.css"
+    },
+    {
       "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Bakgrunn.css",
       "PackagePath": "staticwebassets/css/Bakgrunn.css"
     },
@@ -45,20 +49,16 @@
       "PackagePath": "staticwebassets/css/HomePage.css"
     },
     {
+      "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Login.css",
+      "PackagePath": "staticwebassets/css/Login.css"
+    },
+    {
       "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Om_Oss.css",
       "PackagePath": "staticwebassets/css/Om_Oss.css"
     },
     {
-      "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/arbeidsdokument.css",
-      "PackagePath": "staticwebassets/css/arbeidsdokument.css"
-    },
-    {
       "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/buttons.css",
       "PackagePath": "staticwebassets/css/buttons.css"
-    },
-    {
-      "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/login.css",
-      "PackagePath": "staticwebassets/css/login.css"
     },
     {
       "Id": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/notifikasjon.css",

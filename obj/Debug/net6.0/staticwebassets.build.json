@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yWn7qes8CNxURianlquVOdWy+g8NBYLWRhaDpGfNV6o=",
+  "Hash": "mOZPqNILDFv3eu+Tvd7JUB4m6MwVjDCqZsezbysVTNI=",
   "Source": "Prosjekt",
   "BasePath": "_content/Prosjekt",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/obj/Debug/net6.0/scopedcss/projectbundle/Prosjekt.bundle.scp.css"
     },
     {
-      "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/arbeidsdokument.css",
+      "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Arbeidsdokument.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
       "BasePath": "_content/Prosjekt",
-      "RelativePath": "css/arbeidsdokument.css",
+      "RelativePath": "css/Arbeidsdokument.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/arbeidsdokument.css"
+      "OriginalItemSpec": "wwwroot/css/Arbeidsdokument.css"
     },
     {
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Bakgrunn.css",
@@ -170,12 +170,12 @@
       "OriginalItemSpec": "wwwroot/css/HomePage.css"
     },
     {
-      "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/login.css",
+      "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/Login.css",
       "SourceId": "Prosjekt",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/",
       "BasePath": "_content/Prosjekt",
-      "RelativePath": "css/login.css",
+      "RelativePath": "css/Login.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,7 +184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/login.css"
+      "OriginalItemSpec": "wwwroot/css/Login.css"
     },
     {
       "Identity": "/Users/ineantonsen/Desktop/git.repo/Prosjekt/wwwroot/css/notifikasjon.css",
