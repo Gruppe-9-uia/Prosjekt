@@ -2,32 +2,61 @@
     ViewData["Title"] = "FAQ";
 }
 
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+            <title>FAQ</title>
+            <style>
+                .faq-item {
+                    margin-bottom: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container mt-5">
+                <h1 class="text-center mb-4">FAQ</h1>
+                <p class="text-center">
+                    Her finner du våre mest stilte spørsmål! <br />Om du ikke finner det du lurte på, vennligst
+                    <a href="KontaktOss.cshtml">kontakt oss</a>.
+                 </p>
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqItem1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+                                    Spørsmål 1
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    svar
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <h1>FAQ</h1>
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="question">spørsmål1</div>
-            <div class="answer">svar</div>
-        </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqItem2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+                                    Spørsmål 2
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Svar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="faq-item">
-            <div class="question">spørsmål2</div>
-            <div class="answer">svar</div>
-        </div>
+                    <!-- Add more FAQ items-->
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <div class="question">spørsmål3</div>
-            <div class="answer">svar</div>
-        </div>
-    </div>
-    <script>
-            <!------- JavaScript------->
-                const questions = document.querySelectorAll('.question');
-        questions.forEach((question) => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+
+
 

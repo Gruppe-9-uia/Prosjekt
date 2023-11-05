@@ -195,11 +195,27 @@
             },
             "Patterns": null
           },
-          "igland.png": {
+          "homeFram.png": {
             "Children": null,
             "Asset": {
               "ContentRootIndex": 0,
-              "SubPath": "Images/igland.png"
+              "SubPath": "Images/homeFram.png"
+            },
+            "Patterns": null
+          },
+          "homeIgland.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "Images/homeIgland.png"
+            },
+            "Patterns": null
+          },
+          "homeTrygg.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "Images/homeTrygg.png"
             },
             "Patterns": null
           },
