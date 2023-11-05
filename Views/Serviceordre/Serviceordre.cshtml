@@ -3,8 +3,8 @@
     ViewData["Title"] = "Serviceordre";
 }
 <div class="card w-75 mx-auto mt-5">
-    <h1 class="overskrift b-5px">Opprett ny serviceordre</h1>
-    <form>
+    <h1>Opprett ny serviceordre</h1>
+    <form asp-action="Save" asp-controller="ServiceOrdre" method="post">
         @Html.BeginForm("Save", "ServiceOrder")
         @Html.AntiForgeryToken()
 
