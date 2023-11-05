@@ -9,6 +9,8 @@
     <meta charset="UTF-8">
     <title>Nøsted & Brukeroversikt</title>
     <link href="Brukeroversikt.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,12 @@
              {
             @Html.AntiForgeryToken()
             <form class="searchbar" action="/search" method="get">
-                <input type="search" class="form-control text-center mb-3" name="q" id="search-box-m" placeholder="AnsattID, Fullt navn, Stilling...">
+               <div class="form-group row">
+                    <div class="col-xs-3">
+                        <input type="search" class="form-control text-center mb-3" name="q" id="search-box-m" placeholder="AnsattID, Fullt navn, Stilling...">
+                    </div>
+                </div>
+
                 <div class="search-m">
                     <button type="submit" class="btn btn-primary" id="searchbutton-m">Søk</button><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
                 </div>
@@ -44,7 +51,7 @@
                         <th>Rettigheter</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="userTable">
                     <tr>
                         <td>1111</td>
                         <td>Atle Antonsen</td>
@@ -67,6 +74,17 @@
             </table>
         </div>
 
+        <script>
+            // filtrering av søk
+            $(document).ready(function () {
+                $("#search-box-m").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#userTable tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
         </div>
     </main>
 </body> 
