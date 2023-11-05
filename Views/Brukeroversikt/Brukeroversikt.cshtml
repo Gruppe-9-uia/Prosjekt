@@ -12,57 +12,64 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="h1-m">Brukeroversikt</h1>
-    </header>
+    <div class="container text-center mt-5">
+        <header>
+            <h1 class="h1-m">Brukeroversikt</h1>
+        </header>
+    </div>
 
     <main>
-        <h2 class="h2-m"> Brukere</h2>
-
+        <div class="container text-center mt-4 mb-4">
             @using (Html.BeginForm("", ""))
              {
             @Html.AntiForgeryToken()
             <form class="searchbar" action="/search" method="get">
-                <input type="search" name="q" id="search-box" placeholder="AnsattID, Fullt navn, Stilling...">
-                <div class="search">
-                    <input type="submit" value="Søk" id="searchbutton"><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
+                <input type="search" class="form-control text-center mb-3" name="q" id="search-box-m" placeholder="AnsattID, Fullt navn, Stilling...">
+                <div class="search-m">
+                    <button type="submit" class="btn btn-primary" id="searchbutton-m">Søk</button><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
                 </div>
             </form>
              }
+        </div>
 
         <div style="overflow-x:auto;">
 
-            <table id="brukere">
+        <div class="container">
+            <table class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">AnsattID</th>
-                        <th scope="col">Fullt navn</th>
-                        <th scope="col">Stilling</th>
-                        <th scope="col">Rettigheter</th>
-                        <th>
-                            <!-- <a href="/Brukerregistrering/Brukerregistrering.cshtml"> -->
-                            <input type="button" value="Legg til bruker" class="adduser" onClick='redirectOnClick()' />
-                            <script>
-                                function redirectOnClick() {
-                                    document.location = 'Brukeroversikt';
-                                }</script>
-                        </th>
+                        <th>AnsattID</th>
+                        <th>Fullt navn</th>
+                        <th>Stilling</th>
+                        <th>Rettigheter</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
-                        <td colspan="1">1111</td>
+                        <td>1111</td>
                         <td>Atle Antonsen</td>
                         <td>Administrator</td>
-                        <td>Legge til/fjerne brukere</td>
+                        <td>Legge til/fjerne verktøy</td>
+                    </tr>
+                    <tr>
+                        <td>2222</td>
+                        <td>Justin Bieber</td>
+                        <td>Mekaniker</td>
+                        <td>Sjekkliste</td>
+                    </tr>
+                    <tr>
+                        <td>3333</td>
+                        <td>Ariana Grande</td>
+                        <td>Kundebehandler</td>
+                        <td>Endre/legge til/fjerne serviceordre</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
 
         </div>
     </main>
-</body>
+</body> 
    
 
 </html>

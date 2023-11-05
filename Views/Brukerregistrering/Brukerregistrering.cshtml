@@ -7,96 +7,116 @@
 <head>
     <meta charset="UTF-8">
     <title>Nøsted & Brukerregistrering</title>
-    <link href="Brukerregistrering.css" rel="stylesheet">
+    <!--<link href="Brukerregistrering.css" rel="stylesheet"> -->
 </head>
 
 <body>
-    <header>
-        <h1>Legg til bruker</h1>
-    </header>
+    <div class="container text-center mt-5">
+        <header>
+            <h1>Legg til bruker</h1>
+        </header>
+    </div>
 
     <main>
+        
         @using (Html.BeginForm("Brukerregistrering", "registreingFrom"))
         {
             @Html.AntiForgeryToken()
+        <form action="post">
             <!-- BYTTE ACTION? MÅ FIKSE KONTROLLER -->
-            <div class="container">
-                <label for="bilde" class="bilde">
-                    <b>Last opp bilde</b>
-                </label>
-                <input type="file" id="profilbilde" name="Profilbilde">
-
-                <div>
-                    <label for="fullt navn"><b>Fullt navn</b></label>
-                    <input type="text" placeholder="Fullt navn..." name="Fullt navn" id="fulltnavn" required>
-                </div>
-
-                <div>
-                    <label for="epost"><b>E-post</b></label>
-                    <input type="email" placeholder="E-post..." name="epost" id="epost" required>
-                </div>
-
-                <div>
-                    <label for="tlf"><b>Telefonnummer</b></label> <!-- pattern="[0-9]{3}&nbsp;[0-9]{2}&nbsp;[0-9]{3}" må fikse kontroller -->
-                    <input type="tel" placeholder="Telefonnummer..." name="tlf" id="tlf" maxlength="8" required>
-                </div>
-
-                <div>
-                    <label for="adr"><b>Adresse</b></label>
-                    <input type="text" placeholder="Adresse..." name="adr" id="adr" required>
-                </div>
-
-                <div>
-                    <!-- fikse denne KONTROLLER -->
-                    <label for="postnr"><b>Postnummer</b></label>
-                    <input type="number" placeholder="Postnummer..." name="postnr" id="postnr" maxlength="4" required>
-                </div>
-
-                <div>
-                    <label for="postst"><b>Poststed</b></label>
-                    <input type="text" placeholder="Poststed..." name="postst" id="postst" required>
-                </div>
-
-                <div class="underline">
-                    <div>
-                        <label for="ansID"><b>AnsattID</b></label>
-                        <input type="number" placeholder="AnsattID..." name="ansID" id="ansID" required>
-                    </div>
-
-                    <div class="stilling">
-                        <label for="stilling"><b>Stilling</b></label>
-                        <select placeholder="Stilling..." name="stilling" id="stilling" required>
-                            <option value="Administrator">Administrator</option>
-                            <option value="Kundebehandler">Kundebehandler</option>
-                            <option value="Mekaniker">Mekaniker</option>
-                        </select>
-
-                        <!-- blir brukt av JS under, hvis input er "mekaniker", så dukker denne subkategorien opp -->
-                        <div id="submekanikerkategori" style="display: none;">
-                            <label for="submekaniker"><b>Avdeling</b></label>
-                            <select name="submekaniker" id="submekaniker">
-                                <option value="elektro">Elektro</option>
-                                <option value="hydraulisk">Hydraulisk</option>
-                                <option value="mekanisk">Mekanisk</option>
-                            </select>
-
-                            <script>var stillingDropdown = document.getElementById("stilling");
-                                var submekanikerkategoriDiv = document.getElementById("submekanikerkategori");
-
-                                stillingDropdown.addEventListener("change", function () {
-                                    if (stillingDropdown.value === "Mekaniker") {
-                                        submekanikerkategoriDiv.style.display = "block";
-                                    } else {
-                                        submekanikerkategoriDiv.style.display = "none";
-                                    }
-                                });</script>
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="form-group text-center">
+                            <label for="bilde" class="bilde">
+                                <b>Last opp bilde</b>
+                            </label>
+                            <input type="file" class="form-control" id="profilbilde" name="Profilbilde" />
 
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullt navn"><b>Fullt navn</b></label>
+                    <input type="text" class="form-control" placeholder="Fullt navn..." name="Fullt navn" id="fulltnavn" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="epost"><b>E-post</b></label>
+                    <input type="email" class="form-control" placeholder="E-post..." name="epost" id="epost" required>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="tlf"><b>Telefonnummer</b></label> <!-- pattern="[0-9]{3}&nbsp;[0-9]{2}&nbsp;[0-9]{3}" må fikse kontroller -->
+                    <input type="tel" class="form-control" placeholder="Telefonnummer..." name="tlf" id="tlf" maxlength="8" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="adr"><b>Adresse</b></label>
+                    <input type="text" class="form-control" placeholder="Adresse..." name="adr" id="adr" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- fikse denne KONTROLLER -->
+                    <label for="postnr"><b>Postnummer</b></label>
+                    <input type="number" class="form-control" placeholder="Postnummer..." name="postnr" id="postnr" maxlength="4" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="postst"><b>Poststed</b></label>
+                    <input type="text" class="form-control" placeholder="Poststed..." name="postst" id="postst" required>
+                </div>
+            </div>
+
+            <div class="form-row mt-3"> <!-- kan ta vekk margin fra denne seksjonen hvis det ser rart ut -->
+            <div class="form-group col" id="stilling">
+                <label for="stilling"><b>Stilling</b></label>
+                <select class="form-control" placeholder="Stilling..." name="stilling" id="stilling" required>
+                    <option value="Administrator">Administrator</option>
+                    <option value="Kundebehandler">Kundebehandler</option>
+                    <option value="Mekaniker">Mekaniker</option>
+                </select>
+
+                <!-- blir brukt av JS under, hvis input er "mekaniker", så dukker denne subkategorien opp -->
+                <div class="form-group col" id="submekanikerkategori" style="display: none;">
+                    <label for="submekaniker"><b>Avdeling</b></label>
+                    <select name="submekaniker" id="submekaniker">
+                        <option value="elektro">Elektro</option>
+                        <option value="hydraulisk">Hydraulisk</option>
+                        <option value="mekanisk">Mekanisk</option>
+                    </select>
+                </div>
+
+                <script>var stillingDropdown = document.getElementById("stilling");
+                    var submekanikerkategoriDiv = document.getElementById("submekanikerkategori");
+
+                    stillingDropdown.addEventListener("change", function () {
+                        if (stillingDropdown.value === "Mekaniker") {
+                            submekanikerkategoriDiv.style.display = "block";
+                        } else {
+                            submekanikerkategoriDiv.style.display = "none";
+                        }
+                    });</script>
+                </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="ansID"><b>AnsattID</b></label>
+                        <input type="number" class="form-control" placeholder="AnsattID..." name="ansID" id="ansID" required>
+                    </div>
+
+                    <div class="form-group col">
                         <label for="rettigheter"><b>Rettigheter</b></label>
-                        <input type="text" placeholder="Rettigheter..." name="rettigheter" id="rettigheter" list="retthet" required>
+                        <input type="text" class="form-control" placeholder="Rettigheter..." name="rettigheter" id="rettigheter" list="retthet" required>
                         <datalist id="retthet">
                             <option>Legge til/fjerne bruker</option>
                             <option>Fjerne verktøy fra verktøyliste</option>
@@ -105,13 +125,28 @@
                         </datalist>
                     </div>
                 </div>
-            </div>
 
-        <div class="button-m">
-            <a href="Brukeroversikt.cshtml">
-                <input type="submit" value="Fullfør" class="leggtilbruker">
-            </a>
+        </form>
+        <div class="container text-center mt-5 mb-5">
+            <div class="button-m">
+                <button type="submit" class="btn btn-primary" id="button-m">Fullfør</button>
+            </div>
         </div>
+
+        <!-- melding om at brukeren har blitt lagt til-->
+        <div class="container text-center mt-2" style="display: none;" id="alert-m">
+            <div class="alert alert-success">
+                Brukeren har blitt lagt til!
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#button-m").click(function () {
+                    $(".alert-m").show();
+                });
+            });
+        </script>
         }
     </main>
 </body>
