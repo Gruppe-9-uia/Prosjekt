@@ -3,100 +3,91 @@
     ViewData["Title"] = "Serviceskjema";
 }
 
-<div class="main-i">
-    @using (Html.BeginForm("ServiceSkjema", "Save"))
-                    {
-                            @Html.AntiForgeryToken()
-            <div class="container w-100 m-b-1">
-                <div class="row height d-flex justify-content-center align-items-center">
-                    <div class="col-md-8">
-                    <div class="search-i">
-                        <i class="fa fa-search-i"></i>
-                            <input type="text" class="form-control" placeholder="Søk på serinummer, ordrenummer...">
-                            <button class="btn btn-primary">Søk</button>
-                        </div>
+<div class="card w-75 mx-auto mt-5">
+    <h1>Serviceskjema</h1>
+    <form asp-action="Save" asp-controller="ServiceSkjema" method="post">
+        <div class="søkebar">
+            <!-- denne koden har jeg tatt fra nettet-->
+            <div class="row height d-flex justify-content-center align-items-center">
+                <div class="col-md-12">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" placeholder="Søk på serienummer, ordrenummer ...">
+                        <button class="btn btn-primary">Søk</button>
                     </div>
                 </div>
             </div>
-            <div class="serviceordre">
-            </div>
-            <div class="serviceskjema">
-                <div class="firstSection">
-                    <div class="title">
-                    <label class="label-i1" for="reperasjonsbeskrivelse">Reperasjons beskrivelse:</label>
-                    </div>
-
-                    <div class="textbox">
-                    <textarea class="textarea-i1" id="reperasjonsbeskrivelse" name="reperasjonsbeskrivelse" asp-for="reperasjonsbeskrivelse" required></textarea>
-                    </div>
-                </div>
-                <div class="secondSection">
-                    <div class="title">
-                    <label class="label-i1" for="MedgåtteDeler">Medgåtte deler:</label>
-                    </div>
-
-                    <div class="textbox">
-                    <textarea class="textarea-i1" id="MedgåtteDeler" name="medgåttedeler" asp-for="medgåtteDeler"></textarea>
-                    </div>
-                </div>
-                <div class="thirdSection">
-                    <div class="kol1">
-                        <div class="innhold">
-                        <label class="label-i1" for="ferdigDato">Ferdigstilt dato:</label>
-                        <input class="input-skjema" type="date" id="ferdigDato" name="ferdigDato" asp-for="ferdigstiltdato" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="avtaltLeveringDato">Avtalt levering dato:</label>
-                        <input class="input-skjema" type="date" id="avtaltLeveringDato" name="avatalt leving dato" asp-for="avtaltLeveringDato" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="booketServiceUke">Booket service uke:</label>
-                        <input class="input-skjema" type="number" id="booketServiceUke" name="booketServiceUke" asp-for="booketServiceUke" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="utskiftetDelerRetur">Utskiftet deler returnert:</label>
-                        <input class="input-skjema" type="text" id="utskiftetDelerRetur" name="utskiftetDelerRetur" asp-for="utskiftetDelerRetur" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="signKunde">Sign.Kunde:</label>
-                        <input class="input-skjema" type="text" id="signKunde" name="signKunde" />
-                        </div>
-                    </div>
-                    <div class="kol2">
-                        <div class="innhold">
-                        <label class="label-i1" for="serviceFerdigDato">Service ferdig dato:</label>
-                        <input class="input-skjema" type="date" id="serviceFerdigDato" name="serviceFerdigDato" asp-for="serivceFerdigDato" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="Produktmottatdato">Produkt mottat dato:</label>
-                        <input class="input-skjema" type="date" id="Produktmottatdato" name="Produktmottatdato" asp-for="produktMotattDato" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="arbeidstimer">Arbeidstimer:</label>
-                        <input class="input-skjema" type="number" id="arbeidstimer" name="arbeidstimer" asp-for="Arbeidstimer" />
-                        </div>
-                        <div class="innhold">
-                        <label class="label-i1" for="forsendelsemåte">Forsendelsemåte:</label>
-                        <input class="input-skjema" type="text" id="forsendelsemåte" name="forsendelsemåte" asp-for="forsendelsemåte" />
-                        </div>
-
-                        <!-- Må kanskje lage model element for dette -->
-                        <div class="innhold">
-                        <label class="label-i1" for="signRep">Sign.Reperatør:</label>
-                        <input class="input-skjema" type="text" id="signRep" name="signReperatør" />
-                        </div>
-                    </div>
+            <!-- her skal serviceordre komme opp-->
+        </div>
+        <div class="card">
+            <div class="form-row my-0">
+                <div class="form-group col-md-12">
+                    <label for="reperasjonsbeskrivelse">Reperasjons beskrivelse:</label>
+                    <textarea class="form-control" id="reperasjonsbeskrivelse" placeholder="Skriv her..." asp-for="reperasjonsbeskrivelse"></textarea>
                 </div>
             </div>
-            <div class="buttons">
-                <div class="send">
-                    <input type="submit" id="submit" value="Endre">
-                </div>
-                <div class="send">
-                    <input type="submit" id="submit" value="Lagre">
+            <div class="form-row my-0">
+                <div class="form-group col-md-12">
+                    <label class="label-i" for="MedgåtteDeler">Medgåtte deler:</label>
+                    <textarea class="form-control" id="MedgåtteDeler" placeholder="Skriv her..." asp-for="medgåtteDeler"> </textarea>
                 </div>
             </div>
-        }
-    </div>
-
+            <div class="form-row my-0">
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="ferdigDato">Ferdigstilt dato:</label>
+                    <input type="date" class="form-control" id="ferdigDato" asp-for="ferdigstiltdato">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="serviceFerdigDato">Service ferdig dato:</label>
+                    <input type="date" class="form-control" id="serviceFerdigDato" asp-for="serivceFerdigDato">
+                </div>
+            </div>
+            <div class="form-row my-0">
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="avtaltLeveringDato">Avtalt levering dato:</label>
+                    <input type="date" class="form-control" id="avtaltLeveringDato" asp-for="avtaltLeveringDato">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="Produktmottatdato">Produkt mottat dato:</label>
+                    <input type="date" class="form-control" id="Produktmottatdato" asp-for="produktMotattDato">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="booketServiceUke">Booket serivce uke:</label>
+                    <input type="number" class="form-control" id="booketServiceUke" asp-for="booketServiceUke">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="arbeidstimer">Arbeidstimer:</label>
+                    <input type="number" class="form-control" id="arbeidstimer" asp-for="Arbeidstimer">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="utskiftetDelerRetur">Utskiftet deler returnert:</label>
+                    <input type="text" class="form-control" id="utskiftetDelerRetur" asp-for="utskiftetDelerRetur">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="forsendelsemåte">Forsendelsemåte:</label>
+                    <input type="text" class="form-control" id="forsendelsemåte" required asp-for="forsendelsemåte">
+                </div>
+            </div>
+            <!-- litt usikker akkurat nå hvordan sign. kunde og reperatør skal ordnes akkurat nå.-->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="signKunde">Sign. Kunde:</label>
+                    <input type="text" class="form-control" id="signKunde">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="signRep">Sign. Reperatør:</label>
+                    <input type="text" class="form-control" id="signRep">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Send inn</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+        </div>
+    </form>
+</div>
 

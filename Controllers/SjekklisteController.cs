@@ -45,42 +45,6 @@ namespace Prosjekt.Controllers
 
             return RedirectToAction("Sjekklist");
         }
-        [HttpPost]
-        public IActionResult MekaniskForm(SjekklisteModel Sjekkliste)
-        {
-            //Funskjonalt er avhengig av database for å sende den inn som blir lagret
-            if (!ModelState.IsValid) return View();
 
-            return RedirectToAction("Sjekklist");
-
-        }
-        [HttpPost]
-        public IActionResult HydrauliskForm(SjekklisteModel Sjekkliste)
-        {
-            //Funskjonalt er avhengig av database for å sende den inn som blir lagret
-            if (!ModelState.IsValid) return View();
-
-            return RedirectToAction("Sjekklist");
-
-        }
-        [HttpPost]
-        public IActionResult ElektroForm(SjekklisteModel Sjekkliste)
-        {
-            //Funskjonalt er avhengig av database for å sende den inn som blir lagret
-            if (!ModelState.IsValid) return View();
-
-            return RedirectToAction("Sjekklist");
-
-        }
-
-        [HttpPost]
-        public IActionResult SignForm(SjekklisteModel Sjekkliste)
-        {
-            //Funskjonalt er avhengig av database for å sende den inn som blir lagret
-            if (!ModelState.IsValid) return View();
-
-            return RedirectToAction("Sjekklist");
-
-        }
     }
 }
