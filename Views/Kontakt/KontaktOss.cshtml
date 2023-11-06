@@ -12,8 +12,10 @@
         <div class="m-3 text-center">
             <h1>Kontakt oss</h1>
         </div>
-        <!-- TODO Fikse på form, må midtstilt-->
-        <form method="post" class="w-75 m-auto" asp-controller="Kontakt" asp-action="SumbitKontaktForm">
+    @using (Html.BeginForm("SumbitKontaktForm", "Kontakt"))
+                    {
+                            @Html.AntiForgeryToken()
+        <div class="w-75 m-auto">
         <div class=" d-flex flex-row w-100">
             <div class="col">
                 <div class="form-group">
@@ -101,8 +103,8 @@
             </div>
             </div>
             </div>
-        </form>
-
+        </div>
+        }
 </div>
 
 <div class="container vw-100">
