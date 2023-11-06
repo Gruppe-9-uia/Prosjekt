@@ -1,0 +1,90 @@
+﻿body, html {
+    height: 100%;
+    background-color: #FBFBFF;
+}
+
+.navbar, .footer {
+    background-color: #060623 !important;
+}
+
+footer.border-top.text-white.py-4 {
+    background-color: #060623 !important;
+}
+
+
+.border-bottom {
+    border-bottom: solid 4px #FF6700!important;
+}
+
+.border-top {
+    border-top: solid 4px #FF6700 !important;
+}
+a:link {
+    text-decoration: none;
+}
+
+
+
+.hamburger {
+    display: grid;
+    position: relative;
+    height: 45px;
+    margin: 10px;
+    z-index: 121;
+    cursor: pointer;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+}
+
+    .hamburger span {
+        width: 40px;
+        height: 5px;
+        margin-top: 7px;
+        background-color: #FFA500;
+        border-radius: 3px;
+        transition: 0.2s ease-in-out;
+    }
+
+#toggle {
+    display: none;
+}
+
+    #toggle:checked + label .hamburger .top {
+        transform: rotate(-45deg);
+        margin-top: 22.5px;
+    }
+
+    #toggle:checked + label .hamburger .meat {
+        transform: rotate(45deg);
+        margin-top: -5px;
+    }
+
+    #toggle:checked + label .hamburger .bottom {
+        transform: scale(0);
+    }
+
+.menu {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    padding-top: 175px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 120;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s;
+    overflow-y: auto;
+    list-style: none;
+}
+
+#toggle:checked ~ .menu {
+    right: 0;
+}
+
+
+

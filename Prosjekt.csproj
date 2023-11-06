@@ -16,13 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\css\FAQ.css" />
-    <None Include="wwwroot\css\HomePage.css" />
-    <None Include="wwwroot\css\notifikasjon.css" />
     <None Include="wwwroot\css\serviceordre.css" />
     <None Include="wwwroot\css\serviceskjema.css" />
-    <None Include="wwwroot\css\Login.css" />
-    <None Include="wwwroot\css\Arbeidsdokument.css" />
   </ItemGroup>
 
   <ItemGroup>
