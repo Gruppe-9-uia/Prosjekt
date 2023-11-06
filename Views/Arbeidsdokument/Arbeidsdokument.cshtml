@@ -1,131 +1,132 @@
-﻿@model ArbeidsdokumentModell;
+﻿
 @{
     ViewData["Title"] = "Arbeidsdokument";
 }
 
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <table tableHeader>
-        <thead>
-            <tr>
-                <th>
-                    BOOKET
-                    SERVICE
-                    TIL UKE:
-                </th>
-                <th>
-                    Hendelse
-                    mottat og reg.
-                    ddmmåå
-                </th>
-                <th>Ordrenr.</th>
-                <th>Produkttype</th>
-                <th>
-                    Beskrivelse fra
-                    kunde
-                </th>
-                <th>Kundeinfo</th>
-                <th>
-                    Avtalt levering
-                    ddmmåå
-                </th>
-                <th>
-                    Produkt mottatt
-                    ddmmåå
-                </th>
-                <th>
-                    Avtalt
-                    ferdigstillelse
-                    innen ddmmåå
-                </th>
-                <th>
-                    Service ferdig
-                    ddmmåå
-                </th>
-                <th>
-                    Antall timer på
-                    utført service
-                </th>
-                <th>
-                    Service
-                    skjema
-                    JA/NEI
-                </th>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeidsdokument</title>
+    <link rel="stylesheet" href="~/css/arbeidsdokument.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arbeidsdokument</h1>
+        <input type="text" id="searchInput" placeholder="...">
+        <button id="søkSearch">søk</button>
 
-            </tr>
-        </thead>
-        <tbody>
 
-            <tr>
-                <td>Uke 1</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 2</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 3</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 4</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Uke 5</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <!-- Fortsett med resten av ukene -->
-        </tbody>
-    </table>
-</div>
+
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Booket service uke</th>
+                    <th>Avtalt levering ddmmåå</th>
+                    <th>Hendelse mottat og reg. ddmmåå</th>
+                    <th>Ordrenr.</th>
+                    <th>Produkttype</th>
+                    <th>Beskrivelse fra kunde</th>
+                    <th>Kundeinfo</th>
+                    <th>Produkt mottatt ddmmåå</th>
+                    <th>Avtalt ferdigstillelse innen ddmmåå</th>
+                    <th>Service ferdig ddmmåå</th>
+                    <th>Antall timer på utført service</th>
+                    <th>Service skjema JA/NEI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Legg til serviceordredata her -->
+                <tr>
+                    <td>44</td>
+                    <td>02-11-23</td>
+                    <td>01-11-23</td>
+                    <td>12345</td>
+                    <td>Produkt A</td>
+                    <td>Beskrivelse av ordren fra kunde A</td>
+                    <td>Kundeinfo A</td>
+                    <td>03-11-23</td>
+                    <td>05-11-23</td>
+                    <td>06-11-23</td>
+                    <td>2 timer</td>
+                    <td>JA</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>02-11-23</td>
+                    <td>01-11-23</td>
+                    <td>12345</td>
+                    <td>Produkt B</td>
+                    <td>Beskrivelse av ordren fra kunde B</td>
+                    <td>Kundeinfo A</td>
+                    <td>03-11-23</td>
+                    <td>05-11-23</td>
+                    <td>06-11-23</td>
+                    <td>8 timer</td>
+                    <td>NEI</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <!-- kode for søkerfelt-->
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const søkSearch = document.getElementById("søkSearch");
+
+            søkSearch.addEventListener("click", function () {
+                searchInput.value = "";
+                søkSearch.style.display = "none";
+                søkTable();
+            });
+
+            searchInput.addEventListener("input", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+                søkSearch.style.display = searchTerm.length > 0 ? "inline" : "none";
+                filterTable(searchTerm);
+            });
+
+            function søkTable() {
+                const tableRows = document.querySelectorAll("tbody tr");
+                tableRows.forEach((row) => {
+                    row.style.display = "";
+                    row.querySelectorAll("td").forEach((cell) => {
+                        cell.innerHTML = cell.textContent;
+                    });
+                });
+            }
+
+            function filterTable(searchTerm) {
+                const tableRows = document.querySelectorAll("tbody tr");
+                tableRows.forEach((row) => {
+                    let hasMatch = false;
+                    row.querySelectorAll("td").forEach((cell) => {
+                        const cellText = cell.textContent.toLowerCase();
+                        if (cellText.includes(searchTerm)) {
+                            hasMatch = true;
+                            const highlightedText = cellText.replace(new RegExp(searchTerm, "gi"), (match) => {
+                                return `<span class="highlight">${match}</span>`;
+                            });
+                            cell.innerHTML = highlightedText;
+                        } else {
+                            cell.innerHTML = cellText;
+                        }
+                    });
+                    row.style.display = hasMatch ? "" : "none";
+                });
+            }
+        });</script>
+
+
+
+</body>
+</html>
