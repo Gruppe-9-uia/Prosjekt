@@ -1,4 +1,4 @@
-﻿/* highlighting search terms */
+/* highlighting search terms /
 .highlight {
     background-color: #D2F69C;
     font-weight: bold;
@@ -9,11 +9,9 @@
     margin: 20px;
 }
 
-/* knappene */
+/ knappene */
 .btn-primary {
     background-color: #C22323;
     color: #FEFEFE;
     padding: 5px 10px;
 }
-
-

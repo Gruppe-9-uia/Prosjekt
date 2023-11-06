@@ -1,18 +1,73 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-        
-        <section class="header">      
-            <div class="text-box">
-                <h1>Verdenskjent Varemerke</h1>
-                <p>
-                    IGLAND er et verdenskjent varemerke innen utstyr til landbruk og skogbruk.
-                    <br>IGLAND produktene omfatter skogsvinsjer, tømmervogner, utstyr for snørydding,
-                    løft og vedlikehold til vei.
-                </p>
-                <a href="" class="hero-btn">Mer Informasjon</a>
+
+        <head>
+            <!-- Link to Bootstrap 5.3.2 CSS -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+            <!-- Link to Bootstrap 5.3.2 JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+            <h1 class="text-center mb-4">Verdenskjente Varemerker</h1>
+
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/Images/homeTrygg.png" alt="Trygg" class="d-block w-100 carousel-image">
+                        <div class="carousel-caption">
+                            <h3>Trygg</h3>
+                            <!-- <p>Trygg</p> -->
+                            <a href="Om_Oss.cshtml" class="btn btn-primary">Mer Informasjon</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="~/Images/homeIgland.png" alt="Igland" class="d-block w-100 carousel-image">
+                        <div class="carousel-caption">
+                            <h3>Igland</h3>
+                            <!-- <p>Igland</p> -->
+                            <a href="Om_Oss.cshtml" class="btn btn-primary">Mer Informasjon</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="~/Images/homeFram.png" alt="Fram" class="d-block w-100 carousel-image">
+                        <div class="carousel-caption">
+                            <h3>Fram</h3>
+                            <!-- <p>Fram</p> -->
+                            <a href="Om_Oss.cshtml" class="btn btn-primary">Mer Informasjon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
             </div>
-        </section>
+
+            <script>
+                // JavaScript Code
+                $(document).ready(function () {
+                    $('#myCarousel').carousel();
+                });
+            </script>
+        </body>
 
 
 

@@ -1,4 +1,4 @@
-﻿@import "bourbon";
+@import "bourbon";
 
 body {
     background: #eee !important;
@@ -60,4 +60,3 @@ button.btn {
 .form-signin-heading {
     text-align: center;
 }
-
