@@ -1,23 +1,25 @@
-﻿.faq-container {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 20px auto;
+﻿/*
+Style the FAQ section's background and padding 
+.faq-container {
+    background-color: #f4f4f4;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.faq-item {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-.question {
+Style the FAQ item headers and buttons 
+.accordion-button {
+    background-color: #3498db;
+    color: #fff;
     font-weight: bold;
-    cursor: pointer;
+    text-transform: uppercase;
 }
 
-.answer {
-    display: none;
-}
+    .accordion-button:hover {
+        background-color: #2980b9;
+    }
+
+Style the FAQ item content 
+.accordion-body {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}*/
