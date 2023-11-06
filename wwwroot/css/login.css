@@ -1,4 +1,17 @@
 ﻿
+body {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-image: url('https://cmspro.nosted.com/wp-content/uploads/igland.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .login-container {
     background-color: #f4f4f4dc;
     padding: 70px;

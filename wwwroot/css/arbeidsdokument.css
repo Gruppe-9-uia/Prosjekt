@@ -1,5 +1,13 @@
 ﻿
-.tableHeader {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
     background-color: #1A5760;
     padding: 20px;
     display: flex;
@@ -24,10 +32,10 @@ nav ul {
 
 .wrapper {
     display: flex;
-    justify-content: center; /* Horisontalt sentrering /
-    align-items: center; / Vertikalt sentrering /
-    height: calc(100vh - 500px); / 100vh er hele skjermens høyde, - 100px for å plassere tabellen litt lenger ned /
-    padding-top: 50px; / Skyver tabellen 50px nedover */
+    justify-content: center; /* Horisontalt sentrering */
+    align-items: center; /* Vertikalt sentrering */
+    height: calc(100vh - 500px); /* 100vh er hele skjermens høyde, - 100px for å plassere tabellen litt lenger ned */
+    padding-top: 50px; /* Skyver tabellen 50px nedover */
 }
 
 
