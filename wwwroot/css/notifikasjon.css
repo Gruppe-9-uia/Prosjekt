@@ -1,99 +1,33 @@
-﻿/* Generell stil for kortet */
-.card {
-    margin-top: 30px;
-    border-radius: 8px;
-}
-
-.card-header {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.card-body {
-    padding: 20px 20px; 
-}
-
-/* Stil for formen */
-.form-label {
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.form-control {
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-size: 14px;
-    margin-bottom: 15px;
+﻿
+.mb-cus {
+    margin-bottom: 8rem;
+    background-color: white !important;
 }
 
 
-.btn {
-    background-color: orange;
-    margin-top: 24px;
-    border: none; /*hjelper å se penere ut*/
-    padding: 8px 15px;
-    color: white;
+.cus-bg {
+    background-color: #dcdcdc !important;
+}
+
+
+.cus-button {
+    background-color: darkorange;
+    color: #FFFFFF;
     cursor: pointer;
-    border-radius: 10px;
 }
 
 
-.alert .mb-0 {
-    text-align: left;
-    margin-top: 25px;
-}
-
-/* Spesifikk stil for notifikasjon */
+/* for notifikasjon */
 
 
-.alert {
-    padding: 15px;
+.alert { /*bakgrunnen*/
     border: 3px solid #e0e0e0;
-    background-color: white;
-    border-radius: 4px;
-    margin-top: 25px; /* legger til en overlegen margin */
-    font-size: 14px;
 }
 
 
-
- .alert .badge {
-        padding: 3px 8px;
-        font-size: 12.5px;
-        border-radius: 5px;
-
-    }
-
-
-.icon-size {
-    font-size: 15px; /* eller hvilken som helst annen størrelse du ønsker */
-}
-
-.division-icon {
-    font-size: 15px; /* setter ikonstørrelsen til 24px */
-    margin-left: 10px; /* legger til litt høyre margin */
-}
-
-
-
-.alert .btn-close {
-        margin-left: 8px; /* legger til litt plass til venstre for lukkeknappen */
-    }
-
-
-    /*bokmerke*/
+/*bokmerke*/
 
 
 .bi-bookmark-fill {
     color: orange !important; /* riktig */
-    font-size: 16px;
-}
-
-
-.form-label, select.form-control, input.form-control {
-    font-family: sans-serif;
-}
-
-.division-icon {
-    font-family: sans-serif;
 }
