@@ -7,67 +7,102 @@
     <!-- TODO legg til bilde -->
 </div>
 
-<div class="container w-75 align-items-center">
+<div class="container">
 
         <div class="m-3 text-center">
             <h1>Kontakt oss</h1>
         </div>
-        <form method="post" class="form-inline" asp-controller="Kontakt" asp-action="SumbitKontaktForm">
-
-            <div class="row m-3">
-                <div class="col">
-                    <div class="form-group">
-                        <label for="navn"> 
-                            <h5>Navn</h5>
-                        </label>
-                    <input type="text" class="form-control" id="navn" asp-for="navn" placeholder="Fult navn" required>
-                    </div>
+        <!-- TODO Fikse på form, må midtstilt-->
+        <form method="post" class="w-75 m-auto" asp-controller="Kontakt" asp-action="SumbitKontaktForm">
+        <div class=" d-flex flex-row w-100">
+            <div class="col">
+                <div class="form-group">
+                    <label for="navn">
+                        <h5>Navn</h5>
+                    </label>
                 </div>
-
-                <div class="col">
+            </div>
+            <div class="col">
                     <div class="form-group">
                         <label for="telefon">
                             <h5>Telefon</h5>
                         </label>
+                        </div>
+                </div>
+            </div>
+
+        <div class=" d-flex flex-row w-100 p-0">
+            <div class="col">
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="navn" asp-for="navn" placeholder="Fult navn" required>
+                    </div>
+                </div>
+
+            <div class="col align-items-center">
+                    <div class="form-group">
                     <input type="text" class="form-control" id="telefon" asp-for="telefon" placeholder="+47 777777" required>
                     </div>
                 </div>
             </div>
-
-            <div class="row m-3">
-                <div class="col">
+        <div class=" d-flex flex-row w-100">
+            <div class="col">
+                <div class="form-group">
+                    <label for="emial">
+                        <h5>Email</h5>
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-gr">
                     <div class="form-group">
                         <label for="email">
-                            <h5>Email</h5>
+                            <h5>Land</h5>
                         </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class=" d-flex flex-row w-100 p-0 mb-3">
+            <div class="col align-items-center">
+                    <div class="form-group">
                     <input type="text" class="form-control" id="email" asp-for="email" placeholder="example@gmail.com" required>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="form-group">
-                        <label for="region">
-                            <h5>Land</h5>
-                        </label>
                     <input type="text" class="form-control" id="region" asp-for="land" placeholder="Norge" required>
                     </div>
                 </div>
             </div>
 
-            <div class="row m-3">
-                <div class="form-group">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="form-group text-center m-auto">
                     <label for="melding">
                         <h5>Melding</h5>
                     </label>
-                    <textarea class="form-control" rows="5" id="melding" asp-for="melding" required></textarea>
                 </div>
             </div>
-        <div class="row m-3">
+        </div>
+        <div class=" d-flex flex-row w-100 p-0 justify-content-md-center">
+            <div class="col align-items-center">
+            <div class="form-group">
+                    <textarea class="form-control  align-items-center w-100" rows="5" id="melding" asp-for="melding" required></textarea>
+                </div>
+            </div>
+            </div>
+        <div class=" d-flex flex-row w-100 m-3">
+            <div class="col align-items-center">
             <div class="d-grid gap-2 m-auto w-25">
                 <button class="btn btn-primary font-weight-bold" type="submit">Send</button>
             </div>
             </div>
+            </div>
         </form>
+
 </div>
 
 <div class="container vw-100">
@@ -78,7 +113,7 @@
 
     <div class="d-flex flex-wrap float-left">
         
-        <div class="row vw-100">
+        <div class="row w-100">
             <hr class="mt-2 mb-3" />
             <h3>Mandal, Norge (hovedkontor)</h3>
             <div>
@@ -103,7 +138,7 @@
             </div>
         </div>
 
-        <div class="row vw-100">
+        <div class="row w-100">
             <hr class="mt-2 mb-3" />
             <h3>Igland verksted og servicesenter, Mandal</h3>
             <div>
@@ -128,7 +163,7 @@
             </div>
         </div>
 
-        <div class="row vw-100">
+        <div class="row w-100">
             <hr class="mt-2 mb-3" />
             <h3>Kragerø, Norge</h3>
             <div>
@@ -153,7 +188,7 @@
             </div>
         </div>
 
-        <div class="row vw-100">
+        <div class="row w-100">
             <hr class="mt-2 mb-3" />
             <h3>Utena, Lithuania</h3>
             <div>
@@ -178,7 +213,7 @@
             </div>
         </div>
 
-        <div class="row vw-100">
+        <div class="row w-100">
             <hr class="mt-2 mb-3" />
             <h3>USA</h3>
             <div>
@@ -203,7 +238,7 @@
             </div>
         </div>
 
-        <div class="row vw-100">
+        <div class="row w-100">
             <hr class="mt-2 mb-3" />
             <h3>Quebec, Canada</h3>
             <div>
