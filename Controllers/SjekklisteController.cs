@@ -19,7 +19,7 @@ namespace Prosjekt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> GenerrellForm(SjekklisteModel addSjekkliste)
+        public async Task<IActionResult> GenerrellForm(ChecklistModel addSjekkliste)
         {
             //For teste formål, blir fjerne når databasen blir lagt til
 
@@ -28,12 +28,12 @@ namespace Prosjekt.Controllers
             //if (!ModelState.IsValid) { return View();
             try
             {
-                var sjekkliste = new SjekklisteModel()
+                var sjekkliste = new ChecklistModel()
                 {
                     DocID_str = addSjekkliste.DocID_str,
                     SerialNr_str = addSjekkliste.SerialNr_str
                 };
-                _context.Sjekkliste.AddAsync(sjekkliste);
+                _context.Checklist.AddAsync(sjekkliste);
                 _context.SaveChangesAsync(); 
             }
             catch (Exception ex)

@@ -3,7 +3,7 @@ using System.Reflection.Metadata;
 
 namespace Prosjekt.Models
 {
-    public class SjekklisteModel
+    public class ChecklistModel
     {
         [Required]
         public string DocID_str { get; set; }

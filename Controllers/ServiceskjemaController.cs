@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Prosjekt.Models.ServiceSkjema;
 
 namespace Prosjekt.Controllers
 {
@@ -12,7 +11,7 @@ namespace Prosjekt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(ServiceSkjemaModell model)
+        public IActionResult Save(ServiceFormModel model)
         {
             if (ModelState.IsValid)
             {

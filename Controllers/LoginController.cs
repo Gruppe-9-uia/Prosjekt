@@ -13,14 +13,14 @@ namespace Prosjekt.Controllers
 
         // POST
         [HttpPost]
-        public IActionResult Login(LoginModel model)
+        public IActionResult Login(EmployeeModel model)
         {
             if (ModelState.IsValid)
 
             {
                 // (logikk for å linke brukernavn og passord til en database her)
 
-                if (model.Username == "validUsername" && model.Password == "validPassword")
+                if (model.Email_str == "validUsername" && model.Password_str == "validPassword")
                 {
 
                     // Logg inn suksess, følg brukeren til hjemsiden

@@ -12,7 +12,7 @@ namespace Prosjekt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(ServiceOrdreModell model)
+        public IActionResult Save(ServiceOrdreModel model)
         {
             if (ModelState.IsValid)
             {
