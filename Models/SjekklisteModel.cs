@@ -5,8 +5,9 @@ namespace Prosjekt.Models
 {
     public class SjekklisteModel
     {
-        public string Document_nr_str { get; set; }
-        public string Serial_number_str { get; set; }
+        [Required]
+        public string DocID_str { get; set; }
+        public string SerialNr_str { get; set; }
         public string Type_str { get; set; }
         public string Procedure_str { get; set; }
         public DateOnly Starting_Date { get; set; }

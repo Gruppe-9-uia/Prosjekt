@@ -7,6 +7,10 @@ namespace Prosjekt.Controllers
 {
     public class SjekklistController : Controller
     {
+        private readonly ProsjektContext _context;
+        public SjekklistController(ProsjektContext _context) {
+            this._context = _context;
+        }  
 
         public IActionResult Sjekklist()
         {
@@ -14,36 +18,30 @@ namespace Prosjekt.Controllers
         }
 
         [HttpPost]
-        public IActionResult GenerrellForm(SjekklisteModel Sjekkliste)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> GenerrellForm(SjekklisteModel addSjekkliste)
         {
             //For teste formål, blir fjerne når databasen blir lagt til
-            Sjekkliste.Document_nr_str = "IG-IN-104-01-01";
-            Sjekkliste.Starting_Date = new DateOnly(2023, 10, 24);
-            Sjekkliste.Serial_number_str = "77777-test";
-            Sjekkliste.Prepared_by_str = "JBS";
-            Sjekkliste.Procedure_str = "Servicesjekkliste vinsjer";
 
             //Funskjonalt er avhengig av database for å sende den inn som blir lagret
             // Vil ikke kjøre det sinde er mest sannsynlig null verdier i modellen, 
             //if (!ModelState.IsValid) { return View();
             try
             {
-                var Type_str = Sjekkliste.Type_str;
-                var xx_Bar_str = Sjekkliste.xx_Bar_str;
-                var Test_winch = Sjekkliste.Test_winch;
-                var Brake_force = Sjekkliste.Brake_force;
-                var Traction_force_Kn = Sjekkliste.Traction_force_Kn;
-                var comment_str = Sjekkliste.comment_str;
-
-                //test om får hentet data, skal fjernes
-                Console.WriteLine(Type_str);
+                var sjekkliste = new SjekklisteModel()
+                {
+                    DocID_str = addSjekkliste.DocID_str,
+                    SerialNr_str = addSjekkliste.SerialNr_str
+                };
+                _context.Sjekkliste.AddAsync(sjekkliste);
+                _context.SaveChangesAsync(); 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
 
-            return RedirectToAction("Sjekklist");
+            return RedirectToAction("addSjekkliste");
         }
 
     }

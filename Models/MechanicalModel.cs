@@ -4,7 +4,6 @@ namespace Prosjekt.Models
 {
     public class MechanicalModel
     {
-        [Required]
         public string Document_nr_str { get; set; }
         public string Department_ID { get; set; } = string.Empty;
         public string Clutch_Plate { get; set; }
