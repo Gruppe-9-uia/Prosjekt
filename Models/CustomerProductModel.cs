@@ -3,10 +3,10 @@
     public class CustomerProductModel
     {
         [Required]
-        public string SerialNr_str { get; set; }
+        public ProductModel Product { get; set; }
         [Required]
-        public int CustomerID_int { get; set; }
+        public CustomerModel Customer { get; set; }
         [Required]
-        public int WarrantyID_int { get;set; }
+        public WarrantyModel Warranty { get; set; }
     }
 }

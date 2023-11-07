@@ -8,5 +8,7 @@
         public int FormID_int { get; set; }
         [Required]
         public int Quantity_int { get; set; }
+        [Required]
+        public PartsModel Parts { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model Prosjekt.Models.ServiceOrdre.ServiceOrdreModel;
+﻿@model Prosjekt.Models.ServiceOrderModel;
 @{
     ViewData["Title"] = "Serviceordre";
 }
@@ -10,66 +10,74 @@
 
         <div class="form-row">
             <div class="form-group col-sm-6">
-                <label for="produkttype">Produkttype:</label>
-                <input type="text" class="form-control" id="produkttype" asp-for="produkttype" placeholder="Produkttype">
+                <label for="Product_Type_str">Produkttype:</label>
+                <input type="text" class="form-control" id="Product_Type_str" asp-for="CustomerProductModel.Product.Product_Type_str" placeholder="Produkttype">
             </div>
             <div class="form-group col-sm-6">
-                <label for="mottattDato">Motatt dato:</label>
-                <input type="date" class="form-control" id="mottattDato" asp-for="mottattDato">
+                <label for="Received_Date">Motatt dato:</label>
+                <input type="date" class="form-control" id="Received_Date" asp-for="Received_Date">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="årsmodell">Årsmodell:</label>
-                <input type="text" class="form-control" id="årsmodell" asp-for="årsmodell" placeholder="Årsmodell">
+                <label for="Model_Year">Årsmodell:</label>
+                <input type="text" class="form-control" id="Model_Year" asp-for="CustomerProductModel.Product.Model_Year" placeholder="Årsmodell">
             </div>
             <div class="form-group col-md-6">
-                <label for="serienummer">Serienummer:</label>
-                <input type="text" class="form-control" id="serienummer" asp-for="serienummer" placeholder="Serienummer">
+                <label for="SerialNr_str">Serienummer:</label>
+                <input type="text" class="form-control" id="SerialNr_str" asp-for="CustomerProductModel.Product.SerialNr_str" placeholder="Serienummer">
             </div>
         </div>
         <div class="form-group">
-            <label for="navn">Fullt navn:</label>
-            <input type="text" class="form-control" id="navn" asp-for="fulltNavn" placeholder="Fullt navn">
+            <label for="fornavn">Fornavn:</label>
+            <input type="text" class="form-control" id="fornavn" asp-for="CustomerModel.FirstName_str" placeholder="Fornavn">
+        </div>
+        <div class="form-group">
+            <label for="Ettternavn">Etternavn:</label>
+            <input type="text" class="form-control" id="Ettternavn" asp-for="CustomerModel.LastName_str" placeholder="Ettternavn">
         </div>
         <div class="form-group">
             <label for="adresse">Adresse:</label>
-            <input type="text" class="form-control" id="adresse" asp-for="adresse" placeholder="Adresse">
+            <input type="text" class="form-control" id="adresse" asp-for="CustomerModel.Street_Address_str" placeholder="Adresse">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="sted">Sted:</label>
-                <input type="text" class="form-control" id="sted" asp-for="sted" placeholder="Sted">
+                <label for="Land">Land:</label>
+                <input type="text" class="form-control" id="Land" asp-for="CustomerModel.Address.Country_str" placeholder="Land">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="By">By:</label>
+                <input type="text" class="form-control" id="By" asp-for="CustomerModel.Address.City_str" placeholder="By">
             </div>
             <div class="form-group col-md-6">
                 <label for="postnummer">Postnummer:</label>
-                <input type="number" class="form-control" id="postnummer" asp-for="postnummer" placeholder="Postnummer">
+                <input type="number" class="form-control" id="postnummer" asp-for="CustomerModel.Address.PostalCode_str" placeholder="Postnummer">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="epost">E-post:</label>
-                <input type="email" class="form-control" id="epost" asp-for="epost" placeholder="E-post">
+                <input type="email" class="form-control" id="epost" asp-for="CustomerModel.Email_str" placeholder="E-post">
             </div>
             <div class="form-group col-md-6">
                 <label for="mobilnummer">Mobilnummer:</label>
-                <input type="tel" class="form-control" id="mobilnummer" asp-for="mobilnummer" placeholder="Mobilnummer">
+                <input type="tel" class="form-control" id="mobilnummer" asp-for="CustomerModel.Phone_str" placeholder="Mobilnummer">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="garanti">Garanti:</label>
-                <input type="text" class="form-control" id="garanti" asp-for="garanti" placeholder="Garanti">
+                <label for="WarrantyName_str">Garanti:</label>
+                <input type="text" class="form-control" id="WarrantyName_str" asp-for="CustomerProductModel.Warranty.WarrantyName_str" placeholder="Garanti">
             </div>
             <div class="form-group col-md-6">
-                <label for="service">Service/rep:</label>
-                <input type="text" class="form-control" id="service" asp-for="service_rep" placeholder="Service/rep">
+                <label for="Order_type_str">Service/rep:</label>
+                <input type="text" class="form-control" id="Order_type_str" asp-for="Order_type_str" placeholder="Service/rep">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="beskrivelse">Hva som er avtalt med kunden:</label>
-                <textarea class="form-control" id="beskrivelse" asp-for="avtaleBeskrivelse" placeholder="Skriv her..."></textarea>
+                <textarea class="form-control" id="beskrivelse" asp-for="Description_From_Customer_str" placeholder="Skriv her..."></textarea>
             </div>
         </div>
         <div class="d-flex justify-content-center">

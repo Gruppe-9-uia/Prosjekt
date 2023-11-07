@@ -1,4 +1,4 @@
-﻿@model Prosjekt.Models.ServiceSkjema.ServiceFormModel;
+﻿@model Prosjekt.Models.ServiceFormModel;
 @{
     ViewData["Title"] = "Serviceskjema";
 }
@@ -23,53 +23,53 @@
             <div class="form-row my-0">
                 <div class="form-group col-md-12">
                     <label for="reperasjonsbeskrivelse">Reperasjons beskrivelse:</label>
-                    <textarea class="form-control" id="reperasjonsbeskrivelse" placeholder="Skriv her..." asp-for="reperasjonsbeskrivelse"></textarea>
+                    <textarea class="form-control" id="reperasjonsbeskrivelse" placeholder="Skriv her..." asp-for="Repairdescription_str"></textarea>
                 </div>
             </div>
             <div class="form-row my-0">
                 <div class="form-group col-md-12">
                     <label class="label-i" for="MedgåtteDeler">Medgåtte deler:</label>
-                    <textarea class="form-control" id="MedgåtteDeler" placeholder="Skriv her..." asp-for="medgåtteDeler"> </textarea>
+                    <textarea class="form-control" id="MedgåtteDeler" placeholder="Skriv her..." asp-for="UsedPartModel.Parts.PartName_str"> </textarea>
                 </div>
             </div>
             <div class="form-row my-0">
                 <div class="form-group col-md-6">
                     <label class="label-i" for="ferdigDato">Ferdigstilt dato:</label>
-                    <input type="date" class="form-control" id="ferdigDato" asp-for="ferdigstiltdato">
+                    <input type="date" class="form-control" id="ferdigDato" asp-for="ServiceCompleted_date">
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="label-i" for="serviceFerdigDato">Service ferdig dato:</label>
-                    <input type="date" class="form-control" id="serviceFerdigDato" asp-for="serivceFerdigDato">
+                    <label class="label-i" for="ServiceCompleted_date">Service ferdig dato:</label>
+                    <input type="date" class="form-control" id="ServiceCompleted_date" asp-for="ServiceCompleted_date">
                 </div>
             </div>
             <div class="form-row my-0">
                 <div class="form-group col-md-6">
-                    <label class="label-i" for="avtaltLeveringDato">Avtalt levering dato:</label>
-                    <input type="date" class="form-control" id="avtaltLeveringDato" asp-for="avtaltLeveringDato">
+                    <label class="label-i" for="AgreedDelivery_date">Avtalt levering dato:</label>
+                    <input type="date" class="form-control" id="AgreedDelivery_date" asp-for="AgreedDelivery_date">
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="label-i" for="Produktmottatdato">Produkt mottat dato:</label>
-                    <input type="date" class="form-control" id="Produktmottatdato" asp-for="produktMotattDato">
+                    <label class="label-i" for="BookedServiceWeek_int">Produkt mottat dato:</label>
+                    <input type="date" class="form-control" id="BookedServiceWeek_int" asp-for="BookedServiceWeek_int">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="booketServiceUke">Booket serivce uke:</label>
-                    <input type="number" class="form-control" id="booketServiceUke" asp-for="booketServiceUke">
+                    <label for="BookedServiceWeek_int">Booket serivce uke:</label>
+                    <input type="number" class="form-control" id="BookedServiceWeek_int" asp-for="BookedServiceWeek_int">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="arbeidstimer">Arbeidstimer:</label>
-                    <input type="number" class="form-control" id="arbeidstimer" asp-for="Arbeidstimer">
+                    <label for="Working_Hours_int">Arbeidstimer:</label>
+                    <input type="number" class="form-control" id="Working_Hours_int" asp-for="ServiceFormEmployee.Working_Hours_int">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="utskiftetDelerRetur">Utskiftet deler returnert:</label>
-                    <input type="text" class="form-control" id="utskiftetDelerRetur" asp-for="utskiftetDelerRetur">
+                    <input type="text" class="form-control" id="utskiftetDelerRetur" asp-for="ReplacedPartsReturned.Parts.PartName_str">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="forsendelsemåte">Forsendelsemåte:</label>
-                    <input type="text" class="form-control" id="forsendelsemåte" required asp-for="forsendelsemåte">
+                    <label for="ShippingMethod_str">Forsendelsemåte:</label>
+                    <input type="text" class="form-control" id="ShippingMethod_str" required asp-for="ShippingMethod_str">
                 </div>
             </div>
             <!-- litt usikker akkurat nå hvordan sign. kunde og reperatør skal ordnes akkurat nå.-->

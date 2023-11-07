@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Prosjekt.Models.ServiceOrdre;
 
 namespace Prosjekt.Controllers
 {
@@ -12,7 +11,7 @@ namespace Prosjekt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(ServiceOrdreModel model)
+        public IActionResult Save(ServiceOrderModel model)
         {
             if (ModelState.IsValid)
             {

@@ -1,5 +1,4 @@
 ﻿using Prosjekt.Models;
-using Prosjekt.Models.ServiceOrdre;
 
 namespace Prosjekt.Data
 {
@@ -14,7 +13,7 @@ namespace Prosjekt.Data
         public DbSet<CustomerProductModel> CustomerProduct { get; set; }
         public DbSet<DepartmentModel> Department { get; set; }
         public DbSet<EmployeeModel> Employee { get; set; }
-        public DbSet<ServiceOrdreModel> ServiceOrdre { get; set; }
+        public DbSet<ServiceOrderModel> ServiceOrdre { get; set; }
         public DbSet<ServiceFormModel> ServiceForm { get; set; }
         public DbSet<ServiceOrderServiceformModel> ServiceOrderServiceform { get; set; }
         public DbSet<ServiceFormEmployeeModel> ServiceFormEmployee { get; set; }
