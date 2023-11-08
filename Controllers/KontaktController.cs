@@ -18,7 +18,7 @@ namespace Prosjekt.Controllers
         [HttpPost]
         public IActionResult SumbitKontaktForm(KontaktFormModell kontaktForm)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return View("KontaktOss");
 
             try
             {

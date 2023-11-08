@@ -17,9 +17,9 @@ namespace Prosjekt.Controllers
         }
 
         [HttpPost]
-        public IActionResult registreingFrom()
+        public IActionResult RegistreingFrom()
         {
-            return View();
+            return View("Brukerregistrering");
         }
     }
 }
