@@ -12,15 +12,15 @@
 </head>
 <body>
     <div class="wrapper">
-            @using (Html.BeginForm("GenerrellForm", "Sjekklist"))
+        @using (Html.BeginForm("LoginUser", "Login"))
                     {
                             @Html.AntiForgeryToken()
             <div class="form-signin">
 
             </div>
             <h2 class="form-signin-heading text-center">Velkommen til Nøsted &</h2>
-            <input type="text" class="form-control" name="Brukernavn" placeholder="Email" required="" autofocus="" />
-            <input type="password" class="form-control" name="passord" placeholder="Passord" required="" />
+            <input type="text" class="form-control" name="Brukernavn" placeholder="Email" required="" autofocus="" asp-for="Email_str" />
+            <input type="password" class="form-control" name="passord" placeholder="Passord" required="" asp-for="Password_str" />
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
                     }

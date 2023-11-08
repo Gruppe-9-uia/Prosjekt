@@ -4,7 +4,7 @@
     {
         [Required]
         [Key]
-        public int WarrantyID_int { get; set; }
+        public int ID_int { get; set; }
         [Required]
         public string WarrantyName_str { get; set; }
         [Required]

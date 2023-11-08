@@ -21,7 +21,13 @@ namespace Prosjekt
         {
             services.AddDbContext<ProsjektContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(11, 3, 0)))); // Adjust the version according to your MariaDB version
+                new MySqlServerVersion(new Version(10, 11, 5)),
+                mysqlOptions =>
+                {
+                    mysqlOptions.EnableRetryOnFailure();
+                }));
+
+            // Adjust the version according to your MariaDB version
 
             services.AddControllersWithViews();
             services.AddTransient<ProsjektContext>();

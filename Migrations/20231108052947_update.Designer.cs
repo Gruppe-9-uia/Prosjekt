@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231108021234_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231108052947_update")]
+    partial class update
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -188,17 +188,11 @@ namespace Prosjekt.Migrations
                     b.Property<string>("ChecklistDocID_str")
                         .HasColumnType("varchar(255)");
 
-                    b.Property<int>("EmployeeID_int1")
-                        .HasColumnType("int");
-
                     b.HasKey("DocID_str", "EmployeeID_int");
 
                     b.HasAlternateKey("EmployeeID_int");
 
                     b.HasIndex("ChecklistDocID_str")
-                        .IsUnique();
-
-                    b.HasIndex("EmployeeID_int1")
                         .IsUnique();
 
                     b.ToTable("ChecklistSignature");
@@ -250,9 +244,6 @@ namespace Prosjekt.Migrations
                     b.Property<int>("WarrantyID_int")
                         .HasColumnType("int");
 
-                    b.Property<int>("WarrantyID_int1")
-                        .HasColumnType("int");
-
                     b.HasKey("CustomerID_int", "SerialNr_str");
 
                     b.HasAlternateKey("SerialNr_str");
@@ -260,9 +251,6 @@ namespace Prosjekt.Migrations
                     b.HasAlternateKey("WarrantyID_int");
 
                     b.HasIndex("ProductSerialNr_str")
-                        .IsUnique();
-
-                    b.HasIndex("WarrantyID_int1")
                         .IsUnique();
 
                     b.ToTable("CustomerProduct");
@@ -285,7 +273,7 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Models.EmployeeModel", b =>
                 {
-                    b.Property<int>("EmployeeID_int")
+                    b.Property<int>("ID_int")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -316,7 +304,7 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("EmployeeID_int");
+                    b.HasKey("ID_int");
 
                     b.HasIndex("DepartmentID_int");
 
@@ -564,7 +552,7 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Models.WarrantyModel", b =>
                 {
-                    b.Property<int>("WarrantyID_int")
+                    b.Property<int>("ID_int")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -582,7 +570,7 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("WarrantyID_int");
+                    b.HasKey("ID_int");
 
                     b.ToTable("Warranty");
                 });
@@ -607,7 +595,7 @@ namespace Prosjekt.Migrations
 
                     b.HasOne("Prosjekt.Models.EmployeeModel", "employee")
                         .WithOne("ChecklistSignature")
-                        .HasForeignKey("Prosjekt.Models.ChecklistSignatureModel", "EmployeeID_int1")
+                        .HasForeignKey("Prosjekt.Models.ChecklistSignatureModel", "EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -643,7 +631,7 @@ namespace Prosjekt.Migrations
 
                     b.HasOne("Prosjekt.Models.WarrantyModel", "Warranty")
                         .WithOne("CustomerProduct")
-                        .HasForeignKey("Prosjekt.Models.CustomerProductModel", "WarrantyID_int1")
+                        .HasForeignKey("Prosjekt.Models.CustomerProductModel", "WarrantyID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

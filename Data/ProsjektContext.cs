@@ -50,7 +50,7 @@ namespace Prosjekt.Data
 
             //WarrantyModel
             modelBuilder.Entity<WarrantyModel>()
-              .HasKey(Warranty => Warranty.WarrantyID_int);
+              .HasKey(Warranty => Warranty.ID_int);
 
             modelBuilder.Entity<WarrantyModel>()
                 .HasOne(w => w.CustomerProduct)
@@ -83,7 +83,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<CustomerProductModel>()
                 .HasOne(c => c.Warranty)
                 .WithOne(w => w.CustomerProduct)
-                .HasPrincipalKey<WarrantyModel>(c => c.WarrantyID_int);
+                .HasPrincipalKey<WarrantyModel>(c => c.ID_int);
 
             modelBuilder.Entity<CustomerProductModel>()
                 .HasOne(c => c.Product)
@@ -106,7 +106,7 @@ namespace Prosjekt.Data
 
             //EmployeeModel
             modelBuilder.Entity<EmployeeModel>()
-                .HasKey(Employee => Employee.EmployeeID_int);
+                .HasKey(Employee => Employee.ID_int);
 
             modelBuilder.Entity<EmployeeModel>()
                 .HasOne(e => e.Department)
@@ -203,7 +203,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.Employee)
                 .WithMany(e => e.ServiceFormEmployees)
-                .HasPrincipalKey(s => s.EmployeeID_int);
+                .HasPrincipalKey(s => s.ID_int);
 
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.ServiceForm)
@@ -233,7 +233,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormSignModel>()
                .HasOne(e => e.Employee)
                .WithMany(s => s.ServiceFormsSign)
-               .HasPrincipalKey(s => s.EmployeeID_int);
+               .HasPrincipalKey(s => s.ID_int);
 
             //ChecklistModel
             modelBuilder.Entity<ChecklistModel>()
@@ -264,7 +264,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(e => e.employee)
                 .WithOne(e => e.ChecklistSignature)
-                .HasPrincipalKey<EmployeeModel>(e => e.EmployeeID_int);
+                .HasPrincipalKey<EmployeeModel>(e => e.ID_int);
 
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(c => c.Checklist)

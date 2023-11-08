@@ -4,7 +4,7 @@
     {
         [Required]
         [Key]
-        public int EmployeeID_int { get; set; }
+        public int ID_int { get; set; }
         [Required]
         [ForeignKey("DepartmentID_int")]
         public int DepartmentID_int { get; set; }

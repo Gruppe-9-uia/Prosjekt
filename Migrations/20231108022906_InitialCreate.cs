@@ -105,7 +105,7 @@ namespace Prosjekt.Migrations
                 name: "Warranty",
                 columns: table => new
                 {
-                    WarrantyID_int = table.Column<int>(type: "int", nullable: false)
+                    ID_int = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     WarrantyName_str = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -116,7 +116,7 @@ namespace Prosjekt.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Warranty", x => x.WarrantyID_int);
+                    table.PrimaryKey("PK_Warranty", x => x.ID_int);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -152,7 +152,7 @@ namespace Prosjekt.Migrations
                 name: "Employee",
                 columns: table => new
                 {
-                    EmployeeID_int = table.Column<int>(type: "int", nullable: false)
+                    ID_int = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DepartmentID_int = table.Column<int>(type: "int", nullable: false),
                     FirstName_str = table.Column<string>(type: "longtext", nullable: false)
@@ -170,7 +170,7 @@ namespace Prosjekt.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Employee", x => x.EmployeeID_int);
+                    table.PrimaryKey("PK_Employee", x => x.ID_int);
                     table.ForeignKey(
                         name: "FK_Employee_Department_DepartmentID_int",
                         column: x => x.DepartmentID_int,
@@ -292,8 +292,7 @@ namespace Prosjekt.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CustomerID_int = table.Column<int>(type: "int", nullable: false),
                     WarrantyID_int = table.Column<int>(type: "int", nullable: false),
-                    ProductSerialNr_str = table.Column<int>(type: "int", nullable: false),
-                    WarrantyID_int1 = table.Column<int>(type: "int", nullable: false)
+                    ProductSerialNr_str = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -313,10 +312,10 @@ namespace Prosjekt.Migrations
                         principalColumn: "SerialNr_str",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CustomerProduct_Warranty_WarrantyID_int1",
-                        column: x => x.WarrantyID_int1,
+                        name: "FK_CustomerProduct_Warranty_WarrantyID_int",
+                        column: x => x.WarrantyID_int,
                         principalTable: "Warranty",
-                        principalColumn: "WarrantyID_int",
+                        principalColumn: "ID_int",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -369,8 +368,7 @@ namespace Prosjekt.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     EmployeeID_int = table.Column<int>(type: "int", nullable: false),
                     ChecklistDocID_str = table.Column<string>(type: "varchar(255)", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    EmployeeID_int1 = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
@@ -382,10 +380,10 @@ namespace Prosjekt.Migrations
                         principalTable: "Checklist",
                         principalColumn: "DocID_str");
                     table.ForeignKey(
-                        name: "FK_ChecklistSignature_Employee_EmployeeID_int1",
-                        column: x => x.EmployeeID_int1,
+                        name: "FK_ChecklistSignature_Employee_EmployeeID_int",
+                        column: x => x.EmployeeID_int,
                         principalTable: "Employee",
-                        principalColumn: "EmployeeID_int",
+                        principalColumn: "ID_int",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -451,7 +449,7 @@ namespace Prosjekt.Migrations
                         name: "FK_ServiceFormEmployee_Employee_EmployeeID_int",
                         column: x => x.EmployeeID_int,
                         principalTable: "Employee",
-                        principalColumn: "EmployeeID_int",
+                        principalColumn: "ID_int",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ServiceFormEmployee_ServiceForm_ServiceFormFormID_int",
@@ -486,7 +484,7 @@ namespace Prosjekt.Migrations
                         name: "FK_ServiceFormSign_Employee_EmployeeID_int",
                         column: x => x.EmployeeID_int,
                         principalTable: "Employee",
-                        principalColumn: "EmployeeID_int",
+                        principalColumn: "ID_int",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ServiceFormSign_ServiceForm_ServiceFormFormID_int",
@@ -546,12 +544,6 @@ namespace Prosjekt.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ChecklistSignature_EmployeeID_int1",
-                table: "ChecklistSignature",
-                column: "EmployeeID_int1",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Customer_Address_code_int",
                 table: "Customer",
                 column: "Address_code_int");
@@ -560,12 +552,6 @@ namespace Prosjekt.Migrations
                 name: "IX_CustomerProduct_ProductSerialNr_str",
                 table: "CustomerProduct",
                 column: "ProductSerialNr_str",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CustomerProduct_WarrantyID_int1",
-                table: "CustomerProduct",
-                column: "WarrantyID_int1",
                 unique: true);
 
             migrationBuilder.CreateIndex(
