@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Prosjekt.Models;
 using System.Configuration;
@@ -21,7 +22,7 @@ namespace Prosjekt
         {
             services.AddDbContext<ProsjektContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(10, 11, 5)),
+                new MySqlServerVersion(new Version(10, 5, 11)),
                 mysqlOptions =>
                 {
                     mysqlOptions.EnableRetryOnFailure();
@@ -33,6 +34,7 @@ namespace Prosjekt
             services.AddTransient<ProsjektContext>();
         }
 
+       
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
