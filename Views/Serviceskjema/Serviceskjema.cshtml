@@ -29,7 +29,7 @@
             <div class="form-row my-0">
                 <div class="form-group col-md-12">
                     <label class="label-i" for="MedgåtteDeler">Medgåtte deler:</label>
-                    <textarea class="form-control" id="MedgåtteDeler" placeholder="Skriv her..." asp-for="UsedPartModel.Parts.PartName_str"> </textarea>
+                    <textarea class="form-control" id="MedgåtteDeler" placeholder="Skriv her..." asp-for="UsedPart.PartID_int"> </textarea>
                 </div>
             </div>
             <div class="form-row my-0">
@@ -65,7 +65,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="utskiftetDelerRetur">Utskiftet deler returnert:</label>
-                    <input type="text" class="form-control" id="utskiftetDelerRetur" asp-for="ReplacedPartsReturned.Parts.PartName_str">
+                    <input type="text" class="form-control" id="utskiftetDelerRetur" asp-for="ReplacedPartsReturned.PartID_int">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="ShippingMethod_str">Forsendelsemåte:</label>

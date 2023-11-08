@@ -4,6 +4,7 @@ namespace Prosjekt.Models
 {
     public class KontaktFormModell
     {
+        //TODO endre navnene til engelsk
         [Required]
         public string navn { get; set; }
         [Required]

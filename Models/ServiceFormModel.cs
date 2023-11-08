@@ -4,7 +4,12 @@
     {
 
         [Required]
+        [Key]
         public int FormID_int { get; set; }
+        [Required]
+        [Key]
+        [ForeignKey("CustomerID_int")]
+        public int CustomerID_int { get; set; }
         [Required]
         public string Repairdescription_str { get; set; }
         [Required]
@@ -17,14 +22,15 @@
         public int BookedServiceWeek_int { get; set; }
         [Required]
         public string ShippingMethod_str { get; set; }
-        [Required]
-        public CustomerModel Customer_model { get; set; }
-        [Required]
-        public UsedPartModel UsedPartModel { get; set; }
-        [Required]
-        public ReplacedPartsReturnedModel ReplacedPartsReturned { get; set;}
-        [Required]
+
+        public CustomerModel Customer { get; set; }
+        public ServiceOrderServiceformModel ServiceOrderServiceform { get; set; }
         public ServiceFormEmployeeModel ServiceFormEmployee { get; set; }
+        public ServiceFormSignModel ServiceFormSign { get; set; }
+
+        public UsedPartModel UsedPart { get; set; }
+
+        public ReplacedPartsReturnedModel ReplacedPartsReturned { get; set;}
 
             //trenger kanskje data for signatur, eventuelt erstatte det -
             // med noe annet som kan etterligne en signatur.

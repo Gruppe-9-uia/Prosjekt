@@ -2,11 +2,22 @@
 {
     public class CustomerProductModel
     {
+
         [Required]
+        [Key]
+        [ForeignKey("SerialNr_str")]
+        public string SerialNr_str { get; set; }
+        [ForeignKey("CustomerID_int")]
+        [Required]
+        [Key]
+        public int CustomerID_int { get; set; }
+        [Required]
+        [ForeignKey("WarrantyID_int")]
+        public int WarrantyID_int { get; set; }
+
         public ProductModel Product { get; set; }
-        [Required]
         public CustomerModel Customer { get; set; }
-        [Required]
         public WarrantyModel Warranty { get; set; }
+        
     }
 }

@@ -730,12 +730,24 @@
 
             <div class="align-items-center p-3">
             <!-- Må kanskje flyttet som tar med alle formene og kan sjekke den-->
-                            <div class="p-3">
+                    <div class="row">
+                        <div class="col-4 border p-2">
+                            <div class="col text-center border p-2">
+                                <div class="form-group">
+                                    <label for="FirstName_str">Fornavn</label>
+                                    <input type="text" class="form-control" id="FirstName_str" asp-for="ChecklistSignature.employee.FirstName_str">
+                                </div>
+                              </div>
+                            </div>
+                        <div class="col-4 border p-2">
+                            <div class="col text-center border p-2">
+                                <div class="form-group">
+                                    <label for="LastName_str">Etternavn</label>
+                                    <input type="text" class="form-control" id="LastName_str" asp-for="ChecklistSignature.employee.LastName_str">
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="EmployeeName">Signerte av:</label>
-                        <input type="text" class="form-control" id="EmployeeName" asp-for="Employee_name">
-                    </div>
 
                         <div class="form-group">
                             <label for="kommentar"><h5>Kommentar:</h5></label>

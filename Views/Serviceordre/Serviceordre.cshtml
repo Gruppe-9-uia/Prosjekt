@@ -11,7 +11,7 @@
         <div class="form-row">
             <div class="form-group col-sm-6">
                 <label for="Product_Type_str">Produkttype:</label>
-                <input type="text" class="form-control" id="Product_Type_str" asp-for="CustomerProductModel.Product.Product_Type_str" placeholder="Produkttype">
+                <input type="text" class="form-control" id="Product_Type_str" asp-for="CustomerProduct.Product.Product_Type_str" placeholder="Produkttype">
             </div>
             <div class="form-group col-sm-6">
                 <label for="Received_Date">Motatt dato:</label>
@@ -21,53 +21,53 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="Model_Year">Årsmodell:</label>
-                <input type="text" class="form-control" id="Model_Year" asp-for="CustomerProductModel.Product.Model_Year" placeholder="Årsmodell">
+                <input type="text" class="form-control" id="Model_Year" asp-for="CustomerProduct.Product.Model_Year" placeholder="Årsmodell">
             </div>
             <div class="form-group col-md-6">
                 <label for="SerialNr_str">Serienummer:</label>
-                <input type="text" class="form-control" id="SerialNr_str" asp-for="CustomerProductModel.Product.SerialNr_str" placeholder="Serienummer">
+                <input type="text" class="form-control" id="SerialNr_str" asp-for="CustomerProduct.Product.SerialNr_str" placeholder="Serienummer">
             </div>
         </div>
         <div class="form-group">
             <label for="fornavn">Fornavn:</label>
-            <input type="text" class="form-control" id="fornavn" asp-for="CustomerModel.FirstName_str" placeholder="Fornavn">
+            <input type="text" class="form-control" id="fornavn" asp-for="CustomerProduct.Customer.FirstName_str" placeholder="Fornavn">
         </div>
         <div class="form-group">
             <label for="Ettternavn">Etternavn:</label>
-            <input type="text" class="form-control" id="Ettternavn" asp-for="CustomerModel.LastName_str" placeholder="Ettternavn">
+            <input type="text" class="form-control" id="Ettternavn" asp-for="CustomerProduct.Customer.LastName_str" placeholder="Ettternavn">
         </div>
         <div class="form-group">
             <label for="adresse">Adresse:</label>
-            <input type="text" class="form-control" id="adresse" asp-for="CustomerModel.Street_Address_str" placeholder="Adresse">
+            <input type="text" class="form-control" id="adresse" asp-for="CustomerProduct.Customer.Street_Address_str" placeholder="Adresse">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="Land">Land:</label>
-                <input type="text" class="form-control" id="Land" asp-for="CustomerModel.Address.Country_str" placeholder="Land">
+                <input type="text" class="form-control" id="Land" asp-for="CustomerProduct.Customer.Address.Country_str" placeholder="Land">
             </div>
             <div class="form-group col-md-6">
                 <label for="By">By:</label>
-                <input type="text" class="form-control" id="By" asp-for="CustomerModel.Address.City_str" placeholder="By">
+                <input type="text" class="form-control" id="By" asp-for="CustomerProduct.Customer.Address.City_str" placeholder="By">
             </div>
             <div class="form-group col-md-6">
                 <label for="postnummer">Postnummer:</label>
-                <input type="number" class="form-control" id="postnummer" asp-for="CustomerModel.Address.PostalCode_str" placeholder="Postnummer">
+                <input type="number" class="form-control" id="postnummer" asp-for="CustomerProduct.Customer.Address.PostalCode_str" placeholder="Postnummer">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="epost">E-post:</label>
-                <input type="email" class="form-control" id="epost" asp-for="CustomerModel.Email_str" placeholder="E-post">
+                <input type="email" class="form-control" id="epost" asp-for="CustomerProduct.Customer.Email_str" placeholder="E-post">
             </div>
             <div class="form-group col-md-6">
                 <label for="mobilnummer">Mobilnummer:</label>
-                <input type="tel" class="form-control" id="mobilnummer" asp-for="CustomerModel.Phone_str" placeholder="Mobilnummer">
+                <input type="tel" class="form-control" id="mobilnummer" asp-for="CustomerProduct.Customer.Phone_str" placeholder="Mobilnummer">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="WarrantyName_str">Garanti:</label>
-                <input type="text" class="form-control" id="WarrantyName_str" asp-for="CustomerProductModel.Warranty.WarrantyName_str" placeholder="Garanti">
+                <input type="text" class="form-control" id="WarrantyName_str" asp-for="CustomerProduct.Warranty.WarrantyName_str" placeholder="Garanti">
             </div>
             <div class="form-group col-md-6">
                 <label for="Order_type_str">Service/rep:</label>
