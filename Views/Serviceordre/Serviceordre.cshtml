@@ -4,8 +4,7 @@
 }
 <div class="card w-75 mx-auto mt-5">
     <h1>Opprett ny serviceordre</h1>
-    <form asp-action="Save" asp-controller="ServiceOrdre" method="post">
-        @Html.BeginForm("Save", "ServiceOrder")
+    @Html.BeginForm("Save", "Serviceordre") {
         @Html.AntiForgeryToken()
 
         <div class="form-row">
@@ -84,5 +83,5 @@
             <button type="submit" class="btn btn-primary">Send inn</button>
             <button type="reset" class="btn btn-primary">Reset</button>
         </div>
-    </form>
+    }
 </div>

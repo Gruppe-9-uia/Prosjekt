@@ -34,7 +34,7 @@ namespace Prosjekt.Controllers
                 {
                     Console.WriteLine("yay!");
                     // Logg inn suksess, følg brukeren til hjemsiden
-                    return RedirectToAction("Welcome", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {

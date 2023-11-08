@@ -41,7 +41,7 @@ namespace Prosjekt.Controllers
                 Console.WriteLine(ex.ToString());
             }
 
-            return RedirectToAction("addSjekkliste");
+            return RedirectToAction("Sjekklist");
         }
 
     }
