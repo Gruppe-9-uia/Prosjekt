@@ -93,3 +93,28 @@ INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, Se
 VALUES (9, 1211, "ødelagt", 15.01.2023, 16.01.2023, 16.01.2023, 1, "med bil");
 INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
 VALUES (10, 1212, "ødelagt", 17.01.2023, 18.01.2023, 18.01.2023, 1, "med bil");
+
+
+-- Parts
+
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (1, "IG200388", "STÅLTAU - 8 mm Metervare", "STÅLTAU")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (2, "IG201201", "Gullkjetting m/ krok og tverrpinne", "SNAREUTSTYR")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (3, "IG201210", "Spesialformet m/ stoppeknaster. 160 mm", "GLIDERE")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (4, "IG200693", "Snarekrok m/ splint", "KROKER",)
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (5, "IG143210", "Spesialtilpassethurtigkobling", "DIVERSE UTSTYR")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (6, "IG022151", "Motorsagholder", "DIVERSE UTSTYR")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (7, "IG31326401", "Kasteblokk 2 t", "BLOKKER")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (8, "IG110960", "Løpekatt", "UTSTYR FOR LETT SLEPEBANE")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (9, "G31346355", "Tømmersaks", "TØMMERSAKS")
+INSERT INTO PARTS ID_str, Name_str, Catalog_str)
+VALUES (10, "IG209100", "Kraftoverføringsakselspesialutførelse for vinsj", "KRAFTOVERFØRINGSAKSEL")
+
