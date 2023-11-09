@@ -1,10 +1,30 @@
+--  Product
+INSERT INTO Product VALUES("IG308011", "Igland 2501", "2010","En-tromlet");
+INSERT INTO Product VALUES("IG308231", "Igland 2501", "2010","En-tromlet");
+INSERT INTO Product VALUES("IG300622", "IGLAND 9002 Maxo TLP", "2023","To-tromlet");
+INSERT INTO Product VALUES("IG300902", "IGLAND 52","En-tromlet");
+INSERT INTO Product VALUES("IG300052", "Igland 4501", "2020","En-tromlet");
+INSERT INTO Product VALUES("IG300630", "IGLAND 9002 MAXO", "2015","Vinsjtopp");
+INSERT INTO Product VALUES("IG300612", "IGLAND 6002 Pronto TLP", "2013","Tn-tromlet");
+INSERT INTO Product VALUES("IG300491", "IGLAND 5002 Pento TL", "2005", "To-tromlet");
+
+--Warranty
+INSERT INTO Warranty VALUES(1, "Lang garanti", "2008-11-09", "2023-11-09");
+INSERT INTO Warranty VALUES(2, "Kort garanti", "2023-12-09", "2028-12-09");
+INSERT INTO Warranty VALUES(3, "Lang garanti", "2013-09-10", "2028-09-10");
+INSERT INTO Warranty VALUES(4, "Middels garanti", "2020-07-02", "2025-07-02");
+INSERT INTO Warranty VALUES(5, "Middels garanti", "2019-11-11", "2024-11-11");
+INSERT INTO Warranty VALUES(6, "Lang garanti", "2020-02-14", "2025-02-14");
+INSERT INTO Warranty VALUES(7, "Kort garanti", "2020-04-01", "2025-04-01");
+INSERT INTO Warranty VALUES(8, "Lang garanti", "2010-03-04", "2025-05-14");
+INSERT INTO Warranty VALUES(9, "Lang garanti", "2014-11-09", "2029-11-09");
+INSERT INTO Warranty VALUES(10, "Kort garanti", "2021-03-15", "2026-03-15");
+
 -- Department
 INSERT INTO Department VALUES(1, "Admin");
 INSERT INTO Department VALUES(2, "Mekanisk");
 INSERT INTO Department VALUES(3, "Hydraulisk");
 INSERT INTO Department VALUES(4, "Elektro");
-
-
 
 -- Employees
 INSERT INTO Employee (ID_int, FirstName_str, LastName_str, Phone_str, Email_str, Password_str, Level_str, DepartmentID_int)
