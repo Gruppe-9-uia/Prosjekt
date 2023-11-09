@@ -322,19 +322,19 @@ namespace Prosjekt.Data
                 .HasPrincipalKey(rp => rp.FormID_int);
         }
 
-        public DbSet<AddressModel> Address { get; set; }
-        public DbSet<CustomerModel> Customer { get; set; }
-        public DbSet<WarrantyModel> Warranty { get; set; }
-        public DbSet<ProductModel> Product { get; set; }
-        public DbSet<CustomerProductModel> CustomerProduct { get; set; }
-        public DbSet<DepartmentModel> Department { get; set; }
-        public DbSet<EmployeeModel> Employee { get; set; }
-        public DbSet<ServiceOrderModel> ServiceOrdre { get; set; }
-        public DbSet<ServiceFormModel> ServiceForm { get; set; }
-        public DbSet<ServiceOrderServiceformModel> ServiceOrderServiceform { get; set; }
-        public DbSet<ServiceFormEmployeeModel> ServiceFormEmployee { get; set; }
-        public DbSet<ServiceFormSignModel> ServiceFormSign { get; set; }
-        public DbSet<ChecklistModel> Checklist { get; set; }
+        public DbSet<AddressModel>? Address { get; set; }
+        public DbSet<CustomerModel>? Customer { get; set; }
+        public DbSet<WarrantyModel>? Warranty { get; set; }
+        public DbSet<ProductModel>? Product { get; set; }
+        public DbSet<CustomerProductModel>? CustomerProduct { get; set; }
+        public DbSet<DepartmentModel>? Department { get; set; }
+        public DbSet<EmployeeModel>? Employee { get; set; }
+        public DbSet<ServiceOrderModel>? ServiceOrdre { get; set; }
+        public DbSet<ServiceFormModel>? ServiceForm { get; set; }
+        public DbSet<ServiceOrderServiceformModel>? ServiceOrderServiceform { get; set; }
+        public DbSet<ServiceFormEmployeeModel>? ServiceFormEmployee { get; set; }
+        public DbSet<ServiceFormSignModel>? ServiceFormSign { get; set; }
+        public DbSet<ChecklistModel>? Checklist { get; set; }
         public DbSet<ChecklistSignatureModel> ChecklistSignature { get; set; }
         public DbSet<PartsModel> Parts { get; set; }
         public DbSet<ReplacedPartsReturnedModel> ReplacedParts { get; set; }

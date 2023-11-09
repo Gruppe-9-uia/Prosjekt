@@ -1,5 +1,6 @@
 ﻿namespace Prosjekt.Models
 {
+    [Table("Employee")] 
     public class EmployeeModel
     {
         [Required]
@@ -23,10 +24,10 @@
         [Required]
         public string Level_str { get; set; }
 
-        public DepartmentModel Department { get; set; }
-        public ChecklistSignatureModel ChecklistSignature { get; set; }
-        public ICollection<ServiceFormEmployeeModel> ServiceFormEmployees { get; set; }
-        public ICollection<ServiceFormSignModel> ServiceFormsSign { get; }
+        public DepartmentModel? Department { get; set; }
+        public ChecklistSignatureModel? ChecklistSignature{ get; set; }
+        public ICollection<ServiceFormEmployeeModel>? ServiceFormEmployees { get; set; }
+        public ICollection<ServiceFormSignModel>? ServiceFormsSign { get; }
 
 
     }

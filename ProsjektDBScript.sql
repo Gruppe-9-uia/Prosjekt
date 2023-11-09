@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS Used_Part (
 );
 
 
-INSERT INT= Department VALUES(1, "Admin");
+INSERT INTO Department VALUES(1, "Admin");
 INSERT INTO Employee (ID_int, FirstName_str, LastName_str, Phone_str, Email_str, Password_str, Level_str, DepartmentID_int)
 VALUES (2, "Trevor", "Belmont", "+47 777 77", "castlvania@mail.com", "1234", "high", 1);
 
