@@ -1,4 +1,4 @@
-CREATE DATABASE ProsjektDB;
+CREATE DATABASE IF NOT EXISTS ProsjektDB;
 USE ProsjektDB;
 
 -- Customer SQL:
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS Service_order (
     FOREIGN KEY(CustomerID_int) REFERENCES Customer_Product(CustomerID_int)
 );
 
-CREATE TABLE IF NOT EXISTS service_form (
+CREATE TABLE IF NOT EXISTS Service_Form (
     FormID_int INTEGER,
     CustomerID_int INTEGER,
     Repairdescription_str VARCHAR(255),
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS Service_Order_Service_form (
     FormID_int INTEGER,
     PRIMARY KEY (OrderID_int, FormID_int),
     FOREIGN KEY (OrderID_int) REFERENCES Service_order(OrderID_int),
-    FOREIGN KEY (FormID_int) REFERENCES service_form(FormID_int)
+    FOREIGN KEY (FormID_int) REFERENCES Service_Form(FormID_int)
 );
 
 CREATE TABLE IF NOT EXISTS Service_Form_Employee (
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS Service_Form_Sign (
     FormID_int INTEGER,
     Sign_Date DATE,
     PRIMARY KEY (CustomerID_int, EmployeeID_int, FormID_int),
-    FOREIGN KEY (FormID_int) REFERENCES service_form(FormID_int),
+    FOREIGN KEY (FormID_int) REFERENCES Service_Form(FormID_int),
 	FOREIGN KEY (CustomerID_int) REFERENCES Customer(CustomerID_int),
 	FOREIGN KEY (EmployeeID_int) REFERENCES Employee(ID_int)
 );
@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS Replaced_Parts_Returned (
     Quantity_int INTEGER,
     PRIMARY KEY (PartID_int, FormID_int),
     FOREIGN KEY (PartID_int) REFERENCES Parts(PartID_int),
-    FOREIGN KEY (FormID_int) REFERENCES service_form(FormID_int)
+    FOREIGN KEY (FormID_int) REFERENCES Service_Form(FormID_int)
 );
 
 CREATE TABLE IF NOT EXISTS Used_Part (
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS Used_Part (
     Quantity_used_int INTEGER,
     PRIMARY KEY (PartID_int, FormID_int),
     FOREIGN KEY (PartID_int) REFERENCES Parts(PartID_int),
-    FOREIGN KEY (FormID_int) REFERENCES service_form(FormID_int)
+    FOREIGN KEY (FormID_int) REFERENCES Service_Form(FormID_int)
 );
 
 
