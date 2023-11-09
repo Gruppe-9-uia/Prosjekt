@@ -71,3 +71,25 @@ INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_
 VALUES (9, 109, "Vedlikehold", "09-09-23", "Inspiser og rengjør");
 INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
 VALUES (10, 110, "Vedlikehold", "11-10-23", "Rutinesjekk og service");
+
+-- Service_form
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (1, 123, "ødelagt", 01.01.2023, 02.01.2023, 02.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (2, 124, "ødelagt", 02.01.2023, 03.01.2023, 03.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (3, 125, "ødelagt", 03.01.2023, 04.01.2023, 04.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (4, 126, "ødelagt", 05.01.2023, 06.01.2023, 06.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (5, 127, "ødelagt", 07.01.2023, 08.01.2023, 08.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (6, 128, "ødelagt", 09.01.2023, 10.01.2023, 10.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (7, 129, "ødelagt", 11.01.2023, 12.01.2023, 12.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (8, 1210, "ødelagt", 13.01.2023, 14.01.2023, 14.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (9, 1211, "ødelagt", 15.01.2023, 16.01.2023, 16.01.2023, 1, "med bil");
+INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
+VALUES (10, 1212, "ødelagt", 17.01.2023, 18.01.2023, 18.01.2023, 1, "med bil");
