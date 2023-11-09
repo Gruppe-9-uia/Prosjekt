@@ -49,3 +49,25 @@ INSERT INTO Customer (ID_int, FirstName_str, LastName_str, Phone_str, Email_str,
 VALUES (9, "Greg", "Brown", "+47 410 00 009", "GregBrown@mail.com", "The Streets 9", "0009");
 INSERT INTO Customer (ID_int, FirstName_str, LastName_str, Phone_str, Email_str, Street_Address_str, Postal_Code_str)
 VALUES (10, "Kris", "Parrish", "+47 410 00 010", "KrisParrish@mail.com", "The Streets 10", "0010");
+
+-- Service_order
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (1, 101, "Vedlikehold", "01-01-23", "Bytt ut ødelagte deler");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (2, 102, "Installasjon", "07-03-23", "Sett opp nytt utstyr");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (3, 103, "Reparere", "23-05-23", "Fiks system som ikke fungerer");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (4, 104, "Oppgradering", "30-06-23", "Forbedre systemytelsen");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (5, 105, "Vedlikehold", "01-07-23", "Rutinesjekk og service");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (6, 106, "Reparere", "27-07-23", "Løs tilkoblingsproblemer");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (7, 107, "Oppgradering", "30-07-23", "Forbedre systemytelsen");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (8, 108, "Installasjon", "05-08-23", "Legg til nye deler");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (9, 109, "Vedlikehold", "09-09-23", "Inspiser og rengjør");
+INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+VALUES (10, 110, "Vedlikehold", "11-10-23", "Rutinesjekk og service");
