@@ -1,10 +1,10 @@
 #!/bin/bash
 
-docker kill prosjekt
+docker kill webapp
 
-docker image build -t prosjekt .
+docker image build -t webapp .
 
-docker container run --rm -it -d --name Prosjekt --publish 80:80 Prosjekt
+docker container run --rm -it -d --name webapp --publish 80:80 webapp
 
 echo.
 echo "Link: http://localhost:80/"
