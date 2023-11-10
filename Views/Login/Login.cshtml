@@ -3,30 +3,22 @@
     ViewData["Title"] = "Login";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="~/css/login.css">
-</head>
-<body>
-    <div class="wrapper">
-        @using (Html.BeginForm("LoginUser", "Login"))
-                    {
-                            @Html.AntiForgeryToken()
-            <div class="form-signin">
 
-            </div>
-            <h2 class="form-signin-heading text-center">Velkommen til Nøsted &</h2>
-            <input type="text" class="form-control" placeholder="Email" required="" autofocus="" asp-for="Email_str" />
-            <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str" />
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
-                    }
-        </div>   
-</body>
-</html>
+@using (Html.BeginForm("LoginUser", "Login"))
+    {
+        @Html.AntiForgeryToken()
+        <div id="login-form" class="card w-50 mx-auto">
+
+        </div>
+        <h2 class="text-center">Velkommen til Nøsted &</h2>
+        <input type="text" class="form-control" placeholder="Email" required="" autofocus="" asp-for="Email_str" />
+        <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str" />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
+    }
+   
+
 
 
 
