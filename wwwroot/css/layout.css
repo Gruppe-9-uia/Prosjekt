@@ -3,14 +3,29 @@
     background-color: #FBFBFF;
 }
 
-.navbar, .footer {
-    background-color: #060623 !important;
+.navbar, footer {
+    background-color: #0A1214 !important;
+    /*background-color: #060623 !important;*/
 }
 
-footer.border-top.text-white.py-4 {
-    background-color: #060623 !important;
+.navbar-brand img {
+    width: 140px; 
+    height: auto; 
+    margin-right: 10px;
 }
 
+.footer-brand img {
+    max-height: 42px; 
+    width: 170px;
+}
+
+.text-lighter-white {
+    color: #FFFFFFB2 
+}
+
+.social-icon img {
+    width: 36px !important;
+}
 
 .border-bottom {
     border-bottom: solid 4px #FF6700!important;
@@ -54,7 +69,7 @@ a:link {
         margin-top: 22.5px;
     }
 
-    #toggle:checked + label .hamburger .meat {
+    #toggle:checked + label .hamburger .middle {
         transform: rotate(45deg);
         margin-top: -5px;
     }
