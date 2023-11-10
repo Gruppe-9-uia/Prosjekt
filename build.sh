@@ -1,13 +1,10 @@
-@echo off
+#!/bin/bash
 
-:: Kill running instance of container
-docker kill webapp
+docker kill prosjekt
 
-:: Builds image specified in Dockerfile
-docker image build -t webapp .
+docker image build -t prosjekt .
 
-:: Starts container with web application and maps port 80 (ext) to 80 (internal)
-docker container run --rm -it -d --name webapp --publish 80:80 webapp
+docker container run --rm -it -d --name Prosjekt --publish 80:80 Prosjekt
 
 echo.
 echo "Link: http://localhost:80/"
