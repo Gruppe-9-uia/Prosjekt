@@ -1,6 +1,6 @@
 # Prosjekt
 
-##K Hvordan man starter prosjektet
+## Hvordan man starter prosjektet
 
 ### Windows
 
