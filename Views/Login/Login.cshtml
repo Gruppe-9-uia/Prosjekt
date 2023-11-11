@@ -3,30 +3,88 @@
     ViewData["Title"] = "Login";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="~/css/login.css">
-</head>
-<body>
-    <div class="wrapper">
+<!--TODO: lage glemt passord sin form-->
+
+<div class="card w-25 mx-auto align-content-center align-items-center p-5 mt-xl-5" style="background-color:white !important;">
+
+    <div id="login-form">
         @using (Html.BeginForm("LoginUser", "Login"))
-                    {
-                            @Html.AntiForgeryToken()
-            <div class="form-signin">
-
+        {
+            @Html.AntiForgeryToken()
+            <div class="card-title p-4">
+                <h2 class="text-center">Velkommen til Nøsted &</h2>
             </div>
-            <h2 class="form-signin-heading text-center">Velkommen til Nøsted &</h2>
-            <input type="text" class="form-control" placeholder="Email" required="" autofocus="" asp-for="Email_str" />
-            <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str" />
+            <div class="card-body p-2">
+                <div class="row">
+                    <h5>Email</h5>
+                </div>
+                <div class="row p-3">
+                    <input type="text" class="form-control" placeholder="Email" required="" autofocus="" asp-for="Email_str"/>
+                </div>
+                <div class="row">
+                    <h5>Passord</h5>
+                </div>
+                <div class="row p-3">
+                    <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str"/>
+                </div>
+                <div class="row p-2">
+                    <p id="href-forgot-password" class="text-center">Glemt passord</p>
+                </div>
+                <div class="row p-2">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <div id="forgotPassword-form" style="display: none;">
+        @using (Html.BeginForm("ForgotPassword", "Login"))
+        {
+            @Html.AntiForgeryToken()
+            <div class="card-title p-4">
+                <h2 class="text-center">Glemt Passsord</h2>
+            </div>
+            
+            <div class="card-body p-2">
+                <div class="row">
+                    <h5>Email</h5>
+                </div>
+                <div class="row p-3">
+                    <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str"/>
+                </div>
+                
+                <div class="row p-2">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Reset passord</button>
+                </div>
+                <div class="row py-2">
+                    <a id="href-login" class="text-center">Tilbake til innloggin</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
-                    }
-        </div>   
-</body>
-</html>
+<script>
+let aLogin = document.getElementById("href-forgot-password");
+let formLogin = document.getElementById("login-form");
+
+let aForgot = document.getElementById("href-login");
+let formForgot = document.getElementById("forgotPassword-form");
+
+
+// add EventListener to switch between the views
+aLogin.addEventListener("click", () => {
+    formLogin.style.display = "none";
+    formForgot.style.display = "block";
+});
+
+aForgot.addEventListener("click", () => {
+    formForgot.style.display = "none";
+    formLogin.style.display = "block";
+});
+</script>
+   
+
 
 
 
