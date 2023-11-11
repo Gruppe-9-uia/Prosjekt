@@ -22,7 +22,7 @@ namespace Prosjekt
         {
             services.AddDbContext<ProsjektContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(10, 5, 11)),
+                new MySqlServerVersion(new Version(11, 1, 2)),
                 mysqlOptions =>
                 {
                     mysqlOptions.EnableRetryOnFailure();
