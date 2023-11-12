@@ -16,6 +16,11 @@ namespace Prosjekt.Controllers
             return View();
         }
 
+        public IActionResult CreateUser()
+        {
+            return RedirectToAction("Brukerregistrering");
+        }
+
         [HttpPost]
         public IActionResult RegistreingFrom()
         {

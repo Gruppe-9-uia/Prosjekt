@@ -1,0 +1,26 @@
+#table-bo {
+    table-layout: fixed;
+}
+
+thead {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+.h1-bo {
+    color: #000000;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border: 1px solid #ddd;
+}
+
+#btn-bruker-bo {
+    margin-top: 50px;
+    color: white;
+    font-weight: bold;
+}

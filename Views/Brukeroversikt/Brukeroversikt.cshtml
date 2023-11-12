@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Nøsted & Brukeroversikt</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> <!-- css for pop up -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">  <!-- css for pop up -->
     <link href="/css/Brukeroversikt-popup.css" rel="stylesheet"> <!-- custom css -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -17,110 +17,150 @@
 <body>
     <div class="container text-center mt-5">
         <header>
-            <h1 class="h1-m">Brukeroversikt</h1>
+            <h1 class="h1-bo">Brukeroversikt</h1>
         </header>
     </div>
+    
+        <main>
+            <div class="container text-center mt-4 mb-4">
+                @using (Html.BeginForm("", ""))
+                {
+                    @Html.AntiForgeryToken()
+                    <form class="searchbar" action="/search" method="get">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-xs-3">
+                                <input type="search" class="form-control text-center mb-3" name="q" id="search-box-bo" placeholder="AnsattID, Fullt navn, Stilling...">
+                            </div>
+                        </div>
 
-    <main>
-        <div class="container text-center mt-4 mb-4">
-            @using (Html.BeginForm("", ""))
-             {
-            @Html.AntiForgeryToken()
-            <form class="searchbar" action="/search" method="get">
-               <div class="form-group row justify-content-center">
-                    <div class="col-xs-3">
-                        <input type="search" class="form-control text-center mb-3" name="q" id="search-box-m" placeholder="AnsattID, Fullt navn, Stilling...">
-                    </div>
-                </div>
-
-                <div class="search-m">
-                    <button type="submit" class="btn btn-primary" id="searchbutton-m">Søk</button><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
-                </div>
-            </form>
-             }
-        </div>
-
-        <div style="overflow-x:auto;">
-            <div class="container">
-                <table class="table table-striped table-bordered table-hover">
-                    <thead>
-                    <tr>
-                        <th>AnsattID</th>
-                        <th>Fullt navn</th>
-                        <th>Stilling</th>
-                        <th>Rettigheter</th>
-                    </tr>
-                    </thead>
-                    <tbody id="userTable">
-                    <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="1111,Atle Antonsen,Administrator,Legge til/fjerne verktøy">
-                        <td>1111</td>
-                        <td>Atle Antonsen</td>
-                        <td>Administrator</td>
-                        <td>Legge til/fjerne verktøy</td>
-                    </tr>
-                    <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="2222,Justin Bieber,Mekaniker,Sjekkliste">
-                        <td>2222</td>
-                        <td>Justin Bieber</td>
-                        <td>Mekaniker</td>
-                        <td>Sjekkliste</td>
-                    </tr>
-                    <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="3333,Ariana Grande,Kundebehandler,Endre/legge til/fjerne serviceordre">
-                        <td>3333</td>
-                        <td>Ariana Grande</td>
-                        <td>Kundebehandler</td>
-                        <td>Endre/legge til/fjerne serviceordre</td>
-                    </tr>
-                    </tbody>
-                </table>
+                        <div class="search-bo">
+                            <button type="submit" class="btn btn-primary" id="searchbutton-bo">Søk</button><!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
+                        </div>
+                    </form>
+                }
             </div>
             
-            <!-- pop up -->
-            <div class="modal fade" id="BOModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content-">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Rad detaljer</h4> <!-- må koble til database sånn at fullt navn kommer opp -->
+                <div class="container">
+                    <div class="table-container" style="max-height: 260px; overflow-x:auto; border: 1px solid #000000;">
+                        
+                   
+                        <table class="table table-striped table-hover" id="table-bo">
+                            <thead>
+                            <tr>
+                                <th>AnsattID</th>
+                                <th>Fullt navn</th>
+                                <th>Stilling</th>
+                                <th>Rettigheter</th>
+                            </tr>
+                            </thead>
+
+                            <tbody id="userTable">
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="1111,Atle Antonsen,Administrator,Legge til/fjerne verktøy">
+                                <td>1111</td>
+                                <td>Atle Antonsen</td>
+                                <td>Administrator</td>
+                                <td>Legge til/fjerne verktøy</td>
+                            </tr>
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="2222,Justin Bieber,Mekaniker,Sjekkliste">
+                                <td>2222</td>
+                                <td>Justin Bieber</td>
+                                <td>Mekaniker</td>
+                                <td>Sjekkliste</td>
+                            </tr>
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="3333,Ariana Grande,Kundebehandler,Endre/legge til/fjerne serviceordre">
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                            <tr>
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                            <tr>
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                            <tr>
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                            <tr>
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                            <tr>
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                            <tr>
+                                <td>3333</td>
+                                <td>Ariana Grande</td>
+                                <td>Kundebehandler</td>
+                                <td>Endre/legge til/fjerne serviceordre</td>
+                            </tr>
+                        </table>
                         </div>
-                        <div class="modal-body" id="BOModalBody">
-                            <p>text</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Lukk</button>
+                </div>
+            
+                <!-- pop up -->
+                <div class="modal fade" id="BOModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content-">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Rad detaljer</h4> <!-- må koble til database sånn at fullt navn kommer opp -->
+                            </div>
+                            <div class="modal-body" id="BOModalBody">
+                                <p>text</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Lukk</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <script>
-            // filtrering av søk
-            $(document).ready(function () {
-                $("#search-box-m").on("keyup", function () {
-                    var value = $(this).val().toLowerCase();
-                    $("#userTable tr").filter(function () {
-                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                <script>
+                    // filtrering av søk
+                    $(document).ready(function () {
+                        $("#search-box-bo").on("keyup", function () {
+                            var value = $(this).val().toLowerCase();
+                        $("#userTable tr").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                            });
+                        });
                     });
-                });
-            });
             
-            //pop up
-            $(document).ready(function () {
-                $(".table-row").click(function () {
-                    var BOrowData = $(this).data("content").split(",");
-                    var BOModalBody = $("#BOModalBody");
+                    //pop up
+                    $(document).ready(function () {
+                        $(".table-row").click(function () {
+                            var BOrowData = $(this).data("content").split(",");
+                            var BOModalBody = $("#BOModalBody");
                     
                     BOModalBody.empty();
                     
                     for (var i = 0; i < BOrowData.length; i++) {
                         BOModalBody.append("<p><strong>Column " + (i + 1) + ": </strong>" + BOrowData[i] + "</p>");
-                    }
-                });
-            });
-        </script>
-        </div>
-    </main>
-</body> 
-   
+                            }
+                        });
+                    });
+                </script>
 
+            <div class="text-center">
+                <a class="btn btn-primary" id="btn-bruker-bo" role="button" href="@Url.Action("CreateUser",  "Brukerregistrering")">Legg til bruker</a>
+            </div>
+        </main>
+</body> 
 </html>

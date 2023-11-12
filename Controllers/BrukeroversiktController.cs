@@ -13,5 +13,10 @@ namespace Prosjekt.Controllers
         {
             return View();
         }
+
+        public IActionResult BackBrukeroversikt()
+        {
+            return RedirectToAction("Brukeroversikt");
+        }
     }
 }

@@ -24,7 +24,7 @@
         @using (Html.BeginForm("RegistreingFrom", "Brukerregistrering"))
         {
             @Html.AntiForgeryToken()
-            <form action="post">
+            <form action="post" id="addUserForm" class="needs-validation" novalidate>
                 <!-- BYTTE ACTION? MÅ FIKSE KONTROLLER -->
                 <div class="container mt-4">
                     <div class="row justify-content-center">
@@ -45,6 +45,9 @@
                         <div class="form-group col-md-6">
                             <label for="fullt navn"><b>Fullt navn</b></label>
                             <input type="text" class="form-control" placeholder="Fullt navn..." name="Fullt navn" id="fulltnavn" required>
+                            <div class="invalid-feedback">
+                                Vennligst fyll ut feltet.
+                            </div>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -119,31 +122,41 @@
                         </div>
                     </div>
                 </div>
-
-            </form>
-            <div class="container text-center mt-5 mb-5">
-                <div class="button-m">
-                    <button type="submit" class="btn btn-primary" id="button-m">Fullfør</button>
+                
+                <div class="container text-center mt-5 mb-5">
+                    <div class="button-m">
+                        <button type="submit" class="btn btn-primary" id="button-m">Fullfør</button>
+                    </div>
                 </div>
-            </div>
-
+            </form>
+            
             <!-- melding om at brukeren har blitt lagt til-->
     <div class="container text-center mt-2" style="display: none;" id="alert-m">
-        <div class="alert alert-success alert-dismissible">
+        <div class="alert alert-success alert-dismissible" id="success-alert-m">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                Brukeren har blitt lagt til!
-            </div>
+            Brukeren har blitt lagt til! Tilbake til <a href="@Url.Action("BackBrukeroversikt", "Brukeroversikt")" class="alert-link">Brukeroversikt.</a>
+        </div>
+        <div class="alert alert-danger alert-dismissable" id="error-alert-m">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            Vennligst fyll ut alle feltene! Gå tilbake til <a href="@Url.Action("BackBrukeroversikt", "Brukeroversikt")" class="alert-link">Brukeroversikt?</a>
+        </div>
         </div>
 
         <script>
+        // bruker lagt til / fyll ut feltene varslinger
             $(document).ready(function () {
                 $("#button-m").click(function () {
-                    $("#alert-m").show();
+                    if ($("#addUserForm")[0].checkValidity()) {
+                        $("#success-alert-m").show();
+                        $("#error-alert-m").hide();
+                    } else  {
+                        $("#success-alert-m").hide();
+                        $("#error-alert-m").show();
+                    }
                 });
             });
-        </script>
-
-        <script>
+        
+            // subkategori for mekaniker drop-down
             var stillingDropdown = document.getElementById("stilling");
             var submekanikerkategoriDiv = document.getElementById("submekanikerkategori");
 
