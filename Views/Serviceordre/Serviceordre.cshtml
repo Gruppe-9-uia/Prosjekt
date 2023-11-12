@@ -4,9 +4,10 @@
 }
 <div class="card w-75 mx-auto mt-5">
     <h1>Opprett ny serviceordre</h1>
-    @Html.BeginForm("Save", "Serviceordre") {
+        @Html.BeginForm("Save", "Serviceordre", FormMethod.Post, new { id = "myForm"})
+        @Html.ValidationSummary()
         @Html.AntiForgeryToken()
-
+    
         <div class="form-row">
             <div class="form-group col-sm-6">
                 <label for="Product_Type_str">Produkttype:</label>
@@ -79,26 +80,31 @@
                 <textarea class="form-control" id="beskrivelse" asp-for="Description_From_Customer_str" placeholder="Skriv her..." required></textarea>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <!--<button type="button" >Send innjjjj</button>
-                <img src="/icons/icons8-exclamation-mark-96.png">
-                <h2>Send inn</h2>
-                <p>Du prøver å sende inn en ny serviceordre, er du sikker på du ønsker å opprette ny ordre?</p>
-                <button type="button" onclick="closePopup()">JA</button> 
-            </div>
-            <button type="reset" class="btn btn-primary">Reset</button> -->
+ 
+        <div class="d-flex justify-content-center"> 
+            <button type="submit" class="btn btn-primary" onSubmit="openPopup()">Send inn</button>
+            <button type="reset" class="btn btn-primary" onClick="resetPopup()">Reset</button>
         </div>
+        
+        <!--  script under for å få en fungerende popup når man trykker på knappene-->
+        <!--  function openPopup og resetPopup, lager en bekreftelse boks som kommer opp når man trykker på send inn eller reset-->
+        <script>
+    function openPopup() {
+        var confirmed = confirm("Er du sikker på du ønsker å sende inn serviceordren?");
+        if (confirmed) {
+            // hvis brukeren trykker på confirmed, så vil forum bli sendt.
+            document.getElementById("myForm").submit();
+        } else {
+            return false;
+        }
+    }
+    function resetPopup() {
+        var ok = confirm("Er du sikker på du ønsker å resette serviceordreren?");
+        if (ok) {
+            // hvis brukeren trykker på ok, vil alt bli resettet.
+            document.getElementById("myForm").reset();
+        }
+    }
+    </script>
     
 </div>
-
-<script>
-function openPopup(){
-    let popup = document.getElementById("popup");
-    popup.classList.add("open-popup");
-}
-
-
-function closePopup(){
-    popup.classList.remove("open-popup");
-}
-</script>
