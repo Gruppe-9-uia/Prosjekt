@@ -1,9 +1,7 @@
-﻿@model Prosjekt.Models.EmployeeModel
+﻿@model Prosjekt.Models.LoginModel
 @{
     ViewData["Title"] = "Login";
 }
-
-<!--TODO: lage glemt passord sin form-->
 
 <div class="card w-25 mx-auto align-content-center align-items-center p-5 mt-xl-5" style="background-color:white !important;">
 
@@ -28,7 +26,7 @@
                     <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str"/>
                 </div>
                 <div class="row p-2">
-                    <p id="href-forgot-password" class="text-center">Glemt passord</p>
+                    @Html.ActionLink("Glemt passord", "ForgotPassword", "Login", null)
                 </div>
                 <div class="row p-2">
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Logg inn</button>
@@ -37,52 +35,8 @@
         }
     </div>
     
-    <div id="forgotPassword-form" style="display: none;">
-        @using (Html.BeginForm("ForgotPassword", "Login"))
-        {
-            @Html.AntiForgeryToken()
-            <div class="card-title p-4">
-                <h2 class="text-center">Glemt Passsord</h2>
-            </div>
-            
-            <div class="card-body p-2">
-                <div class="row">
-                    <h5>Email</h5>
-                </div>
-                <div class="row p-3">
-                    <input type="password" class="form-control" placeholder="Passord" required="" asp-for="Password_str"/>
-                </div>
-                
-                <div class="row p-2">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Reset passord</button>
-                </div>
-                <div class="row py-2">
-                    <a id="href-login" class="text-center">Tilbake til innloggin</a>
-                </div>
-            </div>
-        }
-    </div>
 </div>
 
-<script>
-let aLogin = document.getElementById("href-forgot-password");
-let formLogin = document.getElementById("login-form");
-
-let aForgot = document.getElementById("href-login");
-let formForgot = document.getElementById("forgotPassword-form");
-
-
-// add EventListener to switch between the views
-aLogin.addEventListener("click", () => {
-    formLogin.style.display = "none";
-    formForgot.style.display = "block";
-});
-
-aForgot.addEventListener("click", () => {
-    formForgot.style.display = "none";
-    formLogin.style.display = "block";
-});
-</script>
    
 
 
