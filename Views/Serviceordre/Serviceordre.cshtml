@@ -89,22 +89,22 @@
         <!--  script under for å få en fungerende popup når man trykker på knappene-->
         <!--  function openPopup og resetPopup, lager en bekreftelse boks som kommer opp når man trykker på send inn eller reset-->
         <script>
-    function openPopup() {
-        var confirmed = confirm("Er du sikker på du ønsker å sende inn serviceordren?");
-        if (confirmed) {
+        function openPopup() {
+            var confirmed = confirm("Er du sikker på du ønsker å sende inn serviceordren?");
+            if (confirmed) {
             // hvis brukeren trykker på confirmed, så vil forum bli sendt.
             document.getElementById("myForm").submit();
-        } else {
-            return false;
+            } else {
+                return false;
+            }
         }
-    }
-    function resetPopup() {
-        var ok = confirm("Er du sikker på du ønsker å resette serviceordreren?");
-        if (ok) {
+        function resetPopup() {
+            var ok = confirm("Er du sikker på du ønsker å resette serviceordreren?");
+            if (ok) {
             // hvis brukeren trykker på ok, vil alt bli resettet.
             document.getElementById("myForm").reset();
+            }
         }
-    }
     </script>
     
 </div>
