@@ -3,101 +3,95 @@
     ViewData["Title"] = "Serviceordre";
 }
 <div class="card w-75 mx-auto mt-5">
-    <h1>Opprett ny serviceordre</h1>
-        @Html.BeginForm("Save", "Serviceordre", FormMethod.Post, new { id = "myForm"})
-        @Html.ValidationSummary()
-        @Html.AntiForgeryToken()
-    
-        <div class="form-row">
-            <div class="form-group col-sm-6">
-                <label for="Product_Type_str">Produkttype:</label>
-                <input type="text" class="form-control" id="Product_Type_str" asp-for="CustomerProduct.Product.Product_Type_str" placeholder="Produkttype" required>
+    <h1 class="mb-50">Opprett ny serviceordre</h1>
+        @using (Html.BeginForm("Save", "Serviceordre", FormMethod.Post, new { id = "myForm",onsubmit = "return confirm('Er du sikker på du ønsker å sende inn serviceskjema?');" })) 
+        {
+            @Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <label for="Product_Type_str">Produkttype:</label>
+                    <input type="text" class="form-control" id="Product_Type_str" asp-for="CustomerProduct.Product.Product_Type_str" placeholder="Produkttype" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="Received_Date">Motatt dato:</label>
+                    <input type="date" class="form-control" id="Received_Date" asp-for="Received_Date">
+                </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label for="Received_Date">Motatt dato:</label>
-                <input type="date" class="form-control" id="Received_Date" asp-for="Received_Date">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Model_Year">Årsmodell:</label>
+                    <input type="text" class="form-control" id="Model_Year" asp-for="CustomerProduct.Product.Model_Year" placeholder="Årsmodell" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="SerialNr_str">Serienummer:</label>
+                    <input type="text" class="form-control" id="SerialNr_str" asp-for="CustomerProduct.Product.SerialNr_str" placeholder="Serienummer" required>
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="Model_Year">Årsmodell:</label>
-                <input type="text" class="form-control" id="Model_Year" asp-for="CustomerProduct.Product.Model_Year" placeholder="Årsmodell" required>
+            <div class="form-group">
+                <label for="fornavn">Fornavn:</label>
+                <input type="text" class="form-control" id="fornavn" asp-for="CustomerProduct.Customer.FirstName_str" placeholder="Fornavn" required>
             </div>
-            <div class="form-group col-md-6">
-                <label for="SerialNr_str">Serienummer:</label>
-                <input type="text" class="form-control" id="SerialNr_str" asp-for="CustomerProduct.Product.SerialNr_str" placeholder="Serienummer" required>
+            <div class="form-group">
+                <label for="Ettternavn">Etternavn:</label>
+                <input type="text" class="form-control" id="Ettternavn" asp-for="CustomerProduct.Customer.LastName_str" placeholder="Ettternavn" required>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="fornavn">Fornavn:</label>
-            <input type="text" class="form-control" id="fornavn" asp-for="CustomerProduct.Customer.FirstName_str" placeholder="Fornavn" required>
-        </div>
-        <div class="form-group">
-            <label for="Ettternavn">Etternavn:</label>
-            <input type="text" class="form-control" id="Ettternavn" asp-for="CustomerProduct.Customer.LastName_str" placeholder="Ettternavn" required>
-        </div>
-        <div class="form-group">
-            <label for="adresse">Adresse:</label>
-            <input type="text" class="form-control" id="adresse" asp-for="CustomerProduct.Customer.Street_Address_str" placeholder="Adresse" required>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="Land">Land:</label>
-                <input type="text" class="form-control" id="Land" asp-for="CustomerProduct.Customer.Address.Country_str" placeholder="Land" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="adresse">Adresse:</label>
+                    <input type="text" class="form-control" id="adresse" asp-for="CustomerProduct.Customer.Street_Address_str" placeholder="Adresse" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="postnummer">Postnummer:</label>
+                    <input type="number" class="form-control" id="postnummer" asp-for="CustomerProduct.Customer.Address.PostalCode_str" placeholder="Postnummer" required>
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="By">By:</label>
-                <input type="text" class="form-control" id="By" asp-for="CustomerProduct.Customer.Address.City_str" placeholder="By" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Land">Land:</label>
+                    <input type="text" class="form-control" id="Land" asp-for="CustomerProduct.Customer.Address.Country_str" placeholder="Land" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="By">By:</label>
+                    <input type="text" class="form-control" id="By" asp-for="CustomerProduct.Customer.Address.City_str" placeholder="By" required>
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="postnummer">Postnummer:</label>
-                <input type="number" class="form-control" id="postnummer" asp-for="CustomerProduct.Customer.Address.PostalCode_str" placeholder="Postnummer" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="epost">E-post:</label>
+                    <input type="email" class="form-control" id="epost" asp-for="CustomerProduct.Customer.Email_str" placeholder="E-post" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="mobilnummer">Mobilnummer:</label>
+                    <input type="tel" class="form-control" id="mobilnummer" asp-for="CustomerProduct.Customer.Phone_str" placeholder="Mobilnummer" required>
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="epost">E-post:</label>
-                <input type="email" class="form-control" id="epost" asp-for="CustomerProduct.Customer.Email_str" placeholder="E-post" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="WarrantyName_str">Garanti:</label>
+                    <input type="text" class="form-control" id="WarrantyName_str" asp-for="CustomerProduct.Warranty.WarrantyName_str" placeholder="Garanti" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Order_type_str">Service/rep:</label>
+                    <input type="text" class="form-control" id="Order_type_str" asp-for="Order_type_str" placeholder="Service/rep" required>
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="mobilnummer">Mobilnummer:</label>
-                <input type="tel" class="form-control" id="mobilnummer" asp-for="CustomerProduct.Customer.Phone_str" placeholder="Mobilnummer" required>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="beskrivelse">Hva som er avtalt med kunden:</label>
+                    <textarea class="form-control mb-50" style="height: 100px;" id="beskrivelse" asp-for="Description_From_Customer_str" placeholder="Skriv her..." required></textarea>
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="WarrantyName_str">Garanti:</label>
-                <input type="text" class="form-control" id="WarrantyName_str" asp-for="CustomerProduct.Warranty.WarrantyName_str" placeholder="Garanti" required>
+            <div class="d-flex justify-content-center" style="margin-top: 25px;">
+                <button type="reset" class="btn btn-primary button-spacing" id="resetB" onClick="resetPopup()">Reset</button>
+                <button type="submit" class="btn btn-primary button-spacing" id="sendB">Send inn</button>
             </div>
-            <div class="form-group col-md-6">
-                <label for="Order_type_str">Service/rep:</label>
-                <input type="text" class="form-control" id="Order_type_str" asp-for="Order_type_str" placeholder="Service/rep" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="beskrivelse">Hva som er avtalt med kunden:</label>
-                <textarea class="form-control" id="beskrivelse" asp-for="Description_From_Customer_str" placeholder="Skriv her..." required></textarea>
-            </div>
-        </div>
- 
-        <div class="d-flex justify-content-center"> 
-            <button type="submit" class="btn btn-primary" onSubmit="openPopup()">Send inn</button>
-            <button type="reset" class="btn btn-primary" onClick="resetPopup()">Reset</button>
-        </div>
+
+            <!--  script under for å få en fungerende popup når man trykker på knappene-->
+            <!--  function resetPopup, lager en bekreftelse boks som kommer opp når man trykker på reset-->
+            <script>
         
-        <!--  script under for å få en fungerende popup når man trykker på knappene-->
-        <!--  function openPopup og resetPopup, lager en bekreftelse boks som kommer opp når man trykker på send inn eller reset-->
-        <script>
-        function openPopup() {
-            var confirmed = confirm("Er du sikker på du ønsker å sende inn serviceordren?");
-            if (confirmed) {
-            // hvis brukeren trykker på confirmed, så vil forum bli sendt.
-            document.getElementById("myForm").submit();
-            } else {
-                return false;
-            }
-        }
         function resetPopup() {
             var ok = confirm("Er du sikker på du ønsker å resette serviceordreren?");
             if (ok) {
@@ -106,5 +100,5 @@
             }
         }
     </script>
-    
+        } 
 </div>
