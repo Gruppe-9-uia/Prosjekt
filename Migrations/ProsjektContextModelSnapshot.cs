@@ -19,6 +19,130 @@ namespace Prosjekt.Migrations
                 .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoleClaims");
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.Employee", b =>
+                {
+                    b.Property<int>("ID_int")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("DepartmentID_int")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Email_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FirstName_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastName_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Level_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Password_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Phone_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ID_int");
+
+                    b.HasIndex("DepartmentID_int");
+
+                    b.ToTable("Employee");
+                });
+
             modelBuilder.Entity("Prosjekt.Models.AddressModel", b =>
                 {
                     b.Property<int>("Address_code_int")
@@ -266,46 +390,6 @@ namespace Prosjekt.Migrations
                     b.HasKey("DepartmentID_int");
 
                     b.ToTable("Department");
-                });
-
-            modelBuilder.Entity("Prosjekt.Models.EmployeeModel", b =>
-                {
-                    b.Property<int>("ID_int")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("DepartmentID_int")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("FirstName_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("LastName_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Level_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Password_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Phone_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("ID_int");
-
-                    b.HasIndex("DepartmentID_int");
-
-                    b.ToTable("Employee");
                 });
 
             modelBuilder.Entity("Prosjekt.Models.PartsModel", b =>
@@ -572,6 +656,17 @@ namespace Prosjekt.Migrations
                     b.ToTable("Warranty");
                 });
 
+            modelBuilder.Entity("Prosjekt.Entities.Employee", b =>
+                {
+                    b.HasOne("Prosjekt.Models.DepartmentModel", "Department")
+                        .WithMany("Employees")
+                        .HasForeignKey("DepartmentID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+                });
+
             modelBuilder.Entity("Prosjekt.Models.ChecklistModel", b =>
                 {
                     b.HasOne("Prosjekt.Models.ProductModel", "product")
@@ -590,7 +685,7 @@ namespace Prosjekt.Migrations
                         .HasForeignKey("Prosjekt.Models.ChecklistSignatureModel", "ChecklistDocID_str")
                         .HasPrincipalKey("Prosjekt.Models.ChecklistModel", "DocID_str");
 
-                    b.HasOne("Prosjekt.Models.EmployeeModel", "employee")
+                    b.HasOne("Prosjekt.Entities.Employee", "employee")
                         .WithOne("ChecklistSignature")
                         .HasForeignKey("Prosjekt.Models.ChecklistSignatureModel", "EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -639,17 +734,6 @@ namespace Prosjekt.Migrations
                     b.Navigation("Warranty");
                 });
 
-            modelBuilder.Entity("Prosjekt.Models.EmployeeModel", b =>
-                {
-                    b.HasOne("Prosjekt.Models.DepartmentModel", "Department")
-                        .WithMany("Employees")
-                        .HasForeignKey("DepartmentID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
             modelBuilder.Entity("Prosjekt.Models.PartsModel", b =>
                 {
                     b.HasOne("Prosjekt.Models.ReplacedPartsReturnedModel", "ReplacedPartsReturned")
@@ -673,7 +757,7 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Models.ServiceFormEmployeeModel", b =>
                 {
-                    b.HasOne("Prosjekt.Models.EmployeeModel", "Employee")
+                    b.HasOne("Prosjekt.Entities.Employee", "Employee")
                         .WithMany("ServiceFormEmployees")
                         .HasForeignKey("EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -728,7 +812,7 @@ namespace Prosjekt.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Prosjekt.Models.EmployeeModel", "Employee")
+                    b.HasOne("Prosjekt.Entities.Employee", "Employee")
                         .WithMany("ServiceFormsSign")
                         .HasForeignKey("EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -804,6 +888,15 @@ namespace Prosjekt.Migrations
                     b.Navigation("serviceForm");
                 });
 
+            modelBuilder.Entity("Prosjekt.Entities.Employee", b =>
+                {
+                    b.Navigation("ChecklistSignature");
+
+                    b.Navigation("ServiceFormEmployees");
+
+                    b.Navigation("ServiceFormsSign");
+                });
+
             modelBuilder.Entity("Prosjekt.Models.AddressModel", b =>
                 {
                     b.Navigation("customers");
@@ -828,16 +921,6 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Models.DepartmentModel", b =>
                 {
                     b.Navigation("Employees");
-                });
-
-            modelBuilder.Entity("Prosjekt.Models.EmployeeModel", b =>
-                {
-                    b.Navigation("ChecklistSignature")
-                        .IsRequired();
-
-                    b.Navigation("ServiceFormEmployees");
-
-                    b.Navigation("ServiceFormsSign");
                 });
 
             modelBuilder.Entity("Prosjekt.Models.ProductModel", b =>

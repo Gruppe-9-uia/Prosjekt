@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Prosjekt.Models;
 using System.Configuration;
+using Prosjekt.Entities;
 
 namespace Prosjekt
 {
@@ -27,6 +28,12 @@ namespace Prosjekt
                 {
                     mysqlOptions.EnableRetryOnFailure();
                 }));
+            
+            services.AddDbContext<ProsjektContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<EmployeeUser, IdentityRole>()
+                .AddEntityFrameworkStores<ProsjektContext>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
 
             // Adjust the version according to your MariaDB version
 
@@ -80,6 +87,7 @@ namespace Prosjekt
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

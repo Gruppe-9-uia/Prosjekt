@@ -1,4 +1,6 @@
-﻿namespace Prosjekt.Models
+﻿using Prosjekt.Entities;
+
+namespace Prosjekt.Models
 {
     public class ServiceFormEmployeeModel
     {
@@ -16,6 +18,6 @@
         public string Repair_Description_str { get; set; }
 
         public ServiceFormModel ServiceForm {get; set; }
-        public EmployeeModel Employee { get; set; }
+        public EmployeeUser Employee { get; set; }
     }
 }

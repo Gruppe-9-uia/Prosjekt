@@ -1,15 +1,21 @@
-﻿using Prosjekt.Models;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Prosjekt.Entities;
 
 namespace Prosjekt.Data
 {
-    public class ProsjektContext : DbContext
+    public class ProsjektContext : IdentityDbContext<EmployeeUser, EmployeeRole, Guid>
     {
         public ProsjektContext(DbContextOptions<ProsjektContext> options) : base (options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Setter opp relasjoner
-
+            modelBuilder.Ignore<IdentityUserLogin<string>>();
+            modelBuilder.Ignore<IdentityUserRole<string>>();
+            modelBuilder.Ignore<IdentityUserClaim<string>>();
+            modelBuilder.Ignore<IdentityUserToken<string>>();
+            modelBuilder.Ignore<IdentityUser<string>>();
             //AddressModel
             modelBuilder.Entity<AddressModel>()
                 .HasKey(a => a.Address_code_int);
@@ -105,20 +111,20 @@ namespace Prosjekt.Data
                 .HasForeignKey(e => e.DepartmentID_int);
 
             //EmployeeModel
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                 .HasKey(Employee => Employee.ID_int);
 
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                 .HasOne(e => e.Department)
                 .WithMany(d => d.Employees) 
                 .HasForeignKey(e => e.DepartmentID_int);
 
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                 .HasMany(e => e.ServiceFormsSign)
                 .WithOne(s => s.Employee)
                 .HasForeignKey(s => s.EmployeeID_int);
 
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                .HasOne(e => e.ChecklistSignature)
                .WithOne(c => c.employee)
                .HasPrincipalKey<ChecklistSignatureModel>(e => e.EmployeeID_int);
@@ -264,7 +270,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(e => e.employee)
                 .WithOne(e => e.ChecklistSignature)
-                .HasPrincipalKey<EmployeeModel>(e => e.ID_int);
+                .HasPrincipalKey<EmployeeUser>(e => e.ID_int);
 
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(c => c.Checklist)
@@ -328,7 +334,7 @@ namespace Prosjekt.Data
         public DbSet<ProductModel>? Product { get; set; }
         public DbSet<CustomerProductModel>? CustomerProduct { get; set; }
         public DbSet<DepartmentModel>? Department { get; set; }
-        public DbSet<EmployeeModel>? Employee { get; set; }
+        public DbSet<EmployeeUser>? Employees { get; set; }
         public DbSet<ServiceOrderModel>? ServiceOrdre { get; set; }
         public DbSet<ServiceFormModel>? ServiceForm { get; set; }
         public DbSet<ServiceOrderServiceformModel>? ServiceOrderServiceform { get; set; }

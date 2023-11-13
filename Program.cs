@@ -1,6 +1,8 @@
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Prosjekt.Entities;
+
 public class Program
 {
     static void Main(string[] args)
@@ -12,6 +14,12 @@ public class Program
         builder.Services.AddControllersWithViews();
 
         SetupDataConnections(builder);
+
+        builder.Services.AddIdentity<EmployeeUser, EmployeeRole>()
+            .AddEntityFrameworkStores<ProsjektContext>()
+            .AddDefaultUI()
+            .AddDefaultTokenProviders();
+
         SetupAuthentication(builder);
 
         var app = builder.Build();
@@ -30,9 +38,15 @@ public class Program
 
         UseAuthentication(app);
 
-        app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
-        app.MapControllers();
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
+        });
+        app.MapControllers();
+        app.MapRazorPages();
 
         app.Run();
     }
@@ -44,7 +58,7 @@ public class Program
         {
             options.UseMySql(builder.Configuration.GetConnectionString("MariaDb"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MariaDb")));
         });
-
+        
     }
 
     private static void UseAuthentication(WebApplication app)
@@ -67,14 +81,8 @@ public class Program
             options.SignIn.RequireConfirmedAccount = false;
             options.User.RequireUniqueEmail = true;
         });
+        
 
-
-        builder.Services.AddAuthentication(o =>
-        {
-            o.DefaultScheme = IdentityConstants.ApplicationScheme;
-            o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-
-        }).AddIdentityCookies(o => { });
 
     }
 
