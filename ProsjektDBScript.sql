@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS Customer (
 CREATE TABLE IF NOT EXISTS Warranty (
     ID_int INTEGER PRIMARY KEY,
     WarrantyName_str VARCHAR(20),
-    WarrantyType_str VARCHAR(40) NOT NULL,
     StartDate_date date,
     ExpDate_date date
 );
