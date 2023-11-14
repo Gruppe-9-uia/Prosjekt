@@ -11,9 +11,14 @@
     <title>Arbeidsdokument</title>
     <link rel="stylesheet" href="~/css/Arbeidsdokument.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     
 </head>
-<body>  <div class="container text-center mt-4 mb-4">
+<body>  <div class="container text-center mt-4 mb-4"> 
     <div class="container">
         <h1 class="text-center mt-5">Arbeidsdokument</h1>
         <div class="row">
@@ -22,8 +27,32 @@
             </div>
             <div class="row mt-3"> 
                 <div class="col-md-3 mx-auto">
+                    <div class="col-md-3 mx-auto">
+                    </div>
                     
-                     <!--<button id="søkSearch" class="btn btn-primary btn-block">Søk</button> -->
+                    
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Booket service uke</a>
+                        <a class="dropdown-item" href="#">Avtalt levering ddmmåå</a>
+                          <a class="dropdown-item" href="#">Hendelse mottat og reg. ddmmåå</a>
+                            <a class="dropdown-item" href="#">Ordrenr</a>
+                          <a class="dropdown-item" href="#">Produkttype</a>
+                          <a class="dropdown-item" href="#">Beskrivelse fra kunde</a>
+                            <a class="dropdown-item" href="#">Kundeinfo</a>
+                          <a class="dropdown-item" href="#">Produkt mottatt ddmmåå</a>
+                          <a class="dropdown-item" href="#">Avtalt ferdigstillelse innen ddmmåå</a>
+                            <a class="dropdown-item" href="#">Service ferdig ddmmåå</a>
+                          <a class="dropdown-item" href="#">Antall timer på utført service</a>
+                          <a class="dropdown-item" href="#">Service skjema JA/NEI</a>
+                      </div>
+                    </div>
+
+                    
+                    <!--<button id="søkSearch" class="btn btn-primary btn-block">Søk</button> -->
                 </div>
         </div>
                 <div class="table-responsive mt-3">
@@ -74,6 +103,51 @@
                             <td>8 timer</td>
                             <td>NEI</td>
                         </tr>
+                        
+                        <tr>
+                            <td>44</td>
+                            <td>02-11-23</td>
+                            <td>01-11-23</td>
+                            <td>12345</td>
+                            <td>Produkt A</td>
+                            <td>Beskrivelse av ordren fra kunde A</td>
+                            <td>Kundeinfo A</td>
+                            <td>03-11-23</td>
+                            <td>05-11-23</td>
+                            <td>06-11-23</td>
+                            <td>2 timer</td>
+                            <td>JA</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>44</td>
+                            <td>02-11-23</td>
+                            <td>01-11-23</td>
+                            <td>12345</td>
+                            <td>Produkt B</td>
+                            <td>Beskrivelse av ordren fra kunde B</td>
+                            <td>Kundeinfo A</td>
+                            <td>03-11-23</td>
+                            <td>05-11-23</td>
+                            <td>06-11-23</td>
+                            <td>8 timer</td>
+                            <td>NEI</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>44</td>
+                            <td>02-11-23</td>
+                            <td>01-11-23</td>
+                            <td>12345</td>
+                            <td>Produkt A</td>
+                            <td>Beskrivelse av ordren fra kunde A</td>
+                            <td>Kundeinfo A</td>
+                            <td>03-11-23</td>
+                            <td>05-11-23</td>
+                            <td>06-11-23</td>
+                            <td>2 timer</td>
+                            <td>JA</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -84,7 +158,7 @@
 
     
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
      <!-- kode for søkerfelt-->
 
