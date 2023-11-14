@@ -24,7 +24,7 @@
         @using (Html.BeginForm("RegistreingFrom", "Brukerregistrering"))
         {
             @Html.AntiForgeryToken()
-            <form action="post" id="addUserForm" class="needs-validation" novalidate>
+            <form action="post" id="addUserForm" class="needs-validation">
                 <!-- BYTTE ACTION? MÅ FIKSE KONTROLLER -->
                 <div class="container mt-4">
                     <div class="row justify-content-center">
@@ -125,7 +125,8 @@
                 
                 <div class="container text-center mt-5 mb-5">
                     <div class="button-m">
-                        <button type="submit" class="btn btn-primary" id="button-m">Fullfør</button>
+                        <button type="submit" class="btn btn-primary button mr-3" id="button-s-m">Fullfør</button>
+                        <button type="reset" class="btn btn-danger button ml-3" id="button-r-m" onclick="return confirm ('Er du sikker på at du vil nullstille informasjonen?')">Nullstill</button>
                     </div>
                 </div>
             </form>
@@ -136,24 +137,37 @@
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             Brukeren har blitt lagt til! Tilbake til <a href="@Url.Action("BackBrukeroversikt", "Brukeroversikt")" class="alert-link">Brukeroversikt.</a>
         </div>
-        <div class="alert alert-danger alert-dismissable" id="error-alert-m">
+        <div class="alert alert-danger alert-dismissible" id="error-alert-m">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             Vennligst fyll ut alle feltene! Gå tilbake til <a href="@Url.Action("BackBrukeroversikt", "Brukeroversikt")" class="alert-link">Brukeroversikt?</a>
         </div>
         </div>
 
         <script>
-        // bruker lagt til / fyll ut feltene varslinger
+        // bruker lagt til / fyll ut feltene varslinger / VIL IKKE FUNKE:(((((
             $(document).ready(function () {
-                $("#button-m").click(function () {
+                $(".button-m").click(function () {
                     if ($("#addUserForm")[0].checkValidity()) {
                         $("#success-alert-m").show();
-                        $("#error-alert-m").hide();
+                        //$("#error-alert-m").hide();
                     } else  {
-                        $("#success-alert-m").hide();
+                        //$("#success-alert-m").hide();
                         $("#error-alert-m").show();
+                       } 
+                    });
+             
+                // reset knapp event - trengs ikke
+                /* $("#addUserForm").on('reset', function (e) {
+                    e.preventDefault();
+                    
+                    var isConfirmed = window.confirm("Er du sikker på  at du vil resette informasjonen?");
+                    
+                    if (isConfirmed) {
+                       $("#success-alert-m").hide();
+                       $("#error-alert-m").hide(); 
+                       this.reset();
                     }
-                });
+                }); */
             });
         
             // subkategori for mekaniker drop-down
