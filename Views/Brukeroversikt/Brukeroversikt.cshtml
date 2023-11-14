@@ -55,7 +55,7 @@
                             </thead>
 
                             <tbody id="userTable">
-                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-content="1111,Atle Antonsen,Administrator,Legge til/fjerne verktøy">
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal">
                                 <td>1111</td>
                                 <td>Atle Antonsen</td>
                                 <td>Administrator</td>
@@ -116,13 +116,30 @@
                 <!-- pop up -->
                 <div class="modal fade" id="BOModal" role="dialog">
                     <div class="modal-dialog">
-                        <div class="modal-content-">
+                        
+                        <!-- modal content -->
+                        <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Rad detaljer</h4> <!-- må koble til database sånn at fullt navn kommer opp -->
+                                <h4 class="modal-title">Rad Detaljer</h4><!-- må koble til database sånn at fullt navn kommer opp -->
                             </div>
+                            
                             <div class="modal-body" id="BOModalBody">
-                                <p>text</p>
+                                <img src="~/Images/fram.png" alt="profilbilde-modal" id="modal-pfp-bo" style="display: inline-block"> <!-- profilbilde må kobles til database -->
+                                <div id="info-modal-bo">
+                                    <!-- må koble til database for info -->
+                                    <p>Stilling: </p>
+                                    <p>E-post: </p>
+                                    <p>Telefonnummer: </p>
+                                    <br/>
+                                </div>
+                                
+                                
+                                <div id="info-modal-bo-2">
+                                    <p>Arbeidsoppgaver: </p> <!-- koble til database -->
+                                    <br/>
+                                
+                                    <button type="button" class="btn btn-primary" id="edit-button-bo">Endre profil</button>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Lukk</button>
@@ -154,6 +171,9 @@
                     for (var i = 0; i < BOrowData.length; i++) {
                         BOModalBody.append("<p><strong>Column " + (i + 1) + ": </strong>" + BOrowData[i] + "</p>");
                             }
+                    
+                        
+                           
                         });
                     });
                 </script>
