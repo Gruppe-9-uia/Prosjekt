@@ -24,3 +24,28 @@ th {
     color: white;
     font-weight: bold;
 }
+
+.modal-dialog {
+    background-color: #FBFBFF;
+    border-radius: 20px;
+}
+
+#modal-pfp-bo {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+#info-modal-bo {
+    float: right;
+    margin-right: 175px;
+    margin-top: 10px;
+    line-height: 2;
+}
+
+#info-modal-bo-2 {
+    float: left;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
