@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS Service_Form_Employee (
     FormID_int INTEGER,
     EmployeeID_int INTEGER,
     Working_Hours_int INT,
-    Repair_Description_str VARCHAR(50),
+    Repair_Description_str VARCHAR(255),
     PRIMARY KEY (FormID_int, EmployeeID_int),
     FOREIGN KEY (FormID_int) REFERENCES Service_Form(FormID_int),
     FOREIGN KEY (EmployeeID_int) REFERENCES Employee(ID_int)
