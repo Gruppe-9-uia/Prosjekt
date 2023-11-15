@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS Customer (
 CREATE TABLE IF NOT EXISTS Warranty (
     ID_int INTEGER PRIMARY KEY,
     WarrantyName_str VARCHAR(20),
-    WarrantyType_str VARCHAR(40) NOT NULL,
     StartDate_date date,
     ExpDate_date date
 );
@@ -107,7 +106,7 @@ CREATE TABLE IF NOT EXISTS Service_Form_Employee (
     FormID_int INTEGER,
     EmployeeID_int INTEGER,
     Working_Hours_int INT,
-    Repair_Description_str VARCHAR(50),
+    Repair_Description_str VARCHAR(255),
     PRIMARY KEY (FormID_int, EmployeeID_int),
     FOREIGN KEY (FormID_int) REFERENCES Service_Form(FormID_int),
     FOREIGN KEY (EmployeeID_int) REFERENCES Employee(ID_int)
