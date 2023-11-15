@@ -1,8 +1,6 @@
+table.table-striped tbody tr:nth-child(odd) {
+    background-color: #fd7e14 !important;
+}
 
-#searchInput {
-    width: 500px;
-}
-.table-striped tbody tr:nth-child(odd) {
-    background-color: #fd7e14;
-}
+
 

@@ -1,6 +1,6 @@
 <!-- kode for søke felt-->
 
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    
 
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
