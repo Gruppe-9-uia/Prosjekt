@@ -36,11 +36,8 @@ th {
     float: left;
 }
 
-#info-modal-bo {
-    float: right;
-    margin-right: 175px;
-    margin-top: 10px;
-    line-height: 2;
+#additionalInfo {
+    width: 100%;
 }
 
 #info-modal-bo-2 {
@@ -48,4 +45,5 @@ th {
     margin-top: 40px;
     font-weight: bold;
 }
+
 
