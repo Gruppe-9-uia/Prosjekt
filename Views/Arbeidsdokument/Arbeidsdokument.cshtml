@@ -1,6 +1,8 @@
 ﻿<!-- fikse slik at tabellen strekker seg helt ut-->
 <!-- fikse filtersystem-->
 <!-- fikse farger og css-->
+
+@model Prosjekt.Models.ArbeidsdokumentModelView;
 @{
     ViewData["Title"] = "Arbeidsdokument";
 }
@@ -11,6 +13,9 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <input type="text" id="searchInput" class="form-control" placeholder="Søk igjennom arbeidsdokumentet">
+                
+                <div id="selectedColumn" class="input-group-append"></div>
+                
             </div>
             <div class="row mt-3"> 
                 <div class="col-md-3 mx-auto">
