@@ -13,30 +13,34 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Prosjekt.Entities;
+using Prosjekt.Services;
+
 
 namespace Prosjekt.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
+        private readonly ProsjektContext _context;
         private readonly SignInManager<EmployeeUser> _signInManager;
         private readonly UserManager<EmployeeUser> _userManager;
         private readonly IUserStore<EmployeeUser> _userStore;
         private readonly IUserEmailStore<EmployeeUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
+        private readonly IMyEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<EmployeeUser> userManager,
             IUserStore<EmployeeUser> userStore,
             SignInManager<EmployeeUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IMyEmailSender emailSender,
+            ProsjektContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +48,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context;
         }
 
         /// <summary>
@@ -98,6 +103,25 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [DataType(DataType.Text)]
+            [Display(Name = "Fornavn")]
+            public string FirstName_str { get; set; }
+
+            [DataType(DataType.Text)]
+            [Display(Name = "Etternavn")]
+            public string LastName_str { get; set; }
+
+            [DataType(DataType.Text)]
+            [Display(Name = "Telefon")]
+            public string PhoneNumber { get; set; }
+
+            [DataType(DataType.Text)]
+            [Display(Name = "Nivå")]
+            public string Level_str { get; set; }
+
+            [Display(Name = "Avdeling")]
+            public int DepartmentID_int { get; set; }
         }
 
 
@@ -117,37 +141,49 @@ namespace Prosjekt.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
 
-                if (result.Succeeded)
-                {
-                    _logger.LogInformation("User created a new account with password.");
+                user.FirstName_str = Input.FirstName_str;
+                user.LastName_str = Input.LastName_str;
+                user.PhoneNumber = Input.PhoneNumber;
+                user.Level_str = Input.Level_str;
+                user.DepartmentID_int = Input.DepartmentID_int;
+                var departmentExists = _context.Department.Any(d => d.DepartmentID_int == Input.DepartmentID_int);
 
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
+                if (departmentExists) {
+                    Console.WriteLine("yay");
+                    var result = await _userManager.CreateAsync(user, Input.Password);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                    if (result.Succeeded)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        _logger.LogInformation("User created a new account with password.");
+
+                        var userId = await _userManager.GetUserIdAsync(user);
+                        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                        var callbackUrl = Url.Page(
+                            "/Account/ConfirmEmail",
+                            pageHandler: null,
+                            values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                            protocol: Request.Scheme);
+
+                        await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                        if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                        {
+                            return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        }
+                        else
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
                     }
-                    else
+                
+                    foreach (var error in result.Errors)
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        ModelState.AddModelError(string.Empty, error.Description);
                     }
-                }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 

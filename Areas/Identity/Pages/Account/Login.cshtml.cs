@@ -15,6 +15,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Prosjekt.Entities;
+using Prosjekt.Services;
+
 
 namespace Prosjekt.Areas.Identity.Pages.Account
 {
@@ -110,6 +112,10 @@ namespace Prosjekt.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
+                Console.WriteLine(Input.Email);
+                Console.WriteLine(Input.Password);
+                Console.WriteLine(Input.RememberMe);
+                Console.WriteLine(_signInManager.ToString);
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);

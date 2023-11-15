@@ -4,18 +4,22 @@ using Prosjekt.Entities;
 
 namespace Prosjekt.Data
 {
-    public class ProsjektContext : IdentityDbContext<EmployeeUser, EmployeeRole, Guid>
+    public class ProsjektContext : IdentityDbContext<EmployeeUser, EmployeeRole, int>
     {
         public ProsjektContext(DbContextOptions<ProsjektContext> options) : base (options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             //Setter opp relasjoner
-            modelBuilder.Ignore<IdentityUserLogin<string>>();
-            modelBuilder.Ignore<IdentityUserRole<string>>();
-            modelBuilder.Ignore<IdentityUserClaim<string>>();
-            modelBuilder.Ignore<IdentityUserToken<string>>();
-            modelBuilder.Ignore<IdentityUser<string>>();
+            //modelBuilder.Ignore<IdentityUserLogin<string>>();
+            //modelBuilder.Ignore<IdentityUserRole<string>>();
+            //modelBuilder.Ignore<IdentityUserClaim<string>>();
+            //modelBuilder.Ignore<IdentityUserToken<string>>();
+            //modelBuilder.Ignore<IdentityUser<string>>();
+
+
+
             //AddressModel
             modelBuilder.Entity<AddressModel>()
                 .HasKey(a => a.Address_code_int);
@@ -112,7 +116,7 @@ namespace Prosjekt.Data
 
             //EmployeeModel
             modelBuilder.Entity<EmployeeUser>()
-                .HasKey(Employee => Employee.ID_int);
+                .HasKey(Employee => Employee.Id);
 
             modelBuilder.Entity<EmployeeUser>()
                 .HasOne(e => e.Department)
@@ -209,7 +213,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.Employee)
                 .WithMany(e => e.ServiceFormEmployees)
-                .HasPrincipalKey(s => s.ID_int);
+                .HasPrincipalKey(s => s.Id);
 
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.ServiceForm)
@@ -239,7 +243,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormSignModel>()
                .HasOne(e => e.Employee)
                .WithMany(s => s.ServiceFormsSign)
-               .HasPrincipalKey(s => s.ID_int);
+               .HasPrincipalKey(s => s.Id);
 
             //ChecklistModel
             modelBuilder.Entity<ChecklistModel>()
@@ -270,7 +274,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(e => e.employee)
                 .WithOne(e => e.ChecklistSignature)
-                .HasPrincipalKey<EmployeeUser>(e => e.ID_int);
+                .HasPrincipalKey<EmployeeUser>(e => e.Id);
 
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(c => c.Checklist)
@@ -326,6 +330,8 @@ namespace Prosjekt.Data
                 .HasMany(rp => rp.ServiceForms)
                 .WithOne(s => s.UsedPart)
                 .HasPrincipalKey(rp => rp.FormID_int);
+
+            
         }
 
         public DbSet<AddressModel>? Address { get; set; }

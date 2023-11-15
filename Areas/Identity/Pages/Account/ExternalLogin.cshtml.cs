@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Prosjekt.Entities;
+using Prosjekt.Services;
 
 namespace Prosjekt.Areas.Identity.Pages.Account
 {
@@ -28,7 +28,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
         private readonly UserManager<EmployeeUser> _userManager;
         private readonly IUserStore<EmployeeUser> _userStore;
         private readonly IUserEmailStore<EmployeeUser> _emailStore;
-        private readonly IEmailSender _emailSender;
+        private readonly IMyEmailSender _emailSender;
         private readonly ILogger<ExternalLoginModel> _logger;
 
         public ExternalLoginModel(
@@ -36,7 +36,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             UserManager<EmployeeUser> userManager,
             IUserStore<EmployeeUser> userStore,
             ILogger<ExternalLoginModel> logger,
-            IEmailSender emailSender)
+            IMyEmailSender emailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;

@@ -15,10 +15,6 @@ public class Program
 
         SetupDataConnections(builder);
 
-        builder.Services.AddIdentity<EmployeeUser, EmployeeRole>()
-            .AddEntityFrameworkStores<ProsjektContext>()
-            .AddDefaultUI()
-            .AddDefaultTokenProviders();
 
         SetupAuthentication(builder);
 
@@ -81,7 +77,12 @@ public class Program
             options.SignIn.RequireConfirmedAccount = false;
             options.User.RequireUniqueEmail = true;
         });
-        
+
+        builder.Services.AddIdentity<EmployeeUser, EmployeeRole>()
+            .AddEntityFrameworkStores<ProsjektContext>()
+            .AddDefaultUI()
+            .AddDefaultTokenProviders();
+
 
 
     }

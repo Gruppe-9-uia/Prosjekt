@@ -37,6 +37,25 @@ namespace Prosjekt.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "AspNetRoles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    NormalizedName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ConcurrencyStamp = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetRoles", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Department",
                 columns: table => new
                 {
@@ -149,7 +168,31 @@ namespace Prosjekt.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Employee",
+                name: "AspNetRoleClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    ClaimType = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ClaimValue = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUsers",
                 columns: table => new
                 {
                     ID_int = table.Column<int>(type: "int", nullable: false)
@@ -159,23 +202,23 @@ namespace Prosjekt.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     LastName_str = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Phone_str = table.Column<string>(type: "longtext", nullable: false)
+                    PhoneNumber = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Email_str = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password_str = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    RememberMe = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     Level_str = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Id = table.Column<string>(type: "longtext", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    UserName = table.Column<string>(type: "longtext", nullable: true)
+                    NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    NormalizedUserName = table.Column<string>(type: "longtext", nullable: true)
+                    Email = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    NormalizedEmail = table.Column<string>(type: "longtext", nullable: true)
+                    NormalizedEmail = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     EmailConfirmed = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     PasswordHash = table.Column<string>(type: "longtext", nullable: true)
@@ -183,8 +226,6 @@ namespace Prosjekt.Migrations
                     SecurityStamp = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ConcurrencyStamp = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    PhoneNumber = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     PhoneNumberConfirmed = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     TwoFactorEnabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
@@ -194,9 +235,9 @@ namespace Prosjekt.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Employee", x => x.ID_int);
+                    table.PrimaryKey("PK_AspNetUsers", x => x.ID_int);
                     table.ForeignKey(
-                        name: "FK_Employee_Department_DepartmentID_int",
+                        name: "FK_AspNetUsers_Department_DepartmentID_int",
                         column: x => x.DepartmentID_int,
                         principalTable: "Department",
                         principalColumn: "DepartmentID_int",
@@ -385,6 +426,103 @@ namespace Prosjekt.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "AspNetUserClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    ClaimType = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ClaimValue = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "ID_int",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserLogins",
+                columns: table => new
+                {
+                    LoginProvider = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ProviderKey = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ProviderDisplayName = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
+                    table.ForeignKey(
+                        name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "ID_int",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserRoles",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
+                    table.ForeignKey(
+                        name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "ID_int",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserTokens",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    LoginProvider = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Name = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Value = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
+                    table.ForeignKey(
+                        name: "FK_AspNetUserTokens_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "ID_int",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "ChecklistSignature",
                 columns: table => new
                 {
@@ -399,16 +537,16 @@ namespace Prosjekt.Migrations
                     table.PrimaryKey("PK_ChecklistSignature", x => new { x.DocID_str, x.EmployeeID_int });
                     table.UniqueConstraint("AK_ChecklistSignature_EmployeeID_int", x => x.EmployeeID_int);
                     table.ForeignKey(
+                        name: "FK_ChecklistSignature_AspNetUsers_EmployeeID_int",
+                        column: x => x.EmployeeID_int,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "ID_int",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_ChecklistSignature_Checklist_ChecklistDocID_str",
                         column: x => x.ChecklistDocID_str,
                         principalTable: "Checklist",
                         principalColumn: "DocID_str");
-                    table.ForeignKey(
-                        name: "FK_ChecklistSignature_Employee_EmployeeID_int",
-                        column: x => x.EmployeeID_int,
-                        principalTable: "Employee",
-                        principalColumn: "ID_int",
-                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -470,9 +608,9 @@ namespace Prosjekt.Migrations
                 {
                     table.PrimaryKey("PK_ServiceFormEmployee", x => new { x.FormID_int, x.EmployeeID_int });
                     table.ForeignKey(
-                        name: "FK_ServiceFormEmployee_Employee_EmployeeID_int",
+                        name: "FK_ServiceFormEmployee_AspNetUsers_EmployeeID_int",
                         column: x => x.EmployeeID_int,
-                        principalTable: "Employee",
+                        principalTable: "AspNetUsers",
                         principalColumn: "ID_int",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -499,16 +637,16 @@ namespace Prosjekt.Migrations
                     table.PrimaryKey("PK_ServiceFormSign", x => new { x.CustomerID_int, x.FormID_int, x.EmployeeID_int });
                     table.UniqueConstraint("AK_ServiceFormSign_FormID_int", x => x.FormID_int);
                     table.ForeignKey(
+                        name: "FK_ServiceFormSign_AspNetUsers_EmployeeID_int",
+                        column: x => x.EmployeeID_int,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "ID_int",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_ServiceFormSign_Customer_CustomerID_int",
                         column: x => x.CustomerID_int,
                         principalTable: "Customer",
                         principalColumn: "CustomerID_int",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ServiceFormSign_Employee_EmployeeID_int",
-                        column: x => x.EmployeeID_int,
-                        principalTable: "Employee",
-                        principalColumn: "ID_int",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ServiceFormSign_ServiceForm_ServiceFormFormID_int",
@@ -556,6 +694,48 @@ namespace Prosjekt.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AspNetRoleClaims_RoleId",
+                table: "AspNetRoleClaims",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "RoleNameIndex",
+                table: "AspNetRoles",
+                column: "NormalizedName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserClaims_UserId",
+                table: "AspNetUserClaims",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserLogins_UserId",
+                table: "AspNetUserLogins",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserRoles_RoleId",
+                table: "AspNetUserRoles",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "EmailIndex",
+                table: "AspNetUsers",
+                column: "NormalizedEmail");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_DepartmentID_int",
+                table: "AspNetUsers",
+                column: "DepartmentID_int");
+
+            migrationBuilder.CreateIndex(
+                name: "UserNameIndex",
+                table: "AspNetUsers",
+                column: "NormalizedUserName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Checklist_Product",
                 table: "Checklist",
                 column: "Product",
@@ -577,11 +757,6 @@ namespace Prosjekt.Migrations
                 table: "CustomerProduct",
                 column: "ProductSerialNr_str",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Employee_DepartmentID_int",
-                table: "Employee",
-                column: "DepartmentID_int");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ServiceForm_CustomerID_int",
@@ -641,6 +816,21 @@ namespace Prosjekt.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AspNetRoleClaims");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserClaims");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserLogins");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserRoles");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
                 name: "ChecklistSignature");
 
             migrationBuilder.DropTable(
@@ -656,10 +846,13 @@ namespace Prosjekt.Migrations
                 name: "ServiceOrderServiceform");
 
             migrationBuilder.DropTable(
+                name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
                 name: "Checklist");
 
             migrationBuilder.DropTable(
-                name: "Employee");
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "ServiceForm");

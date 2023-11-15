@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Prosjekt.Entities;
+using Prosjekt.Services;
+
 
 namespace Prosjekt.Areas.Identity.Pages.Account.Manage
 {

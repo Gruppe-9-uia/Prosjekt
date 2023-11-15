@@ -2,9 +2,9 @@
 
 namespace Prosjekt.Entities
 {
-    public class EmployeeRole : IdentityRole<Guid>
+    public class EmployeeRole : IdentityRole<int>
     {
-        public int id { get; set; }
-        public string name { get; set; }   
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

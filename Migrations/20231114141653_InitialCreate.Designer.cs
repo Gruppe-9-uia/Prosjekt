@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231113034629_CreateIdentitySchema")]
-    partial class CreateIdentitySchema
+    [Migration("20231114141653_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,26 +22,7 @@ namespace Prosjekt.Migrations
                 .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("NormalizedName")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Roles");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -53,15 +34,122 @@ namespace Prosjekt.Migrations
                     b.Property<string>("ClaimValue")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("RoleId")
-                        .HasColumnType("longtext");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("RoleClaims");
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.Employee", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.EmployeeRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
                     b.Property<int>("ID_int")
                         .ValueGeneratedOnAdd()
@@ -71,13 +159,15 @@ namespace Prosjekt.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("longtext");
 
                     b.Property<int>("DepartmentID_int")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
@@ -90,8 +180,8 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Id")
-                        .HasColumnType("longtext");
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName_str")
                         .IsRequired()
@@ -108,10 +198,12 @@ namespace Prosjekt.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("longtext");
@@ -121,14 +213,14 @@ namespace Prosjekt.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Phone_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("RememberMe")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("longtext");
@@ -137,13 +229,21 @@ namespace Prosjekt.Migrations
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.HasKey("ID_int");
 
                     b.HasIndex("DepartmentID_int");
 
-                    b.ToTable("Employee");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex");
+
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Prosjekt.Models.AddressModel", b =>
@@ -659,7 +759,58 @@ namespace Prosjekt.Migrations
                     b.ToTable("Warranty");
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.Employee", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.EmployeeRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.EmployeeRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
                     b.HasOne("Prosjekt.Models.DepartmentModel", "Department")
                         .WithMany("Employees")
@@ -688,7 +839,7 @@ namespace Prosjekt.Migrations
                         .HasForeignKey("Prosjekt.Models.ChecklistSignatureModel", "ChecklistDocID_str")
                         .HasPrincipalKey("Prosjekt.Models.ChecklistModel", "DocID_str");
 
-                    b.HasOne("Prosjekt.Entities.Employee", "employee")
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", "employee")
                         .WithOne("ChecklistSignature")
                         .HasForeignKey("Prosjekt.Models.ChecklistSignatureModel", "EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -760,7 +911,7 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Models.ServiceFormEmployeeModel", b =>
                 {
-                    b.HasOne("Prosjekt.Entities.Employee", "Employee")
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", "Employee")
                         .WithMany("ServiceFormEmployees")
                         .HasForeignKey("EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -815,7 +966,7 @@ namespace Prosjekt.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Prosjekt.Entities.Employee", "Employee")
+                    b.HasOne("Prosjekt.Entities.EmployeeUser", "Employee")
                         .WithMany("ServiceFormsSign")
                         .HasForeignKey("EmployeeID_int")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -891,7 +1042,7 @@ namespace Prosjekt.Migrations
                     b.Navigation("serviceForm");
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.Employee", b =>
+            modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
                     b.Navigation("ChecklistSignature");
 

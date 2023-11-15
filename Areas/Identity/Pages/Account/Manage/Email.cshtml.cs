@@ -8,11 +8,11 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Prosjekt.Entities;
+using Prosjekt.Services;
 
 namespace Prosjekt.Areas.Identity.Pages.Account.Manage
 {
@@ -20,12 +20,12 @@ namespace Prosjekt.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<EmployeeUser> _userManager;
         private readonly SignInManager<EmployeeUser> _signInManager;
-        private readonly IEmailSender _emailSender;
+        private readonly IMyEmailSender _emailSender;
 
         public EmailModel(
             UserManager<EmployeeUser> userManager,
             SignInManager<EmployeeUser> signInManager,
-            IEmailSender emailSender)
+            IMyEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;

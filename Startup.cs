@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Prosjekt.Models;
 using System.Configuration;
 using Prosjekt.Entities;
+using Prosjekt.Services;
+using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol.Core.Types;
 
 namespace Prosjekt
 {
@@ -30,15 +33,67 @@ namespace Prosjekt
                 }));
             
             services.AddDbContext<ProsjektContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<EmployeeUser, IdentityRole>()
+            services.AddIdentity<EmployeeUser, EmployeeRole>()
                 .AddEntityFrameworkStores<ProsjektContext>()
+                 .AddSignInManager()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
-            // Adjust the version according to your MariaDB version
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                    options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                });
+
+            services.AddAuthentication(o =>
+            {
+                o.DefaultScheme = IdentityConstants.ApplicationScheme;
+                o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+
+            }).AddIdentityCookies(o => { });
+
+
+            //Password Strength Setting  
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings  
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredUniqueChars = 6;
+
+                // Lockout settings  
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 10;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // User settings  
+                options.User.RequireUniqueEmail = true;
+            });
+
+            //Seting the Account Login page  
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings  
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                options.LoginPath = "/Account/Login"; // If the LoginPath is not set here, ASP.NET Core will default to /Account/Login  
+                options.LogoutPath = "/Account/Logout"; // If the LogoutPath is not set here, ASP.NET Core will default to /Account/Logout  
+                options.AccessDeniedPath = "/Account/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied  
+                options.SlidingExpiration = true;
+            });
+
+            services.AddOptions();
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
 
             services.AddControllersWithViews();
-            services.AddTransient<ProsjektContext>();
+            services.AddScoped<ProsjektContext>();
+            services.AddScoped<IMyEmailSender, MyEmailSender>();
+            services.AddTransient<IMyEmailSender, MyEmailSender>();
+            services.AddRazorPages();
         }
 
        
