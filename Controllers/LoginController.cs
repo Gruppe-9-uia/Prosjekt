@@ -60,5 +60,11 @@ namespace Prosjekt.Controllers
             // dersom logg inn feiler, tilbake til login med error melding
             return RedirectToAction("Login");
         }
+
+        [HttpPost]
+        public IActionResult ForgotPassword()
+        {
+            return RedirectToAction("Login");
+        }
     }
 }

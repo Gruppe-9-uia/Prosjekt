@@ -7,14 +7,14 @@ VALUES
 ("IG308011", "Igland 2501", "2010","En-tromlet"),
 ("IG308231", "Igland 2501", "2010","En-tromlet"),
 ("IG300622", "IGLAND 9002 Maxo TLP", "2023","To-tromlet"),
-("IG300902", "IGLAND 52","En-tromlet"),
+("IG300902", "IGLAND 52", "2019","En-tromlet"),
 ("IG300052", "Igland 4501", "2020","En-tromlet"),
 ("IG300630", "IGLAND 9002 MAXO", "2015","Vinsjtopp"),
 ("IG300612", "IGLAND 6002 Pronto TLP", "2013","Tn-tromlet"),
 ("IG300491", "IGLAND 5002 Pento TL", "2005", "To-tromlet");
 
 --Warranty
-INSERT INTO Warranty (ID_int, WarrantyName_str, WarrantyType_str, StartDate_date, ExpDate_date) 
+INSERT INTO Warranty (ID_int, WarrantyName_str, StartDate_date, ExpDate_date) 
 VALUES
 (1, "Lang garanti", "2008-11-09", "2023-11-09"),
 (2, "Kort garanti", "2023-12-09", "2028-12-09"),
@@ -81,15 +81,15 @@ VALUES
 -- Postal_Code
 INSERT INTO Postal_Code (PostalCode_str, City_str, State_str, Country_str)
 VALUES
-("0001", "Tromsø", "Troms og Finnmark", "Norge"),
+("0001", "Tromsoo", "Troms og Finnmark", "Norge"),
 ("0002", "Kristiansand", "Agder", "Norge"),
-("0003", "Stanavger", "Rogaland", "Norge"),
-("0004", "Molde", "Møre og Romsdal", "Norge"),
-("0005", "Bodø", "Nordland", "Norge"),
-("0006", "Trondheim", "Trøndelag", "Norge"),
+("0003", "Stavanger", "Rogaland", "Norge"),
+("0004", "Molde", "Moore og Romsdal", "Norge"),
+("0005", "Bodoo", "Nordland", "Norge"),
+("0006", "Trondheim", "Troondelag", "Norge"),
 ("0007", "Narvik", "Nordland", "Norge"),
 ("0008", "Kirkenes", "Troms og Finnmark", "Norge"),
-("0009", "Svovær", "Nordland", "Norge"),
+("0009", "Svoveer", "Nordland", "Norge"),
 ("0010", "Harstad", "Troms og Finnmark", "Norge");
 
 -- Service_order
@@ -109,16 +109,16 @@ VALUES
 -- Service_form
 INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
 VALUES 
-(123, 1, "Ødelagt", 01.01.2023, 02.01.2023, 02.01.2023, 1, "med bil"),
-(124, 2, "Ødelagt", 02.01.2023, 03.01.2023, 03.01.2023, 1, "med bil"),
-(125, 3, "Ødelagt", 03.01.2023, 04.01.2023, 04.01.2023, 1, "med bil"),
-(126, 4, "Ødelagt", 05.01.2023, 06.01.2023, 06.01.2023, 1, "med bil"),
-(127, 5, "Ødelagt", 07.01.2023, 08.01.2023, 08.01.2023, 1, "med bil"),
-(128, 6, "Ødelagt", 09.01.2023, 10.01.2023, 10.01.2023, 1, "med bil"),
-(129, 7, "Ødelagt", 11.01.2023, 12.01.2023, 12.01.2023, 1, "med bil"),
-(1210, 8, "Ødelagt", 13.01.2023, 14.01.2023, 14.01.2023, 1, "med bil"),
-(1211, 9, "Ødelagt", 15.01.2023, 16.01.2023, 16.01.2023, 1, "med bil"),
-(1212, 10, "Ødelagt", 17.01.2023, 18.01.2023, 18.01.2023, 1, "med bil");
+(123, 1, "oodelagt", "2023-01-10", "2023-01-01", "2023-01-02", 1, "med bil"),
+(124, 2, "oodelagt", "2023-02-11", "2023-02-02", "2023-02-03", 1, "med bil"),
+(125, 3, "oodelagt", "2023-03-12", "2023-03-03", "2023-03-04", 2, "med bil"),
+(126, 4, "oodelagt", "2022-04-13", "2022-04-04", "2022-04-05", 2, "med bil"),
+(127, 5, "oodelagt", "2022-05-14", "2022-05-05", "2022-05-06", 3, "med bil"),
+(128, 6, "oodelagt", "2021-06-15", "2021-06-06", "2022-06-07", 3, "med bil"),
+(129, 7, "oodelagt", "2023-07-16", "2023-07-07", "2023-07-08", 4, "med bil"),
+(1210, 8, "oodelagt", "2023-08-17", "2023-08-08", "2023-08-09", 4, "med bil"),
+(1211, 9, "oodelagt", "2023-09-18", "2023-09-09", "2023-09-10", 5, "med bil"),
+(1212, 10, "oodelagt", "2023-10-19", "2023-10-10", "2023-10-11", 5, "med bil");
 
 -- Service_Order_Service_form
 INSERT INTO Service_Order_Service_form (OrderID_int, FormID_int)
@@ -152,30 +152,30 @@ VALUES
 -- what the hell is this? 
 INSERT INTO Parts (PartID_int, PartName_str, Quantity_available_int)
 VALUES 
-(111, "STÅLTAU - 8 mm Metervare", 8),
+(111, "Staaltau - 8 mm Metervare", 8),
 (222, "Gullkjetting m/ krok og tverrpinne", 4),
 (333, "Spesialformet m/ stoppeknaster. 160 mm", 8),
-(444,   "Snarekrok m/ splint", 20),
+(444, "Snarekrok m/ splint", 20),
 (555, "Spesialtilpassethurtigkobling", 50),
 (666, "Motorsagholder", 13),
 (777, "Kasteblokk 2 t", 100),
-(888, "Løpekatt", 45),
-(999, "Tømmersaks", 12),
-(1010, "Kraftoverføringsakselspesialutførelse for vinsj", 22);
+(888, "Loopekatt", 45),
+(999, "Toommersaks", 12),
+(1010, "Kraftoverfooringsakselspesialutfoorelse for vinsj", 22);
 
 -- Service_Form_Sign
 INSERT INTO Service_Form_Sign (CustomerID_int, EmployeeID_int, FormID_int, Sign_Date)
 VALUES
-(1, 10, 123, 2019-12-01),
-(2, 9, 124, 2020-07-21),
-(3, 8, 125, 2021-01-26),
-(4, 7, 126, 1998-01-27),
-(5, 6, 127, 2023-02-02),
-(6, 5, 128, 2023-02-10),
-(7, 4, 129, 2020-05-10),
-(8, 3, 1210, 2021-04-30),
-(9, 2, 1211, 2022-11-01),
-(10, 1, 1212, 2018-06-25);
+(1, 10, 123, "2019-12-01"),
+(2, 9, 124, "2020-07-21"),
+(3, 8, 125, "2021-01-26"),
+(4, 7, 126, "1998-01-27"),
+(5, 6, 127, "2023-02-02"),
+(6, 5, 128, "2023-02-10"),
+(7, 4, 129, "2020-05-10"),
+(8, 3, 1210, "2021-04-30"),
+(9, 2, 1211, "2022-11-01"),
+(10, 1, 1212, "2018-06-25");
 
 
 -- Checklist

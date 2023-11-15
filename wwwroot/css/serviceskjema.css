@@ -5,7 +5,7 @@
 
 .search input {
     height: 40px;
-    text-indent: 25px;
+    text-indent: 15px;
     border: 2px solid #d6d4d4;
 }
 
@@ -15,8 +15,6 @@
     border: 2px solid #FF6700;
 }
 
-
-
 .search button {
     position: absolute;
     top: 5px;
@@ -24,6 +22,9 @@
     height: 30px;
     width: 110px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
  }
 
 .form-row input:focus {
@@ -34,4 +35,7 @@
 textarea:focus {
     box-shadow: none !important;
     border: 2px solid #FF6700 !important;
+}
+.button-spacing {
+    margin-right: 30px;
 }

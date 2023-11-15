@@ -15,7 +15,9 @@
 9. Connect database i jetbrains med følge informasjon:
    1.Database=ProsjektDB
    2.Port=3308
-11. Tilsutt kjører dockerfile i jetbrains
+11. Kjører dockerfile i jetbrains
+12. Tilsutt kjør prosjekt i jetbrains
+
 
 ### Mac
 
@@ -26,5 +28,6 @@
 9. Connect database i jetbrains med følge informasjon:
    1.Database=ProsjektDB
    2.Port=3308
-11. Tilsutt kjører dockerfile i jetbrains
+11. Kjører dockerfile i jetbrains
+12. Tilsutt kjør prosjekt i jetbrains
 
