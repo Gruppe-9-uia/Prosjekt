@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Prosjekt.Models;
 using System.Configuration;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Prosjekt.Entities;
 using Prosjekt.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -33,12 +34,15 @@ namespace Prosjekt
                 }));
             
             services.AddDbContext<ProsjektContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<EmployeeUser, EmployeeRole>()
+            services.AddIdentity<EmployeeUser, IdentityRole>(o =>
+                {
+                    o.SignIn.RequireConfirmedAccount = false;
+                })
                 .AddEntityFrameworkStores<ProsjektContext>()
-                 .AddSignInManager()
+                .AddSignInManager<SignInManager<EmployeeUser>>() // Provide the correct generic type
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddRazorPagesOptions(options =>
                 {
@@ -91,8 +95,8 @@ namespace Prosjekt
 
             services.AddControllersWithViews();
             services.AddScoped<ProsjektContext>();
-            services.AddScoped<IMyEmailSender, MyEmailSender>();
-            services.AddTransient<IMyEmailSender, MyEmailSender>();
+            services.AddScoped<IEmailSender, MyEmailSender>();
+            services.AddTransient<IEmailSender, MyEmailSender>();
             services.AddRazorPages();
         }
 

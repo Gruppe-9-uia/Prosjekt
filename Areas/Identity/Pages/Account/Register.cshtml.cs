@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
@@ -32,14 +33,14 @@ namespace Prosjekt.Areas.Identity.Pages.Account
         private readonly IUserStore<EmployeeUser> _userStore;
         private readonly IUserEmailStore<EmployeeUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IMyEmailSender _emailSender;
+        private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<EmployeeUser> userManager,
             IUserStore<EmployeeUser> userStore,
             SignInManager<EmployeeUser> signInManager,
             ILogger<RegisterModel> logger,
-            IMyEmailSender emailSender,
+            IEmailSender emailSender,
             ProsjektContext context)
         {
             _userManager = userManager;
@@ -96,7 +97,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             public string Password { get; set; }
 
             /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+            ///     Th-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++is API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
@@ -139,7 +140,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.FirstName_str, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
                 user.FirstName_str = Input.FirstName_str;
@@ -149,25 +150,31 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                 user.DepartmentID_int = Input.DepartmentID_int;
                 var departmentExists = _context.Department.Any(d => d.DepartmentID_int == Input.DepartmentID_int);
 
-                if (departmentExists) {
-                    Console.WriteLine("yay");
+                if (departmentExists)
+                {
                     var result = await _userManager.CreateAsync(user, Input.Password);
 
+                    Console.WriteLine(result.ToString());
                     if (result.Succeeded)
                     {
                         _logger.LogInformation("User created a new account with password.");
+                        var userId = await _userManager.FindByNameAsync(user.UserName);
+                        Console.WriteLine("ye");
+                        Console.WriteLine(userId);
+                        Console.WriteLine("ye");
+                        Console.WriteLine(user);
+                        Console.WriteLine("ye");
+                       // var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                        var userId = await _userManager.GetUserIdAsync(user);
-                        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                        var callbackUrl = Url.Page(
-                            "/Account/ConfirmEmail",
-                            pageHandler: null,
-                            values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                            protocol: Request.Scheme);
+                       // var callbackUrl = Url.Page(
+                        //    "/Account/ConfirmEmail",
+                        //    pageHandler: null,
+                        //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                        //    protocol: Request.Scheme);
 
-                        await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                         //   $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                         if (_userManager.Options.SignIn.RequireConfirmedAccount)
                         {

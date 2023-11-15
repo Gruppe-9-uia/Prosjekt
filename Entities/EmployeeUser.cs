@@ -5,9 +5,14 @@ namespace Prosjekt.Entities;
 [Table("Employee")]
 public class EmployeeUser : IdentityUser<int>
 {
+    
     [Required]
     [Key]
     public int Id { get; set; }
+    
+    [Required]
+    [Key]
+    public int ID_int { get; set; }
 
     [Required]
     [ForeignKey("DepartmentID_int")]

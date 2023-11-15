@@ -6,11 +6,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Prosjekt.Services
 {
-    public interface IMyEmailSender
-    {
-        Task SendEmailAsync(string email, string subject, string message);
-    }
-    public class MyEmailSender : IMyEmailSender
+    public class MyEmailSender : IEmailSender
     {
         private readonly EmailSettings _emailSettings;
 

@@ -9,6 +9,7 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
@@ -21,9 +22,9 @@ namespace Prosjekt.Areas.Identity.Pages.Account
     public class ResendEmailConfirmationModel : PageModel
     {
         private readonly UserManager<EmployeeUser> _userManager;
-        private readonly IMyEmailSender _emailSender;
+        private readonly IEmailSender _emailSender;
 
-        public ResendEmailConfirmationModel(UserManager<EmployeeUser> userManager, IMyEmailSender emailSender)
+        public ResendEmailConfirmationModel(UserManager<EmployeeUser> userManager, IEmailSender emailSender)
         {
             _userManager = userManager;
             _emailSender = emailSender;

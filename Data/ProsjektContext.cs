@@ -4,7 +4,7 @@ using Prosjekt.Entities;
 
 namespace Prosjekt.Data
 {
-    public class ProsjektContext : IdentityDbContext<EmployeeUser, EmployeeRole, int>
+    public class ProsjektContext : IdentityDbContext<EmployeeUser, EmployeeRole,  int>
     {
         public ProsjektContext(DbContextOptions<ProsjektContext> options) : base (options) { }
 
@@ -116,7 +116,7 @@ namespace Prosjekt.Data
 
             //EmployeeModel
             modelBuilder.Entity<EmployeeUser>()
-                .HasKey(Employee => Employee.Id);
+                .HasKey(Employee => Employee.ID_int);
 
             modelBuilder.Entity<EmployeeUser>()
                 .HasOne(e => e.Department)
@@ -213,7 +213,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.Employee)
                 .WithMany(e => e.ServiceFormEmployees)
-                .HasPrincipalKey(s => s.Id);
+                .HasPrincipalKey(s => s.ID_int);
 
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.ServiceForm)
@@ -243,7 +243,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormSignModel>()
                .HasOne(e => e.Employee)
                .WithMany(s => s.ServiceFormsSign)
-               .HasPrincipalKey(s => s.Id);
+               .HasPrincipalKey(s => s.ID_int);
 
             //ChecklistModel
             modelBuilder.Entity<ChecklistModel>()
@@ -274,7 +274,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(e => e.employee)
                 .WithOne(e => e.ChecklistSignature)
-                .HasPrincipalKey<EmployeeUser>(e => e.Id);
+                .HasPrincipalKey<EmployeeUser>(e => e.ID_int);
 
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(c => c.Checklist)
