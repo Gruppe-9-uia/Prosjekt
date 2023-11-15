@@ -95,16 +95,16 @@ VALUES
 -- Service_order
 INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
 VALUES 
-(101, 1, "Vedlikehold", "01-01-23", "Bytt ut ødelagte deler"),
-(102, 2, "Installasjon", "07-03-23", "Sett opp nytt utstyr"),
-(103, 3, "Reparere", "23-05-23", "Fiks system som ikke fungerer"),
-(104, 4, "Oppgradering", "30-06-23", "Forbedre systemytelsen"),
-(105, 5, "Vedlikehold", "01-07-23", "Rutinesjekk og service"),
-(106, 6, "Reparere", "27-07-23", "Løs tilkoblingsproblemer"),
-(107, 7, "Oppgradering", "30-07-23", "Forbedre systemytelsen"),
-(108, 8, "Installasjon", "05-08-23", "Legg til nye deler"),
-(109, 9, "Vedlikehold", "09-09-23", "Inspiser og rengjør"),
-(110, 10, "Vedlikehold", "11-10-23", "Rutinesjekk og service");
+(101, 1, "Vedlikehold", "2023-01-01", "Bytt ut ødelagte deler"),
+(102, 2, "Installasjon", "2023-02-02", "Sett opp nytt utstyr"),
+(103, 3, "Reparere", "2023-02-29", "Fiks system som ikke fungerer"),
+(104, 4, "Oppgradering", "2022-04-02", "Forbedre systemytelsen"),
+(105, 5, "Vedlikehold", "2022-04-20", "Rutinesjekk og service"),
+(106, 6, "Reparere", "2021-06-05", "Løs tilkoblingsproblemer"),
+(107, 7, "Oppgradering", "2023-07-06", "Forbedre systemytelsen"),
+(108, 8, "Installasjon", "2023-08-07", "Legg til nye deler"),
+(109, 9, "Vedlikehold", "2023-09-09", "Inspiser og rengjør"),
+(110, 10, "Vedlikehold", "2023-10-17", "Rutinesjekk og service");
 
 -- Service_form
 INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
