@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Prosjekt.Models;
+using Prosjekt.Entities;
 
 //TODO: prøve å fikse som modelstate sjekke kan kjøre
 

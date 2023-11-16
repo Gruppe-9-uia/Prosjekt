@@ -138,7 +138,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                 user.PhoneNumber = Input.PhoneNumber;
                 user.Level_str = Input.Level_str;
                 user.DepartmentID_int = Input.DepartmentID_int;
-                var departmentExists = _context.Department.Any(d => d.DepartmentID_int == Input.DepartmentID_int);
+                var departmentExists = _context.Department.Any(d => d.ID_int == Input.DepartmentID_int);
 
                 if (departmentExists)
                 {

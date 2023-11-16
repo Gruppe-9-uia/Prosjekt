@@ -1,6 +1,6 @@
 ﻿using Prosjekt.Entities;
 
-namespace Prosjekt.Models
+namespace Prosjekt.Entities
 {
     public class ServiceFormSignModel
     {

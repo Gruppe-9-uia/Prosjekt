@@ -1,4 +1,4 @@
-﻿namespace Prosjekt.Models
+﻿namespace Prosjekt.Entities
 {
     public class UsedPartModel
     {

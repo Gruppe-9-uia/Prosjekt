@@ -1,4 +1,6 @@
-﻿@model Prosjekt.Models.ServiceOrderModel;
+﻿<!-- Må lage view model for denne istedenfor å bruke entittes -->
+
+@model Prosjekt.Entities.ServiceOrderModel;
 @{
     ViewData["Title"] = "Serviceordre";
 }
@@ -44,7 +46,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="postnummer">Postnummer:</label>
-                    <input type="number" class="form-control" id="postnummer" asp-for="CustomerProduct.Customer.Address.PostalCode_str" placeholder="Postnummer" required>
+                    <input type="number" class="form-control" id="postnummer" asp-for="CustomerProduct.Customer.Address.Postal_Code_str" placeholder="Postnummer" required>
                 </div>
             </div>
             <div class="form-row">

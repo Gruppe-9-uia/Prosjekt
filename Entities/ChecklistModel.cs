@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata;
 
-namespace Prosjekt.Models
+
+namespace Prosjekt.Entities
 {
     public class ChecklistModel
     {
