@@ -16,7 +16,7 @@ namespace Prosjekt.Controllers
         // Funskjon vil gi bruker resposen om det var vellykke eller ikke
         // ved innsending av form
         [HttpPost]
-        public IActionResult SumbitKontaktForm(KontaktFormModell kontaktForm)
+        public IActionResult SumbitKontaktForm(KontaktFormModel kontaktForm)
         {
             if (!ModelState.IsValid) return View("KontaktOss");
 

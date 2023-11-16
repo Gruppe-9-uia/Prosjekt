@@ -1,12 +1,10 @@
-﻿namespace Prosjekt.Models
+﻿namespace Prosjekt.Entities
 {
-    public class AddressModel
+    public class PostalCode
     {
         [Required]
         [Key]
-        public int Address_code_int { get; set; }
-        [Required]
-        public string PostalCode_str { get; set; }
+        public string Postal_Code_str { get; set; }
         [Required]
         public string City_str { get; set; }
         [Required]

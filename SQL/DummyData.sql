@@ -29,6 +29,20 @@ VALUES
 (10, "Kort garanti", "2021-03-15", "2026-03-15");
 
 
+-- Postal_Code
+INSERT INTO Postal_Code (Postal_Code_str, City_str, State_str, Country_str)
+VALUES
+    ("0001", "Tromsoo", "Troms og Finnmark", "Norge"),
+    ("0002", "Kristiansand", "Agder", "Norge"),
+    ("0003", "Stavanger", "Rogaland", "Norge"),
+    ("0004", "Molde", "Moore og Romsdal", "Norge"),
+    ("0005", "Bodoo", "Nordland", "Norge"),
+    ("0006", "Trondheim", "Troondelag", "Norge"),
+    ("0007", "Narvik", "Nordland", "Norge"),
+    ("0008", "Kirkenes", "Troms og Finnmark", "Norge"),
+    ("0009", "Svoveer", "Nordland", "Norge"),
+    ("0010", "Harstad", "Troms og Finnmark", "Norge");
+
 -- Customer
 INSERT INTO Customer (ID_int, FirstName_str, LastName_str, Phone_str, Email_str, Street_Address_str, Postal_Code_str)
 VALUES
@@ -65,7 +79,7 @@ VALUES
 (3, "Hydraulisk"),
 (4, "Elektro");
 
--- Employees
+-- Employees, Må gjøes og legge på en annen måte
 INSERT INTO Employee (ID_int, FirstName_str, LastName_str, Phone_str, Email_str, Password_str, Level_str, DepartmentID_int)
 VALUES 
 (1, "Taylor", "Swift", "+47 452 65 333", "TaylorSwift@mail.com", "if51iP6Np", "high", 3),
@@ -79,22 +93,9 @@ VALUES
 (9, "Terje", "Gjøsæter", "+47 555 65 444", "TerjeG@mail.com", "bx8WOqyzDqS", "high", 3),
 (10, "Rania", "El-Gazzar", "+47 555 65 555", "RaniaE@mail.com", "ZA7Q118LU", "high", 1);
 
--- Postal_Code
-INSERT INTO Postal_Code (PostalCode_str, City_str, State_str, Country_str)
-VALUES
-("0001", "Tromsoo", "Troms og Finnmark", "Norge"),
-("0002", "Kristiansand", "Agder", "Norge"),
-("0003", "Stavanger", "Rogaland", "Norge"),
-("0004", "Molde", "Moore og Romsdal", "Norge"),
-("0005", "Bodoo", "Nordland", "Norge"),
-("0006", "Trondheim", "Troondelag", "Norge"),
-("0007", "Narvik", "Nordland", "Norge"),
-("0008", "Kirkenes", "Troms og Finnmark", "Norge"),
-("0009", "Svoveer", "Nordland", "Norge"),
-("0010", "Harstad", "Troms og Finnmark", "Norge");
 
 -- Service_order
-INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
+INSERT INTO Service_ordre(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
 VALUES 
 (101, 1, "Vedlikehold", "2023-01-01", "Bytt ut ødelagte deler"),
 (102, 2, "Installasjon", "2023-02-02", "Sett opp nytt utstyr"),

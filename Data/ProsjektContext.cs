@@ -21,22 +21,22 @@ namespace Prosjekt.Data
             //TODO: fiks fforholdene mellom roles og user?
 
             //AddressModel
-            modelBuilder.Entity<AddressModel>()
-                .HasKey(a => a.Address_code_int);
+            modelBuilder.Entity<PostalCode>()
+                .HasKey(a => a.Postal_Code_str);
 
-            modelBuilder.Entity<AddressModel>()
+            modelBuilder.Entity<PostalCode>()
                 .HasMany(a => a.customers)
                 .WithOne(c => c.Address)
-                .HasForeignKey(a => a.Address_code_int);
+                .HasForeignKey(a => a.Postal_Code_str);
 
             //CustomerModel
             modelBuilder.Entity<CustomerModel>()
-                .HasKey(Customer => Customer.CustomerID_int);
+                .HasKey(Customer => Customer.ID_int);
 
             modelBuilder.Entity<CustomerModel>()
                 .HasOne(c => c.Address)
                 .WithMany(a => a.customers)
-                .HasForeignKey(c => c.Address_code_int);
+                .HasForeignKey(c => c.Postal_Code_str);
 
             modelBuilder.Entity<CustomerModel>()
                 .HasMany(c => c.ServiceOrders)
@@ -107,7 +107,7 @@ namespace Prosjekt.Data
 
             //DepartmentModel
             modelBuilder.Entity<DepartmentModel>()
-                .HasKey(Department => Department.DepartmentID_int);
+                .HasKey(Department => Department.ID_int);
 
             modelBuilder.Entity<DepartmentModel>()
                 .HasMany(d => d.Employees)
@@ -144,7 +144,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceOrderModel>()
                 .HasOne(s => s.Customer)
                 .WithMany(c => c.ServiceOrders)
-                .HasPrincipalKey(s => s.CustomerID_int);
+                .HasPrincipalKey(s => s.ID_int);
 
             modelBuilder.Entity<ServiceOrderModel>()
                 .HasOne(s => s.ServiceOrderServiceform)
@@ -162,7 +162,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormModel>()
                 .HasOne(s => s.Customer)
                 .WithMany(c => c.ServiceForms)
-                .HasPrincipalKey(s => s.CustomerID_int);
+                .HasPrincipalKey(s => s.ID_int);
 
             modelBuilder.Entity<ServiceFormModel>()
                 .HasOne(s => s.ServiceOrderServiceform)
@@ -238,7 +238,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormSignModel>()
                .HasOne(s => s.Customer)
                .WithMany(c => c.ServiceFormsSign)
-               .HasPrincipalKey(s => s.CustomerID_int);
+               .HasPrincipalKey(s => s.ID_int);
 
             modelBuilder.Entity<ServiceFormSignModel>()
                .HasOne(e => e.Employee)
@@ -334,22 +334,22 @@ namespace Prosjekt.Data
             
         }
 
-        public DbSet<AddressModel>? Address { get; set; }
-        public DbSet<CustomerModel>? Customer { get; set; }
+        public DbSet<PostalCode>? Postal_Code { get; set; }
+        public DbSet<CustomerModel>? s { get; set; }
         public DbSet<WarrantyModel>? Warranty { get; set; }
         public DbSet<ProductModel>? Product { get; set; }
-        public DbSet<CustomerProductModel>? CustomerProduct { get; set; }
+        public DbSet<CustomerProductModel>? Customer_Product { get; set; }
         public DbSet<DepartmentModel>? Department { get; set; }
         public DbSet<EmployeeUser>? Employees { get; set; }
-        public DbSet<ServiceOrderModel>? ServiceOrdre { get; set; }
-        public DbSet<ServiceFormModel>? ServiceForm { get; set; }
-        public DbSet<ServiceOrderServiceformModel>? ServiceOrderServiceform { get; set; }
-        public DbSet<ServiceFormEmployeeModel>? ServiceFormEmployee { get; set; }
-        public DbSet<ServiceFormSignModel>? ServiceFormSign { get; set; }
+        public DbSet<ServiceOrderModel>? Service_ordre { get; set; }
+        public DbSet<ServiceFormModel>? Service_Form { get; set; }
+        public DbSet<ServiceOrderServiceformModel>? Service_Order_Service_form { get; set; }
+        public DbSet<ServiceFormEmployeeModel>? Service_Form_Employee { get; set; }
+        public DbSet<ServiceFormSignModel>? Service_Form_Sign { get; set; }
         public DbSet<ChecklistModel>? Checklist { get; set; }
-        public DbSet<ChecklistSignatureModel> ChecklistSignature { get; set; }
+        public DbSet<ChecklistSignatureModel> Checklist_signature { get; set; }
         public DbSet<PartsModel> Parts { get; set; }
-        public DbSet<ReplacedPartsReturnedModel> ReplacedParts { get; set; }
-        public DbSet<UsedPartModel> UsedParts { get; set; }
+        public DbSet<ReplacedPartsReturnedModel> Replaced_Parts_Returned { get; set; }
+        public DbSet<UsedPartModel> Used_Parts { get; set; }
     }
 }
