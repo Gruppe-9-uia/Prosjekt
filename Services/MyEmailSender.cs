@@ -1,51 +1,44 @@
-﻿using Microsoft.Extensions.Options;
-using Prosjekt.Entities;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
-
+using Microsoft.AspNetCore.Identity.UI.Services;
 namespace Prosjekt.Services
 {
 
-    public class MyEmailSender : IMyEmailsender
+    public class MyEmailSender : IEmailSender
     {
-        private readonly EmailSettings _emailSettings;
-
-        public MyEmailSender(IOptions<EmailSettings> emailSettings)
-        {
-            _emailSettings = emailSettings.Value;
-        }
 
         public Task SendEmailAsync(string email, string subject, string message)
         {
             try
             {
-                // Credentials
-                var credentials = new NetworkCredential(_emailSettings.Sender, _emailSettings.Password);
+                MailMessage mail = new MailMessage();
 
-                // Mail message
-                var mail = new MailMessage()
-                {
-                    From = new MailAddress(_emailSettings.Sender, _emailSettings.SenderName),
-                    Subject = subject,
-                    Body = message,
-                    IsBodyHtml = true
-                };
+                
+                //mail addressen den sender fra
+                mail.From = new MailAddress("gruppe9Uia@outlook.com");
 
-                mail.To.Add(new MailAddress(email));
+                //Emnet til mailen
+                mail.Subject = subject;
 
-                // Smtp client
-                var client = new SmtpClient()
-                {
-                    Port = _emailSettings.MailPort,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Host = _emailSettings.MailServer,
-                    EnableSsl = true,
-                    Credentials = credentials
-                };
+                //innholdet i mail
+                mail.Body = message;
+                mail.IsBodyHtml = true;
+                
+                mail.To.Add(email);
+                //Passord UiaProsjekt
+                //Email gruppe9Uia@gmail.com
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.office365.com";
+                smtp.Port = 587;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("gruppe9Uia@outlook.com", "UiaProsjekt");
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.EnableSsl = true;
 
-                // Send it...         
-                client.Send(mail);
+                //hentet fra https://stackoverflow.com/questions/2859790/the-request-was-aborted-could-not-create-ssl-tls-secure-channel
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                smtp.Send(mail);
             }
             catch (Exception ex)
             {

@@ -16,8 +16,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+
 using Prosjekt.Entities;
 using Prosjekt.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Prosjekt.Areas.Identity.Pages.Account
 {
@@ -28,7 +30,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
         private readonly UserManager<EmployeeUser> _userManager;
         private readonly IUserStore<EmployeeUser> _userStore;
         private readonly IUserEmailStore<EmployeeUser> _emailStore;
-        private readonly IMyEmailsender _emailSender;
+        private readonly IEmailSender _emailSender;
         private readonly ILogger<ExternalLoginModel> _logger;
 
         public ExternalLoginModel(
@@ -36,7 +38,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             UserManager<EmployeeUser> userManager,
             IUserStore<EmployeeUser> userStore,
             ILogger<ExternalLoginModel> logger,
-            IMyEmailsender emailSender)
+            IEmailSender emailSender)
             {
             _signInManager = signInManager;
             _userManager = userManager;

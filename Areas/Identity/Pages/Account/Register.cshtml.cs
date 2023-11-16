@@ -2,10 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
+using System.Text;
+using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.WebUtilities;
 using Prosjekt.Entities;
 using Prosjekt.Services;
 
@@ -127,7 +130,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.FirstName_str, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
                 user.FirstName_str = Input.FirstName_str;
@@ -145,25 +148,20 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                     if (result.Succeeded)
                     {
 
-                        await _userManager.AddToRoleAsync(user, "admin");
+                        await _userManager.AddToRoleAsync(user, "Administrator");
                         _logger.LogInformation("User created a new account with password.");
                         var userId = await _userManager.FindByNameAsync(user.UserName);
-                        Console.WriteLine("ye");
-                        Console.WriteLine(userId);
-                        Console.WriteLine("ye");
-                        Console.WriteLine(user);
-                        Console.WriteLine("ye");
-                       // var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                        //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                       var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                       code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                       // var callbackUrl = Url.Page(
-                        //    "/Account/ConfirmEmail",
-                        //    pageHandler: null,
-                        //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        //    protocol: Request.Scheme);
+                       var callbackUrl = Url.Page(
+                           "/Account/ConfirmEmail",
+                           pageHandler: null,
+                           values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                           protocol: Request.Scheme);
 
-                        //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                         //   $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                      await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                         if (_userManager.Options.SignIn.RequireConfirmedAccount)
                         {

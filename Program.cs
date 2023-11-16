@@ -1,4 +1,4 @@
-
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Prosjekt.Entities;
@@ -79,7 +79,7 @@ public class Program
             options.User.RequireUniqueEmail = true;
         });
 
-        builder.Services.AddIdentity<EmployeeUser, EmployeeRole>()
+        builder.Services.AddIdentity<EmployeeUser, IdentityRole>()
             .AddEntityFrameworkStores<ProsjektContext>()
             .AddSignInManager()
             .AddDefaultUI()
@@ -104,7 +104,7 @@ public class Program
             options.User.RequireUniqueEmail = true;
         });
 
-        builder.Services.AddScoped<MyEmailSender>();
+        builder.Services.AddTransient<MyEmailSender>();
 
 
     }
