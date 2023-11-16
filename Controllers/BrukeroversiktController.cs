@@ -6,17 +6,41 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Prosjekt.Controllers
 {
-    public class BrukeroversiktController : Controller
+    public class BrukeroversiktController : Controller {
+    
+    private readonly ProsjektContext _context;
+    // GET
+
+    public BrukeroversiktController(ProsjektContext context)
     {
+        _context = context;
+    }
         // GET: /<controller>/
         public IActionResult Brukeroversikt()
         {
-            return View();
+            var employees = _context.Employee.ToList();
+            
+            return View(employees);
         }
 
         public IActionResult BackBrukeroversikt()
         {
             return RedirectToAction("Brukeroversikt");
         }
+        
+        
+        public IActionResult GetEmployeeDetails(int employeeID)
+        {
+            var employee = _context.Employee.FirstOrDefault(e => e.ID_int == employeeID);
+            if (employee != null)
+            {
+                return Json(new {Email = employee.Email_str, Phone = employee.Phone_str});
+            }
+
+            return Json(null);
+        }
+
+        
+       
     }
 }

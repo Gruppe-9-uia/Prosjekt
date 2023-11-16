@@ -7,6 +7,7 @@ VALUES
 ("IG308011", "Igland 2501", "2010","En-tromlet"),
 ("IG308231", "Igland 2501", "2010","En-tromlet"),
 ("IG300622", "IGLAND 9002 Maxo TLP", "2023","To-tromlet"),
+("IG300902", "IGLAND 52","2013", "En-tromlet"),
 ("IG300902", "IGLAND 52", "2019","En-tromlet"),
 ("IG300052", "Igland 4501", "2020","En-tromlet"),
 ("IG300630", "IGLAND 9002 MAXO", "2015","Vinsjtopp"),
@@ -111,6 +112,14 @@ INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, Se
 VALUES 
 (123, 1, "oodelagt", "2023-01-10", "2023-01-01", "2023-01-02", 1, "med bil"),
 (124, 2, "oodelagt", "2023-02-11", "2023-02-02", "2023-02-03", 1, "med bil"),
+(125, 3, "oodelagt", "2023-03-12", "2023-03-03", "2023-03-04", 1, "med bil"),
+(126, 4, "oodelagt", "2023-04-13", "2023-04-04", "2023-04-05", 1, "med bil"),
+(127, 5, "oodelagt", "2023-05-14", "2023-05-05", "2023-05-06", 1, "med bil"),
+(128, 6, "oodelagt", "2023-06-15", "2023-06-06", "2023-06-07", 1, "med bil"),
+(129, 7, "oodelagt", "2023-07-16", "2023-07-07", "2023-07-08", 1, "med bil"),
+(1210, 8, "oodelagt", "2023-08-17", "2023-08-08", "2023-08-09", 1, "med bil"),
+(1211, 9, "oodelagt", "2023-09-18", "2023-09-09", "2023-09-10", 1, "med bil"),
+(1212, 10, "oodelagt", "2023-10-19", "2023-10-10", "2023-10-11", 1, "med bil");
 (125, 3, "oodelagt", "2023-03-12", "2023-03-03", "2023-03-04", 2, "med bil"),
 (126, 4, "oodelagt", "2022-04-13", "2022-04-04", "2022-04-05", 2, "med bil"),
 (127, 5, "oodelagt", "2022-05-14", "2022-05-05", "2022-05-06", 3, "med bil"),
@@ -137,7 +146,7 @@ VALUES
 -- Service_Form_Employee
 INSERT INTO Service_Form_Employee (FormID_int, EmployeeID_int, Working_Hours_int, Repair_Description_str)
 VALUES
-    (123, 1, 67, "Byttet metall bit som holder fast en annen metallbit"),
+    (123, 1, 67, "Byttet metallbit som holder fast en annen metallbit"),
     (124, 2, 42,  "rotor fast, byttet til ny rotor"),
     (125, 3, 10, "oljet vinsj, fungerer bra nå"),
     (126, 4, 14, "vinsj jobber bra nå"),
@@ -161,7 +170,7 @@ VALUES
 (777, "Kasteblokk 2 t", 100),
 (888, "Loopekatt", 45),
 (999, "Toommersaks", 12),
-(1010, "Kraftoverfooringsakselspesialutfoorelse for vinsj", 22);
+(1010, "Kraftoverføringsakselspesialutfoorelse for vinsj", 22);
 
 -- Service_Form_Sign
 INSERT INTO Service_Form_Sign (CustomerID_int, EmployeeID_int, FormID_int, Sign_Date)
