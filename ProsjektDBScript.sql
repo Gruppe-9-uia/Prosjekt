@@ -4,7 +4,7 @@ USE ProsjektDB;
 -- Customer SQL:
 
 CREATE TABLE IF NOT EXISTS Postal_Code(
-    PostalCode_str VARCHAR(50) PRIMARY KEY,
+    Postal_Code_str VARCHAR(50) PRIMARY KEY,
     City_str VARCHAR(50),
     State_str VARCHAR(50),
     Country_str VARCHAR(50)
