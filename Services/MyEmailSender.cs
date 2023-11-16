@@ -2,11 +2,11 @@
 using Prosjekt.Entities;
 using System.Net;
 using System.Net.Mail;
-using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Prosjekt.Services
 {
-    public class MyEmailSender : IEmailSender
+
+    public class MyEmailSender : IMyEmailsender
     {
         private readonly EmailSettings _emailSettings;
 

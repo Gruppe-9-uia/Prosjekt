@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
@@ -20,9 +19,9 @@ namespace Prosjekt.Areas.Identity.Pages.Account
     public class RegisterConfirmationModel : PageModel
     {
         private readonly UserManager<EmployeeUser> _userManager;
-        private readonly IEmailSender _sender;
+        private readonly IMyEmailsender _sender;
 
-        public RegisterConfirmationModel(UserManager<EmployeeUser> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<EmployeeUser> userManager, IMyEmailsender sender)
         {
             _userManager = userManager;
             _sender = sender;

@@ -2,23 +2,10 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Prosjekt.Entities;
 using Prosjekt.Services;
 
@@ -33,14 +20,14 @@ namespace Prosjekt.Areas.Identity.Pages.Account
         private readonly IUserStore<EmployeeUser> _userStore;
         private readonly IUserEmailStore<EmployeeUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
+        private readonly MyEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<EmployeeUser> userManager,
             IUserStore<EmployeeUser> userStore,
             SignInManager<EmployeeUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender,
+            MyEmailSender emailSender,
             ProsjektContext context)
         {
             _userManager = userManager;
@@ -157,6 +144,8 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                     Console.WriteLine(result.ToString());
                     if (result.Succeeded)
                     {
+
+                        await _userManager.AddToRoleAsync(user, "admin");
                         _logger.LogInformation("User created a new account with password.");
                         var userId = await _userManager.FindByNameAsync(user.UserName);
                         Console.WriteLine("ye");

@@ -18,7 +18,7 @@ namespace Prosjekt.Data
             //modelBuilder.Ignore<IdentityUserToken<string>>();
             //modelBuilder.Ignore<IdentityUser<string>>();
 
-
+            //TODO: fiks fforholdene mellom roles og user?
 
             //AddressModel
             modelBuilder.Entity<AddressModel>()

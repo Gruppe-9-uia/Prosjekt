@@ -6,9 +6,6 @@ namespace Prosjekt.Entities;
 public class EmployeeUser : IdentityUser<int>
 {
     
-    [Required]
-    [Key]
-    public int Id { get; set; }
     
     [Required]
     [Key]
