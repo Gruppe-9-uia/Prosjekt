@@ -181,7 +181,7 @@
                             $('#BOModal').modal('show');
                             
                             // AJAX call
-                            $.get("/Brukeroverikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
+                            $.get("/Brukeroversikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
                                 if (data !== null) {
                                     $("editEpost").val(data.Email);
                                     $("editTlf").val(data.Phone);
