@@ -1,4 +1,6 @@
-﻿namespace Prosjekt.Models
+﻿using Prosjekt.Entities;
+
+namespace Prosjekt.Models
 {
     public class ChecklistSignatureModel
     {
@@ -13,7 +15,7 @@
         [Required]
         public DateOnly Sign_Date { get;}
         public ChecklistModel Checklist { get; set; }
-        public EmployeeModel employee { get; set; }
+        public EmployeeUser employee { get; set; }
 
 
     }

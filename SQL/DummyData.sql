@@ -8,6 +8,7 @@ VALUES
 ("IG308231", "Igland 2501", "2010","En-tromlet"),
 ("IG300622", "IGLAND 9002 Maxo TLP", "2023","To-tromlet"),
 ("IG300902", "IGLAND 52","2013", "En-tromlet"),
+("IG300902", "IGLAND 52", "2019","En-tromlet"),
 ("IG300052", "Igland 4501", "2020","En-tromlet"),
 ("IG300630", "IGLAND 9002 MAXO", "2015","Vinsjtopp"),
 ("IG300612", "IGLAND 6002 Pronto TLP", "2013","Tn-tromlet"),
@@ -95,16 +96,16 @@ VALUES
 -- Service_order
 INSERT INTO Service_order(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
 VALUES 
-(101, 1, "Vedlikehold", "01-01-23", "Bytt ut ødelagte deler"),
-(102, 2, "Installasjon", "07-03-23", "Sett opp nytt utstyr"),
-(103, 3, "Reparere", "23-05-23", "Fiks system som ikke fungerer"),
-(104, 4, "Oppgradering", "30-06-23", "Forbedre systemytelsen"),
-(105, 5, "Vedlikehold", "01-07-23", "Rutinesjekk og service"),
-(106, 6, "Reparere", "27-07-23", "Løs tilkoblingsproblemer"),
-(107, 7, "Oppgradering", "30-07-23", "Forbedre systemytelsen"),
-(108, 8, "Installasjon", "05-08-23", "Legg til nye deler"),
-(109, 9, "Vedlikehold", "09-09-23", "Inspiser og rengjør"),
-(110, 10, "Vedlikehold", "11-10-23", "Rutinesjekk og service");
+(101, 1, "Vedlikehold", "2023-01-01", "Bytt ut ødelagte deler"),
+(102, 2, "Installasjon", "2023-02-02", "Sett opp nytt utstyr"),
+(103, 3, "Reparere", "2023-02-29", "Fiks system som ikke fungerer"),
+(104, 4, "Oppgradering", "2022-04-02", "Forbedre systemytelsen"),
+(105, 5, "Vedlikehold", "2022-04-20", "Rutinesjekk og service"),
+(106, 6, "Reparere", "2021-06-05", "Løs tilkoblingsproblemer"),
+(107, 7, "Oppgradering", "2023-07-06", "Forbedre systemytelsen"),
+(108, 8, "Installasjon", "2023-08-07", "Legg til nye deler"),
+(109, 9, "Vedlikehold", "2023-09-09", "Inspiser og rengjør"),
+(110, 10, "Vedlikehold", "2023-10-17", "Rutinesjekk og service");
 
 -- Service_form
 INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
@@ -119,6 +120,14 @@ VALUES
 (1210, 8, "oodelagt", "2023-08-17", "2023-08-08", "2023-08-09", 1, "med bil"),
 (1211, 9, "oodelagt", "2023-09-18", "2023-09-09", "2023-09-10", 1, "med bil"),
 (1212, 10, "oodelagt", "2023-10-19", "2023-10-10", "2023-10-11", 1, "med bil");
+(125, 3, "oodelagt", "2023-03-12", "2023-03-03", "2023-03-04", 2, "med bil"),
+(126, 4, "oodelagt", "2022-04-13", "2022-04-04", "2022-04-05", 2, "med bil"),
+(127, 5, "oodelagt", "2022-05-14", "2022-05-05", "2022-05-06", 3, "med bil"),
+(128, 6, "oodelagt", "2021-06-15", "2021-06-06", "2022-06-07", 3, "med bil"),
+(129, 7, "oodelagt", "2023-07-16", "2023-07-07", "2023-07-08", 4, "med bil"),
+(1210, 8, "oodelagt", "2023-08-17", "2023-08-08", "2023-08-09", 4, "med bil"),
+(1211, 9, "oodelagt", "2023-09-18", "2023-09-09", "2023-09-10", 5, "med bil"),
+(1212, 10, "oodelagt", "2023-10-19", "2023-10-10", "2023-10-11", 5, "med bil");
 
 -- Service_Order_Service_form
 INSERT INTO Service_Order_Service_form (OrderID_int, FormID_int)
