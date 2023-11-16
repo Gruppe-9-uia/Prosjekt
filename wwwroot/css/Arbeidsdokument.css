@@ -31,3 +31,23 @@ input, .dropdown {
     overflow-x: auto;
     max-width: 100%;
 }
+
+.table-striped {
+    font-size: 14px; 
+}
+
+.table th, .table td {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+.table td, .table th {
+         white-space: normal;
+         word-wrap: break-word;
+     }
+.container {
+         max-width: none;
+     }
+.table {
+        width: 100%;
+    }
