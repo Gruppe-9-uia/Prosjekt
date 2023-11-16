@@ -16,16 +16,30 @@ namespace Prosjekt.Controllers
         _context = context;
     }
         // GET: /<controller>/
-        public IActionResult Brukeroversikt() 
+        public IActionResult Brukeroversikt()
         {
+            var employees = _context.Employee.ToList();
             
-            return View();
+            return View(employees);
         }
 
         public IActionResult BackBrukeroversikt()
         {
             return RedirectToAction("Brukeroversikt");
         }
+        
+        
+        public IActionResult GetEmployeeDetails(int employeeID)
+        {
+            var employee = _context.Employee.FirstOrDefault(e => e.ID_int == employeeID);
+            if (employee != null)
+            {
+                return Json(new {Email = employee.Email_str, Phone = employee.Phone_str});
+            }
+
+            return Json(null);
+        }
+
         
        
     }

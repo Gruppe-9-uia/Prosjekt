@@ -57,7 +57,7 @@
                             <tbody id="userTable">
                             @foreach (var employee in Model)
                             {
-                            <tr class="table-row" data-toggle="modal" data-target="#BOModal">
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.ID_int" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-department="@employee.DepartmentID_int" data-employee-level="@employee.Level_str">
                                 <td>@employee.ID_int</td>
                                 <td>@(employee.FirstName_str + " " + employee.LastName_str)</td>
                                 <td>@employee.DepartmentID_int</td>
@@ -165,6 +165,32 @@
                     // pop up
                     $(document).ready(function () {
                         $(".table-row").click(function () {
+                            var employeeID = $(this).data("employee-id");
+                            var employeeFirstName = $(this).data("employee-firstname");
+                            var employeeLastName = $(this).data("employee-lastname");
+                            var employeeDepartment = $(this).data("employee-department");
+                            var employeeLevel = $(this).data("employee-level");
+                        
+                            
+                            
+                            $("#editStilling").val(employeeDepartment);
+                            $("#editEpost").val(data.Email);
+                            $("#editTlf").val(data.Phone);
+                            $("#editNavn").val(employeeFirstName + " " + employeeLastName);
+                        
+                            $('#BOModal').modal('show');
+                            
+                            // AJAX call
+                            $.get("/Brukeroverikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
+                                if (data !== null) {
+                                    $("editEpost").val(data.Email);
+                                    $("editTlf").val(data.Phone);
+                                }
+                            });
+                        });
+                     });
+                        
+                        /*$(".table-row").click(function () {
                             var BOrowData = $(this).data("content").split(",");
                             var BOModalBody = $("#BOModalBody");
                     
@@ -174,7 +200,7 @@
                         BOModalBody.append("<p><strong>Column " + (i + 1) + ": </strong>" + BOrowData[i] + "</p>");
                             }
                         });
-                    });
+                    });*/
                     
                     // funksjon for å endre readonly inputs
                     function editPfFunction() {
