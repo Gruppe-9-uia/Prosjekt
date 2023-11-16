@@ -1,14 +1,24 @@
-﻿using Prosjekt.Models;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Prosjekt.Entities;
 
 namespace Prosjekt.Data
 {
-    public class ProsjektContext : DbContext
+    public class ProsjektContext : IdentityDbContext<EmployeeUser>
     {
         public ProsjektContext(DbContextOptions<ProsjektContext> options) : base (options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             //Setter opp relasjoner
+            //modelBuilder.Ignore<IdentityUserLogin<string>>();
+            //modelBuilder.Ignore<IdentityUserRole<string>>();
+            //modelBuilder.Ignore<IdentityUserClaim<string>>();
+            //modelBuilder.Ignore<IdentityUserToken<string>>();
+            //modelBuilder.Ignore<IdentityUser<string>>();
+
+            //TODO: fiks fforholdene mellom roles og user?
 
             //AddressModel
             modelBuilder.Entity<AddressModel>()
@@ -105,20 +115,20 @@ namespace Prosjekt.Data
                 .HasForeignKey(e => e.DepartmentID_int);
 
             //EmployeeModel
-            modelBuilder.Entity<EmployeeModel>()
-                .HasKey(Employee => Employee.ID_int);
+            modelBuilder.Entity<EmployeeUser>()
+                .HasKey(Employee => Employee.Id);
 
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                 .HasOne(e => e.Department)
                 .WithMany(d => d.Employees) 
                 .HasForeignKey(e => e.DepartmentID_int);
 
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                 .HasMany(e => e.ServiceFormsSign)
                 .WithOne(s => s.Employee)
                 .HasForeignKey(s => s.EmployeeID_int);
 
-            modelBuilder.Entity<EmployeeModel>()
+            modelBuilder.Entity<EmployeeUser>()
                .HasOne(e => e.ChecklistSignature)
                .WithOne(c => c.employee)
                .HasPrincipalKey<ChecklistSignatureModel>(e => e.EmployeeID_int);
@@ -203,7 +213,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.Employee)
                 .WithMany(e => e.ServiceFormEmployees)
-                .HasPrincipalKey(s => s.ID_int);
+                .HasPrincipalKey(s => s.Id);
 
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.ServiceForm)
@@ -233,7 +243,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormSignModel>()
                .HasOne(e => e.Employee)
                .WithMany(s => s.ServiceFormsSign)
-               .HasPrincipalKey(s => s.ID_int);
+               .HasPrincipalKey(s => s.Id);
 
             //ChecklistModel
             modelBuilder.Entity<ChecklistModel>()
@@ -264,7 +274,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(e => e.employee)
                 .WithOne(e => e.ChecklistSignature)
-                .HasPrincipalKey<EmployeeModel>(e => e.ID_int);
+                .HasPrincipalKey<EmployeeUser>(e => e.Id);
 
             modelBuilder.Entity<ChecklistSignatureModel>()
                 .HasOne(c => c.Checklist)
@@ -320,6 +330,8 @@ namespace Prosjekt.Data
                 .HasMany(rp => rp.ServiceForms)
                 .WithOne(s => s.UsedPart)
                 .HasPrincipalKey(rp => rp.FormID_int);
+
+            
         }
 
         public DbSet<AddressModel>? Address { get; set; }
@@ -328,7 +340,7 @@ namespace Prosjekt.Data
         public DbSet<ProductModel>? Product { get; set; }
         public DbSet<CustomerProductModel>? CustomerProduct { get; set; }
         public DbSet<DepartmentModel>? Department { get; set; }
-        public DbSet<EmployeeModel>? Employee { get; set; }
+        public DbSet<EmployeeUser>? Employees { get; set; }
         public DbSet<ServiceOrderModel>? ServiceOrdre { get; set; }
         public DbSet<ServiceFormModel>? ServiceForm { get; set; }
         public DbSet<ServiceOrderServiceformModel>? ServiceOrderServiceform { get; set; }

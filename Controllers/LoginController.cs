@@ -14,57 +14,30 @@ namespace Prosjekt.Controllers
         }
         public IActionResult Login()
         {
-            return View();
+            return View("Login");
         }
 
-        // POST
-        [HttpPost]
-        public IActionResult LoginUser(EmployeeModel employee)
-        {
-            if (ModelState.IsValid)
-            {
-                Console.WriteLine("test");
-            }
-
-            try
-            {
-                var  db = _context.Employee
-                    .Where(e => e.Email_str == employee.Email_str)
-                    .SingleOrDefault();
-
-                Console.WriteLine(db.Email_str);
-                // (logikk for å linke brukernavn og passord til en database her)
-                if (db != null && employee.Email_str == db.Email_str && employee.Password_str == db.Password_str)
-                {
-                    Console.WriteLine("yay!");
-                    // Logg inn suksess, følg brukeren til hjemsiden
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    //  Add an error message to the ModelState.
-                    //Logg inn feilet
-                    ModelState.AddModelError(string.Empty, "Invalid username or password.");
-                }
-
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-
+        // POS
+        public IActionResult LoginUser(LoginModel employee) {
 
 
             // dersom logg inn feiler, tilbake til login med error melding
             return RedirectToAction("Login");
         }
 
-        [HttpPost]
         public IActionResult ForgotPassword()
         {
-            return RedirectToAction("Login");
+            // Display the form for forgot password
+            return View("ForgotPassword");
+        }
+
+        [HttpPost]
+        public IActionResult ForgotPassword(ForgotPasswordModel model)
+        {
+            // Handle the form submission and any necessary logic
+            // Redirect to the appropriate action based on the result
+
+            return RedirectToAction("ForgotPassword");
         }
     }
 }
