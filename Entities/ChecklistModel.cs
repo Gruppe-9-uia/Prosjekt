@@ -23,13 +23,21 @@ namespace Prosjekt.Entities
         [Required]
         public string xx_Bar_str { get; set; }
         [Required]
+        public string Brake_force { get; set; }
+        [Required]
         public string Traction_force_Kn { get; set; }
+        [Required]
+        public string Test_winch { get;set; }
         [Required]
         public string comment_str { get; set; }
        
         //Hydraulic 
         [Required]
-        public string Hydraulic_block { get; set; }
+        public string Hydraulic_cylinder { get; set; }
+        [Required]
+        public string Hoses { get; set; }
+        [Required]
+        public string Hydraulic_block { get;set; }
         [Required]
         public string Oil_tank { get; set; }
         
@@ -37,10 +45,12 @@ namespace Prosjekt.Entities
         public string HOil_gearbox { get; set; }
         [Required]
         public string Ringe_cylinder_and_replace_seals { get; set; }
-        //Mechanical model
-        
         [Required]
-        public string Cluth_Plate { get; set; }
+        public string Brake_cylinder_and_replace_seals { get; set; }
+        //Mechanical model
+
+        [Required]
+        public string Clutch_Plate { get; set; }
         [Required]
         public string Check_Brakes { get; set; }
         [Required]
@@ -61,11 +71,10 @@ namespace Prosjekt.Entities
         [Required]
         public string Wiring_on_winch { get; set; }
         [Required]
-        public string Pg_test_radio { get; set; }
+        public string Test_radio { get; set; }
         [Required]
         public string EOil_gearbox { get; set; }
-        [Required]
-        public string Button_box { get; set; }
+
         [Required]
         
         [Key]

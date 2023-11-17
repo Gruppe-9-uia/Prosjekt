@@ -1,35 +1,35 @@
 
 
 
---  Product
+--  Product - kjører, mangler et product
 INSERT INTO Product (SerialNr_str, ProductName_str, Model_Year, Product_Type_str)
 VALUES
 ("IG308011", "Igland 2501", "2010","En-tromlet"),
 ("IG308231", "Igland 2501", "2010","En-tromlet"),
 ("IG300622", "IGLAND 9002 Maxo TLP", "2023","To-tromlet"),
-("IG300902", "IGLAND 52","2013", "En-tromlet"),
-("IG300902", "IGLAND 52", "2019","En-tromlet"),
+("IG300903", "IGLAND 52","2013", "En-tromlet"),
+("IG300990", "IGLAND 51", "2019","En-tromlet"),
 ("IG300052", "Igland 4501", "2020","En-tromlet"),
 ("IG300630", "IGLAND 9002 MAXO", "2015","Vinsjtopp"),
 ("IG300612", "IGLAND 6002 Pronto TLP", "2013","Tn-tromlet"),
 ("IG300491", "IGLAND 5002 Pento TL", "2005", "To-tromlet");
 
---Warranty
-INSERT INTO Warranty (ID_int, WarrantyName_str, StartDate_date, ExpDate_date) 
-VALUES
-(1, "Lang garanti", "2008-11-09", "2023-11-09"),
-(2, "Kort garanti", "2023-12-09", "2028-12-09"),
-(3, "Lang garanti", "2013-09-10", "2028-09-10"),
-(4, "Middels garanti", "2020-07-02", "2025-07-02"),
-(5, "Middels garanti", "2019-11-11", "2024-11-11"),
-(6, "Lang garanti", "2020-02-14", "2025-02-14"),
-(7, "Kort garanti", "2020-04-01", "2025-04-01"),
-(8, "Lang garanti", "2010-03-04", "2025-05-14"),
-(9, "Lang garanti", "2014-11-09", "2029-11-09"),
-(10, "Kort garanti", "2021-03-15", "2026-03-15");
+-- Warranty - kjører
+INSERT INTO Warranty (ID_int, WarrantyName_str, StartDate_date, ExpDate_date) VALUES
+(1, "Lang garanti", '2008-11-09', '2023-11-09'),
+(2, "Kort garanti", '2023-12-09', '2028-12-09'),
+(3, "Lang garanti", '2013-09-10', '2028-09-10'),
+(4, "Middels garanti", '2020-07-02', '2025-07-02'),
+(5, "Middels garanti", '2019-11-11', '2024-11-11'),
+(6, "Lang garanti", '2020-02-14', '2025-02-14'),
+(7, "Kort garanti", '2020-04-01', '2025-04-01'),
+(8, "Lang garanti", '2010-03-04', '2025-05-14'),
+(9, "Lang garanti", '2014-11-09', '2029-11-09'),
+(10, "Kort garanti", '2021-03-15', '2026-03-15');
 
 
--- Postal_Code
+
+-- Postal_Code - kjører
 INSERT INTO Postal_Code (Postal_Code_str, City_str, State_str, Country_str)
 VALUES
     ("0001", "Tromsoo", "Troms og Finnmark", "Norge"),
@@ -43,7 +43,7 @@ VALUES
     ("0009", "Svoveer", "Nordland", "Norge"),
     ("0010", "Harstad", "Troms og Finnmark", "Norge");
 
--- Customer
+-- Customer - kjører
 INSERT INTO Customer (ID_int, FirstName_str, LastName_str, Phone_str, Email_str, Street_Address_str, Postal_Code_str)
 VALUES
 (1, "Dolly", "Barrett", "+47 410 00 001", "DollyRoberts@mail.com", "The Streets 1", "0001"),
@@ -57,21 +57,21 @@ VALUES
 (9, "Greg", "Brown", "+47 410 00 009", "GregBrown@mail.com", "The Streets 9", "0009"),
 (10, "Kris", "Parrish", "+47 410 00 010", "KrisParrish@mail.com", "The Streets 10", "0010");
 
--- Customer_Product
+-- Customer_Product - kjører ikke
 INSERT INTO Customer_Product (SerialNr_str, CustomerID_int,  WarrantyID_int)
 VALUES
 ("IG308011", 1, 10),
 ("IG308231", 2, 9),
 ("IG300622", 3, 8),
-("IG300902", 4, 7),
-("IG300052", 5, 6),
-("IG300630", 6, 5),
-("IG300612", 7, 4),
+("IG300903", 4, 7),
+("IG300990", 5, 6),
+("IG300052", 6, 5),
+("IG300630", 7, 4),
 ("IG300491", 8, 3),
-("IG308011", 9, 2),
-("IG300052", 10, 1);
+("IG300612", 9, 2);
+-- ("IG300491", 10, 1);
     
--- Department
+-- Department kjører
 INSERT INTO Department (ID_int, Department_name_str)
 VALUES
 (1, "Admin"),
@@ -94,7 +94,7 @@ VALUES
 (10, "Rania", "El-Gazzar", "+47 555 65 555", "RaniaE@mail.com", "ZA7Q118LU", "high", 1);
 
 
--- Service_order
+-- Service_order - kjører ikke
 INSERT INTO Service_ordre(OrderID_int, CustomerID_int, Order_type_str, Received_Date, Description_From_Customer_str)
 VALUES 
 (101, 1, "Vedlikehold", "2023-01-01", "Bytt ut ødelagte deler"),
@@ -108,7 +108,7 @@ VALUES
 (109, 9, "Vedlikehold", "2023-09-09", "Inspiser og rengjør"),
 (110, 10, "Vedlikehold", "2023-10-17", "Rutinesjekk og service");
 
--- Service_form
+-- Service_form - kjører ikke
 INSERT INTO  Service_Form (FormID_int, CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
 VALUES 
 (123, 1, "oodelagt", "2023-01-10", "2023-01-01", "2023-01-02", 1, "med bil"),
@@ -130,7 +130,7 @@ VALUES
 (1211, 9, "oodelagt", "2023-09-18", "2023-09-09", "2023-09-10", 5, "med bil"),
 (1212, 10, "oodelagt", "2023-10-19", "2023-10-10", "2023-10-11", 5, "med bil");
 
--- Service_Order_Service_form
+-- Service_Order_Service_form - kjører ikke
 INSERT INTO Service_Order_Service_form (OrderID_int, FormID_int)
 VALUES 
 (101, 123),
@@ -144,7 +144,7 @@ VALUES
 (109, 1211),
 (110, 1212);
 
--- Service_Form_Employee
+-- Service_Form_Employee kjører ikke
 INSERT INTO Service_Form_Employee (FormID_int, EmployeeID_int, Working_Hours_int, Repair_Description_str)
 VALUES
     (123, 1, 67, "Byttet metallbit som holder fast en annen metallbit"),
@@ -159,7 +159,7 @@ VALUES
     (1212, 10, 20, "skiftet ny krok");
 
 -- Parts
--- what the hell is this? 
+-- what the hell is this? kjører ikke
 INSERT INTO Parts (PartID_int, PartName_str, Quantity_available_int)
 VALUES 
 (111, "Staaltau - 8 mm Metervare", 8),

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 using Prosjekt.Entities;
 
 namespace Prosjekt.Data
@@ -335,7 +334,7 @@ namespace Prosjekt.Data
         }
 
         public DbSet<PostalCode>? Postal_Code { get; set; }
-        public DbSet<CustomerModel>? s { get; set; }
+        public DbSet<CustomerModel>? Customer { get; set; }
         public DbSet<WarrantyModel>? Warranty { get; set; }
         public DbSet<ProductModel>? Product { get; set; }
         public DbSet<CustomerProductModel>? Customer_Product { get; set; }
