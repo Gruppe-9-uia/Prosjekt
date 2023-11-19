@@ -102,15 +102,15 @@ VALUES
 INSERT INTO  Service_Form (CustomerID_int, Repairdescription_str, ServiceCompleted_date, AgreedDelivery_date, ProductRecived_date,  BookedServiceWeek_int, ShippingMethod_str)
 VALUES 
 (1, "oodelagt", "2023-01-10", "2023-01-01", "2023-01-02", 1, "med bil"),
-(2, "oodelagt", "2023-02-11", "2023-02-02", "2023-02-03", 1, "med bil"),
-(3, "oodelagt", "2023-03-12", "2023-03-03", "2023-03-04", 1, "med bil"),
-(4, "oodelagt", "2023-04-13", "2023-04-04", "2023-04-05", 1, "med bil"),
-(5, "oodelagt", "2023-05-14", "2023-05-05", "2023-05-06", 1, "med bil"),
-(6, "oodelagt", "2023-06-15", "2023-06-06", "2023-06-07", 1, "med bil"),
-(7, "oodelagt", "2023-07-16", "2023-07-07", "2023-07-08", 1, "med bil"),
-(8, "oodelagt", "2023-08-17", "2023-08-08", "2023-08-09", 1, "med bil"),
-(9, "oodelagt", "2023-09-18", "2023-09-09", "2023-09-10", 1, "med bil"),
-(10, "oodelagt", "2023-10-19", "2023-10-10", "2023-10-11", 1, "med bil");
+(2, "justering", "2023-02-11", "2023-02-02", "2023-02-03", 1, "med posten"),
+(3, "oodelagt", "2022-03-12", "2022-03-03", "2022-03-04", 2, "med bil"),
+(4, "kontroll", "2022-04-13", "2022-04-04", "2022-04-05", 2, "med bil"),
+(5, "oodelagt", "2023-05-14", "2023-05-05", "2023-05-06", 2, "med posten"),
+(6, "kontroll", "2023-06-15", "2023-06-06", "2023-06-07", 4, "med bil"),
+(7, "justering", "2023-07-16", "2023-07-07", "2023-07-08", 5, "med henting"),
+(8, "oodelagt", "2022-08-17", "2022-08-08", "2022-08-09", 5, "med henting"),
+(9, "justering", "2023-09-18", "2023-09-09", "2023-09-10", 6, "med bil"),
+(10, "kontroll", "2023-10-19", "2023-10-10", "2023-10-11", 7, "med posten");
 
 -- Service_Order_Service_form - kjører ikke
 INSERT INTO Service_Order_Service_form (OrderID_int, FormID_int)
@@ -186,16 +186,16 @@ INSERT INTO Checklist (DocID_str, SerialNr_str, Type_str, Procedure_str, Startin
 xx_Bar_str, Traction_force_Kn, Brake_force, Test_winch, comment_str, Hydraulic_cylinder, Hydraulic_block, Hoses, HOil_gearbox, Ringe_cylinder_and_replace_seals,
 Brake_cylinder_and_replace_seals, Clutch_Plate, Check_Brakes, Bearing_drum, PTO_and_storage, Chain_tensioners, Wire, Pinion_bearing, Wedge_on_sprocket, Wiring_on_winch, Test_radio, EOil_gearbox, Button_box)
 VALUES
-("DOC001", "IG308011", "Type_A", "Procedure_1", "2023-01-01", "Taylor Swift", "Bar_1", "100", "Noen kommentarer","Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok","Ok", "Ok", "Ok", "Ok"),
-("DOC002", "IG308231", "Type_B", "Procedure_2", "2023-02-01", "Justin Bieber", "Bar_2", "150", "Få kommentarer", "Skiftes", "Defekt", "Ok", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes"),
-("DOC003", "IG300622", "Type_C", "Procedure_3", "2023-03-01", "Ed Sheeran", "Bar_3", "200", "Ingen kommentar", "Defekt", "Ok", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Ok", "Ok", "Ok"),
-("DOC004", "IG300903", "Type_D", "Procedure_2", "2023-04-01", "Julie Robins", "Bar_3", "120", "Mange kommentarer", "Ok", "Defekt", "Ok", "Defekt", "Ok", "Ok", "Defekt", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Ok", "Skiftes", "Ok", "Skiftes"),
-("DOC005", "IG300990", "Type_E", "Procedure_2", "2022-05-01", "Terje Gjøsæter", "Bar_2", "300", "No comments", "Skiftes", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt"),
-("DOC006", "IG300052", "Type_F", "Procedure_3", "2022-06-01", "Espen Limi", "Bar_1", "120", "Ingen kommentar", "Ok", "Ok", "Ok", "Defekt", "Skiftes", "Ok", "Skiftes", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Skiftes", "Ok", "Defekt", "Defekt", "Skiftes", "Ok"),
-("DOC007", "IG300630", "Type_G", "Procedure_3", "2022-07-01", "Taylor Swift", "Bar_1", "100", "More comments", "Defekt", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Defekt",  "Skiftes", "Skiftes", "Ok"),
-("DOC008", "IG300612", "Type_H", "Procedure_1", "2022-08-01", "Justin Bieber", "Bar_3", "50", "Noen kommentarer", "Ok", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt"),
-("DOC009", "IG300491", "Type_I", "Procedure_3", "2022-09-01", "Sofie Wass", "Bar_2", "20", "Noen kommentarer", "Skiftes", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Ok"),
-("DOC0010", "IG300191", "Type_J", "Procedure_2", "2022-10-01", "Espen Limi", "Bar_1", "90", "Ingen kommentar", "Defekt", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Defekt", "Defekt", "Defekt");
+("DOC001", "IG308011", "Type_A", "Procedure_1", "2023-01-01", "Taylor Swift", "Bar_1", "100", "Noen kommentarer","Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok","Ok", "Ok", "Ok", "Ok", "Ok"),
+("DOC002", "IG308231", "Type_B", "Procedure_2", "2023-02-01", "Justin Bieber", "Bar_2", "150", "Få kommentarer", "Skiftes", "Defekt", "Ok", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Defekt"),
+("DOC003", "IG300622", "Type_C", "Procedure_3", "2023-03-01", "Ed Sheeran", "Bar_3", "200", "Ingen kommentar", "Defekt", "Ok", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Ok", "Ok", "Ok", "Defekt"),
+("DOC004", "IG300903", "Type_D", "Procedure_2", "2023-04-01", "Julie Robins", "Bar_3", "120", "Mange kommentarer", "Ok", "Defekt", "Ok", "Defekt", "Ok", "Ok", "Defekt", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Ok", "Skiftes", "Ok", "Skiftes", "Ok"),
+("DOC005", "IG300990", "Type_E", "Procedure_2", "2022-05-01", "Terje Gjøsæter", "Bar_2", "300", "No comments", "Skiftes", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Ok"),
+("DOC006", "IG300052", "Type_F", "Procedure_3", "2022-06-01", "Espen Limi", "Bar_1", "120", "Ingen kommentar", "Ok", "Ok", "Ok", "Defekt", "Skiftes", "Ok", "Skiftes", "Ok", "Ok", "Ok", "Ok", "Ok", "Ok", "Skiftes", "Ok", "Defekt", "Defekt", "Skiftes", "Ok", "Defekt"),
+("DOC007", "IG300630", "Type_G", "Procedure_3", "2022-07-01", "Taylor Swift", "Bar_1", "100", "More comments", "Defekt", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Defekt",  "Skiftes", "Skiftes", "Ok", "Ok"),
+("DOC008", "IG300612", "Type_H", "Procedure_1", "2022-08-01", "Justin Bieber", "Bar_3", "50", "Noen kommentarer", "Ok", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes"),
+("DOC009", "IG300491", "Type_I", "Procedure_3", "2022-09-01", "Sofie Wass", "Bar_2", "20", "Noen kommentarer", "Skiftes", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Skiftes", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Ok", "Ok", "Ok", "Skiftes"),
+("DOC0010", "IG300191", "Type_J", "Procedure_2", "2022-10-01", "Espen Limi", "Bar_1", "90", "Ingen kommentar", "Defekt", "Defekt", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Skiftes", "Ok", "Defekt", "Defekt", "Defekt", "Defekt", "Ok");
 
 -- Checklist_signature
 INSERT INTO Checklist_signature (DocID_str, EmployeeID_int, Sign_Date)
