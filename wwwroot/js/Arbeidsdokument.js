@@ -40,10 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
             row.style.display = hasMatch ? "" : "none";
         });
     }
-
-    
-    
-    
 });
 
  

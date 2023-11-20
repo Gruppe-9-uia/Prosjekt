@@ -8,8 +8,8 @@ namespace Prosjekt.Entities
         [Required]
         [ForeignKey("DocID_str")]
         public string DocID_str { get; set; }
-        [Required]
         [Key]
+        [Required]
         [ForeignKey("EmployeeID_int")]
         public int EmployeeID_int { get; set; }
         [Required]

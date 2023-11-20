@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prosjekt.Data;
 
@@ -10,9 +11,11 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    partial class ProsjektContextModelSnapshot : ModelSnapshot
+    [Migration("20231117074031_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,6 +170,23 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Chain_tensioners")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Check_Brakes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Clutch_Plate")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EOil_gearbox")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("HOil_gearbox")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -178,6 +198,7 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Hydraulic_cylinder")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -353,6 +374,21 @@ namespace Prosjekt.Migrations
                     b.ToTable("Customer_Product");
                 });
 
+            modelBuilder.Entity("Prosjekt.Entities.DepartmentModel", b =>
+                {
+                    b.Property<int>("ID_int")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Department_name_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ID_int");
+
+                    b.ToTable("Department");
+                });
+
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
                     b.Property<string>("Id")
@@ -425,6 +461,8 @@ namespace Prosjekt.Migrations
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DepartmentID_int");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -842,6 +880,17 @@ namespace Prosjekt.Migrations
                     b.Navigation("Warranty");
                 });
 
+            modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.DepartmentModel", "Department")
+                        .WithMany("Employees")
+                        .HasForeignKey("DepartmentID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+                });
+
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
                 {
                     b.HasOne("Prosjekt.Entities.ReplacedPartsReturnedModel", "ReplacedPartsReturned")
@@ -1008,6 +1057,11 @@ namespace Prosjekt.Migrations
                     b.Navigation("ServiceFormsSign");
 
                     b.Navigation("ServiceOrders");
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.DepartmentModel", b =>
+                {
+                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
