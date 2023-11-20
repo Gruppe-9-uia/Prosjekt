@@ -1,6 +1,5 @@
-﻿<!-- Må lage view model for denne istedenfor å bruke entittes -->
-
-@model Prosjekt.Entities.ServiceOrderModel;
+﻿
+@model Prosjekt.Models.Services.ServicesOrderViewModel;
 @{
     ViewData["Title"] = "Serviceordre";
 }
@@ -8,13 +7,18 @@
     <h1 class="mb-50">Opprett ny serviceordre</h1>
         @using (Html.BeginForm("Save", "Serviceordre", FormMethod.Post, new { id = "myForm",onsubmit = "return confirm('Er du sikker på du ønsker å sende inn serviceskjema?');" })) 
         {
-            
+            @Html.ValidationSummary()
             @Html.AntiForgeryToken()
-
+            <h3>Produkt </h3>
+            <hr class="mt-2 mb-3" />
+        <div class="form-group">
+            <label for="ProductName_str">Produktnavn:</label>
+            <input type="text" class="form-control" id="ProductName_str" asp-for="ProductName_str" placeholder="Produktnavn" required>
+        </div>
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <label for="Product_Type_str">Produkttype:</label>
-                    <input type="text" class="form-control" id="Product_Type_str" asp-for="CustomerProduct.Product.Product_Type_str" placeholder="Produkttype" required>
+                    <input type="text" class="form-control" id="Product_Type_str" asp-for="Product_Type_str" placeholder="Produkttype" required>
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="Received_Date">Motatt dato:</label>
@@ -24,62 +28,89 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="Model_Year">Årsmodell:</label>
-                    <input type="text" class="form-control" id="Model_Year" asp-for="CustomerProduct.Product.Model_Year" placeholder="Årsmodell" required>
+                    <input type="text" class="form-control" id="Model_Year" asp-for="Model_Year" placeholder="Årsmodell" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="SerialNr_str">Serienummer:</label>
-                    <input type="text" class="form-control" id="SerialNr_str" asp-for="CustomerProduct.Product.SerialNr_str" placeholder="Serienummer" required>
+                    <input type="text" class="form-control" id="SerialNr_str" asp-for="SerialNr" placeholder="Serienummer" required>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="fornavn">Fornavn:</label>
-                <input type="text" class="form-control" id="fornavn" asp-for="CustomerProduct.Customer.FirstName_str" placeholder="Fornavn" required>
-            </div>
-            <div class="form-group">
-                <label for="Ettternavn">Etternavn:</label>
-                <input type="text" class="form-control" id="Ettternavn" asp-for="CustomerProduct.Customer.LastName_str" placeholder="Ettternavn" required>
-            </div>
+
+            <h3>Kunde</h3>
+            <hr class="mt-2 mb-3" />
             <div class="form-row">
                 <div class="form-group col-md-6">
+                    <label for="fornavn">Fornavn:</label>
+                    <input type="text" class="form-control" id="fornavn" asp-for="FirstName" placeholder="Fornavn" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Ettternavn">Etternavn:</label>
+                    <input type="text" class="form-control" id="Ettternavn" asp-for="LastName" placeholder="Etternavn" required>
+                </div>
+            </div>
+            <div class="form-row"> 
+                <div class="form-group col-md-6">
                     <label for="adresse">Adresse:</label>
-                    <input type="text" class="form-control" id="adresse" asp-for="CustomerProduct.Customer.Street_Address_str" placeholder="Adresse" required>
+                    <input type="text" class="form-control" id="adresse" asp-for="StreetAddress" placeholder="Adresse" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="postnummer">Postnummer:</label>
-                    <input type="number" class="form-control" id="postnummer" asp-for="CustomerProduct.Customer.Address.Postal_Code_str" placeholder="Postnummer" required>
+                    <input type="number" class="form-control" id="postnummer" asp-for="PostalCode" placeholder="Postnummer" required>
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-3">
                     <label for="Land">Land:</label>
-                    <input type="text" class="form-control" id="Land" asp-for="CustomerProduct.Customer.Address.Country_str" placeholder="Land" required>
+                    <input type="text" class="form-control" id="Land" asp-for="Country" placeholder="Land" required>
                 </div>
-                <div class="form-group col-md-6">
+            <div class="form-group col-md-3">
+                <label for="State">Kommune:</label>
+                <input type="text" class="form-control" id="State" asp-for="State" placeholder="Kommune" required>
+            </div>
+                <div class="form-group col-md-3">
                     <label for="By">By:</label>
-                    <input type="text" class="form-control" id="By" asp-for="CustomerProduct.Customer.Address.City_str" placeholder="By" required>
+                    <input type="text" class="form-control" id="By" asp-for="City" placeholder="By" required>
                 </div>
+      
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="epost">E-post:</label>
-                    <input type="email" class="form-control" id="epost" asp-for="CustomerProduct.Customer.Email_str" placeholder="E-post" required>
+                    <input type="email" class="form-control" id="epost" asp-for="Email" placeholder="E-post" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="mobilnummer">Mobilnummer:</label>
-                    <input type="tel" class="form-control" id="mobilnummer" asp-for="CustomerProduct.Customer.Phone_str" placeholder="Mobilnummer" required>
+                    <input type="tel" class="form-control" id="mobilnummer" asp-for="Phone" placeholder="Mobilnummer" required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
+            <h3>Garanti</h3>
+            <hr class="mt-2 mb-3" />
+                <div class="form-group">
                     <label for="WarrantyName_str">Garanti:</label>
-                    <input type="text" class="form-control" id="WarrantyName_str" asp-for="CustomerProduct.Warranty.WarrantyName_str" placeholder="Garanti" required>
-                </div>
+                    <input type="text" class="form-control" id="WarrantyName_str" asp-for="WarrantyName" placeholder="Garanti" required>
+                   </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="StartDate">Startsdato:</label>
+                <input type="date" class="form-control" id="StartDate" asp-for="StartDate" placeholder="Startsdato" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="ExpDate">Sluttsdato:</label>
+                <input type="date" class="form-control" id="ExpDate" asp-for="ExpDate" placeholder="Sluttsdato" required>
+            </div>
+            </div>
+            <h3>Order informasjon</h3>
+            <hr class="mt-2 mb-3" />
+            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="Order_type_str">Service/rep:</label>
                     <input type="text" class="form-control" id="Order_type_str" asp-for="Order_type_str" placeholder="Service/rep" required>
                 </div>
-            </div>
-            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Received_Date">Mottatt dato:</label>
+                <input type="date" class="form-control" id="Received_Date" asp-for="Received_Date" placeholder="Årsmodell" required>
+                </div>
+            
                 <div class="form-group col-md-12">
                     <label for="beskrivelse">Hva som er avtalt med kunden:</label>
                     <textarea class="form-control mb-50" style="height: 100px;" id="beskrivelse" asp-for="Description_From_Customer_str" placeholder="Skriv her..." required></textarea>
