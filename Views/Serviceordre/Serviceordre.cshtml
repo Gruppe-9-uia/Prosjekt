@@ -8,7 +8,7 @@
     <h1 class="mb-50">Opprett ny serviceordre</h1>
         @using (Html.BeginForm("Save", "Serviceordre", FormMethod.Post, new { id = "myForm",onsubmit = "return confirm('Er du sikker på du ønsker å sende inn serviceskjema?');" })) 
         {
-            @Html.ValidationSummary()
+            
             @Html.AntiForgeryToken()
 
             <div class="form-row">
