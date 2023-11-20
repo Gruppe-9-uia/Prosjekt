@@ -18,8 +18,6 @@ public class EmployeeUser : IdentityUser
 
     //TODO: kanskje gjør det om til emun
     [Required] public string Level_str { get; set; }
-
-    public DepartmentModel? Department { get; set; }
     public ChecklistSignatureModel? ChecklistSignature { get; set; }
     public ICollection<ServiceFormEmployeeModel>? ServiceFormEmployees { get; set; }
     public ICollection<ServiceFormSignModel>? ServiceFormsSign { get; }

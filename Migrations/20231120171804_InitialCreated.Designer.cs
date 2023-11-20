@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231120063035_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231120171804_InitialCreated")]
+    partial class InitialCreated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -404,21 +404,6 @@ namespace Prosjekt.Migrations
                     b.ToTable("Customer_Product");
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.DepartmentModel", b =>
-                {
-                    b.Property<int>("ID_int")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Department_name_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("ID_int");
-
-                    b.ToTable("DepartmentModel");
-                });
-
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
                     b.Property<string>("Id")
@@ -491,8 +476,6 @@ namespace Prosjekt.Migrations
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DepartmentID_int");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -910,17 +893,6 @@ namespace Prosjekt.Migrations
                     b.Navigation("Warranty");
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
-                {
-                    b.HasOne("Prosjekt.Entities.DepartmentModel", "Department")
-                        .WithMany("Employees")
-                        .HasForeignKey("DepartmentID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
                 {
                     b.HasOne("Prosjekt.Entities.ReplacedPartsReturnedModel", "ReplacedPartsReturned")
@@ -1087,11 +1059,6 @@ namespace Prosjekt.Migrations
                     b.Navigation("ServiceFormsSign");
 
                     b.Navigation("ServiceOrders");
-                });
-
-            modelBuilder.Entity("Prosjekt.Entities.DepartmentModel", b =>
-                {
-                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
