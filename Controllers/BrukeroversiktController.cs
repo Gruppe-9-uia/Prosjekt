@@ -18,7 +18,7 @@ namespace Prosjekt.Controllers
         // GET: /<controller>/
         public IActionResult Brukeroversikt()
         {
-            var employees = _context.Employee.ToList();
+            var employees = _context.Users.ToList();
             
             return View(employees);
         }
@@ -31,11 +31,12 @@ namespace Prosjekt.Controllers
         
         public IActionResult GetEmployeeDetails(int employeeID)
         {
-            var employee = _context.Employee.FirstOrDefault(e => e.ID_int == employeeID);
-            if (employee != null)
-            {
-                return Json(new {Email = employee.Email_str, Phone = employee.Phone_str});
-            }
+            // TODO: burde kanskje gjør om user id til int
+            //var employee = _context.Users.FirstOrDefault(e => e.Id == employeeID);
+            //if (employee != null)
+            //{
+             //   return Json(new {Email = employee.Email_str, Phone = employee.Phone_str});
+            //}
 
             return Json(null);
         }
