@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231117074031_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231120165923_InitialCreated")]
+    partial class InitialCreated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
