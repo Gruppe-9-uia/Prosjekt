@@ -3,24 +3,13 @@
     public class ServiceFormModel
     {
 
-        [Required]
-        [Key]
         public int FormID_int { get; set; }
-        [Required]
-        [Key]
-        [ForeignKey("CustomerID_int")]
         public int CustomerID_int { get; set; }
-        [Required]
         public string Repairdescription_str { get; set; }
-        [Required]
         public DateOnly ServiceCompleted_date { get; set; }
-        [Required]
         public DateOnly AgreedDelivery_date { get; set; }
-        [Required]
         public DateOnly ProductRecived_date { get; set; }
-        [Required]
         public int BookedServiceWeek_int { get; set; }
-        [Required]
         public string ShippingMethod_str { get; set; }
 
         public CustomerModel Customer { get; set; }

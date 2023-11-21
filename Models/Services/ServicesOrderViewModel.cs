@@ -24,8 +24,6 @@
         //Warranty
         public int WarrantyID { get; set; }
         public string WarrantyName { get; set; }
-        public DateOnly StartDate { get; set; }
-        public DateOnly ExpDate { get; set; }
 
         //Product
         public string SerialNr { get; set; }

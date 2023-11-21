@@ -104,23 +104,16 @@ namespace Prosjekt.Data
                 .WithMany(c => c.CustomerProducts)
                 .HasForeignKey(cp => cp.CustomerID_int);
 
-            //DepartmentModel
-            modelBuilder.Entity<DepartmentModel>()
-                .HasKey(Department => Department.ID_int);
+            modelBuilder.Entity<CustomerProductModel>()
+                .HasOne(s => s.ServiceOrders)
+                .WithMany(c => c.CustomerProductModel)
+                .HasForeignKey(s => s.CustomerID_int);
 
-            modelBuilder.Entity<DepartmentModel>()
-                .HasMany(d => d.Employees)
-                .WithOne(e => e.Department)
-                .HasForeignKey(e => e.DepartmentID_int);
 
             //EmployeeModel
             modelBuilder.Entity<EmployeeUser>()
                 .HasKey(Employee => Employee.Id);
 
-            modelBuilder.Entity<EmployeeUser>()
-                .HasOne(e => e.Department)
-                .WithMany(d => d.Employees) 
-                .HasForeignKey(e => e.DepartmentID_int);
 
             modelBuilder.Entity<EmployeeUser>()
                 .HasMany(e => e.ServiceFormsSign)
@@ -143,7 +136,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceOrderModel>()
                 .HasOne(s => s.Customer)
                 .WithMany(c => c.ServiceOrders)
-                .HasPrincipalKey(s => s.ID_int);
+                .HasForeignKey(s => s.CustomerID_int);
 
             modelBuilder.Entity<ServiceOrderModel>()
                 .HasOne(s => s.ServiceOrderServiceform)
@@ -338,7 +331,6 @@ namespace Prosjekt.Data
         public DbSet<WarrantyModel>? Warranty { get; set; }
         public DbSet<ProductModel>? Product { get; set; }
         public DbSet<CustomerProductModel>? Customer_Product { get; set; }
-        public DbSet<DepartmentModel>? Department { get; set; }
         public DbSet<EmployeeUser>? Employees { get; set; }
         public DbSet<ServiceOrderModel>? Service_ordre { get; set; }
         public DbSet<ServiceFormModel>? Service_Form { get; set; }

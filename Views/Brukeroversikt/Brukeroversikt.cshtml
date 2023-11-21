@@ -57,10 +57,9 @@
                             <tbody id="userTable">
                             @foreach (var employee in Model)
                             {
-                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.Id" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-department="@employee.DepartmentID_int" data-employee-level="@employee.Level_str">
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.Id" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-level="@employee.Level_str">
                                 <td>@employee.Id</td>
                                 <td>@(employee.FirstName_str + " " + employee.LastName_str)</td>
-                                <td>@employee.DepartmentID_int</td>
                                 <td>@employee.Level_str</td>
                             </tr>
                             }

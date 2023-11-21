@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231120200719_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231121140453_InitialCreated")]
+    partial class InitialCreated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -222,9 +222,6 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Product")
-                        .HasColumnType("int");
-
                     b.Property<string>("Ringe_cylinder_and_replace_seals")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -374,21 +371,6 @@ namespace Prosjekt.Migrations
                     b.ToTable("Customer_Product");
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.DepartmentModel", b =>
-                {
-                    b.Property<int>("ID_int")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Department_name_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("ID_int");
-
-                    b.ToTable("Department");
-                });
-
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
                     b.Property<string>("Id")
@@ -400,9 +382,6 @@ namespace Prosjekt.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
-
-                    b.Property<int>("DepartmentID_int")
-                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -461,8 +440,6 @@ namespace Prosjekt.Migrations
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DepartmentID_int");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -657,9 +634,6 @@ namespace Prosjekt.Migrations
                     b.Property<int>("CustomerID_int")
                         .HasColumnType("int");
 
-                    b.Property<int>("CustomerProductCustomerID_int")
-                        .HasColumnType("int");
-
                     b.Property<int>("CustomerProductModelCustomerID_int")
                         .HasColumnType("int");
 
@@ -667,19 +641,13 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("CustomerProductSerialNr_str")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("Description_From_Customer_str")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Order_type_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateOnly>("Received_Date")
                         .HasColumnType("date");
@@ -687,8 +655,6 @@ namespace Prosjekt.Migrations
                     b.HasKey("OrderID_int", "CustomerID_int");
 
                     b.HasIndex("CustomerID_int");
-
-                    b.HasIndex("CustomerProductCustomerID_int", "CustomerProductSerialNr_str");
 
                     b.HasIndex("CustomerProductModelCustomerID_int", "CustomerProductModelSerialNr_str");
 
@@ -746,12 +712,6 @@ namespace Prosjekt.Migrations
                     b.Property<int>("ID_int")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    b.Property<DateOnly>("ExpDate_date")
-                        .HasColumnType("date");
-
-                    b.Property<DateOnly>("StartDate_date")
-                        .HasColumnType("date");
 
                     b.Property<string>("WarrantyName_str")
                         .IsRequired()
@@ -880,17 +840,6 @@ namespace Prosjekt.Migrations
                     b.Navigation("Warranty");
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
-                {
-                    b.HasOne("Prosjekt.Entities.DepartmentModel", "Department")
-                        .WithMany("Employees")
-                        .HasForeignKey("DepartmentID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
                 {
                     b.HasOne("Prosjekt.Entities.ReplacedPartsReturnedModel", "ReplacedPartsReturned")
@@ -995,12 +944,6 @@ namespace Prosjekt.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Prosjekt.Entities.CustomerProductModel", "CustomerProduct")
-                        .WithMany()
-                        .HasForeignKey("CustomerProductCustomerID_int", "CustomerProductSerialNr_str")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Prosjekt.Entities.CustomerProductModel", "CustomerProductModel")
                         .WithMany()
                         .HasForeignKey("CustomerProductModelCustomerID_int", "CustomerProductModelSerialNr_str")
@@ -1008,8 +951,6 @@ namespace Prosjekt.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
-
-                    b.Navigation("CustomerProduct");
 
                     b.Navigation("CustomerProductModel");
                 });
@@ -1057,11 +998,6 @@ namespace Prosjekt.Migrations
                     b.Navigation("ServiceFormsSign");
 
                     b.Navigation("ServiceOrders");
-                });
-
-            modelBuilder.Entity("Prosjekt.Entities.DepartmentModel", b =>
-                {
-                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
