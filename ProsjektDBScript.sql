@@ -46,7 +46,15 @@ CREATE TABLE IF NOT EXISTS Customer_Product(
    FOREIGN KEY(CustomerID_int) REFERENCES Customer(ID_int),
    FOREIGN KEY(WarrantyID_int) REFERENCES Warranty(ID_int)
 );
-
+CREATE TABLE IF NOT EXISTS Customer_Product(
+    SerialNr_str VARCHAR(100),
+    CustomerID_int INTEGER,
+    WarrantyID_int INTEGER,
+    PRIMARY KEY(SerialNr_str, CustomerID_int),
+    FOREIGN KEY(SerialNr_str) REFERENCES Product(SerialNr_str),
+    FOREIGN KEY(CustomerID_int) REFERENCES Customer(ID_int),
+    FOREIGN KEY(WarrantyID_int) REFERENCES Warranty(ID_int)
+    );
 -- Department: 
 
 CREATE TABLE IF NOT EXISTS Department (
