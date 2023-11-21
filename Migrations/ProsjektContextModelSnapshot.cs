@@ -43,6 +43,36 @@ namespace Prosjekt.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "Admin",
+                            ConcurrencyStamp = "admin",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "Mekanisk",
+                            ConcurrencyStamp = "Mekanisk",
+                            Name = "Mekanisk",
+                            NormalizedName = "MEKANISK"
+                        },
+                        new
+                        {
+                            Id = "Hydraulisk",
+                            ConcurrencyStamp = "Hydraulisk",
+                            Name = "Hydraulisk",
+                            NormalizedName = "HYDRAULISK"
+                        },
+                        new
+                        {
+                            Id = "Elektro",
+                            ConcurrencyStamp = "Elektro",
+                            Name = "Elektro",
+                            NormalizedName = "ELEKTRO"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -167,6 +197,23 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Chain_tensioners")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Check_Brakes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Clutch_Plate")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EOil_gearbox")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("HOil_gearbox")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -178,6 +225,7 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Hydraulic_cylinder")
                         .IsRequired()
                         .HasColumnType("longtext");
 
