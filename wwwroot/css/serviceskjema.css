@@ -39,3 +39,17 @@ textarea:focus {
 .button-spacing {
     margin-right: 30px;
 }
+
+@media (max-width: 768px) {
+    
+    .card {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .search button {
+        width: 90px;
+    }
+}
+

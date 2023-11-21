@@ -1,4 +1,4 @@
-﻿@model ChecklistModel;
+﻿@model Prosjekt.Entities.ChecklistModel;
 @{
     ViewData["Title"] = "Sjekkliste";
 }
@@ -194,18 +194,18 @@
 
                                     <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="BrakesMekanisk" id="Brake1" autocomplete="off" value="Ok" asp-for="Brakes">
+                                                <input type="radio" class="form-check-input" name="BrakesMekanisk" id="Brake1" autocomplete="off" value="Ok" asp-for="Check_Brakes">
                                             </div>
                                         </div>
                                     <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="BrakesMekanisk" id="Brake2" autocomplete="off" value="Skiftes" asp-for="Brakes">
+                                            <input type="radio" class="form-check-input" name="BrakesMekanisk" id="Brake2" autocomplete="off" value="Skiftes" asp-for="Check_Brakes">
 
                                             </div>
                                         </div>
                                     <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="BrakesMekanisk" id="Brake3" autocomplete="off" value="Defekt" asp-for="Brakes">
+                                            <input type="radio" class="form-check-input" name="BrakesMekanisk" id="Brake3" autocomplete="off" value="Defekt" asp-for="Check_Brakes">
                                             </div>
                                         </div>
                                     </div>
@@ -420,18 +420,18 @@
 
                                     <div class="col text-center border p-2">
                                         <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder1" autocomplete="off" value="Ok" asp-for="hydraulic_cylinder">
+                                            <input type="radio" class="form-check-input" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder1" autocomplete="off" value="Ok" asp-for="Hydraulic_cylinder">
                                             </div>
                                     </div>
                                     <div class="col text-center border p-2">
                                         <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder2" autocomplete="off" value="Skiftes" asp-for="hydraulic_cylinder">
+                                            <input type="radio" class="form-check-input" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder2" autocomplete="off" value="Skiftes" asp-for="Hydraulic_cylinder">
 
                                         </div>
                                     </div>
                                     <div class="col text-center border p-2">
                                         <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder3" autocomplete="off" value="Defekt" asp-for="hydraulic_cylinder">
+                                            <input type="radio" class="form-check-input" name="HydraulicCylinderHydraulisk" id="HydraulicCylinder3" autocomplete="off" value="Defekt" asp-for="Hydraulic_cylinder">
                                             </div>
                                     </div>
                                  </div>
@@ -531,18 +531,18 @@
 
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="OilGearboxBoxHydraulisk" id="OilGearboxBox1" autocomplete="off" value="Ok" asp-for="Oil_gearbox_box">
+                                            <input type="radio" class="form-check-input" name="OilGearboxBoxHydraulisk" id="OilGearboxBox1" autocomplete="off" value="Ok" asp-for="HOil_gearbox">
                                             </div>
                                         </div>
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="OilGearboxBoxHydraulisk" id="OilGearboxBox2" autocomplete="off" value="Skiftes" asp-for="Oil_gearbox_box">
+                                            <input type="radio" class="form-check-input" name="OilGearboxBoxHydraulisk" id="OilGearboxBox2" autocomplete="off" value="Skiftes" asp-for="HOil_gearbox">
 
                                             </div>
                                         </div>
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="OilGearboxBoxHydraulisk" id="OilGearboxBox3" autocomplete="off" value="Defekt" asp-for="Oil_gearbox_box">
+                                            <input type="radio" class="form-check-input" name="OilGearboxBoxHydraulisk" id="OilGearboxBox3" autocomplete="off" value="Defekt" asp-for="HOil_gearbox">
                                             </div>
                                         </div>
                                     </div>
@@ -697,18 +697,18 @@
 
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="ButtonBoxElektro" id="ButtonBox1" autocomplete="off" value="Ok" asp-for="Button_box">
+                                            <input type="radio" class="form-check-input" name="ButtonBoxElektro" id="ButtonBox1" autocomplete="off" value="Ok" asp-for="EOil_gearbox">
                                             </div>
                                         </div>
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="ButtonBoxElektro" id="ButtonBox2" autocomplete="off" value="Skiftes" asp-for="Button_box">
+                                            <input type="radio" class="form-check-input" name="ButtonBoxElektro" id="ButtonBox2" autocomplete="off" value="Skiftes" asp-for="EOil_gearbox">
 
                                             </div>
                                         </div>
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input" name="ButtonBoxElektro" id="ButtonBox3" autocomplete="off" value="Defekt" asp-for="Button_box">
+                                            <input type="radio" class="form-check-input" name="ButtonBoxElektro" id="ButtonBox3" autocomplete="off" value="Defekt" asp-for="EOil_gearbox">
                                             </div>
                                         </div>
                                     </div>

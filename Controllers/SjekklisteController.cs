@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Prosjekt.Models;
+using Prosjekt.Entities;
 
 //TODO: prøve å fikse som modelstate sjekke kan kjøre
 
@@ -33,8 +33,8 @@ namespace Prosjekt.Controllers
                     DocID_str = addSjekkliste.DocID_str,
                     SerialNr_str = addSjekkliste.SerialNr_str
                 };
-                _context.Checklist.AddAsync(sjekkliste);
-                _context.SaveChangesAsync(); 
+                //_context.Checklist.AddAsync(sjekkliste);
+                //_context.SaveChangesAsync(); 
             }
             catch (Exception ex)
             {
