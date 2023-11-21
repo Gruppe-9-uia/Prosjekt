@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231120194623_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231121114639_InitialCreated")]
+    partial class InitialCreated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -200,19 +200,23 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Brakes")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Button_box")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Chain_tensioners")
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Check_Brakes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Clutch_Plate")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EOil_gearbox")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("HOil_gearbox")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -224,7 +228,7 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Oil_gearbox_box")
+                    b.Property<string>("Hydraulic_cylinder")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -287,10 +291,6 @@ namespace Prosjekt.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("comment_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("hydraulic_cylinder")
                         .IsRequired()
                         .HasColumnType("longtext");
 

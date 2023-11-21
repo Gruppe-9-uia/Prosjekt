@@ -1,3 +1,6 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace Prosjekt.Models;
 
     public class ArbeidsdokumentModelView

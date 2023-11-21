@@ -2,7 +2,7 @@
 
 #Run MariaDB container with specified timezone and root password, and map the ports.
 #The first container is mapped to port 3308, and the second to the default port 3306.
-docker run --rm --env "TZ=Europe/Oslo" --name mariadb -p 3308:3306/tcp -v "$(pwd)/database":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=12345 -d mariadb:10.5.11
+docker run --rm --env "TZ=Europe/Oslo" --name mariadb -p 3308:3306/tcp -v "$(pwd)/database":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=12345 -d mariadb:latest
 
 #Wait for a few seconds to ensure MariaDB is up and ready to accept connections.
 echo "Waiting for MariaDB to initialize..."
