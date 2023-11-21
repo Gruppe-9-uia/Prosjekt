@@ -17,7 +17,7 @@ namespace Prosjekt.Controllers
         // GET: /<controller>/
         public IActionResult Brukeroversikt()
         {
-            var employees = _context.Users.ToList();
+            var employees = _context.Users.ToList().ToString();
             
             return View(employees);
         }
