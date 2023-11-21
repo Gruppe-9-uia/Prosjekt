@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-﻿@model List<Prosjekt.Entities.EmployeeUser>
-=======
-﻿@model List<Prosjekt.Models.Employee.BrukerOversiktViewModel>
+@model List<Prosjekt.Models.Employee.BrukerOversiktViewModel>
 
->>>>>>> 7e4d952814a321a72c011b796780ec6120924f26
+
 @{
     ViewData["Title"] = "Brukeroversikt";
 }
@@ -62,8 +59,8 @@
                             <tbody id="userTable">
                             @foreach (var employee in Model)
                             {
-                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.Id" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-department="@employee.DepartmentID_int" data-employee-level="@employee.Level_str">
-                                <td>@employee.Id</td>
+                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.ID_int" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-department="@employee.DepartmentID_int" data-employee-level="@employee.Level_str">
+                                <td>@employee.ID_int</td>
                                 <td>@(employee.FirstName_str + " " + employee.LastName_str)</td>
                                 <td>@employee.DepartmentID_int</td>
                                 <td>@employee.Level_str</td>
