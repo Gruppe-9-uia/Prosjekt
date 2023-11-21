@@ -51,3 +51,7 @@ input, .dropdown {
 .table {
         width: 100%;
     }
+
+.highlight {
+    background-color: rgba(248, 147, 96, 0.65);
+}
