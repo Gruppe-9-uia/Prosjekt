@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+﻿@model List<Prosjekt.Entities.EmployeeUser>
+=======
 ﻿@model List<Prosjekt.Models.Employee.BrukerOversiktViewModel>
 
+>>>>>>> 7e4d952814a321a72c011b796780ec6120924f26
 @{
     ViewData["Title"] = "Brukeroversikt";
 }
@@ -182,7 +186,7 @@
                             $('#BOModal').modal('show');
                             
                             // AJAX call
-                            $.get("/Brukeroverikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
+                            $.get("/Brukeroversikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
                                 if (data !== null) {
                                     $("editEpost").val(data.Email);
                                     $("editTlf").val(data.Phone);
