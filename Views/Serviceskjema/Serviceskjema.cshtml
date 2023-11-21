@@ -1,4 +1,4 @@
-﻿@model Prosjekt.Models.ServiceFormModel;
+﻿@model Prosjekt.Entities.ServiceFormModel;
 @{
     ViewData["Title"] = "Serviceskjema";
 }
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-center" style="margin-top: 30px;">
-            <button type="reset" class="btn btn-primary button-spacing" onclick="confirmReset()">Reset</button>
+            <button type="reset" class="btn btn-danger button-spacing" onclick="confirmReset()">Reset</button>
             <button type="submit" class="btn btn-primary button-spacing">Send inn</button> 
         </div>
         <script>

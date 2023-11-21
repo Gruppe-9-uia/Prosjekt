@@ -1,4 +1,4 @@
-﻿namespace Prosjekt.Models
+﻿namespace Prosjekt.Entities
 {
     public class WarrantyModel
     {
@@ -7,8 +7,6 @@
         public int ID_int { get; set; }
         [Required]
         public string WarrantyName_str { get; set; }
-        [Required]
-        public string WarrantyType_str { get; set; }
         [Required]
         public DateOnly StartDate_date { get; set; }
         [Required]

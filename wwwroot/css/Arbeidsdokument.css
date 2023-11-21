@@ -1,6 +1,57 @@
-table.table-striped tbody tr:nth-child(odd) {
-    background-color: #fd7e14 !important;
+
+.custom-table-scroll-y {
+    max-height: 500px; 
+    overflow-y: auto;
+}
+
+.container {
+    margin-bottom: 50px !important;
+}
+
+.container h1 {
+    margin-bottom: 20px; 
 }
 
 
+input, .dropdown {
+    margin-bottom: 15px;
+}
 
+
+.table-responsive {
+    margin-top: 20px; 
+}
+
+.btn-secondary.dropdown-toggle {
+    background-color: #11618C ;
+    border-color: #11618C ;
+    color: #fff; 
+}
+.custom-table-scroll {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.table-striped {
+    font-size: 14px; 
+}
+
+.table th, .table td {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+.table td, .table th {
+         white-space: normal;
+         word-wrap: break-word;
+     }
+.container {
+         max-width: none;
+     }
+.table {
+        width: 100%;
+    }
+
+.highlight {
+    background-color: rgba(248, 147, 96, 0.65);
+}

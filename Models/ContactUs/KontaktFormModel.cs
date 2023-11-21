@@ -2,7 +2,7 @@
 
 namespace Prosjekt.Models
 {
-    public class KontaktFormModell
+    public class KontaktFormModel
     {
         //TODO endre navnene til engelsk
         [Required]
