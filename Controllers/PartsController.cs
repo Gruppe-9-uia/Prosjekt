@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Prosjekt.Models;
+using Prosjekt.Entities;
 
 namespace Prosjekt.Controllers
 {
