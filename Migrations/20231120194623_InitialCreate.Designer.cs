@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prosjekt.Data;
 
@@ -10,9 +11,11 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    partial class ProsjektContextModelSnapshot : ModelSnapshot
+    [Migration("20231120194623_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,6 +46,36 @@ namespace Prosjekt.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "Admin",
+                            ConcurrencyStamp = "admin",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "Mekanisk",
+                            ConcurrencyStamp = "Mekanisk",
+                            Name = "Mekanisk",
+                            NormalizedName = "MEKANISK"
+                        },
+                        new
+                        {
+                            Id = "Hydraulisk",
+                            ConcurrencyStamp = "Hydraulisk",
+                            Name = "Hydraulisk",
+                            NormalizedName = "HYDRAULISK"
+                        },
+                        new
+                        {
+                            Id = "Elektro",
+                            ConcurrencyStamp = "Elektro",
+                            Name = "Elektro",
+                            NormalizedName = "ELEKTRO"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -167,6 +200,19 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Brakes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Button_box")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Chain_tensioners")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Clutch_Plate")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -178,6 +224,7 @@ namespace Prosjekt.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Oil_gearbox_box")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -240,6 +287,10 @@ namespace Prosjekt.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("comment_str")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("hydraulic_cylinder")
                         .IsRequired()
                         .HasColumnType("longtext");
 
