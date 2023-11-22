@@ -73,6 +73,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             [EmailAddress]
+            [Display(Name = "Epost")]
             public string Email { get; set; }
 
             /// <summary>
@@ -81,13 +82,14 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             [DataType(DataType.Password)]
+            [Display(Name = "Passord")]
             public string Password { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Husk meg?")]
             public bool RememberMe { get; set; }
         }
 
@@ -127,7 +129,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
 
                     if (result.Succeeded)
                     {
-                        _logger.LogInformation("User logged in.");
+                        _logger.LogInformation("Du er logget inn.");
                         return LocalRedirect(returnUrl);
                     }
 
@@ -139,12 +141,12 @@ namespace Prosjekt.Areas.Identity.Pages.Account
 
                     if (result.IsLockedOut)
                     {
-                        _logger.LogWarning("User account locked out.");
+                        _logger.LogWarning("Du er logget ut.");
                         return RedirectToPage("./Lockout");
                     }
                     else
                     {
-                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                        ModelState.AddModelError(string.Empty, "Ugyldig påloggingsforsøk.");
                         return Page();
                     }
                 }
