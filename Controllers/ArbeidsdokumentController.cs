@@ -17,6 +17,7 @@ namespace Prosjekt.Controllers
 
         public IActionResult Index()
         {
+            /*
             var arbeidsdokumentModelViews = _context.Service_Form
                 .Include(sf => sf.Customer)
                 .Include(sf => sf.ServiceOrder)
@@ -39,8 +40,8 @@ namespace Prosjekt.Controllers
                     ServiceSkjemaFerdig = sf.ServiceSkjemaFerdig
                 })
                 .ToList();
-
-            return View("Arbeidsdokument", arbeidsdokumentModelViews);
+            */
+            return View("Arbeidsdokument");
         }
     }
 }

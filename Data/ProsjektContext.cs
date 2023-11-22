@@ -248,8 +248,7 @@ namespace Prosjekt.Data
                 new IdentityRole { Id = "Elektro", Name = "Elektro", NormalizedName = "ELEKTRO", ConcurrencyStamp = "Elektro" }
             );
         }
-        public DbSet<ArbeidsdokumentModelView> ArbeidsdokumentModelViews { get; set; }
-// lagt til denne linjen for arbeidsdokumentet^^^
+
         public DbSet<PostalCode>? Postal_Code { get; set; }
         public DbSet<CustomerModel>? Customer { get; set; }
         public DbSet<WarrantyModel>? Warranty { get; set; }
