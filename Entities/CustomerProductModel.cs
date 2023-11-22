@@ -13,7 +13,6 @@
         public CustomerModel Customer { get; set; }
         public WarrantyModel Warranty { get; set; }
 
-        public ICollection<ServiceOrderModel> ServiceOrders { get; }
-
+        public ServiceOrderModel ServiceOrders { get; }
     }
 }
