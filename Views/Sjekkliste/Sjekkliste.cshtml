@@ -53,7 +53,7 @@
                     {
                             @Html.AntiForgeryToken()
             <!-- Generell informasjon som er ikke avhengig av avdeling-->
-            <div id="Generell" role="tabpanel" class="bs-stepper-pane active dstepper-block" aria-labelledby="stepperSjekkliste1">
+            <div id="Generell" role="tabpanel" class="bs-stepper-pane active dstepper-block">
                 <div class="p-3">
                     <div class="container">
                 <div class="form-group">
@@ -144,7 +144,7 @@
                 </div>
 
             <!-- Form for den mekaniske avdelingen -->
-            <div id="Mekanisk" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste2">
+            <div id="Mekanisk" role="tabpanel" class="bs-stepper-pane">
                 <div class="p-3">
                         <div class="form-group">
                         <fieldset class="btn-group w-100 " role="group" aria-label="Clutch_Plate">
@@ -395,7 +395,7 @@
             </div>
 
             <!-- Form for Hydraulisk avdeling -->
-            <div id="Hydraulisk" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste3">
+            <div id="Hydraulisk" role="tabpanel" class="bs-stepper-pane">
                 <div class="p-3">
                     <div class="form-group">
                         <fieldset class="btn-group w-100 " role="group" aria-label="Hydraulic_cylinder">
@@ -531,18 +531,18 @@
 
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="HOil_gearbox" autocomplete="off" value="Ok" asp-for="HOil_gearbox">
+                                            <input type="radio" class="form-check-input" autocomplete="off" value="Ok" asp-for="HOil_gearbox">
                                             </div>
                                         </div>
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="HOil_gearbox" autocomplete="off" value="Skiftes" asp-for="HOil_gearbox">
+                                            <input type="radio" class="form-check-input" autocomplete="off" value="Skiftes" asp-for="HOil_gearbox">
 
                                             </div>
                                         </div>
                                         <div class="col text-center border p-2">
                                             <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="HOil_gearbox" autocomplete="off" value="Defekt" asp-for="HOil_gearbox">
+                                            <input type="radio" class="form-check-input"autocomplete="off" value="Defekt" asp-for="HOil_gearbox">
                                             </div>
                                         </div>
                                     </div>
@@ -615,7 +615,7 @@
             </div>
 
             <!-- form for Elektro avdeling -->
-            <div id="Elektro" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste4">
+            <div id="Elektro" role="tabpanel" class="bs-stepper-pane">
                 <div class="p-3">
                     <div class="form-group">
                         <fieldset class="btn-group w-100 " role="group" aria-label="Wiring_on_winch">
@@ -722,7 +722,7 @@
                     
                 </div>
             </div>
-            <div id="Signering" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepperSjekkliste5">
+            <div id="Signering" role="tabpanel" class="bs-stepper-pane">
 
             <div class="align-items-center p-3">
             <!-- Må kanskje flyttet som tar med alle formene og kan sjekke den-->

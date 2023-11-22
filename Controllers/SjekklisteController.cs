@@ -44,28 +44,6 @@ namespace Prosjekt.Controllers
                 Console.WriteLine(addSjekkliste.Bearing_drum);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 var checklistDB = new ChecklistModel();
                 checklistDB.DocID_str = addSjekkliste.DocID_str;
                 checklistDB.SerialNr_str = addSjekkliste.SerialNr_str;
@@ -82,7 +60,7 @@ namespace Prosjekt.Controllers
                 checklistDB.Hoses = addSjekkliste.Hoses;
                 checklistDB.Hydraulic_block = addSjekkliste.Hydraulic_block;
                 checklistDB.Oil_tank = addSjekkliste.Oil_tank;
-                checklistDB.HOil_gearbox = checklistDB.HOil_gearbox;
+                checklistDB.HOil_gearbox = addSjekkliste.HOil_gearbox;
                 checklistDB.Ringe_cylinder_and_replace_seals = addSjekkliste.Ringe_cylinder_and_replace_seals;
                 checklistDB.Brake_cylinder_and_replace_seals = addSjekkliste.Brake_cylinder_and_replace_seals;
                 checklistDB.Clutch_Plate = addSjekkliste.Clutch_Plate;
