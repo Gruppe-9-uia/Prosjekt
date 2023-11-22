@@ -23,6 +23,8 @@
         <ul class="menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" asp-controller="Sjekkliste" asp-action="Sjekkliste">Sjekkliste</a></li>
             <li><a class="dropdown-item" asp-controller="Parts" asp-action="Parts">Parts</a></li>
+
+            <li><a class="dropdown-item" asp-controller="Oversikt" asp-action="Oversikt">Oversikt</a></li>
             <li><a class="dropdown-item" asp-controller="Equipment" asp-action="Equipment">Utstyr</a></li>
             <li><a class="dropdown-item" asp-controller="Notifikasjon" asp-action="Notifikasjon">Notifikasjon</a></li>
             <li><a class="dropdown-item" asp-controller="Serviceordre" asp-action="Serviceordre">Serviceordre</a></li>
@@ -73,7 +75,9 @@ else
         <li><a class="dropdown-item" asp-controller="Kontakt" asp-action="KontaktOss">Kontakt oss</a></li>
         <li><a class="dropdown-item" asp-controller="FAQ" asp-action="FAQ">FAQ</a></li>
         <li><a class="dropdown-item" asp-controller="Om_Oss" asp-action="Om_Oss">Om Oss</a></li>
-       <li><a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+
+        <li><a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+
         <li><a class="dropdown-item" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
 
     </ul>
