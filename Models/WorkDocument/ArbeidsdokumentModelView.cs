@@ -5,17 +5,17 @@ namespace Prosjekt.Models;
 
     public class ArbeidsdokumentModelView
     {
-        [Required] public string BooketServiceTilUke { get; set; }
+        public string BooketServiceTilUke { get; set; }
 
         public DateOnly HendelseMotatt { get; set; }
 
         public int Orderenummer { get; set; }
 
-        [Required] public string Produkttype { get; set; }
+        public string Produkttype { get; set; }
 
-        [Required] public string BeskrivelseFraKunde { get; set; }
+        public string BeskrivelseFraKunde { get; set; }
 
-        [Required] public string Kundeinfo { get; set; }
+        public string Kundeinfo { get; set; }
 
         public DateOnly AvtaltLevering { get; set; }
 
