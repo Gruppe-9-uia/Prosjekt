@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +25,11 @@
     <link rel="stylesheet" href="~/css/Sjekklist.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/serviceordre.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/serviceskjema.css" asp-append-version="true" />
+
+<link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+
     <link rel="stylesheet" href="~/css/Logginn.css" asp-append-version="true" />
+
 
     <link rel="stylesheet" href="~/css/Arbeidsdokument.css" asp-append-version="true" />
 
@@ -40,20 +44,13 @@
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                     <img src="~/Images/Nostedlogo.png" alt="Nøsted sin logo" />
                 </a>
-                  <ul class="navbar-nav ms-auto">
-                             <li class="nav-item d-flex align-items-center">
-                                 <!-- Notifikasjon bjelle -->
-                                 <a class="nav-link mx-2 mb-2" asp-controller="Notifikasjon" asp-action="Notifikasjon" role="button">
-                                     <i class="bi-bell" style="font-size: 38px; color: grey;"></i>
-                                 </a>
+                 
                         <partial name="_Navbar" />
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
 
-    <div class="d-flex flex-column min-vh-100">
+    <div class="d-flex flex-column"> <!-- min-vh-100 -->
         <div class="flex-grow-1">
             <div class="container-fluid flex-fill p-0">
                 <main role="main" class="h-100 w-100">

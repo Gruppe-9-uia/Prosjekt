@@ -1,0 +1,147 @@
+@using Prosjekt.Models.Parts;
+@model Prosjekt.Models.Parts.PartsViewModel;
+
+@{
+    ViewBag.Title = "Parts";
+}
+
+<div class="container-fluid mt-4">
+    <h2 class="text-center mb-2">Deler Oversikt</h2> <!-- Redusert margin-bottom for overskriften -->
+
+    <div class="row" style="margin-bottom: 120px; margin-top: 30px;">
+        <div class="col-8 mx-auto text-center">
+            <!-- Søkebaren sentrert i henhold til overskriften -->
+            <form asp-action="Parts" method="get" class="w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="searchString" placeholder="Søk etter deler..." aria-label="Søk etter deler">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary ml-2" type="submit">Søk</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mb-3">
+            <div class="col-12 d-flex justify-content-center">
+                <!-- "Legg til" og "Slett" knapper justert til høyre -->
+                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#addPartModal">Legg til</button>
+                <button type="button" class="btn btn-danger btn-sm ml-2" data-bs-toggle="modal" data-bs-target="#deletePartModal">
+                    <i class="bi bi-trash"></i> Slett
+                </button>
+            </div>
+        </div>
+</div>
+    
+                
+<!-- Modal for å legge til ny del -->
+    <div class="modal fade" id="addPartModal" tabindex="-1" role="dialog" aria-labelledby="addPartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPartModalLabel">Legg til ny del</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <partial name="AddPart" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Modal for sletting -->
+    <div class="modal fade" id="deletePartModal" tabindex="-1" aria-labelledby="deletePartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deletePartModalLabel">Bekreft sletting</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="/Parts/DeletePart">
+                    <div class="modal-body">
+                        <p>Angi ID for delen du ønsker å slette:</p>
+                        <input type="number" class="form-control" name="partId" required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
+                        <button type="submit" class="btn btn-danger">Slett</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Tabell -->
+    <table class="table table-striped table-hover table-sm mx-auto" id="partsTable" style="width: 85%">
+        <thead>
+            <tr>
+                <!-- Gjør ID-kolonnen mindre på små skjermer -->
+                <th class="col-2 col-md-2 text-center">ID</th>
+                <th class="col-4 col-md-6">Navn</th>
+                <th class="col-3 col-md-2 text-center">Lager</th>
+                <th class="col-3 col-md-2 text-center">Handling</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (ViewData["list"] != null)
+        {
+            @foreach (var part in ViewData["list"] as List<PartsViewModel>)
+            {
+                <tr>
+                    <td class="text-center">@part.PartID_int</td>
+                    <td>@part.PartName_str</td>
+                    <td class="text-center">@part.Quantity_available_int stk</td>
+                    <td class="text-center">@part.EquipmentName stk</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="openModal(@part.PartID_int, '@part.PartName_str', @part.Quantity_available_int)">
+                            <i class="bi bi-gear"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+
+        </tbody>
+    </table>
+  
+    
+    
+    <!-- Endre antall -->
+<div class="modal fade" id="updateQuantityModal" tabindex="-1" role="dialog" aria-labelledby="updateQuantityModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateQuantityModalLabel">Endre Antall</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateForm" asp-action="UpdateQuantity" method="post">
+                    <input type="hidden" id="updatePartID" name="PartID_int" />
+                    <div class="form-group">
+                        <label for="newQuantity">Nytt Antall:</label>
+                        <input type="number" id="newQuantity" name="NewQuantity" min="0" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Oppdater</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Slette del--> 
+
+
+@section Scripts {
+    <script>
+        function openModal(partId, partName, currentQuantity) {
+            document.getElementById('updatePartID').value = partId;
+            document.getElementById('newQuantity').value = currentQuantity;
+            $('#updateQuantityModal').modal('show');
+        }
+                    
+    </script>
+}
