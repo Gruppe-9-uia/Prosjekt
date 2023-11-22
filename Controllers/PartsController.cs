@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Entities;
 using Prosjekt.Models.Parts;
 
+
 namespace Prosjekt.Controllers
 {
     public class PartsController : Controller
@@ -43,22 +44,6 @@ namespace Prosjekt.Controllers
             return View();
         }
 
-        /*
-        public IActionResult Parts(string searchString)
-        {
-            var parts = from p in _context.Parts
-                select p;
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                parts = parts.Where(p =>
-                    p.PartName_str.Contains(searchString) ||
-                    p.PartID_int.ToString().Contains(searchString));
-            }
-
-            return View(parts.ToList());
-        }
-        */
 
         [HttpPost]
         public IActionResult UpdateQuantity(int PartID_int, int NewQuantity)
