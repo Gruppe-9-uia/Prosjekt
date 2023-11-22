@@ -1,4 +1,4 @@
-﻿using System.Net;
+using System.Net;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Identity.UI.Services;
 namespace Prosjekt.Services
@@ -11,6 +11,11 @@ namespace Prosjekt.Services
         {
             try
             {
+                Console.WriteLine(email);
+                Console.WriteLine(subject);
+                Console.WriteLine(message);
+
+                /*
                 MailMessage mail = new MailMessage();
 
                 
@@ -39,6 +44,7 @@ namespace Prosjekt.Services
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 smtp.Send(mail);
+                */
             }
             catch (Exception ex)
             {

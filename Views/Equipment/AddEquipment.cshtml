@@ -11,12 +11,21 @@
         <label name="Name_str">Navn</label>
         <input type="text" class="form-control" asp-for="Name_str" name="Name_str" required />
     </div>
+    
     <div class="form-group">
         <label name="Availability">Tilgjengelig</label>
-        <p>Ja</p>
-        <input type="radio" class="form-check-input" asp-for="Availability" name="Availability" value="true" required />
-        <p>Nei</p>
-        <input type="radio" class="form-check-input" asp-for="Availability" name="Availability" value="False" required />
-    </div>
+        <div class="row">
+            <div class="col-md-1 offset-md-1">
+                <div class="radio">
+                    <label><input type="radio" class="form-check-input" asp-for="Availability" name="Availability" value="true" required/>Ja</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" class="form-check-input" asp-for="Availability" name="Availability" value="False" required/>Nei</label>
+                </div>
+            </div>
+        <div>
+           </div> 
+        </div>
+        </div>
     <button type="submit" class="btn btn-primary">Lagre</button>
 }

@@ -1,5 +1,41 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+      For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+  *@
 @{
+    ViewData["Title"] = "Oversikt";
 }
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Oversikt</h1>
+  
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <button type="button" class="btn btn-primary btn-block" onclick="goToPage('../Serviceskjema/Serviceskjema')">Serviceskjema</button>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-primary btn-block" onclick="goToPage('../Serviceordre/Serviceordre')">Serviceordre</button>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-primary btn-block" onclick="goToPage('../Sjekkliste/Sjekkliste')">Sjekkliste</button>
+    </div>
+  </div>
+</div>
+    
+<div class="row justify-content-center mt-3">
+    <div class="col-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+      function goToPage(pageUrl) {
+        window.location.href = pageUrl;
+      }
+    </script>
+

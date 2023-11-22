@@ -54,12 +54,26 @@ namespace Prosjekt.Controllers
                 if (result == null)
                 {
                     ModelState.AddModelError(string.Empty, "Klarte ikke å lage service order");
-                    return View("Equipment");
+                    return RedirectToAction("Equipment");
                 }
             }
 
             _context.SaveChanges();
-            return View("Equipment");
+            return RedirectToAction("Equipment");
+        }
+
+        public IActionResult DeleteEquipment(EquimentViewModel model)
+        {
+            var equipmentToDelete = _context.Equipment.Where(x => x.Id_int == model.Id_int).FirstOrDefault();
+            if (equipmentToDelete == null)
+            {
+                return NotFound();
+            }
+
+            _context.Equipment.Remove(equipmentToDelete);
+            _context.SaveChanges();
+
+            return RedirectToAction("Equipment");
         }
 
     }
