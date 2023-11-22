@@ -6,7 +6,7 @@ namespace Prosjekt.Data
 {
     public class ProsjektContext : IdentityDbContext<EmployeeUser>
     {
-        public ProsjektContext(DbContextOptions<ProsjektContext> options) : base (options) { }
+        public ProsjektContext(DbContextOptions<ProsjektContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -186,7 +186,7 @@ namespace Prosjekt.Data
                 .HasOne(s => s.OrderServiceformModel)
                 .WithOne(s => s.ServiceOrder)
                 .HasForeignKey<ServiceOrderServiceformModel>(s => s.OrderID_int)
-                .HasPrincipalKey<ServiceOrderModel>(s => new {s.OrderID_int});
+                .HasPrincipalKey<ServiceOrderModel>(s => new { s.OrderID_int });
 
             modelBuilder.Entity<ServiceFormModel>()
                 .HasOne(s => s.OrderServiceformModel)
@@ -231,7 +231,7 @@ namespace Prosjekt.Data
                 .HasOne(s => s.ReplacedPartsReturned)
                 .WithOne(s => s.ServiceForm)
                 .HasForeignKey<ReplacedPartsReturnedModel>(s => s.FormID_int);
-        
+
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "Admin", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "admin" }
             );

@@ -5,14 +5,14 @@ using Prosjekt.Entities;
 
 namespace Prosjekt.Controllers
 {
-    public class SjekklistController : Controller
+    public class SjekklisteController : Controller
     {
         private readonly ProsjektContext _context;
-        public SjekklistController(ProsjektContext _context) {
+        public SjekklisteController(ProsjektContext _context) {
             this._context = _context;
         }  
 
-        public IActionResult Sjekklist()
+        public IActionResult Sjekkliste()
         {
             return View();
         }
