@@ -15,7 +15,7 @@ namespace Prosjekt.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Arbeidsdokument()
         {
             /*
             var arbeidsdokumentModelViews = _context.Service_Form
