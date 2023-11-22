@@ -9,8 +9,9 @@ namespace Prosjekt.Controllers
         {
             return new List<Notifikasjon>
             {
-                new Notifikasjon { Melding = "Ny serviceordre er registrert", Status = "Fullført", Avdeling = "Servicebehandler"},
-                new Notifikasjon { Melding = "Sett inn flere utstyr", Status = "Pågår", Avdeling = "Elektro"}
+                new Notifikasjon
+                    { Melding = "Serviceform er fullført", Status = "Fullført", Avdeling = "Hydreulisk" },
+                new Notifikasjon { Melding = "Serviceform er i gang", Status = "Pågår", Avdeling = "Elektro" }
             };
         }
 
@@ -18,17 +19,6 @@ namespace Prosjekt.Controllers
         {
             var notifikasjoner = TestNotifikasjoner();
             return View(notifikasjoner);
-        }
-
-        [HttpPost]
-        public IActionResult LeggTilNotifikasjon(Notifikasjon nyNotifikasjon)
-        {
-            //
-
-            var notifikasjoner = TestNotifikasjoner();
-            notifikasjoner.Add(nyNotifikasjon); 
-
-            return View("Notifikasjon", notifikasjoner);
         }
     }
 }
