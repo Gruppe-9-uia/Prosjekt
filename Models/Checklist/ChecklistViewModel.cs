@@ -1,14 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Reflection.Metadata;
-
-namespace Prosjekt.Entities
+﻿namespace Prosjekt.Models.Checklist
 {
-    public class ChecklistModel
+    public class ChecklistViewModel
     {
         [StringLength(50)]
         public string DocID_str { get; set; }
         public string SerialNr_str { get; set; }
         [StringLength(50)]
+        public string FirstName_str { get; set; }
+        public string LastName_str { get; set; }
+        public DateOnly signDate {  get; set; }
         public string Type_str { get; set; }
         [StringLength(50)]
         public string Procedure_str { get; set; }
@@ -49,11 +49,5 @@ namespace Prosjekt.Entities
         public string Wiring_on_winch { get; set; }
         public string Test_radio { get; set; }
         public string EOil_gearbox { get; set; }
-
-
-        public ProductModel product { get; set; }
-
-        //Sign
-        public ChecklistSignatureModel ChecklistSignature;
     }
 }
