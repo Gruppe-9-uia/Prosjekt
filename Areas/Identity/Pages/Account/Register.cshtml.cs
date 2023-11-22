@@ -112,7 +112,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             public string Level_str { get; set; }
 
             [Display(Name = "Avdeling")]
-            public int DepartmentID_int { get; set; }
+            public string Department { get; set; }
         }
 
 
@@ -137,9 +137,6 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                 user.LastName_str = Input.LastName_str;
                 user.PhoneNumber = Input.PhoneNumber;
                 user.Level_str = Input.Level_str;
-                /*
-                var departmentExists = _context.Department.Any(d => d.ID_int == Input.DepartmentID_int);
-
                 if (departmentExists)
                 {
                     var result = await _userManager.CreateAsync(user, Input.Password);
@@ -148,7 +145,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                     if (result.Succeeded)
                     {
 
-                        await _userManager.AddToRoleAsync(user, "Administrator");
+                        await _userManager.AddToRoleAsync(user, Input.Department);
                         _logger.LogInformation("User created a new account with password.");
                         var userId = await _userManager.FindByNameAsync(user.UserName);
                        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prosjekt.Data;
 
@@ -10,9 +11,11 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    partial class ProsjektContextModelSnapshot : ModelSnapshot
+    [Migration("20231120194623_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -180,96 +183,130 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.ChecklistModel", b =>
                 {
                     b.Property<string>("DocID_str")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("SerialNr_str")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(255)");
 
-                    b.Property<int>("Bearing_drum")
-                        .HasColumnType("int");
+                    b.Property<string>("Bearing_drum")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Brake_cylinder_and_replace_seals")
-                        .HasColumnType("int");
+                    b.Property<string>("Brake_cylinder_and_replace_seals")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Brake_force")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Hoses")
-                        .HasColumnType("int");
+                    b.Property<string>("Brakes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Hydraulic_block")
-                        .HasColumnType("int");
+                    b.Property<string>("Button_box")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
+                    b.Property<string>("Chain_tensioners")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
+                    b.Property<string>("Clutch_Plate")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Oil_tank")
-                        .HasColumnType("int");
+                    b.Property<string>("Hoses")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("PTO_and_storage")
-                        .HasColumnType("int");
+                    b.Property<string>("Hydraulic_block")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Pinion_bearing")
-                        .HasColumnType("int");
+                    b.Property<string>("Oil_gearbox_box")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Oil_tank")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PTO_and_storage")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Pinion_bearing")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Prepared_by_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Procedure_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Ringe_cylinder_and_replace_seals")
+                    b.Property<int>("Product")
                         .HasColumnType("int");
+
+                    b.Property<string>("Ringe_cylinder_and_replace_seals")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<DateOnly>("Starting_Date")
                         .HasColumnType("date");
 
-                    b.Property<int>("Test_radio")
-                        .HasColumnType("int");
+                    b.Property<string>("Test_radio")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Test_winch")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Traction_force_Kn")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Type_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Wedge_on_sprocket")
-                        .HasColumnType("int");
+                    b.Property<string>("Wedge_on_sprocket")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Wire")
-                        .HasColumnType("int");
+                    b.Property<string>("Wire")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Wiring_on_winch")
-                        .HasColumnType("int");
+                    b.Property<string>("Wiring_on_winch")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("comment_str")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("varchar(250)");
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("hydraulic_cylinder")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("productSerialNr_str")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("xx_Bar_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("DocID_str", "SerialNr_str");
 
-                    b.HasIndex("SerialNr_str")
+                    b.HasAlternateKey("SerialNr_str");
+
+                    b.HasIndex("productSerialNr_str")
                         .IsUnique();
 
                     b.ToTable("Checklist");
@@ -278,17 +315,26 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.ChecklistSignatureModel", b =>
                 {
                     b.Property<string>("DocID_str")
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)");
 
-                    b.Property<string>("EmployeeID_int")
+                    b.Property<int>("EmployeeID_int")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChecklistDocID_str")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("employeeId")
+                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("DocID_str", "EmployeeID_int");
 
-                    b.HasIndex("DocID_str")
+                    b.HasAlternateKey("EmployeeID_int");
+
+                    b.HasIndex("ChecklistDocID_str")
                         .IsUnique();
 
-                    b.HasIndex("EmployeeID_int")
+                    b.HasIndex("employeeId")
                         .IsUnique();
 
                     b.ToTable("Checklist_signature");
@@ -302,33 +348,27 @@ namespace Prosjekt.Migrations
 
                     b.Property<string>("Email_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("FirstName_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("LastName_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Phone_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Postal_Code_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Street_Address_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("ID_int");
 
@@ -343,7 +383,11 @@ namespace Prosjekt.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("SerialNr_str")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ProductSerialNr_str")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("WarrantyID_int")
                         .HasColumnType("int");
@@ -353,6 +397,9 @@ namespace Prosjekt.Migrations
                     b.HasAlternateKey("SerialNr_str");
 
                     b.HasAlternateKey("WarrantyID_int");
+
+                    b.HasIndex("ProductSerialNr_str")
+                        .IsUnique();
 
                     b.ToTable("Customer_Product");
                 });
@@ -369,6 +416,9 @@ namespace Prosjekt.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("DepartmentID_int")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
@@ -378,13 +428,11 @@ namespace Prosjekt.Migrations
 
                     b.Property<string>("FirstName_str")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("LastName_str")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Level_str")
                         .IsRequired()
@@ -409,8 +457,7 @@ namespace Prosjekt.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("varchar(15)");
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("tinyint(1)");
@@ -440,45 +487,19 @@ namespace Prosjekt.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Prosjekt.Entities.EquipmentModel", b =>
-                {
-                    b.Property<int>("Id_int")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Availability")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Name_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id_int");
-
-                    b.ToTable("Equipment");
-                });
-
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
                 {
                     b.Property<int>("PartID_int")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("EquipmentID_int")
                         .HasColumnType("int");
 
                     b.Property<string>("PartName_str")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("Quantity_available_int")
                         .HasColumnType("int");
 
                     b.HasKey("PartID_int");
-
-                    b.HasIndex("EquipmentID_int")
-                        .IsUnique();
 
                     b.ToTable("Parts");
                 });
@@ -486,23 +507,19 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.PostalCode", b =>
                 {
                     b.Property<string>("Postal_Code_str")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("City_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Country_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("State_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Postal_Code_str");
 
@@ -512,21 +529,18 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.ProductModel", b =>
                 {
                     b.Property<string>("SerialNr_str")
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("Model_Year")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductName_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Product_Type_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("SerialNr_str");
 
@@ -546,9 +560,6 @@ namespace Prosjekt.Migrations
 
                     b.HasKey("PartID_int", "FormID_int");
 
-                    b.HasIndex("FormID_int")
-                        .IsUnique();
-
                     b.ToTable("Replaced_Parts_Returned");
                 });
 
@@ -557,23 +568,28 @@ namespace Prosjekt.Migrations
                     b.Property<int>("FormID_int")
                         .HasColumnType("int");
 
-                    b.Property<string>("EmployeeID_int")
+                    b.Property<int>("EmployeeID_int")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("Repair_Description_str")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ServiceFormFormID_int")
+                        .HasColumnType("int");
 
                     b.Property<int>("Working_Hours_int")
                         .HasColumnType("int");
 
                     b.HasKey("FormID_int", "EmployeeID_int");
 
-                    b.HasIndex("EmployeeID_int")
-                        .IsUnique();
+                    b.HasIndex("EmployeeId");
 
-                    b.HasIndex("FormID_int")
+                    b.HasIndex("ServiceFormFormID_int")
                         .IsUnique();
 
                     b.ToTable("Service_Form_Employee");
@@ -582,7 +598,9 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.ServiceFormModel", b =>
                 {
                     b.Property<int>("FormID_int")
-                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("CustomerID_int")
                         .HasColumnType("int");
 
                     b.Property<DateOnly>("AgreedDelivery_date")
@@ -596,45 +614,49 @@ namespace Prosjekt.Migrations
 
                     b.Property<string>("Repairdescription_str")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateOnly>("ServiceCompleted_date")
                         .HasColumnType("date");
 
                     b.Property<string>("ShippingMethod_str")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
-                    b.HasKey("FormID_int");
+                    b.HasKey("FormID_int", "CustomerID_int");
+
+                    b.HasIndex("CustomerID_int");
 
                     b.ToTable("Service_Form");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ServiceFormSignModel", b =>
                 {
+                    b.Property<int>("CustomerID_int")
+                        .HasColumnType("int");
+
                     b.Property<int>("FormID_int")
                         .HasColumnType("int");
 
-                    b.Property<string>("EmployeeID_int")
+                    b.Property<int>("EmployeeID_int")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmployeeId")
                         .HasColumnType("varchar(255)");
 
-                    b.Property<int>("CustomerID_int")
+                    b.Property<int>("ServiceFormFormID_int")
                         .HasColumnType("int");
 
                     b.Property<DateOnly>("Sign_Date")
                         .HasColumnType("date");
 
-                    b.HasKey("FormID_int", "EmployeeID_int", "CustomerID_int");
+                    b.HasKey("CustomerID_int", "FormID_int", "EmployeeID_int");
 
-                    b.HasIndex("CustomerID_int")
-                        .IsUnique();
+                    b.HasAlternateKey("FormID_int");
 
-                    b.HasIndex("EmployeeID_int")
-                        .IsUnique();
+                    b.HasIndex("EmployeeId");
 
-                    b.HasIndex("FormID_int")
+                    b.HasIndex("ServiceFormFormID_int")
                         .IsUnique();
 
                     b.ToTable("Service_Form_Sign");
@@ -648,8 +670,19 @@ namespace Prosjekt.Migrations
                     b.Property<int>("CustomerID_int")
                         .HasColumnType("int");
 
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("CustomerProductCustomerID_int")
                         .HasColumnType("int");
+
+                    b.Property<int>("CustomerProductModelCustomerID_int")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CustomerProductModelSerialNr_str")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("CustomerProductSerialNr_str")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Description_From_Customer_str")
                         .IsRequired()
@@ -664,14 +697,13 @@ namespace Prosjekt.Migrations
                     b.Property<DateOnly>("Received_Date")
                         .HasColumnType("date");
 
-                    b.Property<string>("SerialNr_str")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.HasKey("OrderID_int", "CustomerID_int");
 
-                    b.HasIndex("CustomerId")
-                        .IsUnique();
+                    b.HasIndex("CustomerID_int");
+
+                    b.HasIndex("CustomerProductCustomerID_int", "CustomerProductSerialNr_str");
+
+                    b.HasIndex("CustomerProductModelCustomerID_int", "CustomerProductModelSerialNr_str");
 
                     b.ToTable("Service_ordre");
                 });
@@ -684,10 +716,24 @@ namespace Prosjekt.Migrations
                     b.Property<int>("FormID_int")
                         .HasColumnType("int");
 
-                    b.HasKey("OrderID_int");
+                    b.Property<int>("CustomerProductCustomerID_int")
+                        .HasColumnType("int");
 
-                    b.HasIndex("FormID_int")
+                    b.Property<string>("CustomerProductSerialNr_str")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("ServiceOrderOrderID_int")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderID_int", "FormID_int");
+
+                    b.HasAlternateKey("OrderID_int");
+
+                    b.HasIndex("ServiceOrderOrderID_int")
                         .IsUnique();
+
+                    b.HasIndex("CustomerProductCustomerID_int", "CustomerProductSerialNr_str");
 
                     b.ToTable("Service_Order_Service_form");
                 });
@@ -705,9 +751,6 @@ namespace Prosjekt.Migrations
 
                     b.HasKey("PartID_int", "FormID_int");
 
-                    b.HasIndex("FormID_int")
-                        .IsUnique();
-
                     b.ToTable("Used_Parts");
                 });
 
@@ -717,10 +760,15 @@ namespace Prosjekt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<DateOnly>("ExpDate_date")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly>("StartDate_date")
+                        .HasColumnType("date");
+
                     b.Property<string>("WarrantyName_str")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("ID_int");
 
@@ -782,7 +830,7 @@ namespace Prosjekt.Migrations
                 {
                     b.HasOne("Prosjekt.Entities.ProductModel", "product")
                         .WithOne("Checklist")
-                        .HasForeignKey("Prosjekt.Entities.ChecklistModel", "SerialNr_str")
+                        .HasForeignKey("Prosjekt.Entities.ChecklistModel", "productSerialNr_str")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -793,14 +841,12 @@ namespace Prosjekt.Migrations
                 {
                     b.HasOne("Prosjekt.Entities.ChecklistModel", "Checklist")
                         .WithOne("ChecklistSignature")
-                        .HasForeignKey("Prosjekt.Entities.ChecklistSignatureModel", "DocID_str")
-                        .HasPrincipalKey("Prosjekt.Entities.ChecklistModel", "DocID_str")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Prosjekt.Entities.ChecklistSignatureModel", "ChecklistDocID_str")
+                        .HasPrincipalKey("Prosjekt.Entities.ChecklistModel", "DocID_str");
 
                     b.HasOne("Prosjekt.Entities.EmployeeUser", "employee")
                         .WithOne("ChecklistSignature")
-                        .HasForeignKey("Prosjekt.Entities.ChecklistSignatureModel", "EmployeeID_int")
+                        .HasForeignKey("Prosjekt.Entities.ChecklistSignatureModel", "employeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -830,7 +876,7 @@ namespace Prosjekt.Migrations
 
                     b.HasOne("Prosjekt.Entities.ProductModel", "Product")
                         .WithOne("CustomerProduct")
-                        .HasForeignKey("Prosjekt.Entities.CustomerProductModel", "SerialNr_str")
+                        .HasForeignKey("Prosjekt.Entities.CustomerProductModel", "ProductSerialNr_str")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -849,34 +895,37 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
                 {
-                    b.HasOne("Prosjekt.Entities.ServiceFormModel", "ServiceForm")
-                        .WithOne("ReplacedPartsReturned")
-                        .HasForeignKey("Prosjekt.Entities.ReplacedPartsReturnedModel", "FormID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Prosjekt.Entities.PartsModel", "Parts")
-                        .WithMany("ReplacedPartsReturned")
+                    b.HasOne("Prosjekt.Entities.ReplacedPartsReturnedModel", "ReplacedPartsReturned")
+                        .WithMany("Parts")
                         .HasForeignKey("PartID_int")
+                        .HasPrincipalKey("PartID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Parts");
+                    b.HasOne("Prosjekt.Entities.UsedPartModel", "UsedPart")
+                        .WithMany("Parts")
+                        .HasForeignKey("PartID_int")
+                        .HasPrincipalKey("PartID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("ServiceForm");
+                    b.Navigation("ReplacedPartsReturned");
+
+                    b.Navigation("UsedPart");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ServiceFormEmployeeModel", b =>
                 {
                     b.HasOne("Prosjekt.Entities.EmployeeUser", "Employee")
-                        .WithOne("EmployeeForm")
-                        .HasForeignKey("Prosjekt.Entities.ServiceFormEmployeeModel", "EmployeeID_int")
+                        .WithMany("ServiceFormEmployees")
+                        .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Prosjekt.Entities.ServiceFormModel", "ServiceForm")
-                        .WithOne("Employee")
-                        .HasForeignKey("Prosjekt.Entities.ServiceFormEmployeeModel", "FormID_int")
+                        .WithOne("ServiceFormEmployee")
+                        .HasForeignKey("Prosjekt.Entities.ServiceFormEmployeeModel", "ServiceFormFormID_int")
+                        .HasPrincipalKey("Prosjekt.Entities.ServiceFormModel", "FormID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -885,23 +934,51 @@ namespace Prosjekt.Migrations
                     b.Navigation("ServiceForm");
                 });
 
+            modelBuilder.Entity("Prosjekt.Entities.ServiceFormModel", b =>
+                {
+                    b.HasOne("Prosjekt.Entities.CustomerModel", "Customer")
+                        .WithMany("ServiceForms")
+                        .HasForeignKey("CustomerID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Prosjekt.Entities.ReplacedPartsReturnedModel", "ReplacedPartsReturned")
+                        .WithMany("ServiceForms")
+                        .HasForeignKey("FormID_int")
+                        .HasPrincipalKey("FormID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Prosjekt.Entities.UsedPartModel", "UsedPart")
+                        .WithMany("ServiceForms")
+                        .HasForeignKey("FormID_int")
+                        .HasPrincipalKey("FormID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("ReplacedPartsReturned");
+
+                    b.Navigation("UsedPart");
+                });
+
             modelBuilder.Entity("Prosjekt.Entities.ServiceFormSignModel", b =>
                 {
                     b.HasOne("Prosjekt.Entities.CustomerModel", "Customer")
-                        .WithOne("ServiceFormSign")
-                        .HasForeignKey("Prosjekt.Entities.ServiceFormSignModel", "CustomerID_int")
+                        .WithMany("ServiceFormsSign")
+                        .HasForeignKey("CustomerID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Prosjekt.Entities.EmployeeUser", "Employee")
-                        .WithOne("Sign")
-                        .HasForeignKey("Prosjekt.Entities.ServiceFormSignModel", "EmployeeID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("ServiceFormsSign")
+                        .HasForeignKey("EmployeeId");
 
                     b.HasOne("Prosjekt.Entities.ServiceFormModel", "ServiceForm")
-                        .WithOne("Sign")
-                        .HasForeignKey("Prosjekt.Entities.ServiceFormSignModel", "FormID_int")
+                        .WithOne("ServiceFormSign")
+                        .HasForeignKey("Prosjekt.Entities.ServiceFormSignModel", "ServiceFormFormID_int")
+                        .HasPrincipalKey("Prosjekt.Entities.ServiceFormModel", "FormID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -914,20 +991,27 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Entities.ServiceOrderModel", b =>
                 {
-                    b.HasOne("Prosjekt.Entities.CustomerProductModel", "CustomerProductModel")
-                        .WithOne("ServiceOrders")
-                        .HasForeignKey("Prosjekt.Entities.ServiceOrderModel", "CustomerId")
-                        .HasPrincipalKey("Prosjekt.Entities.CustomerProductModel", "CustomerID_int")
+                    b.HasOne("Prosjekt.Entities.CustomerModel", "Customer")
+                        .WithMany("ServiceOrders")
+                        .HasForeignKey("CustomerID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Prosjekt.Entities.CustomerModel", "Customer")
+                    b.HasOne("Prosjekt.Entities.CustomerProductModel", "CustomerProduct")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("CustomerProductCustomerID_int", "CustomerProductSerialNr_str")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Prosjekt.Entities.CustomerProductModel", "CustomerProductModel")
+                        .WithMany()
+                        .HasForeignKey("CustomerProductModelCustomerID_int", "CustomerProductModelSerialNr_str")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Customer");
+
+                    b.Navigation("CustomerProduct");
 
                     b.Navigation("CustomerProductModel");
                 });
@@ -935,40 +1019,30 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.ServiceOrderServiceformModel", b =>
                 {
                     b.HasOne("Prosjekt.Entities.ServiceFormModel", "serviceForm")
-                        .WithOne("OrderServiceformModel")
-                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "FormID_int")
+                        .WithOne("ServiceOrderServiceform")
+                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "OrderID_int")
+                        .HasPrincipalKey("Prosjekt.Entities.ServiceFormModel", "FormID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Prosjekt.Entities.ServiceOrderModel", "ServiceOrder")
-                        .WithOne("OrderServiceformModel")
-                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "OrderID_int")
+                        .WithOne("ServiceOrderServiceform")
+                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "ServiceOrderOrderID_int")
                         .HasPrincipalKey("Prosjekt.Entities.ServiceOrderModel", "OrderID_int")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Prosjekt.Entities.CustomerProductModel", "CustomerProduct")
+                        .WithMany()
+                        .HasForeignKey("CustomerProductCustomerID_int", "CustomerProductSerialNr_str")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CustomerProduct");
+
                     b.Navigation("ServiceOrder");
 
                     b.Navigation("serviceForm");
-                });
-
-            modelBuilder.Entity("Prosjekt.Entities.UsedPartModel", b =>
-                {
-                    b.HasOne("Prosjekt.Entities.ServiceFormModel", "ServiceForm")
-                        .WithOne("UsedPart")
-                        .HasForeignKey("Prosjekt.Entities.UsedPartModel", "FormID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Prosjekt.Entities.PartsModel", "Parts")
-                        .WithMany("UsedParts")
-                        .HasForeignKey("PartID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Parts");
-
-                    b.Navigation("ServiceForm");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ChecklistModel", b =>
@@ -980,33 +1054,20 @@ namespace Prosjekt.Migrations
                 {
                     b.Navigation("CustomerProducts");
 
-                    b.Navigation("ServiceFormSign")
-                        .IsRequired();
+                    b.Navigation("ServiceForms");
+
+                    b.Navigation("ServiceFormsSign");
+
+                    b.Navigation("ServiceOrders");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
                 {
-                    b.Navigation("ChecklistSignature")
-                        .IsRequired();
+                    b.Navigation("ChecklistSignature");
 
-                    b.Navigation("EmployeeForm")
-                        .IsRequired();
+                    b.Navigation("ServiceFormEmployees");
 
-                    b.Navigation("Sign")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Prosjekt.Entities.EquipmentModel", b =>
-                {
-                    b.Navigation("Parts")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
-                {
-                    b.Navigation("ReplacedPartsReturned");
-
-                    b.Navigation("UsedParts");
+                    b.Navigation("ServiceFormsSign");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.PostalCode", b =>
@@ -1023,28 +1084,36 @@ namespace Prosjekt.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Prosjekt.Entities.ReplacedPartsReturnedModel", b =>
+                {
+                    b.Navigation("Parts");
+
+                    b.Navigation("ServiceForms");
+                });
+
             modelBuilder.Entity("Prosjekt.Entities.ServiceFormModel", b =>
                 {
-                    b.Navigation("Employee")
+                    b.Navigation("ServiceFormEmployee")
                         .IsRequired();
 
-                    b.Navigation("OrderServiceformModel")
+                    b.Navigation("ServiceFormSign")
                         .IsRequired();
 
-                    b.Navigation("ReplacedPartsReturned")
-                        .IsRequired();
-
-                    b.Navigation("Sign")
-                        .IsRequired();
-
-                    b.Navigation("UsedPart")
+                    b.Navigation("ServiceOrderServiceform")
                         .IsRequired();
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ServiceOrderModel", b =>
                 {
-                    b.Navigation("OrderServiceformModel")
+                    b.Navigation("ServiceOrderServiceform")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.UsedPartModel", b =>
+                {
+                    b.Navigation("Parts");
+
+                    b.Navigation("ServiceForms");
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.WarrantyModel", b =>

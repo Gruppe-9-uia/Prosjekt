@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Prosjekt.Entities;
 
@@ -231,64 +231,7 @@ namespace Prosjekt.Data
                 .HasOne(s => s.ReplacedPartsReturned)
                 .WithOne(s => s.ServiceForm)
                 .HasForeignKey<ReplacedPartsReturnedModel>(s => s.FormID_int);
-            /*
-
-            //ReplacedParts
-            modelBuilder.Entity<ReplacedPartsReturnedModel>()
-                .HasKey(p => new
-                {
-                    p.PartID_int,
-                    p.FormID_int
-                });
-
-            modelBuilder.Entity<UsedPartModel>()
-                .HasOne(u => u.Parts)
-                .WithMany(p => p.UsedParts)
-                .HasForeignKey(u => u.PartID_int);
-
-            modelBuilder.Entity<ReplacedPartsReturnedModel>()
-                .HasOne(u => u.Parts)
-                .WithMany(p => p.ReplacedPartsReturned)
-                .HasForeignKey(u => u.PartID_int);
-
-            modelBuilder.Entity<PartsModel>()
-                .HasOne(p => p.Equipment)
-                .WithMany(e => e.Parts)
-                .HasForeignKey(u => u.EquipmentID_int);
-
-            
-            modelBuilder.Entity<ReplacedPartsReturnedModel>()
-                .HasOne(p => p.ServiceForm)
-                .WithMany(c => c.ReplacedPartsReturned)
-                .HasForeignKey(s => new { s.CustomerID_int, s.SerialNr_str });
-
-            modelBuilder.Entity<UsedPartModel>()
-                .HasOne(p => p.ServiceForm)
-                .WithMany(c => c.UsedParts)
-                .HasForeignKey(s => new { s.CustomerID_int, s.SerialNr_str });
-            
-
-            //Service_Order_Service_form
-            modelBuilder.Entity<ServiceOrderServiceformModel>()
-                .HasKey(s => s.OrderID_int);
-
-            modelBuilder.Entity<ServiceOrderServiceformModel>()
-                .HasOne(s => s.ServiceOrder)
-                .WithOne(so => so.OrderServiceformModel)
-                .HasForeignKey<ServiceOrderServiceformModel>(s => s.OrderID_int);
-
-            modelBuilder.Entity<ServiceOrderServiceformModel>()
-                .HasOne(s => s.serviceForm)
-                .WithOne(so => so.OrderServiceformModel)
-                .HasForeignKey<ServiceOrderServiceformModel>(s => s.FormID_int);
-
-
-
-            
-
-            
-            */
-            // Legger til grunnlegge data
+        
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "Admin", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "admin" }
             );
