@@ -21,6 +21,7 @@
             </span>
         </label>
         <ul class="menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" asp-controller="Equipment" asp-action="Equipment">Equipment</a></li>
             <li><a class="dropdown-item" asp-controller="Notifikasjon" asp-action="Notifikasjon">Notifikasjon</a></li>
             <li><a class="dropdown-item" asp-controller="Serviceordre" asp-action="Serviceordre">Serviceordre</a></li>
             <li><a class="dropdown-item" asp-controller="Serviceskjema" asp-action="Serviceskjema">Serviceskjema</a></li>
@@ -45,6 +46,8 @@
                 </span>
             </label>
             <ul class="menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" asp-controller="Equipment" asp-action="Equipment">Equipment</a></li>
+
                 <li><a class="dropdown-item" asp-controller="Sjekklist" asp-action="Sjekklist">Sjekklist</a></li>
             <li><a class="dropdown-item" asp-controller="Arbeidsdokument" asp-action="Arbeidsdokument">Arbeidsdokument</a></li>
             <li><a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">Logout</a></li>
@@ -67,7 +70,7 @@ else
         <li><a class="dropdown-item" asp-controller="Kontakt" asp-action="KontaktOss">Kontakt oss</a></li>
         <li><a class="dropdown-item" asp-controller="FAQ" asp-action="FAQ">FAQ</a></li>
         <li><a class="dropdown-item" asp-controller="Om_Oss" asp-action="Om_Oss">Om Oss</a></li>
-        <li><a class="dropdown-item" asp-controller="Equipment" asp-action="Equipment">Equipment</a></li>
+        <li><a class="dropdown-item" asp-controller="Parts" asp-action="Parts">Parts</a></li>
         <li><a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
         <li><a class="dropdown-item" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
 
