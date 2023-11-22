@@ -1,4 +1,5 @@
-@model List<Prosjekt.Entities.PartsModel>
+@using Prosjekt.Models.Parts;
+@model Prosjekt.Models.Parts.PartsViewModel;
 
 @{
     ViewBag.Title = "Parts";
@@ -40,21 +41,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form asp-action="AddPart" method="post">
-                        <div class="form-group">
-                            <label>ID</label>
-                            <input type="number" class="form-control" name="PartID_int" required />
-                        </div>
-                        <div class="form-group">
-                            <label>Navn</label>
-                            <input type="text" class="form-control" name="PartName_str" required />
-                        </div>
-                        <div class="form-group">
-                            <label>Antall</label>
-                            <input type="number" class="form-control" name="Quantity_available_int" required />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Lagre</button>
-                    </form>
+                <partial name="AddPart" />
                 </div>
             </div>
         </div>
@@ -97,12 +84,15 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var part in Model)
+        @if (ViewData["list"] != null)
+        {
+            @foreach (var part in ViewData["list"] as List<PartsViewModel>)
             {
                 <tr>
                     <td class="text-center">@part.PartID_int</td>
                     <td>@part.PartName_str</td>
                     <td class="text-center">@part.Quantity_available_int stk</td>
+                    <td class="text-center">@part.EquipmentName stk</td>
                     <td class="text-center">
                         <button type="button" class="btn btn-secondary btn-sm" onclick="openModal(@part.PartID_int, '@part.PartName_str', @part.Quantity_available_int)">
                             <i class="bi bi-gear"></i>
@@ -110,6 +100,8 @@
                     </td>
                 </tr>
             }
+        }
+
         </tbody>
     </table>
   
