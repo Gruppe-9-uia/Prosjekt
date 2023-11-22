@@ -18,8 +18,10 @@ namespace Prosjekt.Controllers
         public IActionResult Brukeroversikt()
         {
             var employees = _context.Users.ToList().ToString();
+
             
-            return View(employees);
+            
+            return View();
         }
 
         public IActionResult BackBrukeroversikt()

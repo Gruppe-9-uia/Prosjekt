@@ -2,15 +2,14 @@
 {
     public class PartsModel
     {
-        [Required]
-        [Key]
         public int PartID_int { get; set; }
-        [Required] 
+        [StringLength(20)]
         public string PartName_str { get; set;}
-        [Required]
         public int Quantity_available_int { get; set; }
+        public int EquipmentID_int { get; set; }
 
-        public UsedPartModel UsedPart {  get; set; }
-        public ReplacedPartsReturnedModel ReplacedPartsReturned { get; set; }
+        public EquipmentModel Equipment { get; set; }
+        public ICollection<UsedPartModel> UsedParts {  get; set; }
+        public ICollection<ReplacedPartsReturnedModel> ReplacedPartsReturned { get; set; }
     }
 }
