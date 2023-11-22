@@ -1,4 +1,5 @@
-
+@using Prosjekt.Models.Employee;
+@model Prosjekt.Models.Employee.BrukerOversiktViewModel;
 @{
     ViewData["Title"] = "Brukeroversikt";
 }
@@ -50,21 +51,23 @@
                                 <th>AnsattID</th>
                                 <th>Fullt navn</th>
                                 <th>Stilling</th>
-                                <th>Rettigheter</th>
                             </tr>
                             </thead>
 
                             <tbody id="userTable">
-                            @foreach (var employee in Model)
+                        @if (ViewData["list"] != null)
+                        {
+                            @foreach (var employee in ViewData["list"] as List<BrukerOversiktViewModel>)
                             {
-                            <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.Id" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-department="@employee.DepartmentID_int" data-employee-level="@employee.Level_str">
-                                <td>@employee.Id</td>
-                                <td>@(employee.FirstName_str + " " + employee.LastName_str)</td>
-                                <td>@employee.DepartmentID_int</td>
-                                <td>@employee.Level_str</td>
-                            </tr>
+                                <tr class="table-row" data-toggle="modal" data-target="#BOModal" data-employee-id="@employee.ID_int" data-employee-firstname="@employee.FirstName_str" data-employee-lastname="@employee.LastName_str" data-employee-department="@employee.Department">
+                                    <td>@employee.ID_int</td>
+
+                                    <td>@(employee.FirstName_str + " " + employee.LastName_str)</td>
+                                    <td>@employee.Department</td>
+                                </tr>
                             }
-                            </tbody>
+                        }
+                    </tbody>
                         </table>
                         </div>
                 </div>
@@ -181,7 +184,7 @@
                             $('#BOModal').modal('show');
                             
                             // AJAX call
-                            $.get("/Brukeroverikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
+                            $.get("/Brukeroversikt/GetEmployeeDetails", { employeeID: employeeId }, function (data) {
                                 if (data !== null) {
                                     $("editEpost").val(data.Email);
                                     $("editTlf").val(data.Phone);
