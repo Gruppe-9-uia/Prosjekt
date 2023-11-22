@@ -2,27 +2,21 @@
 {
     public class CustomerModel
     {
-        [Key]
-        [Required]
         public int ID_int { get; set; }
-        [Required]
+        [StringLength(50)]
         public string FirstName_str { get; set; }
-        [Required]
+        [StringLength(50)]
         public string LastName_str { get; set; }
-        [Required]
+        [StringLength(50)]
         public string Phone_str { get; set;}
-        [Required]
+        [StringLength(50)]
         public string Email_str { get; set; }
-        [Required]
+        [StringLength(50)]
         public string Street_Address_str { get; set;}
-        [Required]
-        [ForeignKey("Postal_Code_str")]
+        [StringLength(50)]
         public string Postal_Code_str { get; set;}
         public PostalCode Address { get; set; }
-
-        public ICollection<ServiceOrderModel> ServiceOrders { get; }
-        public ICollection<ServiceFormModel> ServiceForms { get; }
+        public ServiceFormSignModel ServiceFormSign { get; set; }
         public ICollection<CustomerProductModel> CustomerProducts { get; }
-        public ICollection<ServiceFormSignModel> ServiceFormsSign { get; }
     }
 }

@@ -1,0 +1,113 @@
+﻿@using Prosjekt.Models.Equipment;
+@model Prosjekt.Models.Equipment.EquimentViewModel;
+@{
+    ViewBag.Title = "Equipment";
+}
+
+<div class="container-fluid mt-4">
+    <h2 class="text-center mb-2">Utstyrsoversikt</h2> <!-- Redusert margin-bottom for overskriften -->
+    
+    
+    
+    <div class="row" style="margin-bottom: 120px; margin-top: 30px;">
+        <div class="col-8 mx-auto text-center">
+            <!-- Søkebaren sentrert i henhold til overskriften -->
+            <form asp-action="Parts" method="get" class="w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="searchString" placeholder="Søk etter utstyr..." aria-label="Søk etter utstyr">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary ml-2" type="submit">Søk</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mb-3">
+            <div class="col-12 d-flex justify-content-center">
+                <!-- "Legg til" og "Slett" knapper justert til høyre -->
+                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#addPartModal">Legg til</button>
+                <button type="button" class="btn btn-danger btn-sm ml-2" data-bs-toggle="modal" data-bs-target="#deletePartModal">
+                    <i class="bi bi-trash"></i> Slett
+                </button>
+            </div>
+        </div>
+</div>
+
+
+<!-- Modal for å legge til ny del -->
+<div class="modal fade" id="addPartModal" tabindex="-1" role="dialog" aria-labelledby="addPartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPartModalLabel">Legg til nytt utstyr</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <partial name="AddEquipment" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal for sletting -->
+<div class="modal fade" id="deletePartModal" tabindex="-1" aria-labelledby="deletePartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deletePartModalLabel">Bekreft sletting</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <partial name="DeleteEquipment" />
+         
+        </div>
+    </div>
+</div>
+
+
+<!-- Tabell -->
+<table class="table table-striped table-hover table-sm mx-auto" id="partsTable" style="width: 85%">
+    <thead>
+        <tr>
+            <!-- Gjør ID-kolonnen mindre på små skjermer -->
+            <th class="col-2 col-md-2 text-center">ID</th>
+            <th class="col-4 col-md-6">Navn</th>
+            <th class="col-3 col-md-2 text-center">Lager</th>
+            <th class="col-3 col-md-2 text-center">Handling</th>
+        </tr>
+    </thead>
+    <tbody>
+    @if (ViewData["list"] != null)
+{
+    @foreach (var equipment in ViewData["list"] as List<EquimentViewModel>)
+    {
+        <tr>
+            <td class="text-center">@equipment.Id_int</td>
+            <td>@equipment.Name_str</td>
+            <td class="text-center">@equipment.Availability stk</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="openModal(@equipment.Id_int, '@equipment.Name_str', @equipment.Availability)">
+                    <i class="bi bi-gear"></i>
+                </button>
+            </td>
+        </tr>
+    }
+}
+    </tbody>
+</table>
+
+
+
+
+<!-- Slette del-->
+@section Scripts {
+    <script>
+        function openModal(partsId, partsName, currentQuantity) {
+            document.getElementById('updatePartsID').value = equipmentId;
+            document.getElementById('newQuantity').value = currentQuantity;
+            $('#updateQuantityModal').modal('show');
+        }
+
+    </script>
+}

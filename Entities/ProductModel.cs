@@ -2,15 +2,12 @@
 {
     public class ProductModel
     {
-        [Required]
-        [Key]
+        [StringLength(100)]
         public string SerialNr_str {  get; set; }
-        [Required]
+        [StringLength(50)]
         public string ProductName_str { get; set; }
-        [Required]
-        //TODO: sjekk om dett går siden det er lagt på sql som type YEAR
         public int Model_Year {  get; set; }
-        [Required]
+        [StringLength(50)]
         public string Product_Type_str { get; set;}
 
         public CustomerProductModel CustomerProduct { get; set; }

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Entities;
+using Prosjekt.Models.Parts;
+
 
 namespace Prosjekt.Controllers
 {
@@ -12,20 +14,36 @@ namespace Prosjekt.Controllers
             _context = context;
         }
 
-        public IActionResult Parts(string searchString)
-        {
-            var parts = from p in _context.Parts
-                select p;
 
-            if (!string.IsNullOrEmpty(searchString))
+        public IActionResult Parts()
+        {
+            var PartsList = _context.Parts.ToList();
+            
+
+
+            List<PartsViewModel> list = new List<PartsViewModel>();
+
+            // Convert the fetched data to the view model type
+            foreach (var e in PartsList)
             {
-                parts = parts.Where(p =>
-                    p.PartName_str.Contains(searchString) ||
-                    p.PartID_int.ToString().Contains(searchString));
+                var equipment = _context.Equipment.Where(x=> x.Id_int == e.EquipmentID_int).FirstOrDefault();
+                var partsObj = new PartsViewModel { 
+                    PartID_int = e.PartID_int, 
+                    PartName_str = e.PartName_str, 
+                    Quantity_available_int = e.Quantity_available_int,
+                    EquipmentName = equipment.Name_str
+                    };
+                list.Add(partsObj);
             }
 
-            return View(parts.ToList());
+            if(list.Count > 0)
+            {
+                ViewData["List"] = list;
+
+            }
+            return View();
         }
+
 
         [HttpPost]
         public IActionResult UpdateQuantity(int PartID_int, int NewQuantity)
@@ -41,15 +59,38 @@ namespace Prosjekt.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPart([Bind("PartID_int,PartName_str,Quantity_available_int")] PartsModel part)
+        [ValidateAntiForgeryToken]
+        public IActionResult AddPart(PartsViewModel model)
         {
-            if (true)//Todo.addmodalstate
+            var PartsDB = _context.Parts.Where(e => e.PartName_str.Equals(model.PartName_str)).FirstOrDefault();
+
+            //TODO: f�r ikke hente equipment
+            var equipment = _context.Equipment.Where(e => e.Name_str.Equals(model.EquipmentName)).FirstOrDefault();
+            Console.WriteLine(model.EquipmentName);
+            if(PartsDB == null &&  equipment != null)
             {
-                _context.Parts.Add(part);
-                _context.SaveChanges();
-                return RedirectToAction("Parts");
+                var partsObj = new PartsModel
+                {
+                    PartID_int = model.PartID_int,
+                    PartName_str = model.PartName_str,
+                    Quantity_available_int = model.Quantity_available_int,
+                    EquipmentID_int = equipment.Id_int
+                };
+
+                int latestId = _context.Parts.Any() ? _context.Parts.Max(e => e.PartID_int) + 1 : 1;
+                partsObj.PartID_int = latestId;
+
+                var result = _context.Parts.Add(partsObj);
+                if (result == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Klarte ikke � lage service order");
+                    return RedirectToAction("Parts");
+                }
+
             }
-            return View("Parts", _context.Parts.ToList());
+
+
+            return RedirectToAction("Parts");
         }
     
         [HttpPost]

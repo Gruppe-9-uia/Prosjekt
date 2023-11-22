@@ -6,11 +6,13 @@ namespace Prosjekt.Data
 {
     public class ProsjektContext : IdentityDbContext<EmployeeUser>
     {
-        public ProsjektContext(DbContextOptions<ProsjektContext> options) : base (options) { }
+        public ProsjektContext(DbContextOptions<ProsjektContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            //Setter opp relasjoner
+
 
             //AddressModel
             modelBuilder.Entity<PostalCode>()
@@ -30,25 +32,11 @@ namespace Prosjekt.Data
                 .WithMany(a => a.customers)
                 .HasForeignKey(c => c.Postal_Code_str);
 
-            modelBuilder.Entity<CustomerModel>()
-                .HasMany(c => c.ServiceOrders)
-                .WithOne(s => s.Customer)
-                .HasForeignKey(c => c.CustomerID_int);
-
-            modelBuilder.Entity<CustomerModel>()
-                .HasMany(c => c.ServiceForms)
-                .WithOne(s => s.Customer)
-                .HasForeignKey(c => c.CustomerID_int);
 
             modelBuilder.Entity<CustomerModel>()
                 .HasMany(c => c.CustomerProducts)
                 .WithOne(cp => cp.Customer)
                 .HasForeignKey(c => c.CustomerID_int);
-
-            modelBuilder.Entity<CustomerModel>()
-                .HasMany(c => c.ServiceFormsSign)
-                .WithOne(s => s.Customer)
-                .HasForeignKey(s => s.CustomerID_int);
 
             //WarrantyModel
             modelBuilder.Entity<WarrantyModel>()
@@ -69,32 +57,13 @@ namespace Prosjekt.Data
                 .WithOne(c => c.Product)
                 .HasPrincipalKey<CustomerProductModel>(c => c.SerialNr_str);
 
-            modelBuilder.Entity<ProductModel>()
-                .HasOne(p => p.Checklist)
-                .WithOne(c => c.product)
-                .HasPrincipalKey<ChecklistModel>(s => s.SerialNr_str);
-
-
-            //EmployeeModel
-            modelBuilder.Entity<EmployeeUser>()
-                .HasKey(Employee => Employee.Id);
-
-            modelBuilder.Entity<EmployeeUser>()
-                .HasMany(e => e.ServiceFormsSign)
-                .WithOne(s => s.Employee)
-                .HasForeignKey(s => s.EmployeeID_int);
-
-            modelBuilder.Entity<EmployeeUser>()
-               .HasOne(e => e.ChecklistSignature)
-               .WithOne(c => c.employee)
-               .HasPrincipalKey<ChecklistSignatureModel>(e => e.EmployeeID_int);
-
 
             //CustomerProductModel
             modelBuilder.Entity<CustomerProductModel>()
                 .HasKey(c => new {
                     c.CustomerID_int,
                     c.SerialNr_str
+
                 });
 
             modelBuilder.Entity<CustomerProductModel>()
@@ -105,12 +74,16 @@ namespace Prosjekt.Data
             modelBuilder.Entity<CustomerProductModel>()
                 .HasOne(c => c.Product)
                 .WithOne(p => p.CustomerProduct)
-                .HasPrincipalKey<ProductModel>(c => c.SerialNr_str);
+                .HasForeignKey<CustomerProductModel>(c => c.SerialNr_str);
 
             modelBuilder.Entity<CustomerProductModel>()
                 .HasOne(cp => cp.Customer)
                 .WithMany(c => c.CustomerProducts)
                 .HasForeignKey(cp => cp.CustomerID_int);
+
+            //EmployeeModel
+            modelBuilder.Entity<EmployeeUser>()
+                .HasKey(e => e.Id);
 
             //ServiceOrderModel
             modelBuilder.Entity<ServiceOrderModel>()
@@ -121,159 +94,130 @@ namespace Prosjekt.Data
                 });
 
             modelBuilder.Entity<ServiceOrderModel>()
-                .HasOne(s => s.Customer)
-                .WithMany(c => c.ServiceOrders)
-                .HasPrincipalKey(s => s.ID_int);
+                .HasOne(cp => cp.CustomerProductModel)
+                .WithOne(s => s.ServiceOrders)
+                .HasForeignKey<ServiceOrderModel>(c => c.CustomerId)
+                .HasPrincipalKey<CustomerProductModel>(c => c.CustomerID_int);
 
-            modelBuilder.Entity<ServiceOrderModel>()
-                .HasOne(s => s.ServiceOrderServiceform)
-                .WithOne(so => so.ServiceOrder)
-                .HasPrincipalKey<ServiceOrderServiceformModel>(s => s.OrderID_int);
+            //Checklist
+            modelBuilder.Entity<ChecklistModel>()
+                .HasKey(c => new { c.DocID_str, c.SerialNr_str });
+
+            modelBuilder.Entity<ChecklistModel>()
+                .HasOne(c => c.product)
+                .WithOne(p => p.Checklist)
+                .HasForeignKey<ChecklistModel>(c => c.SerialNr_str);
+
+            //Checklist_Signature
+            modelBuilder.Entity<ChecklistSignatureModel>()
+                .HasKey(c => new { c.DocID_str, c.EmployeeID_int });
+
+            modelBuilder.Entity<EmployeeUser>()
+                .HasOne(e => e.ChecklistSignature)
+                .WithOne(e => e.employee)
+                .HasForeignKey<ChecklistSignatureModel>(c => c.EmployeeID_int)
+                .HasPrincipalKey<EmployeeUser>(e => e.Id);
+
+            modelBuilder.Entity<ChecklistSignatureModel>()
+              .HasOne(cs => cs.Checklist)
+              .WithOne(c => c.ChecklistSignature)
+              .HasForeignKey<ChecklistSignatureModel>(cs => cs.DocID_str)
+              .HasPrincipalKey<ChecklistModel>(c => c.DocID_str);
 
             //ServiceFormModel
             modelBuilder.Entity<ServiceFormModel>()
                 .HasKey(s => new
                 {
                     s.FormID_int,
-                    s.CustomerID_int
                 });
 
-            modelBuilder.Entity<ServiceFormModel>()
-                .HasOne(s => s.Customer)
-                .WithMany(c => c.ServiceForms)
-                .HasPrincipalKey(s => s.ID_int);
-
-            modelBuilder.Entity<ServiceFormModel>()
-                .HasOne(s => s.ServiceOrderServiceform)
-                .WithOne(sf => sf.serviceForm)
-                .HasForeignKey<ServiceOrderServiceformModel>(s => s.OrderID_int);
-
-            modelBuilder.Entity<ServiceFormModel>()
-                .HasOne(sf => sf.ServiceFormSign)
-                .WithOne(s => s.ServiceForm)
-                .HasPrincipalKey<ServiceFormSignModel>(s => s.FormID_int);
-
-            modelBuilder.Entity<ServiceFormModel>()
-                .HasOne(s => s.UsedPart)
-                .WithMany(p => p.ServiceForms)
-                .HasForeignKey(rp => rp.FormID_int);
-
-            modelBuilder.Entity<ServiceFormModel>()
-                .HasOne(s => s.ReplacedPartsReturned)
-                .WithMany(p => p.ServiceForms)
-                .HasForeignKey(rp => rp.FormID_int);
-
-            //ServiceOrderServiceformModel
-            modelBuilder.Entity<ServiceOrderServiceformModel>()
-                .HasKey(S => new
-                {
-                    S.OrderID_int,
-                    S.FormID_int
-                });
-
-            modelBuilder.Entity<ServiceOrderServiceformModel>()
-                .HasOne(s => s.ServiceOrder)
-                .WithOne(so => so.ServiceOrderServiceform)
-                .HasPrincipalKey<ServiceOrderModel>(s => s.OrderID_int);
-
-            modelBuilder.Entity<ServiceOrderServiceformModel>()
-                .HasOne(s => s.serviceForm)
-                .WithOne(sf => sf.ServiceOrderServiceform)
-                .HasPrincipalKey<ServiceFormModel>(s => s.FormID_int);
-
-            //ServiceFormEmployeeModel
+            //Service_Form_Employee
             modelBuilder.Entity<ServiceFormEmployeeModel>()
-                .HasKey(S => new
-                {
-                    S.FormID_int,
-                    S.EmployeeID_int
-                });
+                .HasKey(e => new { e.FormID_int, e.EmployeeID_int });
 
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.Employee)
-                .WithMany(e => e.ServiceFormEmployees)
-                .HasPrincipalKey(s => s.Id);
+                .WithOne(e => e.EmployeeForm)
+                .HasForeignKey<ServiceFormEmployeeModel>(s => s.EmployeeID_int);
 
             modelBuilder.Entity<ServiceFormEmployeeModel>()
                 .HasOne(s => s.ServiceForm)
-                .WithOne(sf => sf.ServiceFormEmployee)
-                .HasPrincipalKey<ServiceFormModel>(s => s.FormID_int);
+                .WithOne(sf => sf.Employee)
+                .HasForeignKey<ServiceFormEmployeeModel>(s => s.FormID_int);
 
+            //Service_Form_Employee
+            modelBuilder.Entity<ServiceFormEmployeeModel>()
+                .HasKey(e => new { e.FormID_int, e.EmployeeID_int });
 
-            //ServiceFormSignModel
+            modelBuilder.Entity<EmployeeUser>()
+                .HasOne(s => s.EmployeeForm)
+                .WithOne(e => e.Employee)
+                .HasForeignKey<ServiceFormEmployeeModel>(s => s.EmployeeID_int);
+
+            modelBuilder.Entity<ServiceFormModel>()
+                .HasOne(s => s.Employee)
+                .WithOne(e => e.ServiceForm)
+                .HasForeignKey<ServiceFormEmployeeModel>(s => s.FormID_int);
+
+            //Service_Form_Sign
             modelBuilder.Entity<ServiceFormSignModel>()
-                .HasKey(s =>new
-                {
-                    s.CustomerID_int,
-                    s.FormID_int,
-                    s.EmployeeID_int
-                });
+                .HasKey(s => new { s.FormID_int, s.EmployeeID_int, s.CustomerID_int });
 
-            modelBuilder.Entity<ServiceFormSignModel>()
-                .HasOne(s => s.ServiceForm)
-                .WithOne(sf => sf.ServiceFormSign)
-                .HasPrincipalKey<ServiceFormModel>(s => s.FormID_int);
+            modelBuilder.Entity<CustomerModel>()
+                .HasOne(c => c.ServiceFormSign)
+                .WithOne(s => s.Customer)
+                .HasForeignKey<ServiceFormSignModel>(s => s.CustomerID_int);
 
-            modelBuilder.Entity<ServiceFormSignModel>()
-               .HasOne(s => s.Customer)
-               .WithMany(c => c.ServiceFormsSign)
-               .HasPrincipalKey(s => s.ID_int);
+            modelBuilder.Entity<EmployeeUser>()
+                .HasOne(s => s.Sign)
+                .WithOne(e => e.Employee)
+                .HasForeignKey<ServiceFormSignModel>(s => s.EmployeeID_int);
 
-            modelBuilder.Entity<ServiceFormSignModel>()
-               .HasOne(e => e.Employee)
-               .WithMany(s => s.ServiceFormsSign)
-               .HasPrincipalKey(s => s.Id);
+            modelBuilder.Entity<ServiceFormModel>()
+                .HasOne(sf => sf.Sign)
+                .WithOne(s => s.ServiceForm)
+                .HasForeignKey<ServiceFormSignModel>(s => s.FormID_int);
 
-            //ChecklistModel
-            modelBuilder.Entity<ChecklistModel>()
-                .HasKey(Checklist => new {
-                    Checklist.DocID_str,
-                    Checklist.SerialNr_str
-                });
+            //Service_Order_Service_form
+            modelBuilder.Entity<ServiceOrderServiceformModel>()
+                .HasKey(s => s.OrderID_int);
 
-            modelBuilder.Entity<ChecklistModel>()
-                .HasOne(c => c.product)
-                .WithOne(p => p.Checklist)
-                .HasPrincipalKey<ProductModel>(s => s.SerialNr_str);
+            modelBuilder.Entity<ServiceOrderModel>()
+                .HasOne(s => s.OrderServiceformModel)
+                .WithOne(s => s.ServiceOrder)
+                .HasForeignKey<ServiceOrderServiceformModel>(s => s.OrderID_int)
+                .HasPrincipalKey<ServiceOrderModel>(s => new { s.OrderID_int });
 
-            modelBuilder.Entity<ChecklistModel>()
-               .HasOne(cs => cs.ChecklistSignature)
-               .WithOne(c => c.Checklist)
-               .HasPrincipalKey<ChecklistSignatureModel>(cs => cs.EmployeeID_int);
+            modelBuilder.Entity<ServiceFormModel>()
+                .HasOne(s => s.OrderServiceformModel)
+                .WithOne(s => s.serviceForm)
+                .HasForeignKey<ServiceOrderServiceformModel>(s => s.FormID_int);
 
-
-            //ChecklistSignatureModel
-            modelBuilder.Entity<ChecklistSignatureModel>()
-                .HasKey(ChecklistSignature => new
-                {
-                    ChecklistSignature.DocID_str,
-                    ChecklistSignature.EmployeeID_int
-                });
-
-            modelBuilder.Entity<ChecklistSignatureModel>()
-                .HasOne(e => e.employee)
-                .WithOne(e => e.ChecklistSignature)
-                .HasPrincipalKey<EmployeeUser>(e => e.Id);
-
-            modelBuilder.Entity<ChecklistSignatureModel>()
-                .HasOne(c => c.Checklist)
-                .WithOne(cs => cs.ChecklistSignature)
-                .HasPrincipalKey<ChecklistModel>(c => c.DocID_str);
-
+            //Equimenpment
+            modelBuilder.Entity<EquipmentModel>()
+                .HasKey(e => e.Id_int);
 
             //Parts
             modelBuilder.Entity<PartsModel>()
                 .HasKey(p => p.PartID_int);
 
-            modelBuilder.Entity<PartsModel>()
-                .HasOne(p => p.ReplacedPartsReturned)
-                .WithMany(rp => rp.Parts)
-                .HasForeignKey(rp => rp.PartID_int);
+            modelBuilder.Entity<EquipmentModel>()
+                .HasOne(e => e.Parts)
+                .WithOne(p => p.Equipment)
+                .HasForeignKey<PartsModel>(p => p.EquipmentID_int);
 
-            modelBuilder.Entity<PartsModel>()
-                .HasOne(p => p.UsedPart)
-                .WithMany(rp => rp.Parts)
-                .HasForeignKey(rp => rp.PartID_int);
+            //UsedParts
+            modelBuilder.Entity<UsedPartModel>()
+                .HasKey(p => new
+                {
+                    p.PartID_int,
+                    p.FormID_int
+                });
+
+            modelBuilder.Entity<ServiceFormModel>()
+                .HasOne(s => s.UsedPart)
+                .WithOne(s => s.ServiceForm)
+                .HasForeignKey<UsedPartModel>(s => s.FormID_int);
 
             //ReplacedParts
             modelBuilder.Entity<ReplacedPartsReturnedModel>()
@@ -283,37 +227,13 @@ namespace Prosjekt.Data
                     p.FormID_int
                 });
 
-            modelBuilder.Entity<ReplacedPartsReturnedModel>()
-                .HasMany(rp => rp.Parts)
-                .WithOne(p => p.ReplacedPartsReturned)
-                .HasPrincipalKey(rp => rp.PartID_int);
+            modelBuilder.Entity<ServiceFormModel>()
+                .HasOne(s => s.ReplacedPartsReturned)
+                .WithOne(s => s.ServiceForm)
+                .HasForeignKey<ReplacedPartsReturnedModel>(s => s.FormID_int);
 
-            modelBuilder.Entity<ReplacedPartsReturnedModel>()
-                .HasMany(rp => rp.ServiceForms)
-                .WithOne(s => s.ReplacedPartsReturned)
-                .HasPrincipalKey(rp => rp.FormID_int);
-
-            //UsedParts
-            modelBuilder.Entity<UsedPartModel>()
-                .HasKey(p => new
-                {
-                    p.PartID_int,
-                    p.FormID_int
-                });
-            modelBuilder.Entity<UsedPartModel>()
-                .HasMany(up => up.Parts)
-                .WithOne(p => p.UsedPart)
-                .HasPrincipalKey(up => up.PartID_int);
-
-            modelBuilder.Entity<UsedPartModel>()
-                .HasMany(rp => rp.ServiceForms)
-                .WithOne(s => s.UsedPart)
-                .HasPrincipalKey(rp => rp.FormID_int);
-
-
-            // Legger til grunnlegge data
             modelBuilder.Entity<IdentityRole>().HasData(
-                new IdentityRole { Id = "Admin", Name="Admin", NormalizedName="ADMIN",ConcurrencyStamp="admin" }
+                new IdentityRole { Id = "Admin", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "admin" }
             );
 
             modelBuilder.Entity<IdentityRole>().HasData(
@@ -327,7 +247,6 @@ namespace Prosjekt.Data
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "Elektro", Name = "Elektro", NormalizedName = "ELEKTRO", ConcurrencyStamp = "Elektro" }
             );
-
         }
         public DbSet<ArbeidsdokumentModelView> ArbeidsdokumentModelViews { get; set; }
 // lagt til denne linjen for arbeidsdokumentet^^^
@@ -347,5 +266,7 @@ namespace Prosjekt.Data
         public DbSet<PartsModel> Parts { get; set; }
         public DbSet<ReplacedPartsReturnedModel> Replaced_Parts_Returned { get; set; }
         public DbSet<UsedPartModel> Used_Parts { get; set; }
+        public DbSet<EquipmentModel> Equipment { get; set; }
+
     }
 }

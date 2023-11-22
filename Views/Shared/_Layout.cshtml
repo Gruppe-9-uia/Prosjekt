@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="~/css/serviceordre.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/serviceskjema.css" asp-append-version="true" />
 
+<link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/Logginn.css" asp-append-version="true" />
+
+
     <link rel="stylesheet" href="~/css/Arbeidsdokument.css" asp-append-version="true" />
 
     <link rel="stylesheet" href="~/css/Brukeroversikt-popup.css" asp-append-version="true" />
@@ -39,43 +44,13 @@
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                     <img src="~/Images/Nostedlogo.png" alt="Nøsted sin logo" />
                 </a>
-                  <ul class="navbar-nav ms-auto">
-                             <li class="nav-item d-flex align-items-center">
-                                 <!-- Notifikasjon bjelle -->
-                                 <a class="nav-link mx-2 mb-2" asp-controller="Notifikasjon" asp-action="Notifikasjon" role="button">
-                                     <i class="bi-bell" style="font-size: 38px; color: grey;"></i>
-                                 </a>
-                        <input type="checkbox" id="toggle" style="display:none;">
-                        <label for="toggle" class="nav-link d-flex align-items-center">
-                            <span class="hamburger">
-                                <span class="top"></span>
-                                <span class="middle"></span>
-                                <span class="bottom"></span>
-                            </span>
-                        </label>
-                        <ul class="menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-                            <li><a class="dropdown-item" asp-controller="Kontakt" asp-action="KontaktOss">Kontakt oss</a></li>
-                            <li><a class="dropdown-item" asp-controller="Sjekklist" asp-action="Sjekklist">Sjekklist</a></li>
-                            <li><a class="dropdown-item" asp-controller="FAQ" asp-action="FAQ">FAQ</a></li>
-                            <li><a class="dropdown-item" asp-controller="Parts" asp-action="Parts">Parts</a></li>
-                            <li><a class="dropdown-item" asp-controller="Login" asp-action="Login">Login</a></li>
-                            <li><a class="dropdown-item" asp-controller="Notifikasjon" asp-action="Notifikasjon">Notifikasjon</a></li>
-                            <li><a class="dropdown-item" asp-controller="Serviceordre" asp-action="Serviceordre">Serviceordre</a></li>
-                            <li><a class="dropdown-item" asp-controller="Serviceskjema" asp-action="Serviceskjema">Serviceskjema</a></li>
-                            <li><a class="dropdown-item" asp-controller="Arbeidsdokument" asp-action="Arbeidsdokument">Arbeidsdokument</a></li>
-                            <li><a class="dropdown-item" asp-controller="Brukeroversikt" asp-action="Brukeroversikt">Brukeroversikt</a></li>
-                            <li><a class="dropdown-item" asp-controller="Brukerregistrering" asp-action="Brukerregistrering">Brukerregistrering</a></li>
-                            <li><a class="dropdown-item" asp-controller="Om_Oss" asp-action="Om_Oss">Om Oss</a></li>
-                        </ul>
+                 
                         <partial name="_Navbar" />
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
 
-    <div class="d-flex flex-column min-vh-100">
+    <div class="d-flex flex-column"> <!-- min-vh-100 -->
         <div class="flex-grow-1">
             <div class="container-fluid flex-fill p-0">
                 <main role="main" class="h-100 w-100">
