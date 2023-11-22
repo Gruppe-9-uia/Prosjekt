@@ -197,13 +197,29 @@ namespace Prosjekt.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<int>("Chain_tensioners")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Check_Brakes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Clutch_Plate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EOil_gearbox")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HOil_gearbox")
+                        .HasColumnType("int");
+
                     b.Property<int>("Hoses")
                         .HasColumnType("int");
 
                     b.Property<int>("Hydraulic_block")
                         .HasColumnType("int");
 
-
+                    b.Property<int>("Hydraulic_cylinder")
+                        .HasColumnType("int");
 
                     b.Property<int>("Oil_tank")
                         .HasColumnType("int");
@@ -849,6 +865,17 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
                 {
+                    b.HasOne("Prosjekt.Entities.EquipmentModel", "Equipment")
+                        .WithOne("Parts")
+                        .HasForeignKey("Prosjekt.Entities.PartsModel", "EquipmentID_int")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Equipment");
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.ReplacedPartsReturnedModel", b =>
+                {
                     b.HasOne("Prosjekt.Entities.ServiceFormModel", "ServiceForm")
                         .WithOne("ReplacedPartsReturned")
                         .HasForeignKey("Prosjekt.Entities.ReplacedPartsReturnedModel", "FormID_int")
@@ -981,6 +1008,12 @@ namespace Prosjekt.Migrations
                     b.Navigation("CustomerProducts");
 
                     b.Navigation("ServiceFormSign")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Prosjekt.Entities.CustomerProductModel", b =>
+                {
+                    b.Navigation("ServiceOrders")
                         .IsRequired();
                 });
 

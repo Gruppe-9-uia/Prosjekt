@@ -137,8 +137,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                 user.LastName_str = Input.LastName_str;
                 user.PhoneNumber = Input.PhoneNumber;
                 user.Level_str = Input.Level_str;
-                if (departmentExists)
-                {
+                
                     var result = await _userManager.CreateAsync(user, Input.Password);
 
                     Console.WriteLine(result.ToString());
@@ -175,7 +174,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                     {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
-                }*/
+                
             }
 
             // If we got this far, something failed, redisplay form
