@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Entities;
 using Prosjekt.Models.Parts;
 
+
 namespace Prosjekt.Controllers
 {
     public class PartsController : Controller
@@ -43,22 +44,6 @@ namespace Prosjekt.Controllers
             return View();
         }
 
-        /*
-        public IActionResult Parts(string searchString)
-        {
-            var parts = from p in _context.Parts
-                select p;
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                parts = parts.Where(p =>
-                    p.PartName_str.Contains(searchString) ||
-                    p.PartID_int.ToString().Contains(searchString));
-            }
-
-            return View(parts.ToList());
-        }
-        */
 
         [HttpPost]
         public IActionResult UpdateQuantity(int PartID_int, int NewQuantity)
@@ -79,17 +64,17 @@ namespace Prosjekt.Controllers
         {
             var PartsDB = _context.Parts.Where(e => e.PartName_str.Equals(model.PartName_str)).FirstOrDefault();
 
-            //TODO: får ikke hente equipment
-            var equipement = _context.Equipment.Where(e => e.Name_str.Equals(model.EquipmentName)).FirstOrDefault();
+            //TODO: fï¿½r ikke hente equipment
+            var equipment = _context.Equipment.Where(e => e.Name_str.Equals(model.EquipmentName)).FirstOrDefault();
             Console.WriteLine(model.EquipmentName);
-            if(PartsDB == null &&  equipement != null)
+            if(PartsDB == null &&  equipment != null)
             {
                 var partsObj = new PartsModel
                 {
                     PartID_int = model.PartID_int,
                     PartName_str = model.PartName_str,
                     Quantity_available_int = model.Quantity_available_int,
-                    EquipmentID_int = equipement.Id_int
+                    EquipmentID_int = equipment.Id_int
                 };
 
                 int latestId = _context.Parts.Any() ? _context.Parts.Max(e => e.PartID_int) + 1 : 1;
@@ -98,14 +83,14 @@ namespace Prosjekt.Controllers
                 var result = _context.Parts.Add(partsObj);
                 if (result == null)
                 {
-                    ModelState.AddModelError(string.Empty, "Klarte ikke å lage service order");
-                    return View("Equipment");
+                    ModelState.AddModelError(string.Empty, "Klarte ikke ï¿½ lage service order");
+                    return RedirectToAction("Parts");
                 }
 
             }
 
 
-            return View("Parts");
+            return RedirectToAction("Parts");
         }
     
         [HttpPost]
