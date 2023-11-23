@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.SignalR;
 using Prosjekt.Entities;
 
 namespace Prosjekt.Data
@@ -309,7 +310,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<PartsModel>().HasData(
                 new PartsModel { PartID_int = 9, EquipmentID_int = 2, PartName_str = "Toommersaks", Quantity_available_int = 17 });
             modelBuilder.Entity<PartsModel>().HasData(
-                new PartsModel { PartID_int = 10, EquipmentID_int = 5, PartName_str = "Kraftoverføringsakselspesialutfoorelse for vinsj", Quantity_available_int = 7 });
+                new PartsModel { PartID_int = 10, EquipmentID_int = 5, PartName_str = "Kraftoverfï¿½ringsakselspesialutfoorelse for vinsj", Quantity_available_int = 7 });
 
             //legger til postal code
             modelBuilder.Entity<PostalCode>().HasData(
@@ -347,13 +348,13 @@ namespace Prosjekt.Data
             modelBuilder.Entity<CustomerModel>().HasData(
                 new CustomerModel { ID_int = 6, FirstName_str = "Buddy", LastName_str="Lutz", Phone_str="+47 420 54 744", Email_str="BuddyLutz@mail.com", Street_Address_str="Vaskerelven 62", Postal_Code_str="8911" });
             modelBuilder.Entity<CustomerModel>().HasData(
-                new CustomerModel { ID_int = 7, FirstName_str = "Edward", LastName_str = "Medina", Phone_str = "+47 485 78 737", Email_str = "EdwardMedina@mail.com", Street_Address_str = " Årholsveien 230", Postal_Code_str = "7070" });
+                new CustomerModel { ID_int = 7, FirstName_str = "Edward", LastName_str = "Medina", Phone_str = "+47 485 78 737", Email_str = "EdwardMedina@mail.com", Street_Address_str = " ï¿½rholsveien 230", Postal_Code_str = "7070" });
             modelBuilder.Entity<CustomerModel>().HasData(
-                new CustomerModel { ID_int = 8, FirstName_str = "Jody", LastName_str = "Haney", Phone_str = "+47 930 85 126", Email_str = "JodyHaney@mail.com", Street_Address_str = "Bjørnehiet 62", Postal_Code_str = "1118" });
+                new CustomerModel { ID_int = 8, FirstName_str = "Jody", LastName_str = "Haney", Phone_str = "+47 930 85 126", Email_str = "JodyHaney@mail.com", Street_Address_str = "Bjï¿½rnehiet 62", Postal_Code_str = "1118" });
             modelBuilder.Entity<CustomerModel>().HasData(
                 new CustomerModel { ID_int = 9, FirstName_str = "Greg", LastName_str = "Brown", Phone_str = "+47 492 04 498", Email_str = "GregBrown@mail.com", Street_Address_str = "Ryglandveien 138", Postal_Code_str = "9311" });
             modelBuilder.Entity<CustomerModel>().HasData(
-                new CustomerModel { ID_int = 10, FirstName_str = "Kris", LastName_str = "Parrish", Phone_str = "+47 954 33 656", Email_str = "KrisParrish@mail.com", Street_Address_str = "Kornbråtenveien 226", Postal_Code_str = "7010" });
+                new CustomerModel { ID_int = 10, FirstName_str = "Kris", LastName_str = "Parrish", Phone_str = "+47 954 33 656", Email_str = "KrisParrish@mail.com", Street_Address_str = "Kornbrï¿½tenveien 226", Postal_Code_str = "7010" });
 
             //Legger til product
             modelBuilder.Entity<ProductModel>().HasData(
@@ -423,7 +424,13 @@ namespace Prosjekt.Data
 
             //Legger til Service_order
             modelBuilder.Entity<ServiceOrderModel>().HasData(
-                new ServiceOrderModel {OrderID_int=1, CustomerID_int= 1, CustomerId=1, SerialNr_str= "IG308011",  Order_type_str ="Vedlikehold", Received_Date=new DateOnly(2023,1,1), Description_From_Customer_str="Bytt ut ødelagte deler" });
+                new ServiceOrderModel {OrderID_int=1, CustomerID_int= 1, CustomerId=1, SerialNr_str= "IG308011",  Order_type_str ="Vedlikehold", Received_Date=new DateOnly(2023,1,1), Description_From_Customer_str="Bytt ut ï¿½delagte deler" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel {OrderID_int=2, CustomerID_int= 2, CustomerId=2, SerialNr_str= "IG308231",  Order_type_str ="Sjekk", Received_Date=new DateOnly(2023,2,2), Description_From_Customer_str="Vinsj plutselig stopper" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel {OrderID_int=3, CustomerID_int= 3, CustomerId=3, SerialNr_str= "IG300622",  Order_type_str ="Kontroll", Received_Date=new DateOnly(2023,3,3), Description_From_Customer_str="Kontroll for Ã¥ sjekke om alt er  i orden" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel {OrderID_int=4, CustomerID_int= 4, CustomerId=4, SerialNr_str= "IG300903",  Order_type_str ="Vedlikehold", Received_Date=new DateOnly(2023,4,4), Description_From_Customer_str="Rens enkelte deler" });
             
             /*
             modelBuilder.Entity<ServiceOrderModel>().HasData(
@@ -435,17 +442,28 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceOrderModel>().HasData(
                 new ServiceOrderModel { 5, "Vedlikehold", "2022-04-20", "Rutinesjekk og service" });
             modelBuilder.Entity<ServiceOrderModel>().HasData(
-                new ServiceOrderModel { 6, "Reparere", "2021-06-05", "Løs tilkoblingsproblemer" });
+                new ServiceOrderModel { 6, "Reparere", "2021-06-05", "Lï¿½s tilkoblingsproblemer" });
             modelBuilder.Entity<ServiceOrderModel>().HasData(
                 new ServiceOrderModel { 7, "Oppgradering", "2023-07-06", "Forbedre systemytelsen" });
             modelBuilder.Entity<ServiceOrderModel>().HasData(
                 new ServiceOrderModel { 8, "Installasjon", "2023-08-07", "Legg til nye deler" });
             modelBuilder.Entity<ServiceOrderModel>().HasData(
-                new ServiceOrderModel { 9, "Vedlikehold", "2023-09-09", "Inspiser og rengjør"});
+                new ServiceOrderModel { 9, "Vedlikehold", "2023-09-09", "Inspiser og rengjï¿½r"});
             modelBuilder.Entity<ServiceOrderModel>().HasData(
                 new ServiceOrderModel {10, "Vedlikehold", "2023-10-17", "Rutinesjekk og service" });
             */
             //Legger til service_form
+            
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel {FormID_int=200, Repairdescription_str="fikser noe", ServiceCompleted_date=new DateOnly(2023,3,3), AgreedDelivery_date= new DateOnly(2023,4,4),  ProductRecived_date =new DateOnly(2023,4,4), BookedServiceWeek_int=1, ShippingMethod_str="Bil"});
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel {FormID_int=201, Repairdescription_str="fikser noe", ServiceCompleted_date=new DateOnly(2023,4,4), AgreedDelivery_date= new DateOnly(2023,5,5),  ProductRecived_date =new DateOnly(2023,5,5), BookedServiceWeek_int=2, ShippingMethod_str="Post"});
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel {FormID_int=202, Repairdescription_str="fikser noe", ServiceCompleted_date=new DateOnly(2023,5,5), AgreedDelivery_date= new DateOnly(2023,6,6),  ProductRecived_date =new DateOnly(2023,6,6), BookedServiceWeek_int=3, ShippingMethod_str="Henting"});
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel {FormID_int=203, Repairdescription_str="fikser noe", ServiceCompleted_date=new DateOnly(2023,6,6), AgreedDelivery_date= new DateOnly(2023,7,7),  ProductRecived_date =new DateOnly(2023,7,7), BookedServiceWeek_int=4, ShippingMethod_str="bil"});
+
+            
             /*
             modelBuilder.Entity<ServiceFormModel>().HasData(
                 new ServiceFormModel { 1, "oodelagt", "2023-01-10", "2023-01-01", "2023-01-02", 1, "med bil" });
@@ -468,6 +486,17 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormModel>().HasData(
                 new ServiceFormModel { 10, "kontroll", "2023-10-19", "2023-10-10", "2023-10-11", 7, "med posten" });
             */
+            
+            /*sjekkliste*/
+            modelBuilder.Entity<ChecklistModel>().HasData(
+                new ChecklistModel {DocID_str="DOC001", SerialNr_str="IG308011", Type_str="Type_A", Procedure_str="Procedure_1", Starting_Date=new DateOnly(2023,1,1), Prepared_by_str="Taylor Swift", xx_Bar_str="Bar_1", Brake_force="100", Traction_force_Kn="50", Test_winch="tester", comment_str="Noen kommentarer", Hydraulic_cylinder="Ok", Hoses="Defekt", Hydraulic_block="Skiftes", Oil_tank="Skiftes", HOil_gearbox="Ok", Ringe_cylinder_and_replace_seals="Defekt", Brake_cylinder_and_replace_seals="Ok", Clutch_Plate="Skiftes", Check_Brakes="Defekt", Bearing_drum="Ok", PTO_and_storage="Skiftes", Chain_tensioners="Ok", Wire="Ok", Pinion_bearing="Defekt", Wedge_on_sprocket="Ok", Wiring_on_winch="Defekt", Test_radio="Skiftes", EOil_gearbox="Ok"});
+            modelBuilder.Entity<ChecklistModel>().HasData(
+                new ChecklistModel {DocID_str="DOC002", SerialNr_str="IG308231", Type_str="Type_B", Procedure_str="Procedure_2", Starting_Date=new DateOnly(2023,2,2), Prepared_by_str="Justin Bieber", xx_Bar_str="Bar_2", Brake_force="100", Traction_force_Kn="50", Test_winch="tester", comment_str="Ingen kommentarer", Hydraulic_cylinder="Ok", Hoses="Defekt", Hydraulic_block="Skiftes", Oil_tank="Skiftes", HOil_gearbox="Ok", Ringe_cylinder_and_replace_seals="Defekt", Brake_cylinder_and_replace_seals="Ok", Clutch_Plate="Skiftes", Check_Brakes="Defekt", Bearing_drum="Ok", PTO_and_storage="Skiftes", Chain_tensioners="Ok", Wire="Ok", Pinion_bearing="Defekt", Wedge_on_sprocket="Ok", Wiring_on_winch="Defekt", Test_radio="Skiftes", EOil_gearbox="Ok"});
+            modelBuilder.Entity<ChecklistModel>().HasData(
+                new ChecklistModel {DocID_str="DOC003", SerialNr_str="IG300622", Type_str="Type_C", Procedure_str="Procedure_1", Starting_Date=new DateOnly(2023,3,3), Prepared_by_str="Terje GjÃ¸sÃ¦ter", xx_Bar_str="Bar_1", Brake_force="100", Traction_force_Kn="50", Test_winch="tester", comment_str="FÃ¥ kommentarer", Hydraulic_cylinder="Ok", Hoses="Defekt", Hydraulic_block="Skiftes", Oil_tank="Skiftes", HOil_gearbox="Ok", Ringe_cylinder_and_replace_seals="Defekt", Brake_cylinder_and_replace_seals="Ok", Clutch_Plate="Skiftes", Check_Brakes="Defekt", Bearing_drum="Ok", PTO_and_storage="Skiftes", Chain_tensioners="Ok", Wire="Ok", Pinion_bearing="Defekt", Wedge_on_sprocket="Ok", Wiring_on_winch="Defekt", Test_radio="Skiftes", EOil_gearbox="Ok"});
+            modelBuilder.Entity<ChecklistModel>().HasData(
+                new ChecklistModel {DocID_str="DOC004", SerialNr_str="IG300903", Type_str="Type_A", Procedure_str="Procedure_3", Starting_Date=new DateOnly(2023,4,4), Prepared_by_str="Sofie Wass", xx_Bar_str="Bar_2", Brake_force="100", Traction_force_Kn="50", Test_winch="tester", comment_str="Mye kommentarer", Hydraulic_cylinder="Ok", Hoses="Defekt", Hydraulic_block="Skiftes", Oil_tank="Skiftes", HOil_gearbox="Ok", Ringe_cylinder_and_replace_seals="Defekt", Brake_cylinder_and_replace_seals="Ok", Clutch_Plate="Skiftes", Check_Brakes="Defekt", Bearing_drum="Ok", PTO_and_storage="Skiftes", Chain_tensioners="Ok", Wire="Ok", Pinion_bearing="Defekt", Wedge_on_sprocket="Ok", Wiring_on_winch="Defekt", Test_radio="Skiftes", EOil_gearbox="Ok"});
+
         }
 
 
