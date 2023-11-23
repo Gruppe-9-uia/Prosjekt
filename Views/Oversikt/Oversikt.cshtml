@@ -1,10 +1,8 @@
-﻿@*
-      For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-  *@
+﻿@using Prosjekt.Models.Oversikt;
+@model Prosjekt.Models.Oversikt.OversiktViewModel;
 @{
     ViewData["Title"] = "Oversikt";
 }
-
 <div class="container mt-5">
   <h1 class="text-center mb-4">Oversikt</h1>
   
@@ -19,8 +17,12 @@
       <button type="button" class="btn btn-primary btn-block" onclick="goToPage('../Sjekkliste/Sjekkliste')">Sjekkliste</button>
     </div>
   </div>
+      <script>
+          function goToPage(pageUrl) {
+            window.location.href = pageUrl;
+          }
+    </script>
 </div>
-    
 <div class="row justify-content-center mt-3">
     <div class="col-6">
       <div class="input-group">
@@ -32,10 +34,43 @@
     </div>
   </div>
 
+ 
+      <!-- Tabell -->
+    <table class="table table-striped table-hover table-sm mx-auto" id="partsTable" style="width: 85%">
+        <thead>
+            <tr>
+                <!-- Gjør ID-kolonnen mindre på små skjermer -->
+                <th class="col-2 col-md-2 text-center">Order ID</th>
+                <th class="col-4 col-md-6">Serienummer</th>
+                <th class="col-3 col-md-2 text-center">Garanti</th>
+                <th class="col-3 col-md-2 text-center">Kunde epost</th>
+                <th class="col-3 col-md-2 text-center">Avtale</th>
+                <th class="col-3 col-md-2 text-center">Serviceskjema nr</th>
+                <th class="col-3 col-md-2 text-center">Beskriver</th>
+                <th class="col-3 col-md-2 text-center">uke</th>
+                <th class="col-3 col-md-2 text-center">Checkliste</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tbody>
+        @if (ViewData["list"] != null)
+        {
+            @foreach (var item  in ViewData["list"] as List<OversiktViewModel>)
+            {
+                <tr>
+                    <td class="text-center">@item.OrderID_int</td>
+                    <td class="text-center">@item.SerialNr_str</td>
+                    <td class="text-center">@item.WarrantyName</td>
+                    <td class="text-center">@item.Email</td>
+                    <td class="text-center">@item.Description_From_Customer_str</td>
+                    <td class="text-center">@item.FormID_int</td>
+                    <td class="text-center">@item.BookedServiceWeek_int</td>
+                    <td class="text-center">@item.Repairdescription_str</td>
+                    <td class="text-center">@item.DocID_str</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table
 
-<script>
-      function goToPage(pageUrl) {
-        window.location.href = pageUrl;
-      }
-    </script>
 
