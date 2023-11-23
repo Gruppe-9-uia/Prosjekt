@@ -6,25 +6,12 @@
     ViewData["Title"] = "Brukeroversikt";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Nøsted & Brukeroversikt</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">  <!-- css for pop up -->
-    <link href="/css/Brukeroversikt-popup.css" rel="stylesheet"> <!-- custom css -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
 
-<body>
     <div class="container text-center mt-5">
         <header>
             <h1 class="h1-bo">Brukeroversikt</h1>
         </header>
     </div>
-    
-        <main>
             <div class="container text-center mt-4 mb-4">
                 @using (Html.BeginForm("", ""))
                 {
@@ -258,8 +245,7 @@
                 </script>
 
             <div class="text-center">
-                <a class="btn btn-primary" id="btn-bruker-bo" role="button" href="@Url.Action("CreateUser",  "Brukerregistrering")">Legg til bruker</a>
+            <a class="btn btn-primary" id="btn-bruker-bo" role="button" asp-area="Identity" asp-page="/Account/Register">>Legg til bruker</a>
             </div>
-        </main>
-</body> 
-</html>
+ 
+

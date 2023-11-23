@@ -118,7 +118,7 @@ namespace Prosjekt.Controllers
                     _context.SaveChanges();
                 }
 
-                return View("Parts");
+                return Redirect("Parts");
 
 
             } catch (Exception ex)

@@ -96,7 +96,7 @@ namespace Prosjekt.Controllers
                 _context.Checklist_signature.Add(checkSign);
                 _context.SaveChanges();
 
-                return RedirectToAction("Add");
+                return RedirectToAction("Oversikt", "Oversikt");
             }
             catch (Exception ex)
             {
