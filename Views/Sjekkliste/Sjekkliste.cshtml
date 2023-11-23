@@ -53,9 +53,10 @@
                     {
                             @Html.AntiForgeryToken()
             <!-- Generell informasjon som er ikke avhengig av avdeling-->
+    <div class="cust-margin"></div>
             <div id="Generell" role="tabpanel" class="bs-stepper-pane active dstepper-block">
                 <div class="p-3">
-                    <div class="container">
+                    <div class="cm-container">
                         <div class="form-group">
                             <h3 style="margin-top: 50px;">Produkt </h3>
                             <hr class="mt-2 mb-3" />
@@ -151,48 +152,50 @@
 
             <!-- Form for den mekaniske avdelingen -->
             <div id="Mekanisk" role="tabpanel" class="bs-stepper-pane">
+                <div class="outer-container"> 
                 <div class="p-3">
-                        <div class="form-group">
-                        <fieldset class="btn-group w-100 " role="group" aria-label="Clutch_Plate">
-                                <div class="container">
-                                <div class="row p-3">
-                                    <div class="col-4">
-                                        </div>
-                                    <div class="col text-center">
-                                            <h6>OK</h6>
-                                        </div>
-                                    <div class="col text-center">
-                                            <h6>Skiftes</h6>
-                                        </div>
-                                    <div class="col text-center">
-                                            <h6>Defekt</h6>
-                                        </div>
-                                    </div>
-                                <div class="row">
-                                    <div class="col-4 border p-2">
-                                            <h6>Sjekk Clutch lammer for slitjase</h6>
-                                        </div>
+                <div class="form-group">
+                    <fieldset class="btn-group w-100 " role="group" aria-label="Clutch_Plate">
+                        <div class="container">
+                            <div class="row p-3">
+                                <div class="col-4">
+                                </div>
+                                <div class="col text-center check-header">
+                                    <h5>OK</h5>
+                                </div>
+                                <div class="col text-center check-header">
+                                    <h5>Skiftes</h5>
+                                </div>
+                                <div class="col text-center check-header">
+                                    <h5>Defekt</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-4 border p-2">
+                                    <h6>Sjekk Clutch lammer for slitjase</h6>
+                                </div>
 
-                                    <div class="col text-center border p-2">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="Clutch_Plate" autocomplete="off" value="Ok" asp-for="Clutch_Plate">
-                                        </div>
-                                    </div>
-                                    <div class="col text-center border p-2">
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Clutch_Plate"  autocomplete="off" value="Bor_skiftes" asp-for="Clutch_Plate">
-
-                                        </div>
-                                    </div>
-                                    <div class="col text-center border p-2">
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Clutch_Plate" autocomplete="off" value="Defekt" asp-for="Clutch_Plate">
-                                        </div>
-                                    </div>
+                                <div class="col text-center border p-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Clutch_Plate" autocomplete="off" value="Ok" asp-for="Clutch_Plate">
                                     </div>
                                 </div>
-                            </fieldset>
+                                <div class="col text-center border p-2">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="Clutch_Plate"  autocomplete="off" value="Bor_skiftes" asp-for="Clutch_Plate">
+
+                                    </div>
+                                </div>
+                                <div class="col text-center border p-2">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="Clutch_Plate" autocomplete="off" value="Defekt" asp-for="Clutch_Plate">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </fieldset>
+                </div>
                         <div class="form-group">
                         <fieldset class="btn-group w-100" role="group" aria-label="Check_Brakes">
                                 <div class="container">
@@ -399,9 +402,11 @@
                     </div>
                 </div>  
             </div>
+          </div>
 
             <!-- Form for Hydraulisk avdeling -->
             <div id="Hydraulisk" role="tabpanel" class="bs-stepper-pane">
+            <div class="outer-container"> 
                 <div class="p-3">
                     <div class="form-group">
                         <fieldset class="btn-group w-100 " role="group" aria-label="Hydraulic_cylinder">
@@ -409,13 +414,13 @@
                                 <div class="row p-3">
                                     <div class="col-4">
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="col text-center check-header">
                                         <h5>OK</h5>
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="col text-center check-header">
                                         <h5>Skiftes</h5>
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="col text-center check-header">
                                         <h5>Defekt</h5>
                                     </div>
                                     </div>
@@ -618,116 +623,119 @@
                     </div>
                     
                 </div>
+                </div>
             </div>
 
             <!-- form for Elektro avdeling -->
-            <div id="Elektro" role="tabpanel" class="bs-stepper-pane">
-                <div class="p-3">
-                    <div class="form-group">
-                        <fieldset class="btn-group w-100 " role="group" aria-label="Wiring_on_winch">
-                            <div class="container">
-                                <div class="row p-3">
-                                        <div class="col-4">
-                                        </div>
-                                        <div class="col text-center">
-                                            <h5>OK</h5>
-                                        </div>
-                                        <div class="col text-center">
-                                            <h5>Skiftes</h5>
-                                        </div>
-                                        <div class="col text-center">
-                                            <h5>Defekt</h5>
-                                        </div>
-                                        </div>
-                                    <div class="row">
-                                        <div class="col-4 border p-2">
-                                                <h6>Sjekk ledningsnett på vinsj</h6>
-                                        </div>
-
-                                        <div class="col text-center border p-2">
-                                            <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Wiring_on_winch"  autocomplete="off" value="Ok" asp-for="Wiring_on_winch">
+                        <div id="Elektro" role="tabpanel" class="bs-stepper-pane">
+                            <div class="outer-container">
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <fieldset class="btn-group w-100 " role="group" aria-label="Wiring_on_winch">
+                                            <div class="container">
+                                                <div class="row p-3">
+                                                    <div class="col-4">
+                                                    </div>
+                                                    <div class="col text-center check-header">
+                                                        <h5>OK</h5>
+                                                    </div>
+                                                    <div class="col text-center check-header">
+                                                        <h5>Skiftes</h5>
+                                                    </div>
+                                                    <div class="col text-center check-header">
+                                                        <h5>Defekt</h5>
+                                                    </div>
                                                 </div>
-                                        </div>
-                                        <div class="col text-center border p-2">
-                                            <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Wiring_on_winch" autocomplete="off" value="Skiftes" asp-for="Wiring_on_winch">
-                                            </div>
-                                        </div>
-                                        <div class="col text-center border p-2">
-                                            <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Wiring_on_winch" autocomplete="off" value="Defekt" asp-for="Wiring_on_winch">
+                                                <div class="row">
+                                                    <div class="col-4 border p-2">
+                                                        <h6>Sjekk ledningsnett på vinsj</h6>
+                                                    </div>
+
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="Wiring_on_winch"  autocomplete="off" value="Ok" asp-for="Wiring_on_winch">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="Wiring_on_winch" autocomplete="off" value="Skiftes" asp-for="Wiring_on_winch">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="Wiring_on_winch" autocomplete="off" value="Defekt" asp-for="Wiring_on_winch">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                        </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-group">
+                                        <fieldset class="btn-group w-100" role="group" aria-label="Test_radio">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-4 border p-2">
+                                                        <h6>Sjekk og test radio</h6>
+                                                    </div>
+
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="Test_radio" autocomplete="off" value="Ok" asp-for="Test_radio">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="Test_radio" autocomplete="off" value="Skiftes" asp-for="Test_radio">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="Test_radio" autocomplete="off" value="Defekt" asp-for="Test_radio">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-group">
+                                        <fieldset class="btn-group w-100" role="group" aria-label="EOil_gearbox">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-4 border p-2">
+                                                        <h6>Sjekk og test knappekasse</h6>
+                                                    </div>
+
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="EOil_gearbox" autocomplete="off" value="Ok" asp-for="EOil_gearbox">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="EOil_gearbox" autocomplete="off" value="Skiftes" asp-for="EOil_gearbox">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col text-center border p-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="radio" class="form-check-input" name="EOil_gearbox" autocomplete="off" value="Defekt" asp-for="EOil_gearbox">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="row justify-content-md-center">
+                                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
+
+                                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
                                     </div>
                                 </div>
-                            </fieldset>
+                            </div>
                         </div>
-                        <div class="form-group">
-                        <fieldset class="btn-group w-100" role="group" aria-label="Test_radio">
-                                <div class="container">
-                                    <div class="row">
-                                    <div class="col-4 border p-2">
-                                        <h6>Sjekk og test radio</h6>
-                                    </div>
-
-                                    <div class="col text-center border p-2">
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Test_radio" autocomplete="off" value="Ok" asp-for="Test_radio">
-                                        </div>
-                                    </div>
-                                    <div class="col text-center border p-2">
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Test_radio" autocomplete="off" value="Skiftes" asp-for="Test_radio">
-
-                                        </div>
-                                    </div>
-                                    <div class="col text-center border p-2">
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="Test_radio" autocomplete="off" value="Defekt" asp-for="Test_radio">
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="form-group">
-                        <fieldset class="btn-group w-100" role="group" aria-label="EOil_gearbox">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-4 border p-2">
-                                            <h6>Sjekk og test knappekasse</h6>
-                                        </div>
-
-                                        <div class="col text-center border p-2">
-                                            <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="EOil_gearbox" autocomplete="off" value="Ok" asp-for="EOil_gearbox">
-                                            </div>
-                                        </div>
-                                        <div class="col text-center border p-2">
-                                            <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="EOil_gearbox" autocomplete="off" value="Skiftes" asp-for="EOil_gearbox">
-
-                                            </div>
-                                        </div>
-                                        <div class="col text-center border p-2">
-                                            <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="EOil_gearbox" autocomplete="off" value="Defekt" asp-for="EOil_gearbox">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-
-                    <div class="row justify-content-md-center">
-                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
-
-                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
-                    </div>
-                    
-                </div>
-            </div>
+                        
             <div id="Signering" role="tabpanel" class="bs-stepper-pane">
 
             <div class="align-items-center">
@@ -736,7 +744,7 @@
                         <div class="col">
                             <div class="col text-center">
                                 <div class="form-group">
-                                    <label for="FirstName_str">Fornavn</label>
+                                    <label for="FirstName_str" style="font-weight: bold;">Fornavn</label>
                                     <input type="text" class="form-control" id="FirstName_str" asp-for="FirstName_str">
                                 </div>
                             </div>
@@ -744,11 +752,12 @@
                         <div class="col">
                             <div class="col text-center">
                                 <div class="form-group">
-                                    <label for="LastName_str">Etternavn</label>
+                                    <label for="LastName_str" style="font-weight: bold;">Etternavn</label>
                                     <input type="text" class="form-control" id="LastName_str" asp-for="LastName_str">
                                 </div>
                             </div>
                         </div>
+                       <div class="cust-margin"></div>
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-group">
@@ -758,7 +767,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-4">
                             <label for="kommentar"><h5>Kommentar:</h5></label>
                             <textarea class="form-control" rows="5" id="kommentar" asp-for="comment_str"></textarea>
                         </div>
