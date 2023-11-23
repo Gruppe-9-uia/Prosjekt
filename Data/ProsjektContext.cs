@@ -427,11 +427,7 @@ namespace Prosjekt.Data
                 new ServiceOrderModel {OrderID_int=1, CustomerID_int= 1, CustomerId=1, SerialNr_str= "IG308011",  Order_type_str ="Vedlikehold", Received_Date=new DateOnly(2023,1,1), Description_From_Customer_str="Bytt ut �delagte deler" });
             modelBuilder.Entity<ServiceOrderModel>().HasData(
                 new ServiceOrderModel {OrderID_int=2, CustomerID_int= 2, CustomerId=2, SerialNr_str= "IG308231",  Order_type_str ="Sjekk", Received_Date=new DateOnly(2023,2,2), Description_From_Customer_str="Vinsj plutselig stopper" });
-            modelBuilder.Entity<ServiceOrderModel>().HasData(
-                new ServiceOrderModel {OrderID_int=3, CustomerID_int= 3, CustomerId=3, SerialNr_str= "IG300622",  Order_type_str ="Kontroll", Received_Date=new DateOnly(2023,3,3), Description_From_Customer_str="Kontroll for å sjekke om alt er  i orden" });
-            modelBuilder.Entity<ServiceOrderModel>().HasData(
-                new ServiceOrderModel {OrderID_int=4, CustomerID_int= 4, CustomerId=4, SerialNr_str= "IG300903",  Order_type_str ="Vedlikehold", Received_Date=new DateOnly(2023,4,4), Description_From_Customer_str="Rens enkelte deler" });
-            
+
             /*
             modelBuilder.Entity<ServiceOrderModel>().HasData(
                 new ServiceOrderModel { 2, "Installasjon", "2023-02-02", "Sett opp nytt utstyr" });
