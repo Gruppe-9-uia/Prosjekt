@@ -3,7 +3,7 @@
     ViewData["Title"] = "Sjekkliste";
 }
 
-
+<div class="card w-75 mx-auto" style="margin-top: 50px;">
 <div class="p-3 text-center">
     <h2>Nøsted&, avd. Jåbekk</h2>
     <h3>Kvalitetsskring</h3>
@@ -56,11 +56,13 @@
             <div id="Generell" role="tabpanel" class="bs-stepper-pane active dstepper-block">
                 <div class="p-3">
                     <div class="container">
-                <div class="form-group">
-                   <div class="row p-3">
+                        <div class="form-group">
+                            <h3 style="margin-top: 50px;">Produkt </h3>
+                            <hr class="mt-2 mb-3" />
+                            <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <label for="serieNr"><h6>Serie Number</h6></label>
+                                        <label for="serieNr"><h6>Serienummer</h6></label>
                                         <input type="text" class="form-control" id="SerialNr_str" asp-for="SerialNr_str">
                                     </div>
                                 </div>
@@ -71,8 +73,10 @@
                                         <input type="text" class="form-control" id="type" asp-for="Type_str">
                                     </div>
                                 </div>
-                       </div>
-                            <div class="row p-3">
+                            </div>
+                            <h3 style="margin-top: 50px;">Generell info</h3>
+                            <hr class="mt-2 mb-3" />
+                            <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
                                         <label for="Procedure_str"><h6>Prosedyre</h6></label>
@@ -88,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row p-3">
+                        <div class="row">
                             <div class="col-sm">
                                 <div class="form-group">
                                     <label for="Prepared_by_str"><h6>Utarbeidet av</h6></label>
@@ -98,12 +102,14 @@
 
                             <div class="col-sm">
                                 <div class="form-group">
-                                    <label for="DocID_str"><h6>Dokumenter number</h6></label>
+                                    <label for="DocID_str"><h6>Dokumenter nummer</h6></label>
                                     <input type="text" class="form-control" id="DocID_str" asp-for="DocID_str">
                                 </div>
                             </div>
                         </div>
-                       <div class="row p-3">
+                        <h3 style="margin-top: 50px;">Generell service</h3>
+                        <hr class="mt-2 mb-3"/>
+                       <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
                                         <label for="xx_bar"><h6>xx-Bar</h6></label>
@@ -118,7 +124,7 @@
                                     </div>
                                 </div>
                        </div>
-                            <div class="row p-3">
+                            <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
                                         <label for="rekkratt"><h6>I rekkratt KN</h6></label>
@@ -135,9 +141,9 @@
                             </div>
 
                             <!-- TODO Fikse på knappe størrelse-->
-                            <div class="row p-3">
+                            <div class="row" style="margin-top: 50px;">
 
-                                <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
+                                <button id="buttonHome" type="button" class="col-2 btn p-1 btn-primary m-2 float-right mx-auto" onclick="stepper1.next()">Neste</button>
                             </div>
                       </div>     
                     </div>
@@ -386,10 +392,10 @@
                         <div class="invalid-feedback">
                             Please provide a valid email.
                         </div>                       
-                    <div class="row p-3">
-                        <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
+                    <div class="row justify-content-md-center">
+                        <button id="buttonHome" type="button" class="col-2 btn  p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
 
-                        <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
+                        <button id="buttonHome" type="button" class="col-2 btn  p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
                     </div>
                 </div>  
             </div>
@@ -605,10 +611,10 @@
                                 </div>
                             </fieldset>
                         </div>
-                    <div class="row p-3">
-                        <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
+                    <div class="row justify-content-md-center">
+                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
 
-                        <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
+                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
                     </div>
                     
                 </div>
@@ -714,59 +720,61 @@
                             </fieldset>
                         </div>
 
-                    <div class="row p-3">
-                        <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
+                    <div class="row justify-content-md-center">
+                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
 
-                        <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
+                        <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.next()">Neste</button>
                     </div>
                     
                 </div>
             </div>
             <div id="Signering" role="tabpanel" class="bs-stepper-pane">
 
-            <div class="align-items-center p-3">
+            <div class="align-items-center">
             <!-- Må kanskje flyttet som tar med alle formene og kan sjekke den-->
                     <div class="row">
-                        <div class="col-4 border p-2">
-                            <div class="col text-center border p-2">
+                        <div class="col">
+                            <div class="col text-center">
                                 <div class="form-group">
                                     <label for="FirstName_str">Fornavn</label>
                                     <input type="text" class="form-control" id="FirstName_str" asp-for="FirstName_str">
                                 </div>
-                              </div>
                             </div>
-                        <div class="col-4 border p-2">
-                            <div class="col text-center border p-2">
+                        </div>
+                        <div class="col">
+                            <div class="col text-center">
                                 <div class="form-group">
                                     <label for="LastName_str">Etternavn</label>
                                     <input type="text" class="form-control" id="LastName_str" asp-for="LastName_str">
                                 </div>
                             </div>
                         </div>
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="signDate"><h6>Dato</h6></label>
-                            <input type="date" class="form-control" id="signDate" asp-for="signDate">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="signDate"><h6>Dato</h6></label>
+                                    <input type="date" class="form-control" id="signDate" asp-for="signDate">
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
                         <div class="form-group">
                             <label for="kommentar"><h5>Kommentar:</h5></label>
                             <textarea class="form-control" rows="5" id="kommentar" asp-for="comment_str"></textarea>
                         </div>
-                        <div class="row p-3">
-                            <button type="button" class="col-sm btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
+                        <div class="row justify-content-md-center">
+                            <button id="buttonHome" type="button" class="col-2 btn w-50 p-1 btn-primary m-2 float-right" onclick="stepper1.previous()">Forrige</button>
 
-                            <button type="submit" class="col-sm w-50 p-1 btn btn-success m-2 float-left">Send</button>
+                            <button id="buttonHome" type="submit" class="col-2 w-50 p-1 btn btn-success m-2 float-left">Send</button>
                         </div>
-                </div>
+                    </div>
                    
                 </div>
             </div>
             }
     </div>
 </div>
-
+</div>
 
 <script src="bs-stepper.min.js"> </script>
  <script>
