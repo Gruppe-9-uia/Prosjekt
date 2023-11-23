@@ -58,7 +58,7 @@ namespace Prosjekt.Controllers
 
                 TempData["id"] = model.OrderNr;
 
-                return View("Parts");
+                return View("SavePart");
                
                 
 
@@ -118,7 +118,7 @@ namespace Prosjekt.Controllers
                     _context.SaveChanges();
                 }
 
-                return Redirect("Parts");
+                return View("SavePart");
 
 
             } catch (Exception ex)
@@ -162,7 +162,7 @@ namespace Prosjekt.Controllers
                 }
 
                 _context.SaveChanges();
-                return RedirectToAction();
+                return RedirectToAction("Oversikt", "Oversikt");
             }
             catch (Exception ex)
             {

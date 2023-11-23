@@ -36,7 +36,7 @@
         <div class="d-flex justify-content-center" style="margin-top: 30px;">
             <button type="reset" class="btn btn-danger button-spacing" onclick="confirmReset()">Reset</button>
             <button type="submit" class="btn btn-primary button-spacing">Legg til</button>
-            <button type="button" class="btn btn-primary button-spacing"> <a asp-controller="Serviceskjema" asp-action="Sign">Neste</a></button>
+            <button type="button" class="btn btn-primary button-spacing"> <a href="@Url.Action("Oversikt", "Oversikt")">Send inn</a></button>
         </div>
         <script>
             function confirmReset() {

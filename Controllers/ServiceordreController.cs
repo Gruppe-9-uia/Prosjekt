@@ -182,8 +182,8 @@ namespace Prosjekt.Controllers
                 }
 
                 _context.SaveChanges();
-                return View("Serviceordre");
 
+                return RedirectToAction("Oversikt", "Oversikt");
             }
             catch (Exception e)
             {
