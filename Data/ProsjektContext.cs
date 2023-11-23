@@ -191,7 +191,15 @@ namespace Prosjekt.Data
             modelBuilder.Entity<ServiceFormModel>()
                 .HasOne(s => s.OrderServiceformModel)
                 .WithOne(s => s.serviceForm)
-                .HasForeignKey<ServiceOrderServiceformModel>(s => s.FormID_int);
+                .HasForeignKey<ServiceOrderServiceformModel>(s => s.FormID_int)
+                .IsRequired(false);
+
+            modelBuilder.Entity<ChecklistModel>()
+                .HasOne(s => s.OrderServiceformModel)
+                .WithOne(s => s.checklist)
+                .HasForeignKey<ServiceOrderServiceformModel>(s => s.DocID_str)
+                .HasPrincipalKey<ChecklistModel>(c => c.DocID_str)
+                .IsRequired(false);
 
             //Equimenpment
             modelBuilder.Entity<EquipmentModel>()
@@ -247,7 +255,221 @@ namespace Prosjekt.Data
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "Elektro", Name = "Elektro", NormalizedName = "ELEKTRO", ConcurrencyStamp = "Elektro" }
             );
+
+            //Legger til employee
+            /*
+            modelBuilder.Entity<EmployeeUser>().HasData(
+                new EmployeeUser { RememberMe=false, Level_str="High", UserName= "TaylorSwift@mail.com", Email= "TaylorSwift@mail.com",
+                    NormalizedUserName= "TAYLORSWIFT@MAIL.COM", NormalizedEmail= "TAYLORSWIFT@MAIL.COM", EmailConfirmed=false,
+                    PasswordHash= "AQAAAAEAACcQAAAAEI8K1K4qrOE+dIR5nlqc7iN6y7RK4BBwlgeWK+R5KpoYC4l7kZR/B0nNWnCLtnfd0w==",
+                    SecurityStamp= "HJAEUP5XQQP5BCZ66OAZNPRX5EV4NH32", ConcurrencyStamp= "8c81b367-6fc5-4163-98d6-34bb8a7b1ce3",
+                    PhoneNumberConfirmed=false, TwoFactorEnabled=false, LockoutEnd=null, LockoutEnabled=true,AccessFailedCount=0
+                });
+            */
+
+            //Legger til equipment
+            modelBuilder.Entity<EquipmentModel>().HasData(
+                new EquipmentModel { Id_int = 1, Name_str = "Tommersaks", Availability=true });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 2, Name_str = "vinsjhaandtak", Availability = false });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 3, Name_str = "Hammer", Availability = false });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 4, Name_str = "Skrujern", Availability = true });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 5, Name_str = "Drill", Availability = true });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 6, Name_str = "Skrutrekker", Availability = false });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 7, Name_str = "Stikksag", Availability = false });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 8, Name_str = "Slagskrutrekker", Availability = true });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 9, Name_str = "Vinkelskrutrekker", Availability = true });
+            modelBuilder.Entity<EquipmentModel>().HasData(
+               new EquipmentModel { Id_int = 10, Name_str = "Multiverktoy", Availability = true });
+
+            //legger til parts
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int=1, EquipmentID_int=8, PartName_str= "Staaltau - 8 mm Metervare", Quantity_available_int= 20});
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 2, EquipmentID_int = 4, PartName_str = "Gullkjetting m/ krok og tverrpinne", Quantity_available_int = 40 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 3, EquipmentID_int = 1, PartName_str = "Spesialformet m/ stoppeknaster. 160 mm", Quantity_available_int = 10 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 4, EquipmentID_int = 7, PartName_str = "Snarekrok m/ splint", Quantity_available_int = 37 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 5, EquipmentID_int = 9, PartName_str = "Spesialtilpassethurtigkobling", Quantity_available_int = 5 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 6, EquipmentID_int = 10, PartName_str = "Motorsagholder", Quantity_available_int = 13 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 7, EquipmentID_int = 3, PartName_str = "Kasteblokk 2 t", Quantity_available_int = 17 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 8, EquipmentID_int = 6, PartName_str = "Loopekatt", Quantity_available_int = 31 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 9, EquipmentID_int = 2, PartName_str = "Toommersaks", Quantity_available_int = 17 });
+            modelBuilder.Entity<PartsModel>().HasData(
+                new PartsModel { PartID_int = 10, EquipmentID_int = 5, PartName_str = "Kraftoverføringsakselspesialutfoorelse for vinsj", Quantity_available_int = 7 });
+
+            //legger til postal code
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str = "4040", City_str="Tromsoo", State_str="Troms og Finnmark", Country_str="Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="4630", City_str="Kristiansand", State_str="Agder", Country_str="Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="3003", City_str="Stavanger", State_str="Rogaland", Country_str="Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="9354", City_str="Molde", State_str="Moore og Romsdal", Country_str="Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="7005", City_str = "Bodoo", State_str = "Nordland", Country_str = "Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="8911", City_str = "Trondheim", State_str = "Troondelag", Country_str = "Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="7070", City_str = "Narvik", State_str = "Nordland", Country_str = "Norge" } );
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="1118", City_str = "Kirkenes", State_str = "Troms og Finnmark", Country_str = "Norge" });
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="9311", City_str = "Svoveer", State_str = "Nordland", Country_str = "Norge" } );
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode { Postal_Code_str="7010", City_str = "Harstad", State_str = "Troms og Finnmark", Country_str = "Norge" });
+
+            //Legger til customer
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int= 1, FirstName_str="Dolly", LastName_str="Barrett", Phone_str="+47 4324 0016", Email_str="DollyRoberts@mail.com", Street_Address_str="Almveien 195", Postal_Code_str="4040"});
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 2, FirstName_str="Saul", LastName_str="Walsh", Phone_str="+47 437 45 352", Email_str="SaulWalsh@mail.com", Street_Address_str="Trollkleiva 109", Postal_Code_str="4630"});
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 3, FirstName_str="Jessie", LastName_str="Vega", Phone_str="+47 914 07 716", Email_str="JessieVega@mail.com", Street_Address_str="Gabbroveien 182", Postal_Code_str="3003" });
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 4, FirstName_str="Morris", LastName_str="Carson", Phone_str="+47 998 48 553", Email_str="MorrisCarson@mail.com", Street_Address_str="Nonshaugen 82", Postal_Code_str="9354"});
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 5, FirstName_str="Kelly", LastName_str="Stephens", Phone_str="+47 948 97 811", Email_str="KellyStephens@mail.com", Street_Address_str="Bjerkemyrveien 117", Postal_Code_str="7005" });
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 6, FirstName_str = "Buddy", LastName_str="Lutz", Phone_str="+47 420 54 744", Email_str="BuddyLutz@mail.com", Street_Address_str="Vaskerelven 62", Postal_Code_str="8911" });
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 7, FirstName_str = "Edward", LastName_str = "Medina", Phone_str = "+47 485 78 737", Email_str = "EdwardMedina@mail.com", Street_Address_str = " Årholsveien 230", Postal_Code_str = "7070" });
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 8, FirstName_str = "Jody", LastName_str = "Haney", Phone_str = "+47 930 85 126", Email_str = "JodyHaney@mail.com", Street_Address_str = "Bjørnehiet 62", Postal_Code_str = "1118" });
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 9, FirstName_str = "Greg", LastName_str = "Brown", Phone_str = "+47 492 04 498", Email_str = "GregBrown@mail.com", Street_Address_str = "Ryglandveien 138", Postal_Code_str = "9311" });
+            modelBuilder.Entity<CustomerModel>().HasData(
+                new CustomerModel { ID_int = 10, FirstName_str = "Kris", LastName_str = "Parrish", Phone_str = "+47 954 33 656", Email_str = "KrisParrish@mail.com", Street_Address_str = "Kornbråtenveien 226", Postal_Code_str = "7010" });
+
+            //Legger til product
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel {SerialNr_str="IG308011", ProductName_str="Igland 2501", Model_Year=2010, Product_Type_str="En-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel {SerialNr_str="IG308231", ProductName_str = "Igland 2501", Model_Year = 2010, Product_Type_str = "En-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel {SerialNr_str="IG300622", ProductName_str = "IGLAND 9002 Maxo TLP", Model_Year = 2023, Product_Type_str = "To-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300903", ProductName_str = "IGLAND 52", Model_Year = 2013, Product_Type_str = "En-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300990", ProductName_str = "IGLAND 51", Model_Year = 2019, Product_Type_str = "En-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300052", ProductName_str = "Igland 4501", Model_Year = 2020, Product_Type_str = "En-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300630", ProductName_str = "IGLAND 9002 MAXO", Model_Year = 2015, Product_Type_str = "Vinsjtopp" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300612", ProductName_str = "IGLAND 6002 Pronto TLP", Model_Year = 2013, Product_Type_str = "Tn-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300491", ProductName_str = "IGLAND 5002 Pento TL", Model_Year = 2005, Product_Type_str = "To-tromlet" });
+            modelBuilder.Entity<ProductModel>().HasData(
+                new ProductModel { SerialNr_str = "IG300191", ProductName_str = "IGLAND 85H", Model_Year = 2020, Product_Type_str = "En-tromlet" });
+
+            //Legger til Warranty
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int=1, WarrantyName_str="Lang garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int=2, WarrantyName_str="Kort garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 3, WarrantyName_str="Lang garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 4, WarrantyName_str="Middels garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 5, WarrantyName_str="Middels garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 6, WarrantyName_str="Lang garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int=7, WarrantyName_str="Kort garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 8, WarrantyName_str="Lang garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 9, WarrantyName_str="Lang garanti"});
+            modelBuilder.Entity<WarrantyModel>().HasData(
+                new WarrantyModel { ID_int= 10, WarrantyName_str="Kort garanti"});
+
+            //legg til customer_product
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel {SerialNr_str="IG308011", CustomerID_int= 1, WarrantyID_int= 10 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str="IG308231", CustomerID_int = 2, WarrantyID_int = 9 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300622", CustomerID_int = 3, WarrantyID_int = 8 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300903", CustomerID_int = 4, WarrantyID_int = 7 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300990", CustomerID_int = 5, WarrantyID_int = 6 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300052", CustomerID_int = 6, WarrantyID_int = 5 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300630", CustomerID_int = 7, WarrantyID_int = 4 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300612", CustomerID_int = 8, WarrantyID_int = 3 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300491", CustomerID_int = 9, WarrantyID_int = 2 });
+            modelBuilder.Entity<CustomerProductModel>().HasData(
+                new CustomerProductModel { SerialNr_str = "IG300191", CustomerID_int = 10, WarrantyID_int = 1 });
+
+            //Legger til Service_order
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel {OrderID_int=1, CustomerID_int= 1, CustomerId=1, SerialNr_str= "IG308011",  Order_type_str ="Vedlikehold", Received_Date=new DateOnly(2023,1,1), Description_From_Customer_str="Bytt ut ødelagte deler" });
+            
+            /*
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 2, "Installasjon", "2023-02-02", "Sett opp nytt utstyr" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 3, "Reparere", "2023-02-24", "Fiks system som ikke fungerer" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 4, "Oppgradering", "2022-04-02", "Forbedre systemytelsen" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 5, "Vedlikehold", "2022-04-20", "Rutinesjekk og service" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 6, "Reparere", "2021-06-05", "Løs tilkoblingsproblemer" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 7, "Oppgradering", "2023-07-06", "Forbedre systemytelsen" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 8, "Installasjon", "2023-08-07", "Legg til nye deler" });
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel { 9, "Vedlikehold", "2023-09-09", "Inspiser og rengjør"});
+            modelBuilder.Entity<ServiceOrderModel>().HasData(
+                new ServiceOrderModel {10, "Vedlikehold", "2023-10-17", "Rutinesjekk og service" });
+            */
+            //Legger til service_form
+            /*
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 1, "oodelagt", "2023-01-10", "2023-01-01", "2023-01-02", 1, "med bil" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 2, "justering", "2023-02-11", "2023-02-02", "2023-02-03", 1, "med posten" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 3, "oodelagt", "2022-03-12", "2022-03-03", "2022-03-04", 2, "med bil" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 4, "kontroll", "2022-04-13", "2022-04-04", "2022-04-05", 2, "med bil" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 5, "oodelagt", "2023-05-14", "2023-05-05", "2023-05-06", 2, "med posten" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 6, "kontroll", "2023-06-15", "2023-06-06", "2023-06-07", 4, "med bil" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 7, "justering", "2023-07-16", "2023-07-07", "2023-07-08", 5, "med henting" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 8, "oodelagt", "2022-08-17", "2022-08-08", "2022-08-09", 5, "med henting" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 9, "justering", "2023-09-18", "2023-09-09", "2023-09-10", 6, "med bil" });
+            modelBuilder.Entity<ServiceFormModel>().HasData(
+                new ServiceFormModel { 10, "kontroll", "2023-10-19", "2023-10-10", "2023-10-11", 7, "med posten" });
+            */
         }
+
 
         public DbSet<PostalCode>? Postal_Code { get; set; }
         public DbSet<CustomerModel>? Customer { get; set; }
