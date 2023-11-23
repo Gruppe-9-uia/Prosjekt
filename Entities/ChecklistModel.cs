@@ -68,7 +68,7 @@ namespace Prosjekt.Entities
         [StringLength(50)]
         public string EOil_gearbox { get; set; }
 
-
+        public ServiceOrderServiceformModel OrderServiceformModel { get; set; }
         public ProductModel product { get; set; }
 
         //Sign

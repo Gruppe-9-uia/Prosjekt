@@ -2,6 +2,9 @@
 {
     public class ServicesOrderViewModel
     {
+
+     
+
         //Services order
         public int OrderID_int { get; set; }
         public int CustomerID_int { get; set; }

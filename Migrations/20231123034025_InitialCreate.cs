@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Prosjekt.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreated : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -300,7 +300,7 @@ namespace Prosjekt.Migrations
                 {
                     PartID_int = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    PartName_str = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                    PartName_str = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Quantity_available_int = table.Column<int>(type: "int", nullable: false),
                     EquipmentID_int = table.Column<int>(type: "int", nullable: false)
@@ -373,24 +373,42 @@ namespace Prosjekt.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     comment_str = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Hydraulic_cylinder = table.Column<int>(type: "int", nullable: false),
-                    Hoses = table.Column<int>(type: "int", nullable: false),
-                    Hydraulic_block = table.Column<int>(type: "int", nullable: false),
-                    Oil_tank = table.Column<int>(type: "int", nullable: false),
-                    HOil_gearbox = table.Column<int>(type: "int", nullable: false),
-                    Ringe_cylinder_and_replace_seals = table.Column<int>(type: "int", nullable: false),
-                    Brake_cylinder_and_replace_seals = table.Column<int>(type: "int", nullable: false),
-                    Clutch_Plate = table.Column<int>(type: "int", nullable: false),
-                    Check_Brakes = table.Column<int>(type: "int", nullable: false),
-                    Bearing_drum = table.Column<int>(type: "int", nullable: false),
-                    PTO_and_storage = table.Column<int>(type: "int", nullable: false),
-                    Chain_tensioners = table.Column<int>(type: "int", nullable: false),
-                    Wire = table.Column<int>(type: "int", nullable: false),
-                    Pinion_bearing = table.Column<int>(type: "int", nullable: false),
-                    Wedge_on_sprocket = table.Column<int>(type: "int", nullable: false),
-                    Wiring_on_winch = table.Column<int>(type: "int", nullable: false),
-                    Test_radio = table.Column<int>(type: "int", nullable: false),
-                    EOil_gearbox = table.Column<int>(type: "int", nullable: false)
+                    Hydraulic_cylinder = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Hoses = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Hydraulic_block = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Oil_tank = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    HOil_gearbox = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Ringe_cylinder_and_replace_seals = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Brake_cylinder_and_replace_seals = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Clutch_Plate = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Check_Brakes = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Bearing_drum = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    PTO_and_storage = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Chain_tensioners = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Wire = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Pinion_bearing = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Wedge_on_sprocket = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Wiring_on_winch = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Test_radio = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    EOil_gearbox = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
@@ -563,7 +581,8 @@ namespace Prosjekt.Migrations
                     DocID_str = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     EmployeeID_int = table.Column<string>(type: "varchar(255)", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Sign_Date = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -622,17 +641,23 @@ namespace Prosjekt.Migrations
                 columns: table => new
                 {
                     OrderID_int = table.Column<int>(type: "int", nullable: false),
-                    FormID_int = table.Column<int>(type: "int", nullable: false)
+                    FormID_int = table.Column<int>(type: "int", nullable: false),
+                    DocID_str = table.Column<string>(type: "varchar(50)", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Service_Order_Service_form", x => x.OrderID_int);
                     table.ForeignKey(
+                        name: "FK_Service_Order_Service_form_Checklist_DocID_str",
+                        column: x => x.DocID_str,
+                        principalTable: "Checklist",
+                        principalColumn: "DocID_str");
+                    table.ForeignKey(
                         name: "FK_Service_Order_Service_form_Service_Form_FormID_int",
                         column: x => x.FormID_int,
                         principalTable: "Service_Form",
-                        principalColumn: "FormID_int",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "FormID_int");
                     table.ForeignKey(
                         name: "FK_Service_Order_Service_form_Service_ordre_OrderID_int",
                         column: x => x.OrderID_int,
@@ -652,6 +677,130 @@ namespace Prosjekt.Migrations
                     { "Hydraulisk", "Hydraulisk", "Hydraulisk", "HYDRAULISK" },
                     { "Mekanisk", "Mekanisk", "Mekanisk", "MEKANISK" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Equipment",
+                columns: new[] { "Id_int", "Availability", "Name_str" },
+                values: new object[,]
+                {
+                    { 1, true, "Tommersaks" },
+                    { 2, false, "vinsjhaandtak" },
+                    { 3, false, "Hammer" },
+                    { 4, true, "Skrujern" },
+                    { 5, true, "Drill" },
+                    { 6, false, "Skrutrekker" },
+                    { 7, false, "Stikksag" },
+                    { 8, true, "Slagskrutrekker" },
+                    { 9, true, "Vinkelskrutrekker" },
+                    { 10, true, "Multiverktoy" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Postal_Code",
+                columns: new[] { "Postal_Code_str", "City_str", "Country_str", "State_str" },
+                values: new object[,]
+                {
+                    { "1118", "Kirkenes", "Norge", "Troms og Finnmark" },
+                    { "3003", "Stavanger", "Norge", "Rogaland" },
+                    { "4040", "Tromsoo", "Norge", "Troms og Finnmark" },
+                    { "4630", "Kristiansand", "Norge", "Agder" },
+                    { "7005", "Bodoo", "Norge", "Nordland" },
+                    { "7010", "Harstad", "Norge", "Troms og Finnmark" },
+                    { "7070", "Narvik", "Norge", "Nordland" },
+                    { "8911", "Trondheim", "Norge", "Troondelag" },
+                    { "9311", "Svoveer", "Norge", "Nordland" },
+                    { "9354", "Molde", "Norge", "Moore og Romsdal" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Product",
+                columns: new[] { "SerialNr_str", "Model_Year", "ProductName_str", "Product_Type_str" },
+                values: new object[,]
+                {
+                    { "IG300052", 2020, "Igland 4501", "En-tromlet" },
+                    { "IG300191", 2020, "IGLAND 85H", "En-tromlet" },
+                    { "IG300491", 2005, "IGLAND 5002 Pento TL", "To-tromlet" },
+                    { "IG300612", 2013, "IGLAND 6002 Pronto TLP", "Tn-tromlet" },
+                    { "IG300622", 2023, "IGLAND 9002 Maxo TLP", "To-tromlet" },
+                    { "IG300630", 2015, "IGLAND 9002 MAXO", "Vinsjtopp" },
+                    { "IG300903", 2013, "IGLAND 52", "En-tromlet" },
+                    { "IG300990", 2019, "IGLAND 51", "En-tromlet" },
+                    { "IG308011", 2010, "Igland 2501", "En-tromlet" },
+                    { "IG308231", 2010, "Igland 2501", "En-tromlet" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Warranty",
+                columns: new[] { "ID_int", "WarrantyName_str" },
+                values: new object[,]
+                {
+                    { 1, "Lang garanti" },
+                    { 2, "Kort garanti" },
+                    { 3, "Lang garanti" },
+                    { 4, "Middels garanti" },
+                    { 5, "Middels garanti" },
+                    { 6, "Lang garanti" },
+                    { 7, "Kort garanti" },
+                    { 8, "Lang garanti" },
+                    { 9, "Lang garanti" },
+                    { 10, "Kort garanti" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Customer",
+                columns: new[] { "ID_int", "Email_str", "FirstName_str", "LastName_str", "Phone_str", "Postal_Code_str", "Street_Address_str" },
+                values: new object[,]
+                {
+                    { 1, "DollyRoberts@mail.com", "Dolly", "Barrett", "+47 4324 0016", "4040", "Almveien 195" },
+                    { 2, "SaulWalsh@mail.com", "Saul", "Walsh", "+47 437 45 352", "4630", "Trollkleiva 109" },
+                    { 3, "JessieVega@mail.com", "Jessie", "Vega", "+47 914 07 716", "3003", "Gabbroveien 182" },
+                    { 4, "MorrisCarson@mail.com", "Morris", "Carson", "+47 998 48 553", "9354", "Nonshaugen 82" },
+                    { 5, "KellyStephens@mail.com", "Kelly", "Stephens", "+47 948 97 811", "7005", "Bjerkemyrveien 117" },
+                    { 6, "BuddyLutz@mail.com", "Buddy", "Lutz", "+47 420 54 744", "8911", "Vaskerelven 62" },
+                    { 7, "EdwardMedina@mail.com", "Edward", "Medina", "+47 485 78 737", "7070", " Årholsveien 230" },
+                    { 8, "JodyHaney@mail.com", "Jody", "Haney", "+47 930 85 126", "1118", "Bjørnehiet 62" },
+                    { 9, "GregBrown@mail.com", "Greg", "Brown", "+47 492 04 498", "9311", "Ryglandveien 138" },
+                    { 10, "KrisParrish@mail.com", "Kris", "Parrish", "+47 954 33 656", "7010", "Kornbråtenveien 226" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Parts",
+                columns: new[] { "PartID_int", "EquipmentID_int", "PartName_str", "Quantity_available_int" },
+                values: new object[,]
+                {
+                    { 1, 8, "Staaltau - 8 mm Metervare", 20 },
+                    { 2, 4, "Gullkjetting m/ krok og tverrpinne", 40 },
+                    { 3, 1, "Spesialformet m/ stoppeknaster. 160 mm", 10 },
+                    { 4, 7, "Snarekrok m/ splint", 37 },
+                    { 5, 9, "Spesialtilpassethurtigkobling", 5 },
+                    { 6, 10, "Motorsagholder", 13 },
+                    { 7, 3, "Kasteblokk 2 t", 17 },
+                    { 8, 6, "Loopekatt", 31 },
+                    { 9, 2, "Toommersaks", 17 },
+                    { 10, 5, "Kraftoverføringsakselspesialutfoorelse for vinsj", 7 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Customer_Product",
+                columns: new[] { "CustomerID_int", "SerialNr_str", "WarrantyID_int" },
+                values: new object[,]
+                {
+                    { 1, "IG308011", 10 },
+                    { 2, "IG308231", 9 },
+                    { 3, "IG300622", 8 },
+                    { 4, "IG300903", 7 },
+                    { 5, "IG300990", 6 },
+                    { 6, "IG300052", 5 },
+                    { 7, "IG300630", 4 },
+                    { 8, "IG300612", 3 },
+                    { 9, "IG300491", 2 },
+                    { 10, "IG300191", 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Service_ordre",
+                columns: new[] { "CustomerID_int", "OrderID_int", "CustomerId", "Description_From_Customer_str", "Order_type_str", "Received_Date", "SerialNr_str" },
+                values: new object[] { 1, 1, 1, "Bytt ut ødelagte deler", "Vedlikehold", new DateOnly(2023, 1, 1), "IG308011" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -756,6 +905,12 @@ namespace Prosjekt.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Service_Order_Service_form_DocID_str",
+                table: "Service_Order_Service_form",
+                column: "DocID_str",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Service_Order_Service_form_FormID_int",
                 table: "Service_Order_Service_form",
                 column: "FormID_int",
@@ -814,10 +969,10 @@ namespace Prosjekt.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Checklist");
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Checklist");
 
             migrationBuilder.DropTable(
                 name: "Service_ordre");

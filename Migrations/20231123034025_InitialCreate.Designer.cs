@@ -11,8 +11,8 @@ using Prosjekt.Data;
 namespace Prosjekt.Migrations
 {
     [DbContext(typeof(ProsjektContext))]
-    [Migration("20231122094101_InitialCreated")]
-    partial class InitialCreated
+    [Migration("20231123034025_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -189,49 +189,75 @@ namespace Prosjekt.Migrations
                     b.Property<string>("SerialNr_str")
                         .HasColumnType("varchar(100)");
 
-                    b.Property<int>("Bearing_drum")
-                        .HasColumnType("int");
+                    b.Property<string>("Bearing_drum")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Brake_cylinder_and_replace_seals")
-                        .HasColumnType("int");
+                    b.Property<string>("Brake_cylinder_and_replace_seals")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Brake_force")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Chain_tensioners")
-                        .HasColumnType("int");
+                    b.Property<string>("Chain_tensioners")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Check_Brakes")
-                        .HasColumnType("int");
+                    b.Property<string>("Check_Brakes")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Clutch_Plate")
-                        .HasColumnType("int");
+                    b.Property<string>("Clutch_Plate")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("EOil_gearbox")
-                        .HasColumnType("int");
+                    b.Property<string>("EOil_gearbox")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("HOil_gearbox")
-                        .HasColumnType("int");
+                    b.Property<string>("HOil_gearbox")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Hoses")
-                        .HasColumnType("int");
+                    b.Property<string>("Hoses")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Hydraulic_block")
-                        .HasColumnType("int");
+                    b.Property<string>("Hydraulic_block")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Hydraulic_cylinder")
-                        .HasColumnType("int");
+                    b.Property<string>("Hydraulic_cylinder")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Oil_tank")
-                        .HasColumnType("int");
+                    b.Property<string>("Oil_tank")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("PTO_and_storage")
-                        .HasColumnType("int");
+                    b.Property<string>("PTO_and_storage")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Pinion_bearing")
-                        .HasColumnType("int");
+                    b.Property<string>("Pinion_bearing")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Prepared_by_str")
                         .IsRequired()
@@ -243,14 +269,18 @@ namespace Prosjekt.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Ringe_cylinder_and_replace_seals")
-                        .HasColumnType("int");
+                    b.Property<string>("Ringe_cylinder_and_replace_seals")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateOnly>("Starting_Date")
                         .HasColumnType("date");
 
-                    b.Property<int>("Test_radio")
-                        .HasColumnType("int");
+                    b.Property<string>("Test_radio")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Test_winch")
                         .IsRequired()
@@ -267,14 +297,20 @@ namespace Prosjekt.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Wedge_on_sprocket")
-                        .HasColumnType("int");
+                    b.Property<string>("Wedge_on_sprocket")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Wire")
-                        .HasColumnType("int");
+                    b.Property<string>("Wire")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Wiring_on_winch")
-                        .HasColumnType("int");
+                    b.Property<string>("Wiring_on_winch")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("comment_str")
                         .IsRequired()
@@ -301,6 +337,9 @@ namespace Prosjekt.Migrations
 
                     b.Property<string>("EmployeeID_int")
                         .HasColumnType("varchar(255)");
+
+                    b.Property<DateOnly>("Sign_Date")
+                        .HasColumnType("date");
 
                     b.HasKey("DocID_str", "EmployeeID_int");
 
@@ -354,6 +393,108 @@ namespace Prosjekt.Migrations
                     b.HasIndex("Postal_Code_str");
 
                     b.ToTable("Customer");
+
+                    b.HasData(
+                        new
+                        {
+                            ID_int = 1,
+                            Email_str = "DollyRoberts@mail.com",
+                            FirstName_str = "Dolly",
+                            LastName_str = "Barrett",
+                            Phone_str = "+47 4324 0016",
+                            Postal_Code_str = "4040",
+                            Street_Address_str = "Almveien 195"
+                        },
+                        new
+                        {
+                            ID_int = 2,
+                            Email_str = "SaulWalsh@mail.com",
+                            FirstName_str = "Saul",
+                            LastName_str = "Walsh",
+                            Phone_str = "+47 437 45 352",
+                            Postal_Code_str = "4630",
+                            Street_Address_str = "Trollkleiva 109"
+                        },
+                        new
+                        {
+                            ID_int = 3,
+                            Email_str = "JessieVega@mail.com",
+                            FirstName_str = "Jessie",
+                            LastName_str = "Vega",
+                            Phone_str = "+47 914 07 716",
+                            Postal_Code_str = "3003",
+                            Street_Address_str = "Gabbroveien 182"
+                        },
+                        new
+                        {
+                            ID_int = 4,
+                            Email_str = "MorrisCarson@mail.com",
+                            FirstName_str = "Morris",
+                            LastName_str = "Carson",
+                            Phone_str = "+47 998 48 553",
+                            Postal_Code_str = "9354",
+                            Street_Address_str = "Nonshaugen 82"
+                        },
+                        new
+                        {
+                            ID_int = 5,
+                            Email_str = "KellyStephens@mail.com",
+                            FirstName_str = "Kelly",
+                            LastName_str = "Stephens",
+                            Phone_str = "+47 948 97 811",
+                            Postal_Code_str = "7005",
+                            Street_Address_str = "Bjerkemyrveien 117"
+                        },
+                        new
+                        {
+                            ID_int = 6,
+                            Email_str = "BuddyLutz@mail.com",
+                            FirstName_str = "Buddy",
+                            LastName_str = "Lutz",
+                            Phone_str = "+47 420 54 744",
+                            Postal_Code_str = "8911",
+                            Street_Address_str = "Vaskerelven 62"
+                        },
+                        new
+                        {
+                            ID_int = 7,
+                            Email_str = "EdwardMedina@mail.com",
+                            FirstName_str = "Edward",
+                            LastName_str = "Medina",
+                            Phone_str = "+47 485 78 737",
+                            Postal_Code_str = "7070",
+                            Street_Address_str = " Årholsveien 230"
+                        },
+                        new
+                        {
+                            ID_int = 8,
+                            Email_str = "JodyHaney@mail.com",
+                            FirstName_str = "Jody",
+                            LastName_str = "Haney",
+                            Phone_str = "+47 930 85 126",
+                            Postal_Code_str = "1118",
+                            Street_Address_str = "Bjørnehiet 62"
+                        },
+                        new
+                        {
+                            ID_int = 9,
+                            Email_str = "GregBrown@mail.com",
+                            FirstName_str = "Greg",
+                            LastName_str = "Brown",
+                            Phone_str = "+47 492 04 498",
+                            Postal_Code_str = "9311",
+                            Street_Address_str = "Ryglandveien 138"
+                        },
+                        new
+                        {
+                            ID_int = 10,
+                            Email_str = "KrisParrish@mail.com",
+                            FirstName_str = "Kris",
+                            LastName_str = "Parrish",
+                            Phone_str = "+47 954 33 656",
+                            Postal_Code_str = "7010",
+                            Street_Address_str = "Kornbråtenveien 226"
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.CustomerProductModel", b =>
@@ -374,6 +515,68 @@ namespace Prosjekt.Migrations
                     b.HasAlternateKey("WarrantyID_int");
 
                     b.ToTable("Customer_Product");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomerID_int = 1,
+                            SerialNr_str = "IG308011",
+                            WarrantyID_int = 10
+                        },
+                        new
+                        {
+                            CustomerID_int = 2,
+                            SerialNr_str = "IG308231",
+                            WarrantyID_int = 9
+                        },
+                        new
+                        {
+                            CustomerID_int = 3,
+                            SerialNr_str = "IG300622",
+                            WarrantyID_int = 8
+                        },
+                        new
+                        {
+                            CustomerID_int = 4,
+                            SerialNr_str = "IG300903",
+                            WarrantyID_int = 7
+                        },
+                        new
+                        {
+                            CustomerID_int = 5,
+                            SerialNr_str = "IG300990",
+                            WarrantyID_int = 6
+                        },
+                        new
+                        {
+                            CustomerID_int = 6,
+                            SerialNr_str = "IG300052",
+                            WarrantyID_int = 5
+                        },
+                        new
+                        {
+                            CustomerID_int = 7,
+                            SerialNr_str = "IG300630",
+                            WarrantyID_int = 4
+                        },
+                        new
+                        {
+                            CustomerID_int = 8,
+                            SerialNr_str = "IG300612",
+                            WarrantyID_int = 3
+                        },
+                        new
+                        {
+                            CustomerID_int = 9,
+                            SerialNr_str = "IG300491",
+                            WarrantyID_int = 2
+                        },
+                        new
+                        {
+                            CustomerID_int = 10,
+                            SerialNr_str = "IG300191",
+                            WarrantyID_int = 1
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.EmployeeUser", b =>
@@ -475,6 +678,68 @@ namespace Prosjekt.Migrations
                     b.HasKey("Id_int");
 
                     b.ToTable("Equipment");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_int = 1,
+                            Availability = true,
+                            Name_str = "Tommersaks"
+                        },
+                        new
+                        {
+                            Id_int = 2,
+                            Availability = false,
+                            Name_str = "vinsjhaandtak"
+                        },
+                        new
+                        {
+                            Id_int = 3,
+                            Availability = false,
+                            Name_str = "Hammer"
+                        },
+                        new
+                        {
+                            Id_int = 4,
+                            Availability = true,
+                            Name_str = "Skrujern"
+                        },
+                        new
+                        {
+                            Id_int = 5,
+                            Availability = true,
+                            Name_str = "Drill"
+                        },
+                        new
+                        {
+                            Id_int = 6,
+                            Availability = false,
+                            Name_str = "Skrutrekker"
+                        },
+                        new
+                        {
+                            Id_int = 7,
+                            Availability = false,
+                            Name_str = "Stikksag"
+                        },
+                        new
+                        {
+                            Id_int = 8,
+                            Availability = true,
+                            Name_str = "Slagskrutrekker"
+                        },
+                        new
+                        {
+                            Id_int = 9,
+                            Availability = true,
+                            Name_str = "Vinkelskrutrekker"
+                        },
+                        new
+                        {
+                            Id_int = 10,
+                            Availability = true,
+                            Name_str = "Multiverktoy"
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.PartsModel", b =>
@@ -488,8 +753,8 @@ namespace Prosjekt.Migrations
 
                     b.Property<string>("PartName_str")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int>("Quantity_available_int")
                         .HasColumnType("int");
@@ -500,6 +765,78 @@ namespace Prosjekt.Migrations
                         .IsUnique();
 
                     b.ToTable("Parts");
+
+                    b.HasData(
+                        new
+                        {
+                            PartID_int = 1,
+                            EquipmentID_int = 8,
+                            PartName_str = "Staaltau - 8 mm Metervare",
+                            Quantity_available_int = 20
+                        },
+                        new
+                        {
+                            PartID_int = 2,
+                            EquipmentID_int = 4,
+                            PartName_str = "Gullkjetting m/ krok og tverrpinne",
+                            Quantity_available_int = 40
+                        },
+                        new
+                        {
+                            PartID_int = 3,
+                            EquipmentID_int = 1,
+                            PartName_str = "Spesialformet m/ stoppeknaster. 160 mm",
+                            Quantity_available_int = 10
+                        },
+                        new
+                        {
+                            PartID_int = 4,
+                            EquipmentID_int = 7,
+                            PartName_str = "Snarekrok m/ splint",
+                            Quantity_available_int = 37
+                        },
+                        new
+                        {
+                            PartID_int = 5,
+                            EquipmentID_int = 9,
+                            PartName_str = "Spesialtilpassethurtigkobling",
+                            Quantity_available_int = 5
+                        },
+                        new
+                        {
+                            PartID_int = 6,
+                            EquipmentID_int = 10,
+                            PartName_str = "Motorsagholder",
+                            Quantity_available_int = 13
+                        },
+                        new
+                        {
+                            PartID_int = 7,
+                            EquipmentID_int = 3,
+                            PartName_str = "Kasteblokk 2 t",
+                            Quantity_available_int = 17
+                        },
+                        new
+                        {
+                            PartID_int = 8,
+                            EquipmentID_int = 6,
+                            PartName_str = "Loopekatt",
+                            Quantity_available_int = 31
+                        },
+                        new
+                        {
+                            PartID_int = 9,
+                            EquipmentID_int = 2,
+                            PartName_str = "Toommersaks",
+                            Quantity_available_int = 17
+                        },
+                        new
+                        {
+                            PartID_int = 10,
+                            EquipmentID_int = 5,
+                            PartName_str = "Kraftoverføringsakselspesialutfoorelse for vinsj",
+                            Quantity_available_int = 7
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.PostalCode", b =>
@@ -526,6 +863,78 @@ namespace Prosjekt.Migrations
                     b.HasKey("Postal_Code_str");
 
                     b.ToTable("Postal_Code");
+
+                    b.HasData(
+                        new
+                        {
+                            Postal_Code_str = "4040",
+                            City_str = "Tromsoo",
+                            Country_str = "Norge",
+                            State_str = "Troms og Finnmark"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "4630",
+                            City_str = "Kristiansand",
+                            Country_str = "Norge",
+                            State_str = "Agder"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "3003",
+                            City_str = "Stavanger",
+                            Country_str = "Norge",
+                            State_str = "Rogaland"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "9354",
+                            City_str = "Molde",
+                            Country_str = "Norge",
+                            State_str = "Moore og Romsdal"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "7005",
+                            City_str = "Bodoo",
+                            Country_str = "Norge",
+                            State_str = "Nordland"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "8911",
+                            City_str = "Trondheim",
+                            Country_str = "Norge",
+                            State_str = "Troondelag"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "7070",
+                            City_str = "Narvik",
+                            Country_str = "Norge",
+                            State_str = "Nordland"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "1118",
+                            City_str = "Kirkenes",
+                            Country_str = "Norge",
+                            State_str = "Troms og Finnmark"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "9311",
+                            City_str = "Svoveer",
+                            Country_str = "Norge",
+                            State_str = "Nordland"
+                        },
+                        new
+                        {
+                            Postal_Code_str = "7010",
+                            City_str = "Harstad",
+                            Country_str = "Norge",
+                            State_str = "Troms og Finnmark"
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ProductModel", b =>
@@ -550,6 +959,78 @@ namespace Prosjekt.Migrations
                     b.HasKey("SerialNr_str");
 
                     b.ToTable("Product");
+
+                    b.HasData(
+                        new
+                        {
+                            SerialNr_str = "IG308011",
+                            Model_Year = 2010,
+                            ProductName_str = "Igland 2501",
+                            Product_Type_str = "En-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG308231",
+                            Model_Year = 2010,
+                            ProductName_str = "Igland 2501",
+                            Product_Type_str = "En-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300622",
+                            Model_Year = 2023,
+                            ProductName_str = "IGLAND 9002 Maxo TLP",
+                            Product_Type_str = "To-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300903",
+                            Model_Year = 2013,
+                            ProductName_str = "IGLAND 52",
+                            Product_Type_str = "En-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300990",
+                            Model_Year = 2019,
+                            ProductName_str = "IGLAND 51",
+                            Product_Type_str = "En-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300052",
+                            Model_Year = 2020,
+                            ProductName_str = "Igland 4501",
+                            Product_Type_str = "En-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300630",
+                            Model_Year = 2015,
+                            ProductName_str = "IGLAND 9002 MAXO",
+                            Product_Type_str = "Vinsjtopp"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300612",
+                            Model_Year = 2013,
+                            ProductName_str = "IGLAND 6002 Pronto TLP",
+                            Product_Type_str = "Tn-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300491",
+                            Model_Year = 2005,
+                            ProductName_str = "IGLAND 5002 Pento TL",
+                            Product_Type_str = "To-tromlet"
+                        },
+                        new
+                        {
+                            SerialNr_str = "IG300191",
+                            Model_Year = 2020,
+                            ProductName_str = "IGLAND 85H",
+                            Product_Type_str = "En-tromlet"
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ReplacedPartsReturnedModel", b =>
@@ -693,6 +1174,18 @@ namespace Prosjekt.Migrations
                         .IsUnique();
 
                     b.ToTable("Service_ordre");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderID_int = 1,
+                            CustomerID_int = 1,
+                            CustomerId = 1,
+                            Description_From_Customer_str = "Bytt ut ødelagte deler",
+                            Order_type_str = "Vedlikehold",
+                            Received_Date = new DateOnly(2023, 1, 1),
+                            SerialNr_str = "IG308011"
+                        });
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.ServiceOrderServiceformModel", b =>
@@ -700,10 +1193,16 @@ namespace Prosjekt.Migrations
                     b.Property<int>("OrderID_int")
                         .HasColumnType("int");
 
+                    b.Property<string>("DocID_str")
+                        .HasColumnType("varchar(50)");
+
                     b.Property<int>("FormID_int")
                         .HasColumnType("int");
 
                     b.HasKey("OrderID_int");
+
+                    b.HasIndex("DocID_str")
+                        .IsUnique();
 
                     b.HasIndex("FormID_int")
                         .IsUnique();
@@ -744,6 +1243,58 @@ namespace Prosjekt.Migrations
                     b.HasKey("ID_int");
 
                     b.ToTable("Warranty");
+
+                    b.HasData(
+                        new
+                        {
+                            ID_int = 1,
+                            WarrantyName_str = "Lang garanti"
+                        },
+                        new
+                        {
+                            ID_int = 2,
+                            WarrantyName_str = "Kort garanti"
+                        },
+                        new
+                        {
+                            ID_int = 3,
+                            WarrantyName_str = "Lang garanti"
+                        },
+                        new
+                        {
+                            ID_int = 4,
+                            WarrantyName_str = "Middels garanti"
+                        },
+                        new
+                        {
+                            ID_int = 5,
+                            WarrantyName_str = "Middels garanti"
+                        },
+                        new
+                        {
+                            ID_int = 6,
+                            WarrantyName_str = "Lang garanti"
+                        },
+                        new
+                        {
+                            ID_int = 7,
+                            WarrantyName_str = "Kort garanti"
+                        },
+                        new
+                        {
+                            ID_int = 8,
+                            WarrantyName_str = "Lang garanti"
+                        },
+                        new
+                        {
+                            ID_int = 9,
+                            WarrantyName_str = "Lang garanti"
+                        },
+                        new
+                        {
+                            ID_int = 10,
+                            WarrantyName_str = "Kort garanti"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -964,11 +1515,14 @@ namespace Prosjekt.Migrations
 
             modelBuilder.Entity("Prosjekt.Entities.ServiceOrderServiceformModel", b =>
                 {
+                    b.HasOne("Prosjekt.Entities.ChecklistModel", "checklist")
+                        .WithOne("OrderServiceformModel")
+                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "DocID_str")
+                        .HasPrincipalKey("Prosjekt.Entities.ChecklistModel", "DocID_str");
+
                     b.HasOne("Prosjekt.Entities.ServiceFormModel", "serviceForm")
                         .WithOne("OrderServiceformModel")
-                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "FormID_int")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Prosjekt.Entities.ServiceOrderServiceformModel", "FormID_int");
 
                     b.HasOne("Prosjekt.Entities.ServiceOrderModel", "ServiceOrder")
                         .WithOne("OrderServiceformModel")
@@ -978,6 +1532,8 @@ namespace Prosjekt.Migrations
                         .IsRequired();
 
                     b.Navigation("ServiceOrder");
+
+                    b.Navigation("checklist");
 
                     b.Navigation("serviceForm");
                 });
@@ -1004,6 +1560,9 @@ namespace Prosjekt.Migrations
             modelBuilder.Entity("Prosjekt.Entities.ChecklistModel", b =>
                 {
                     b.Navigation("ChecklistSignature");
+
+                    b.Navigation("OrderServiceformModel")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Prosjekt.Entities.CustomerModel", b =>
