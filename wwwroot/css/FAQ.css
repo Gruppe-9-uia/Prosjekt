@@ -1,0 +1,35 @@
+.accordion-button.selected {
+    border-color: #FF6700 !important; /* Legg til ønsket kantfarge for den valgte tilstanden */
+}
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button:focus,
+.accordion-button:active {
+    box-shadow: none; /* Fjern skyggen ved fokus og klikk */
+    background-color: #FF6700; /* Tilpass bakgrunnsfarge ved fokus og klikk om nødvendig */
+    color: #000000; /* Tilpass tekstfarge ved fokus og klikk om nødvendig */
+}
+
+.accordion-button {
+    background-color: #ffffff !important; /* Legg til ønsket bakgrunnsfarge */
+    color: #000000; /* Legg til ønsket tekstfarge */
+    border: 1px solid #000000; /* Legg til ønsket kantfarge */
+    border-radius: 3px; /* Legg til ønsket avrunding på kantene */
+    padding: 10px 15px; /* Juster padding for å gjøre boksene smalere */
+}
+
+.accordion-button.collapsed {
+    background-color: #ffffff; /* Legg til ønsket bakgrunnsfarge for den aktive tilstanden */
+}
+
+.accordion-button:hover {
+    border-color: #FF6700; /* Legg til ønsket kantfarge ved hover */
+    color: #000000; /* Legg til ønsket tekstfarge ved hover */
+}
+
+.accordion-body {
+    padding: 15px; /* Legg til ønsket padding for innholdet */
+}
+
