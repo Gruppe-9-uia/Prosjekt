@@ -1,6 +1,8 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Controllers;
+using Xunit;
+
 
 namespace Prosjekt.TestProject.Controllers
 {
