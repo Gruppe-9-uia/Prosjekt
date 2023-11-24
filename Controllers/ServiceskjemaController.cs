@@ -124,7 +124,7 @@ namespace Prosjekt.Controllers
             } catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                return View("Parts");
+                return View("SavePart");
             }
         }
 
