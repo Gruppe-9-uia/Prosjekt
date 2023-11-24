@@ -16,7 +16,7 @@
  </div>
         
     
-    @using (Html.BeginForm("SumbitKontaktForm", "Kontakt"))
+    @using (Html.BeginForm("SumbitKontaktForm", "Kontakt", FormMethod.Post, new { id = "kontaktForm"}))
                     {
                             @Html.AntiForgeryToken()
         <div class="w-75 m-auto" style="position: relative; z-index: 1;">
@@ -133,7 +133,7 @@
             <div>
                 <P>
                     <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
-                    +47 3822 72 550
+                    +47 382 72 550
                 </P>
             </div>
             <div>
@@ -271,4 +271,30 @@
         </div>
     </div>
 </div>
+
+<script>
+// validering av form-et, med confimation
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('kontaktForm');
+        
+        form.addEventListener('submit', function (event) {
+            if (!validateForm()) {
+                event.preventDefault();
+                alert('Vennligst fyll inn alle feltene.');
+            } else {
+                alert('Hendvendelsen har blitt sendt inn! Du hører fra oss så snart vi har fått behandlet den.');
+            }
+        });
+        
+        function validateForm() {
+        var requiredFields = form.querySelectorAll('[required]');
+        for (var i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].value.trim()) {
+                return false;
+            }
+        }
+        return true;
+       }
+    });
+</script>
 
