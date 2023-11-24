@@ -3,20 +3,24 @@
     ViewData["Title"] = "Kontakt oss";
 }
 
-<div class="container wv-100">
-    <!-- TODO legg til bilde -->
-</div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="container">
 
-        <div class="m-3 text-center">
-            <h1>Kontakt oss</h1>
-        </div>
+
+
+
+    <div class="container">
+        <h1 class="text-center mt-4">Kontakt oss</h1>
+        <div class="col" style="position: absolute; z-index: 0; display: flex; justify-content: center; align-items: center; opacity: 0.5;">
+        <img src="~/Images/kart2.png" alt="kart" class="img-responsive" style="width: 70%;">
+ </div>
+        
+    
     @using (Html.BeginForm("SumbitKontaktForm", "Kontakt"))
                     {
                             @Html.AntiForgeryToken()
-        <div class="w-75 m-auto">
-        <div class=" d-flex flex-row w-100">
+        <div class="w-75 m-auto" style="position: relative; z-index: 1;">
+        <div class=" d-flex flex-row w-100" style="z-index: 1;">
             <div class="col">
                 <div class="form-group">
                     <label for="navn">
@@ -36,20 +40,20 @@
         <div class=" d-flex flex-row w-100 p-0">
             <div class="col">
                     <div class="form-group">
-                    <input type="text" class="form-control" id="navn" asp-for="navn" placeholder="Fult navn" required>
+                    <input type="text" class="form-control" id="navn" asp-for="navn" placeholder="Fullt navn" required>
                     </div>
                 </div>
 
             <div class="col align-items-center">
                     <div class="form-group">
-                    <input type="text" class="form-control" id="telefon" asp-for="telefon" placeholder="+47 777777" required>
+                    <input type="text" class="form-control" id="telefon" asp-for="telefon" placeholder="+47 123 45 678" required>
                     </div>
                 </div>
             </div>
         <div class=" d-flex flex-row w-100">
             <div class="col">
                 <div class="form-group">
-                    <label for="emial">
+                    <label for="email">
                         <h5>Email</h5>
                     </label>
                 </div>
@@ -69,7 +73,7 @@
         <div class=" d-flex flex-row w-100 p-0 mb-3">
             <div class="col align-items-center">
                     <div class="form-group">
-                    <input type="text" class="form-control" id="email" asp-for="email" placeholder="example@gmail.com" required>
+                    <input type="text" class="form-control" id="email" asp-for="email" placeholder="eksempel@gmail.com" required>
                     </div>
                 </div>
 
@@ -84,7 +88,7 @@
             <div class="col">
                 <div class="form-group text-center m-auto">
                     <label for="melding">
-                        <h5>Melding</h5>
+                        <h5 style="font-style: italic;">Send inn din henvendelse:</h5>
                     </label>
                 </div>
             </div>
@@ -107,10 +111,10 @@
         }
 </div>
 
-<div class="container vw-100">
+<div class="container vw-100" style="position: relative; z-index: 1;">
     <div class="text-center align-content-center">
         <h2>Kontorer</h2>
-        <p>Kom i kontakt med en av våre globale kontorer</p>
+        <p>Kom i kontakt med et av våre globale kontorer!</p>
     </div>
 
     <div class="d-flex flex-wrap float-left">
