@@ -133,11 +133,11 @@
 
 <script>
 $(document).ready(function () {
-    // Hent tabellen og rader
+    // Hent tabellen og rade
     var table = $('.table');
     var rows = table.find('tbody > tr').toArray();
 
-    // Sorter rader basert på nåværende tid og dato
+    // Sorter rader etter nåværende tid og dato
 rows.sort(function (a, b) {
     var dateA = parseDate($(a).find('td:eq(8)').text());
     var dateB = parseDate($(b).find('td:eq(8)').text());
@@ -147,7 +147,7 @@ rows.sort(function (a, b) {
 
     return dateA - dateB;
 });
-    // Bytt ut de eksisterende radene med de sorterte radene
+    // Bytt ut radene med de sorterte radene
     for (var i = 0; i < rows.length; i++) {
         table.append(rows[i]);
     }
