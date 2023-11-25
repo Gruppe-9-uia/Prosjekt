@@ -2,21 +2,29 @@
     display: block;
     width: 100%;
     text-align: left;
+    padding: 20px; /* Increase padding */
+    font-size: 18px; /* Adjust font size */
 }
-
-
-.accordion-button {
-    padding: 10px 15px;
-}
-
 
 @media (min-width: 768px) {
     .accordion-button {
         margin: 0 auto;
-        max-width: 800px; 
+        max-width: 800px;
     }
 }
 
+.accordion-body {
+    padding: 60px; /* Increase padding */
+    text-align: left;
+    font-size: 16px; /* Adjust font size */
+}
+
+@media (min-width: 768px) {
+    .accordion-body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
 .accordion-body {
     padding: 15px;
     text-align: left; 
@@ -66,12 +74,18 @@
 }
 
 .accordion-button i {
-    margin-right: 10px; 
-    transition: transform 0.3s ease-in-out; 
-    transform: rotate(0deg); 
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg); /* Roter pilen 0 grader i utgangspunktet */
 }
 
-.accordion-button:not(.collapsed) i {
-    transform: rotate(90deg); 
+.accordion-button i.rotate-icon {
+    transform: rotate(90deg); /* Roter pilen 90 grader når boksen er åpen */
 }
+
+.accordion-button.collapsed i.rotate-icon {
+    transform: rotate(0deg); /* Roter pilen 0 grader når boksen er lukket */
+}
+
+
 
