@@ -13,20 +13,27 @@
     width: 140px; 
     height: auto; 
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .footer-brand img {
     max-height: 42px; 
-    width: 170px;
+    width: 150px;
+    margin-top: 20px !important;
+    margin-left: 10px;
+}
+
+.social-icon img {
+    width: 42px;
+    height: auto;
+    display: flex;
+    margin-top: 20px !important;
 }
 
 .text-lighter-white {
     color: #FFFFFFB2 
 }
 
-.social-icon img {
-    width: 36px !important;
-}
 
 .border-bottom {
     border-bottom: solid 4px #FF6700!important;
@@ -38,7 +45,6 @@
 a:link {
     text-decoration: none;
 }
-
 
 
 .hamburger {
@@ -119,5 +125,28 @@ a:link {
     color: black;
     background-color: #FF6700 !important;
     border-color: #FF6700 !important;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.carousel-item {
+    height: 100vh; /* Setter høyden på hvert karusellelement til full viewport-høyde */
+}
+
+.carousel-item img {
+    height: 100%; /* Sørger for at bildene strekker seg for å fylle karusellelementet */
+    object-fit: cover; /* Sørger for at bildet dekker hele området uten å miste aspektforhold */
+}
+
+
+.carousel-header {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    color: white;
 }
 
