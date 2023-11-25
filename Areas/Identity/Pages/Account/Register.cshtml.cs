@@ -107,7 +107,10 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             [Display(Name = "Telefon")]
             public string PhoneNumber { get; set; }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2395385694e338eba81f036e70654218624b8d3
             [Display(Name = "Avdeling")]
             public string Department { get; set; }
         }
@@ -161,6 +164,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                         }
                         else
                         {
+                        return RedirectToAction("Employees", "Employees");
                             //await _signInManager.SignInAsync(user, isPersistent: false);
                             //return LocalRedirect(returnUrl);
                         }
