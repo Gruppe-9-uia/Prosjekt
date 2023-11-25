@@ -2,8 +2,13 @@
     display: block;
     width: 100%;
     text-align: left;
-    padding: 20px; /* Increase padding */
+    padding: 18px; /* Increase padding */
     font-size: 18px; /* Adjust font size */
+    background-color: #ffffff !important;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 3px;
+
 }
 
 @media (min-width: 768px) {
@@ -14,7 +19,7 @@
 }
 
 .accordion-body {
-    padding: 60px; /* Increase padding */
+    padding: 18px; /* Increase padding */
     text-align: left;
     font-size: 16px; /* Adjust font size */
 }
@@ -25,11 +30,6 @@
         margin: 0 auto;
     }
 }
-.accordion-body {
-    padding: 15px;
-    text-align: left; 
-}
-
 
 @media (min-width: 768px) {
     .accordion-body {
@@ -51,14 +51,7 @@
     background-color: #FF6700; 
     color: #000000; 
 }
-
-.accordion-button {
-    background-color: #ffffff !important; 
-    color: #000000; 
-    border: 1px solid #000000;
-    border-radius: 3px; 
-    padding: 10px 15px; 
-}
+ 
 
 .accordion-button.collapsed {
     background-color: #ffffff; 
@@ -69,23 +62,8 @@
     color: #000000; 
 }
 
-.accordion-body {
-    padding: 15px; 
-}
 
-.accordion-button i {
-    margin-right: 10px;
-    transition: transform 0.3s ease-in-out;
-    transform: rotate(0deg); /* Roter pilen 0 grader i utgangspunktet */
-}
 
-.accordion-button i.rotate-icon {
-    transform: rotate(90deg); /* Roter pilen 90 grader når boksen er åpen */
-}
-
-.accordion-button.collapsed i.rotate-icon {
-    transform: rotate(0deg); /* Roter pilen 0 grader når boksen er lukket */
-}
 
 
 
