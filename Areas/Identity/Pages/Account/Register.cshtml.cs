@@ -160,7 +160,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                         }
                         else
                         {
-                        return RedirectToAction("Brukeroversikt", "Brukeroversikt");
+                        return RedirectToAction("Employees", "Employees");
                             //await _signInManager.SignInAsync(user, isPersistent: false);
                             //return LocalRedirect(returnUrl);
                         }

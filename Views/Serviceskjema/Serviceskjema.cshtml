@@ -4,8 +4,13 @@
     ViewData["Title"] = "Serviceskjema";
 }
 
-<div class="card w-75 mx-auto" style="margin-bottom: 50px; margin-top: 50px;">
-    <h1 style="margin-bottom: 30px;">Serviceskjema</h1>
+<div class="card w-75 mx-auto">
+<div class="skjemaouter-container"> 
+ <a href="javascript:history.back()" class="btn btn-link back-link">
+            <i class="bi bi-arrow-left" style="color: #000000;"></i> 
+        </a>
+    <h1 style="margin-bottom: 30px; text-align:  center; font-weight:  bold;">Serviceskjema</h1>
+    
     @using (Html.BeginForm("SaveForm", "ServiceSkjema", FormMethod.Post, new { id = "formSkjema", onsubmit = "return confirm('Er du sikker på du ønsker å sende inn serviceskjema?');" }))
     {
         
@@ -85,6 +90,5 @@
     }
 
 </div>
-
-
+</div>
 

@@ -2,307 +2,318 @@
     ViewData["Title"] = "FAQ";
 }
 
-        <head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-            <title>FAQ</title>
-            <style>
-                .faq-item {
-                    margin-bottom: 20px;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container mt-5">
-                <h1 class="text-center mb-4">FAQ</h1>
-                <p class="text-center">
-                    Her finner du våre mest stilte spørsmål! <br />Om du ikke finner det du lurte på, vennligst
-                    <a href="KontaktOss.cshtml">kontakt oss</a>.
-                 </p>
-                <div class="accordion" id="faqAccordion">
-                    
-                    <!-- FAQ Item 1 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-                                    <b>Hva gjør jeg om jeg tror jeg har en reklamasjon/garantisak?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Kontakt din forhandler.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<title>FAQ</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<div class="container mt-5">
+<h1 class="text-center mb-4">FAQ</h1>
+<p class="text-center mb-5">
+    Her finner du våre mest stilte spørsmål! <br />Om du ikke finner det du lurte på, vennligst
+    <a href="KontaktOss.cshtml">kontakt oss</a>.
+</p>    
+<div class="accordion" id="faqAccordion">
 
-                    <!-- FAQ Item 2 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem2">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-                                    <b>Hva gjør jeg om jeg ønsker å komme innom, og snakke med noen ved Teknisk Servicesenter?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Servicesenteret ligger rett innenfor hovedinngangen, som ligger på framsiden av bygget når du kommer til oss. Velkommen!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 3 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem3">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
-                                    <b>Hva gjør jeg om jeg trenger å ringe noen ved Teknisk Servicesenter?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Du kan ringe vårt direktenummer, 479 20 192. Vi hjelper deg der og da, eller undersøker det du trenger hjelp til, og gir deg snarlig tilbakemelding.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                   <!-- FAQ Item 4 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem4">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4">
-                                    <b>Hvorfor kommer jeg til Nøsted & AS når jeg prøver å ringe Igland?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Ved årsskiftet 2000/2001 solgte Igland familien selskapet til Nøsted gruppen, i dag Nøsted & AS. Men merkevaren Igland, og våre produkter, lever i beste velgående.
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                     
-                    
-                    <!-- FAQ Item 5 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem5">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5">
-                                    <b>Hva gjør jeg om jeg har en fjernkontroll eller radiostyring som ikke virker?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Har du anledning, så er du velkommen til å komme innom og levere den ved vårt servicekontor på Jåbekk. Evt kan du ringe 479 20 192 for nærmere informasjon, eller sende den pr post til oss. Send den da til:
-                                    <br/>Nøsted &, avdeling Jåbekk.
-                                    <br/>Doneheia 17, 4516 Mandal.
-                                    <br/>Att: Torbjørn Sakariassen
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 6 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem6">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6">
-                                    <b>Kan jeg bygge om til radiostyring på vinsjen min, og hva koster det?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Ja, som oftest kan vi bygge om til radiostyring for deg. Alle med elektrisk styring, og som har styrepanel med elektrisk bryter, kan få en radiostyring.
-                                    <br/>Pris vil variere ut fra modeller, men veiledende priser medio februar 2023 ligger på ca. 17.000 – 22.000 kroner + arbeidstid og mva.
-                                    <br/>Unntak finnes. Du har eksempelvis 3502, der radiostyringen kan kobles på, på en enklere måte. Her ligger veiledende pris på ca. 11.000 + arbeidstid og mva.
-                                    <br/>Lurer du på om din vinsj kan få radiostyring, så ta gjerne kontakt med oss, så finner vi ut av det!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 7 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem7">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7">
-                                    <b>Må jeg fremdeles bestille via forhandler selv om jeg har eget org.nr.?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Ja. Alt salg går via våre forhandlere.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 8 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem8">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8">
-                                    <b>Må jeg bestille via forhandler?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Ja. Alt salg går via våre forhandlere.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 9 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem9">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9">
-                                    <b>Hvordan bestiller jeg deler?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Finn varenummer i delekatalog, og ta kontakt med din nærmeste forhandler, så hjelper de deg med bestillingen. Husk at det må settes IG foran alle varenummer.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 10 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem10">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10">
-                                    <b>Hvordan finner jeg deler?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Prøv vårt nye delekatalog-arkiv. Skriv inn produktnavnet på vinsjen din i søkefeltet, og last ned delekatalog. I delekatalogen finner du beskrivelse av deler, og varenummeret du trenger. 
-                                    <!--Legg til 'klikk her' osv...-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 11 -->
-                <div class="faq-item">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqItem11">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11">
-                                <b>Hva er åpningstidene hos dere?</b>
-                            </button>
-                        </h2>
-                        <div id="faqCollapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Servicesenteret er betjent fra kl. 08.30 – 16.00 mandag – fredag.
-                                <br/>Verkstedet er betjent fra kl. 07.00 – 15.00 mandag – fredag.
-                                <br/>Lageret er betjent fra kl. 07.00 – 15.00 mandag – fredag.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                    <!-- FAQ Item 12 -->
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqItem12">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12">
-                                    <b>Når tid på dagen kan jeg levere vinsjen min til service som kommer med transportør?</b>
-                                </button>
-                            </h2>
-                            <div id="faqCollapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Den kan leveres mandag – fredag mellom kl. 07.00 – 15.00.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                <!-- FAQ Item 13 -->
-                <div class="faq-item">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqItem13">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13">
-                                <b>Er det mulig at vinsjen kan stå hos dere, siden jeg sender den med transportør, men har ikke mulighet til å hente før om noen uker?</b>
-                            </button>
-                        </h2>
-                        <div id="faqCollapse13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Ja. Så sant vi har plass på lageret, så ønsker vi å tilrettelegge for de praktiske løsninger som du som kunde har behov for.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                 <!-- FAQ Item 14 -->
-                <div class="faq-item">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqItem14">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse14">
-                                <b>Er det mulig å avtale en bestemt servicedag, så jeg kan få vinsjen med meg hjem samme dag ettersom jeg kommer langveis?</b>
-                            </button>
-                        </h2>
-                        <div id="faqCollapse14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Vi ønsker å tilrettelegge så godt som mulig, og avtaler gjerne en bestemt dato for service. Forbeholdet vi er nødt til å ta, er hvis det skulle vise seg å være et mer omfattende arbeid på vinsjen enn det man kunne anta i forkant.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 15 -->
-                <div class="faq-item">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqItem15">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse15">
-                                <b>Er det kun i Mandal at det utføres service?</b>
-                            </button>
-                        </h2>
-                        <div id="faqCollapse15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Både ja og nei. Service kan utføres hos forhandlere, og du vil også kunne gjøre en del selv. Hvis servicen skal utføres av oss, så må det skje ved vårt verksted på Jåbekk. Adressen er Doneheia 17, 4516 Mandal.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 16 -->
-                <div class="faq-item">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqItem16">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse16">
-                                <b>Hva gjør jeg om jeg skal bestille service/reparasjon til vinsjen min?</b>
-                            </button>
-                        </h2>
-                        <div id="faqCollapse16" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Ring 479 20 192 for nærmere informasjon, og bestilling av service-dag. Det er lurt å være tidlig ute, for det er mange som bestiller service.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                 <!-- FAQ Item 17 -->
-                <div class="faq-item">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqItem17">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse17">
-                                <b>Hvor mye koster det for å bestille service til vinsjen min?</b>
-                            </button>
-                        </h2>
-                        <div id="faqCollapse17" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Kostnad vil variere individuelt, men som et generelt svar så vil en gjennomsnitts-service ligge på ca. 12.000 – 15.000 kroner, inkludert arbeid, deler og mva.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
+<!-- FAQ Item 1 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem1">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse1">
+                <b>Hva gjør jeg om jeg tror jeg har en reklamasjon/garantisak?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                Kontakt din forhandler.
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        </body>
+        </div>
+    </div>
+</div>
 
+
+<!-- FAQ Item 2 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem2">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse2">
+                
+                <b>Hva gjør jeg om jeg ønsker å komme innom, og snakke med noen ved Teknisk Servicesenter?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Servicesenteret ligger rett innenfor hovedinngangen, som ligger på framsiden av bygget når du kommer til oss. Velkommen!
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Item 3 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem3">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse3">
+                <b>Hva gjør jeg om jeg trenger å ringe noen ved Teknisk Servicesenter?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                Du kan ringe vårt direktenummer, 479 20 192. Vi hjelper deg der og da, eller undersøker det du trenger hjelp til, og gir deg snarlig tilbakemelding.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Item 4 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem4">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse4">
+                <b>Hvorfor kommer jeg til Nøsted & AS når jeg prøver å ringe Igland?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+               Ved årsskiftet 2000/2001 solgte Igland familien selskapet til Nøsted gruppen, i dag Nøsted & AS. Men merkevaren Igland, og våre produkter, lever i beste velgående.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Item 5 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem5">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse5">
+                <b>Hva gjør jeg om jeg har en fjernkontroll eller radiostyring som ikke virker?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse5" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Har du anledning, så er du velkommen til å komme innom og levere den ved vårt servicekontor på Jåbekk. Evt kan du ringe 479 20 192 for nærmere informasjon, eller sende den pr post til oss. Send den da til:
+                <br/>Nøsted &, avdeling Jåbekk.
+                <br/>Doneheia 17, 4516 Mandal.
+                <br/>Att: Torbjørn Sakariassen
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Item 6 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem6">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse6">
+                <b>Kan jeg bygge om til radiostyring på vinsjen min, og hva koster det?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse6" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Ja, som oftest kan vi bygge om til radiostyring for deg. Alle med elektrisk styring, og som har styrepanel med elektrisk bryter, kan få en radiostyring.
+                <br/>Pris vil variere ut fra modeller, men veiledende priser medio februar 2023 ligger på ca. 17.000 – 22.000 kroner + arbeidstid og mva.
+                <br/>Unntak finnes. Du har eksempelvis 3502, der radiostyringen kan kobles på, på en enklere måte. Her ligger veiledende pris på ca. 11.000 + arbeidstid og mva.
+                <br/>Lurer du på om din vinsj kan få radiostyring, så ta gjerne kontakt med oss, så finner vi ut av det!
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 7 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem7">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse7">
+                <b>Må jeg fremdeles bestille via forhandler selv om jeg har eget org.nr.?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse7" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                 Ja. Alt salg går via våre forhandlere.
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 8 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem8">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse8">
+                <b>Må jeg bestille via forhandler?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse8" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                               Ja. Alt salg går via våre forhandlere.
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 9 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem9">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse9">
+                <b>Hvordan bestiller jeg deler?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse9" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+               Finn varenummer i delekatalog, og ta kontakt med din nærmeste forhandler, så hjelper de deg med bestillingen. Husk at det må settes IG foran alle varenummer.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 10 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem10">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse10">
+                <b>Hvordan finner jeg deler?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse10" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Prøv vårt nye delekatalog-arkiv. Skriv inn produktnavnet på vinsjen din i søkefeltet, og last ned delekatalog. I delekatalogen finner du beskrivelse av deler, og varenummeret du trenger.
+                <!--Legg til 'klikk her' osv...-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 11 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem11">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse11">
+                <b>Hva er åpningstidene hos dere?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse11" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Servicesenteret er betjent fra kl. 08.30 – 16.00 mandag – fredag.
+                <br/>Verkstedet er betjent fra kl. 07.00 – 15.00 mandag – fredag.
+                <br/>Lageret er betjent fra kl. 07.00 – 15.00 mandag – fredag.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 12 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem12">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse12">
+                <b>Når tid på dagen kan jeg levere vinsjen min til service som kommer med transportør?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse12" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Den kan leveres mandag – fredag mellom kl. 07.00 – 15.00.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 13 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem13">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse13">
+ <b>Er det mulig at vinsjen kan stå hos dere, siden jeg sender den med transportør, men har ikke mulighet til å hente før om noen uker?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse13" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Ja. Så sant vi har plass på lageret, så ønsker vi å tilrettelegge for de praktiske løsninger som du som kunde har behov for.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 14 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem14">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse14">
+  <b>Er det mulig å avtale en bestemt servicedag, så jeg kan få vinsjen med meg hjem samme dag ettersom jeg kommer langveis?</b>            </button>
+        </h2>
+        <div id="faqCollapse14" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Vi ønsker å tilrettelegge så godt som mulig, og avtaler gjerne en bestemt dato for service. Forbeholdet vi er nødt til å ta, er hvis det skulle vise seg å være et mer omfattende arbeid på vinsjen enn det man kunne anta i forkant.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 15 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem15">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse15">
+                <b>Er det kun i Mandal at det utføres service?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse15" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Både ja og nei. Service kan utføres hos forhandlere, og du vil også kunne gjøre en del selv. Hvis servicen skal utføres av oss, så må det skje ved vårt verksted på Jåbekk. Adressen er Doneheia 17, 4516 Mandal.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 16 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem16">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse16">
+                <b>Hva gjør jeg om jeg skal bestille service/reparasjon til vinsjen min?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse16" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Ring 479 20 192 for nærmere informasjon, og bestilling av service-dag. Det er lurt å være tidlig ute, for det er mange som bestiller service.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Item 17 -->
+<div class="faq-item">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqItem17">
+            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse17">
+                <b>Hvor mye koster det for å bestille service til vinsjen min?</b>
+            </button>
+        </h2>
+        <div id="faqCollapse17" class="accordion-collapse collapse" data-parent="#faqAccordion">
+            <div class="accordion-body">
+                
+                Kostnad vil variere individuelt, men som et generelt svar så vil en gjennomsnitts-service ligge på ca. 12.000 – 15.000 kroner, inkludert arbeid, deler og mva.
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+   
+       $(document).ready(function () {
+           // Add event listener for accordion buttons
+           $('.accordion-button').click(function () {
+               // Close all other accordion items
+               $('.accordion-button').not(this).removeClass('collapsed');
+               $('.accordion-collapse').not($(this).data('target')).removeClass('in');
+   
+               // Toggle the clicked accordion item
+               $(this).toggleClass('collapsed');
+           });
+       });
+  
+</script>
