@@ -68,11 +68,15 @@
     padding: 20px; 
     margin: 20px 0; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til en lett skygge for dybde */
-    border-radius: 8px; 
-    
+    border-radius: 8px;
 }
 
+#sjekklistCol {
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 10px;
+}
 
 .cust-margin {
-    margin-top: 60px; 
+    margin-top: 30px; 
 }

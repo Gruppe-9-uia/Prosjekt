@@ -739,29 +739,31 @@
             <div id="Signering" role="tabpanel" class="bs-stepper-pane">
 
             <div class="align-items-center">
-            <!-- Må kanskje flyttet som tar med alle formene og kan sjekke den-->
-                    <div class="row">
+                <div class="outer-container">
+                    <!-- Må kanskje flyttet som tar med alle formene og kan sjekke den-->
+                    <div class="row" id="sjekklistCol">
                         <div class="col">
-                            <div class="col text-center">
+                           
+                           
                                 <div class="form-group">
                                     <label for="FirstName_str" style="font-weight: bold;">Fornavn</label>
                                     <input type="text" class="form-control" id="FirstName_str" asp-for="FirstName_str">
                                 </div>
-                            </div>
+                            
                         </div>
                         <div class="col">
-                            <div class="col text-center">
+                          
                                 <div class="form-group">
                                     <label for="LastName_str" style="font-weight: bold;">Etternavn</label>
                                     <input type="text" class="form-control" id="LastName_str" asp-for="LastName_str">
                                 </div>
-                            </div>
+                            
                         </div>
-                       <div class="cust-margin"></div>
+                        <div class="cust-margin"></div>
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label for="signDate"><h6>Dato</h6></label>
+                                    <label for="signDate" style="font-weight: bold;">Dato</label>
                                     <input type="date" class="form-control" id="signDate" asp-for="signDate">
                                 </div>
                             </div>
@@ -778,6 +780,7 @@
                         </div>
                     </div>
                    
+                </div>
                 </div>
             </div>
             }
