@@ -13,3 +13,31 @@
     margin-right: 30px;
 }
 
+
+.serviceouter-container {
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin: 20px auto; /* Endret for å sentrere containeren */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 60%;
+    position: relative;
+}
+
+.titleservice {
+    margin-bottom: 50px; 
+    font-weight: bold; /* Fet skrift */
+    color: #333;
+    text-align: left;
+    
+    }
+
+
+.back-link-container {
+    position: absolute; /* Posisjonerer tilbake-lenken absolutt i forhold til serviceouter-container */
+    top: 10px; /* Avstand fra toppen av containeren */
+    left: 10px; /* Avstand fra venstre side av containeren */
+}
+
+
+
