@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Models.Employee;
 
 namespace Prosjekt.Controllers
@@ -34,7 +35,9 @@ namespace Prosjekt.Controllers
                         ID_int = e.Id,
                         FirstName_str = e.FirstName_str,
                         LastName_str = e.LastName_str,
-                        Department = userRoleId.RoleId
+                        Department = userRoleId.RoleId,
+                        Phone = e.PhoneNumber,
+                        Email = e.Email
 
                     };
                     list.Add(employeeObj);
@@ -55,5 +58,53 @@ namespace Prosjekt.Controllers
             }
 
         }
+
+        [HttpPost]
+        public IActionResult UpdateEmployee(BrukerOversiktViewModel model)
+        {
+
+            var employeeDB = _context.Employees.Where(x => x.Id.Equals(model.ID_int)).FirstOrDefault();
+
+            if (employeeDB != null)
+            {
+                employeeDB.Email = model.Email;
+                employeeDB.PhoneNumber = model.Phone;
+                employeeDB.FirstName_str = model.FirstName_str;
+                employeeDB.LastName_str = model.LastName_str;
+
+                var UserRolesDB = _context.UserRoles.Where(x => x.UserId.Equals(model.ID_int)).FirstOrDefault();
+
+                _context.UserRoles.Remove(UserRolesDB);
+
+                _context.SaveChanges();
+                var newRole = new IdentityUserRole<string>
+                {
+                    RoleId = model.Department,
+                    UserId = model.ID_int
+                };
+                _context.UserRoles.Add(UserRolesDB);
+
+                _context.SaveChanges();
+            }
+            
+            return RedirectToAction("Employees");
+
+        }
+
+        [HttpPost]
+        public IActionResult RemoveEmployee(BrukerOversiktViewModel model)
+        {
+
+
+            var employeeDB = _context.Employees.Where(x => x.Id.Equals(model.ID_int)).FirstOrDefault();
+            if(employeeDB != null)
+            {
+                _context.Employees.Remove(employeeDB);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Employees");
+        }
+
     }
 }
