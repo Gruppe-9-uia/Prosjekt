@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Prosjekt.Controllers
 {
-    public class Om_OssController : Controller
+    public class OmOssController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Om_Oss()
+        public IActionResult OmOss()
         {
             return View();
         }
