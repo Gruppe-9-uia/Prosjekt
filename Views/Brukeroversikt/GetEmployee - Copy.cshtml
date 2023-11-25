@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<!-- pop up -->
+<div class="modal fade" id="BOModal" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+
+        <!-- modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Rad Detaljer</h4><
+            </div>
+
+            <!-- Pop vindu av mer informasjon om en ansatt -->
+
+            <div class="modal-body" id="BOModalBody">
+                <img src="~/Images/fram.png" alt="profilbilde-modal" id="modal-pfp-bo">
+                <div class="row">
+                    <div class="col">
+                        <!-- må koble til database for info -->
+                        @using (Html.BeginForm("", "", FormMethod.Post, null))
+                        {
+                            <label for="editStilling"><b>Stilling</b></label>
+                            <input type="text" class="form-control" id="editStilling" placeholder="Stilling" list="stillinglist" readonly required>
+
+                            <label for="editEpost"><b>E-post</b></label>
+                            <input type="email" class="form-control" id="editEpost" placeholder="E-post" readonly>
+
+                            <label for="editTlf"><b>Telefonnummer</b></label>
+                            <input type="tel" class="form-control" id="editTlf" placeholder="Telefonnummer" readonly>
+                            <br />
+                        }
+                    </div>
+
+                    <!-- Ser ikke denne delen?-->
+                    <div id="additionalInfo" style="display: none;">
+                        <div class="form-row" id="pf-row-1">
+                            <div class="form-group col">
+                                <label for="pf-fullt-navn"><b>Fullt navn</b></label>
+                                <input type="text" class="form-control" id="editNavn" placeholder="Fullt navn" required>
+                            </div>
+                            <div class="form-group col">
+                                <label for="pf-adresse"><b>Adresse</b></label>
+                                <input type="text" class="form-control" id="editAdresse" placeholder="Adresse" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row" id="pf-row-2">
+                            <div class="form-group col">
+                                <label for="pf-rettigheter"><b>Rettigheter</b></label>
+                                <input type="text" class="form-control" placeholder="Rettigheter..." name="rettigheter" id="editRettigheter" list="retthet" required>
+                                <datalist id="retthet">
+                                    <option>Legge til/fjerne bruker</option>
+                                    <option>Fjerne verktøy fra verktøyliste</option>
+                                    <option>Redigere serviceordre</option>
+                                    <option>Legge til ny serviceordre</option>
+                                </datalist>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="info-modal-bo-2">
+                    <p>Arbeidsoppgaver: </p> <!-- koble til database -->
+                    <br />
+
+                    <button type="button" class="btn btn-primary button mb-2" id="edit-button-bo" onclick="editPfFunction()">Endre profil</button>
+                    <button type="button" class="btn btn-success button mb-2" id="save-button-bo" style="display: none;" onclick="savePfFunction()">Lagre profil</button>
+                    <button type="button" class="btn btn-danger button mb-2" id="delete-button-bo" style="display: none;" onclick="deletePfFunction()">Slett bruker</button>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-bo-lukk" onclick="modalLukk()">Lukk</button>
+            </div>
+        </div>
+    </div>
+</div>
+-

@@ -258,15 +258,30 @@ namespace Prosjekt.Data
             );
 
             //Legger til employee
-            /*
+            
             modelBuilder.Entity<EmployeeUser>().HasData(
-                new EmployeeUser { RememberMe=false, Level_str="High", UserName= "TaylorSwift@mail.com", Email= "TaylorSwift@mail.com",
-                    NormalizedUserName= "TAYLORSWIFT@MAIL.COM", NormalizedEmail= "TAYLORSWIFT@MAIL.COM", EmailConfirmed=false,
+                new EmployeeUser { 
+                    Id = "22e40406-8a9d-2d82-912c-5d6a640ee696",
+                    RememberMe =false,
+                    FirstName_str = " Taylor",
+                    LastName_str = "Swift",
+                    PhoneNumber = "98064355",
+                    UserName= "TaylorSwift@mail.com", 
+                    Email= "TaylorSwift@mail.com",
+                    NormalizedUserName= "TAYLORSWIFT@MAIL.COM", 
+                    NormalizedEmail= "TAYLORSWIFT@MAIL.COM", 
+                    EmailConfirmed=false,
                     PasswordHash= "AQAAAAEAACcQAAAAEI8K1K4qrOE+dIR5nlqc7iN6y7RK4BBwlgeWK+R5KpoYC4l7kZR/B0nNWnCLtnfd0w==",
                     SecurityStamp= "HJAEUP5XQQP5BCZ66OAZNPRX5EV4NH32", ConcurrencyStamp= "8c81b367-6fc5-4163-98d6-34bb8a7b1ce3",
-                    PhoneNumberConfirmed=false, TwoFactorEnabled=false, LockoutEnd=null, LockoutEnabled=true,AccessFailedCount=0
+                    PhoneNumberConfirmed=false, TwoFactorEnabled=false, LockoutEnd=null, LockoutEnabled=true, AccessFailedCount=0
                 });
-            */
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "Admin",
+                UserId = "22e40406-8a9d-2d82-912c-5d6a640ee696"
+            });
+
 
             //Legger til equipment
             modelBuilder.Entity<EquipmentModel>().HasData(

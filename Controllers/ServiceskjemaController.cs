@@ -56,7 +56,7 @@ namespace Prosjekt.Controllers
                 _context.Service_Order_Service_form.Add(formOrder);
                 _context.SaveChanges();
 
-                TempData["id"] = model.OrderNr;
+                TempData["id"] = latestId;
 
                 return View("SavePart");
                
@@ -110,7 +110,7 @@ namespace Prosjekt.Controllers
                     {
                         PartID_int = parts.PartID_int,
                         FormID_int = ID,
-
+                    
                         Quantity_int = model.UsedQuantity_available_int
                     };
 
@@ -118,78 +118,27 @@ namespace Prosjekt.Controllers
                     _context.SaveChanges();
                 }
 
-                return View("SavePart");
+                //reset model data
+                var resetModel = new FormViewModel
+                {
+                    ReplacePartName_str = null,
+                    UsedPartName_str = null,
+                    ReplaceQuantity_available_int = 0,
+                    UsedQuantity_available_int = 0
+                };
+
+                return View("SavePart", resetModel);
 
 
             } catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                return View("Parts");
+                return View("SavePart");
             }
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult addSign(FormViewModel model)
-        {
-            try
-            {
-                int ID = Int32.Parse(TempData["id"].ToString());
-
-                var form = _context.Service_Form.Where(x => x.FormID_int == ID).FirstOrDefault();
-                var customer = _context.Customer.Where(x => x.Email_str.Equals(model.signKunde)).FirstOrDefault();
-                var employee = _context.Employees.Where(x => x.Email.Equals(model.signRep)).FirstOrDefault();
-
-                if (form == null || customer == null || employee == null)
-                {
-                    ModelState.AddModelError(string.Empty, "Klarte ikke å lage service order");
-                    return RedirectToAction("Sign");
-                }
-
-                var signDB = new ServiceFormSignModel
-                {
-                    CustomerID_int = customer.ID_int,
-                    EmployeeID_int = employee.Id,
-                    FormID_int = form.FormID_int,
-                    Sign_Date = model.signDato
-                };
-
-                var result = _context.Service_Form_Sign.Add(signDB);
-                if (signDB == null)
-                {
-                    ModelState.AddModelError(string.Empty, "Klarte ikke å lage service order");
-                    return RedirectToAction("Sign");
-                }
-
-                _context.SaveChanges();
-                return RedirectToAction("Oversikt", "Oversikt");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return Redirect("Sign");
-            }
-
-
-        }
   
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Sign(FormViewModel model)
-        {
-            try
-            {
 
-                return View("Sign");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return RedirectToAction("Parts");
-            }
-
-
-        }
     }
 }

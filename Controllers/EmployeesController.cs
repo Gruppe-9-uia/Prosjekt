@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Models.Employee;
 
 namespace Prosjekt.Controllers
 {
-    public class BrukeroversiktController : Controller {
-    
-    private readonly ProsjektContext _context;
-
-    public BrukeroversiktController(ProsjektContext context)
+    public class EmployeesController : Controller
     {
-        _context = context;
-    }
+        private readonly ProsjektContext _context;
+
+        public EmployeesController(ProsjektContext context)
+        {
+            _context = context;
+        }
         // GET: /<controller>/
-        public IActionResult Brukeroversikt()
+        public IActionResult Employees()
         {
             try
             {
@@ -51,37 +47,13 @@ namespace Prosjekt.Controllers
                 }
                 return View();
 
-            } catch (Exception ex) { 
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex);
                 return View();
             }
-            
+
         }
-
-        public IActionResult BackBrukeroversikt()
-        {
-            return RedirectToAction("Brukeroversikt");
-        }
-        
-        
-        public IActionResult GetEmployee()
-        {
-            // TODO: burde kanskje gjør om user id til int
-
-            return RedirectToAction("Brukeroversikt");
-        }
-
-        public IActionResult GetEmployeeID(string employeeId)
-        {
-
-
-            if (employeeId != null)
-            {
-
-                return RedirectToAction("GetEmployee", new { id = employeeId });
-            }
-            return View("Brukeroversikt");
-        }
-       
     }
 }

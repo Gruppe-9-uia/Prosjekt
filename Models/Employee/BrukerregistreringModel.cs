@@ -5,7 +5,7 @@ namespace Prosjekt.Models
     {
         [Required]
         [Key]
-        public int ID_int { get; set; }
+        public string ID_int { get; set; }
         [Required]
         [ForeignKey("DepartmentID_int")]
         public int DepartmentID_int { get; set; }
@@ -27,15 +27,6 @@ namespace Prosjekt.Models
         public string City_str { get; set; }
         
         public string FulltNavn { get; set; }
-
-        //TODO: kanskje gjør det om til emun
-        [Required]
-        public string Level_str { get; set; }
-
-        //public DepartmentModel? Department { get; set; }
-        //public ChecklistSignatureModel? ChecklistSignature{ get; set; }
-        //public ICollection<ServiceFormEmployeeModel>? ServiceFormEmployees { get; set; }
-        //public ICollection<ServiceFormSignModel>? ServiceFormsSign { get; }
 
 
     }
