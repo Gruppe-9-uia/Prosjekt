@@ -1,0 +1,36 @@
+
+#cardOversikt.card {
+    width: 90%;
+    background-color: hotpink !important;
+}
+
+#colonneOversikt{
+    margin: 0;
+    padding: 0;
+}
+/*
+#button-addon2 {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100px;
+    
+}*/
+
+
+#button-addon2:hover {
+    color: black;
+    background-color: #FF6700 !important;
+    border-color: #FF6700 !important;
+}
+/*#søkebarOversikt{
+    background-image: url("~/icons/icons8-search-24-2.png"); /* Add a search icon to input 
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+}*/
+
+#søkebarOversikt:focus{
+    box-shadow: none;
+    border: 2px solid #FF6700;
+}
