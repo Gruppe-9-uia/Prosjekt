@@ -3,13 +3,16 @@
 }
 
 <title>FAQ</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
 <div class="container mt-5">
 <h1 class="text-center mb-4">FAQ</h1>
 <p class="text-center mb-5">
     Her finner du våre mest stilte spørsmål! <br />Om du ikke finner det du lurte på, vennligst
     <a href="KontaktOss.cshtml">kontakt oss</a>.
 </p>    
+
+
+
 <div class="accordion" id="faqAccordion">
                     
 <!-- FAQ Item 1 -->
@@ -344,7 +347,8 @@
 
             if (!isCollapsed) {
                 $(this).removeClass('collapsed');
-                $(this).next('.accordion-collapse').addClass('show');
+                var targetId = $(this).attr('data-bs-target');
+                $(targetId).addClass('show');
             }
         });
     });
