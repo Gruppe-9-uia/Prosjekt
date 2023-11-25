@@ -1,3 +1,4 @@
+<!--funksjon for å bruke søkerfeltet-->
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const selectedColumn = document.getElementById("selectedColumn");
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.addEventListener("click", function () {
         selectedColumn.innerText = "Søk i: Alle kolonner";
         searchInput.value = "";
-        columnIndex = null; // Sett columnIndex til null når du velger "Alle kolonner"
+        columnIndex = null; 
         søkTable();
     });
 
@@ -67,3 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
