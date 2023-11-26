@@ -19,6 +19,8 @@
 12. Tilsutt kjør prosjekt i jetbrains
 
 startup og build er hentet fra https://github.com/espenlimi
+NB! husk åpne ProsjektNosted
+
 ### Mac
 
 1. kjører build.csh 
@@ -217,6 +219,7 @@ InitialCreated dotnet ef database update
 
 # Unit testing scenarier type tester f. eks. UI test (test kode/skripter og resultater)
 Trenger ikke unit testing på FAQ. 
+testing i koden er tatt ugantpunkt https://softchris.github.io/pages/dotnet-moq.html#why-test
 
 ## Test scenarioer: 
 Gruppen testet scenario på ung alder målgruppe. Denne målgruppen har noen dataerfaring fra før av.  
