@@ -11,7 +11,7 @@ namespace Prosjekt.Controllers
     public class OmOssController : Controller
     {
         // GET: /<controller>/
-        public IActionResult OmOss()
+        public IActionResult index()
         {
             return View();
         }

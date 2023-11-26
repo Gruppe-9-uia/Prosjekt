@@ -28,7 +28,7 @@ namespace Prosjekt.Controllers
             {
                 var equipmentObj = new EquimentViewModel
                 { 
-                    Id = (int)e.Id_int, 
+                    Id = e.Id_int, 
                     Availability = e.Availability, 
                     Name = e.Name_str
                 };
