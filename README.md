@@ -209,7 +209,8 @@ Trenger ikke unit testing på FAQ.
 Gruppen testet scenario på ung alder målgruppe. Denne målgruppen har noen dataerfaring fra før av.  
 
 ### Oppgave: Serviceordre
-Beskrivelse: Opprette serviceordre
+Beskrivelse: Opprette serviceordre.
+
 Instruksjoner:
    - Logg inn.
    - Trykk på meny knapp oppe til høyre.
@@ -217,9 +218,12 @@ Instruksjoner:
    - Trykk på “Serviceordre”. 
    - Fyll inn informasjon om kunde og produkt. 
    - Trykk på “send inn”.
-   - Serviceordre blir presentert på oversiktsiden. 
+   - Serviceordre blir presentert på oversiktsiden.
+
 Forventet resultat:
-   - Etter trykt på send inn, blir man sendt tilbake til oversiktsiden, og kan se at det har kommet inn en ny ordre. 
+   - Etter trykt på send inn, blir man sendt tilbake til oversiktsiden, og kan se at det har kommet inn en ny ordre.
+
+
 Faktisk resultat: 
    - Etter trykt på “Send inn”, ble man sendt tilbake til serviceordre siden 
 
