@@ -298,7 +298,8 @@ Faktisk resultat:
 
 
 ### Oppgave: Brukeroversikt
-Beskrivelse: Legge inn, endre og slette en bruker. 
+Beskrivelse: Legge inn, endre og slette en bruker.
+
 Instruksjoner:
    - Legge til ny bruker: 
          - Velg “Brukeroversikt” i meny.
@@ -406,7 +407,7 @@ Trykk på knappen “Slett”
 Skriv inn ID og trykk slett igjen. 
 
 
-### Endringer i koden (hva er det som ble endret, av hvem og når)
+# Endringer i koden (hva er det som ble endret, av hvem og når)
 
 Par-koding/programmering var et konsept som gruppen forsøkte å ta inn under utviklingen av applikasjonen. Dette var blant annet fordi par-koding er til stor fordel for begge partene, ettersom det er mye læring i metoden. Men gruppen fant raskt ut av at dette ikke var den beste metoden i starten, siden det var begrenset med kunnskap hos de fleste gruppemedlemmene. Det var derfor enklere å heller ha det ene gruppemedlemmet med den nødvendige erfaringen å “lære” de andre på gruppen, og heller hjelpe dem som en gruppe og noen ganger individuelt ved spesifikke feil eller problemer som oppstod. Med opplæring i koding og hvordan man holder GitHub repository hygienen ren, så ble utviklingen av applikasjonen mye mer effektiv. Selv om, det var til tider situasjoner hvor par-koding ble tatt i bruk likevel, som er derfor det i blant er noen brukere som har flere commits enn andre, hvorav noen brukere har kun noen få commits. 
 
