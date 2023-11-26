@@ -4,6 +4,7 @@ namespace Prosjekt.Entities
 {
     public class ServiceOrderModel
     {
+        //henter og setter verdi til en egenskap
         public int OrderID_int { get; set; }
         public string SerialNr_str { get; set; }
         public int CustomerID_int { get; set; }

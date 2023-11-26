@@ -5,6 +5,7 @@ namespace Prosjekt.Entities
 {
     public class ChecklistModel
     {
+        //henter og setter verdi til en egenskap
         [StringLength(50)]
         public string DocID_str { get; set; }
         public string SerialNr_str { get; set; }
