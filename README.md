@@ -156,11 +156,17 @@ Funksjonaliteter:
 ### Logikken av applikasjonen (koden)
 
 Teknologisk Oversikt
+
 Programmeringsspråk: C#
+
 Frontend Teknologier: HTML, CSS, JavaScript
+
 Backend Rammeverk: ASP.NET Core
+
 ORM (Object-Relational Mapping): Entity Framework Core
+
 Databaseteknologi: MariaDB, administrert via Docker.
+
 Sikkerhet: Implementering av ASP.NET Core Identity for autentisering og autorisasjon, samt bruk av anti-forgery tokens.
 
 MVC Arkitektur
