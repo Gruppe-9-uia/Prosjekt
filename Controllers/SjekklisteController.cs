@@ -9,10 +9,13 @@ namespace Prosjekt.Controllers
     public class SjekklisteController : Controller
     {
         private readonly ProsjektContext _context;
+        
+        // Constructor for SjekklisteController
         public SjekklisteController(ProsjektContext _context) {
             this._context = _context;
         }  
-
+        
+        // Action metode for rendering av Sjekkliste view
         public IActionResult Sjekkliste()
         {
             //TODO: må ha en side for å danne informasjon for dette
@@ -28,12 +31,14 @@ namespace Prosjekt.Controllers
             
         }
 
+        // Action metode for haandtering av form-innsending og legger til en sjekkliste
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add(ChecklistViewModel addSjekkliste)
         {
             try
             {
+                // Henter tilsvarrende produkt basert på det gitte serienummeret
                 var productID = _context.Product.Where(x => x.SerialNr_str.Equals(addSjekkliste.SerialNr_str)).FirstOrDefault();
                 if (productID == null)
                 {
@@ -43,7 +48,7 @@ namespace Prosjekt.Controllers
 
                 Console.WriteLine(addSjekkliste.Bearing_drum);
 
-
+                // Lager en ny ChecklistModel instans med det gitte data
                 var checklistDB = new ChecklistModel();
                 checklistDB.DocID_str = addSjekkliste.DocID_str;
                 checklistDB.SerialNr_str = addSjekkliste.SerialNr_str;
@@ -75,24 +80,30 @@ namespace Prosjekt.Controllers
                 checklistDB.Test_radio = addSjekkliste.Test_radio;
                 checklistDB.EOil_gearbox = addSjekkliste.EOil_gearbox;
 
+                // Legger til ChecklistModel til databasen
                 _context.Checklist.Add(checklistDB);
 
                 _context.SaveChanges();
 
-                // sign checkList
+                // Sign checkList - henter tilsvarende ansatt basert på et gitte for- og etternavnet
 
                 var employeeID = _context.Employees.Where(e => e.FirstName_str.Equals(addSjekkliste.FirstName_str) 
                 && e.LastName_str.Equals(addSjekkliste.LastName_str)).FirstOrDefault();
 
+                // Feilmelding
                 if(employeeID == null )
                 {
                     ModelState.AddModelError(string.Empty, "Klarte ikke å lage service order");
                     return RedirectToAction("Sjekklist");
                 }
+                
+                // Lager en ny ChecklistSignatureModel instans med det gitte data
                 var checkSign = new ChecklistSignatureModel();
                 checkSign.Sign_Date = addSjekkliste.signDate;
                 checkSign.EmployeeID_int = employeeID.Id;
                 checkSign.DocID_str = addSjekkliste.DocID_str;
+                
+                // Lagt til i databasen
                 _context.Checklist_signature.Add(checkSign);
                 _context.SaveChanges();
 
