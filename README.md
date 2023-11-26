@@ -35,11 +35,11 @@
 
 
 
-### Applikasjonens oppsett (arkitektur) 
+# Applikasjonens oppsett (arkitektur) 
 
 MVC er et designmønster brukt for å koble fra brukergrensesnittet (visning, eng. “View”), data (modell, eng. “Model”) og applikasjonslogikken (kontroller, eng. “Controller”). Dette mønsteret bidrar til å oppnå en separasjon av bekymringer. Ved å bruke MVC-mønsteret for nettsteder, blir forespørsler rutet til en kontroller som er ansvarlig for å samhandle med modellen for å utføre handlinger og/eller hente data. Kontrolleren velger visningen som skal vises og gir den modellen. Visningen gjengir den endelige siden basert på dataene i modellen. Applikasjonen bruker ‘Microsoft.AspNetCore.Mvc’ for å benytte ASP.NET Core MVC-rammeverket.
 
-Modell:
+## Modell:
 I MVC-arkitekturen representerer "Modell" applikasjonens data og forretningslogikk. Modellen er ansvarlig for å administrere data, behandle brukerinput og samhandle med databasen eller andre datakilder. Den inneholder kjernefunksjonaliteten og reglene for applikasjonen. Modellens viktigste ansvarsområder inkluderer datastyring, forretningslogikk, datavalidering, varsling om endringer og uavhengighet fra brukergrensesnittet. Modellen validerer data før de behandles eller lagres og sikrer at dataene oppfyller de nødvendige kriteriene. I mange MVC-implementeringer er modellen designet for å varsle visningen eller kontrolleren når dens interne tilstand endres, slik at visningen kan oppdatere seg selv som respons på endringer i dataene. Modellen er også uavhengig av brukergrensesnittet, noe som gir en mer vedlikeholdbar og skalerbar kode, ettersom endringer i brukergrensesnittet ikke direkte påvirker underliggende data eller forretningslogikk. Dette skiller og organiserer ansvarsområdene, og fremmer modularitet i programvareutvikling.
 
 Det er 11 modeller i applikasjonen, hver med et spesifikt formål.
@@ -66,18 +66,18 @@ Det er 11 modeller i applikasjonen, hver med et spesifikt formål.
 
 ‘ErrorViewModel’ fungerer som en datastruktur for håndtering og visning av feilinformasjon i applikasjonen. Den inneholder egenskaper relatert til feildetaljer og hjelper med å presentere brukervennlige feilmeldinger.
 
-Visning:
+## Visning:
 I den MVC-arkitektoniske modellen er Visning (eng. “View”) ansvarlig for å presentere data fra Modellen til brukeren og håndtere interaksjoner med brukergrensesnittet. View fokuserer på å vise informasjon, organisere elementer i brukergrensesnittet, formatere data for presentasjon, håndtere brukerinput og oppdatere seg selv som respons på endringer i Modellen. Den er uavhengig av forretningslogikken og kan ha flere perspektiver på de samme underliggende dataene. Denne separasjonen av ansvarsområder bidrar til økt modularitet og vedlikeholdsevne i applikasjonen
 
 Applikasjonen inneholder en del visninger som er organisert inn i 14 mapper for hvert sitt formål. Visningene er av filtypen “.cshtml”, og er stylet ved bruk av hovedsakelig Bootstrap men også noe CSS for å spesifisere noen elementer. CSS filene er lokalisert i en egen mappe kalt css inn i mappen “wwwroot”.
 
-Kontroller:
+## Kontroller:
 I den MVC-modellen er Kontroller ansvarlig for å håndtere brukerinput, behandle forespørsler og koordinere kommunikasjonen mellom Modellen og Visningen. Den tolker brukerhandlinger, håndterer inndata, oppdaterer Modellen basert på brukerforespørsler og velger riktig Visning for å vise den endrede dataen. Kontrolleren spiller en sentral rolle i å opprettholde ansvarsseparasjonen i applikasjonen ved å holde brukergrensesnittslogikken og applikasjonslogikken uavhengige.
 
 I applikasjonen har de 12 ulike kontrollerene ansvar for hvert sitt bruksområde i samheng med Modell og Visning. Kontrolleren har som oppgave å hente data fra Modell og vise Visningen. 
 
 
-Annet:
+## Annet:
 I tillegg til MVC, er det også brukt to ulike patterns som ikke går direkte i konflikt med databasen men som henter funksjonalitet. Det er blitt brukt “Repository Pattern” og “Unit of Work Pattern”.
 
 “Repository Pattern” er et designmønster som skiller logikken som henter data fra applikasjonens database fra forretningslogikken i resten av programmet. I sammenheng med Entity Framework og ASP.NET MVC fungerer et repository som et mellomledd mellom datatilgangskoden (for eksempel Entity Framework) og resten av programmet. Det gir en sett med metoder for å utføre CRUD-operasjoner (Create, Read, Update, Delete) på dataenheter.
@@ -89,7 +89,7 @@ I denne applikasjonen, en ASP.NET MVC-applikasjon som bruker Entity Framework, h
 
 
 
-### Hvordan applikasjonen kjøres (kjøring på Docker, kobling mot database, osv)
+# Hvordan applikasjonen kjøres (kjøring på Docker, kobling mot database, osv)
 
 Det er flere gode grunner til hvorfor det er en fordel å bruke “Docker” i en slik sammensetning som dette. Docker bidrar til en enkel måte å kunne kjøre, teste og bygge en applikasjon. Ved hjelp av en omfattende “conteinerteknologi”, som legger alle applikasjoner i et tilsvarende container-miljø som inneholder alt en trenger for å kjøre applikasjonen. Det vil si, uavhengig av hvor forskjellige gruppens dataoppsett er, kan applikasjonen kjøres på samme måte uten problemer. 
 
@@ -109,7 +109,7 @@ Etter at begge filene er kjørt skrives og kjøres "docker exec -it mariadb mysq
 
 
 
-### Komponenter av applikasjonen (MVC, repo, klasser, osv)
+# Komponenter av applikasjonen (MVC, repo, klasser, osv)
 
 Som sagt tidligere i forhold til MVC, så er Modell en representasjon av dataen knyttet til applikasjonen, hvorav de er ansvarlig for å administrere disse dataene. Visning skal presentere dataene fra Modellen, og Kontroller skal håndtere kommunikasjon mellom Modell og Visning, samt brukerinput og forespørsler.
 
@@ -142,7 +142,7 @@ For applikasjonen som Nøsted har bedt om, så er det klassene “Service_Order�
 I denne applikasjonen, så er det enkelt å si én klasse som dekker en spesifikk funksjonalitet i systemet er det viktigste, men det som blir oversett da er de andre underklassene som er med på å gjøre dataen som blir lagt inn fullstendig og forståelig. 
 
 
-### Funksjonaliteter i applikasjonen (det som applikasjonen gjør)
+# Funksjonaliteter i applikasjonen (det som applikasjonen gjør)
 
 Hensikten med applikasjonene er å gi Nøsted & et system som registrere, mottar og behandler serviceordre. Formålet er å gjøre nåværende arbeidsrutiner digitalisert for å gjøre hverdagen deres enklere og mer effektiv. Med å gjøre systemet digital, vil det gi mange positive innvirkninger, et av de er at digitalisering løser problemet med at i nåværende situasjon er enkelte prosesser repeterende. Dette har gruppen løst med å innføre automatiserte prosesser. 
 Funksjonaliteter: 
@@ -152,7 +152,7 @@ Funksjonaliteter:
 
 
 
-### Logikken av applikasjonen (koden)
+# Logikken av applikasjonen (koden)
 
 Teknologisk Oversikt
 Programmeringsspråk: C#
@@ -199,204 +199,183 @@ dotnet ef migrations add
 InitialCreated dotnet ef database update
 
 
-### Unit testing scenarier type tester f. eks. UI test (test kode/skripter og resultater)
+# Unit testing scenarier type tester f. eks. UI test (test kode/skripter og resultater)
 Trenger ikke unit testing på FAQ. 
 
-Test scenarioer: 
+## Test scenarioer: 
 Gruppen testet scenario på ung alder målgruppe. Denne målgruppen har noen dataerfaring fra før av.  
 
-Oppgave 
-Serviceordre
-Beskrivelse 
-Opprette serviceordre
-Instruksjoner
-Logg inn.
-Trykk på meny knapp oppe til høyre.
-Velg “Oversikt”.
-Trykk på “Serviceordre”. 
-Fyll inn informasjon om kunde og produkt. 
-Trykk på “send inn”.
-Serviceordre blir presentert på oversiktsiden. 
-Forventet resultat
-Etter trykt på send inn, blir man sendt tilbake til oversiktsiden, og kan se at det har kommet inn en ny ordre. 
-Faktisk resultat 
-Etter trykt på “Send inn”, ble man sendt tilbake til serviceordre siden 
+### Oppgave: Serviceordre
+Beskrivelse: Opprette serviceordre
+Instruksjoner:
+   - Logg inn.
+   - Trykk på meny knapp oppe til høyre.
+   - Velg “Oversikt”.
+   - Trykk på “Serviceordre”. 
+   - Fyll inn informasjon om kunde og produkt. 
+   - Trykk på “send inn”.
+   - Serviceordre blir presentert på oversiktsiden. 
+Forventet resultat:
+   - Etter trykt på send inn, blir man sendt tilbake til oversiktsiden, og kan se at det har kommet inn en ny ordre. 
+Faktisk resultat: 
+   - Etter trykt på “Send inn”, ble man sendt tilbake til serviceordre siden 
 
 
 
-Oppgave 
-Serviceskjema
-Beskrivelse 
-Opprette serviceskjema
-Instruksjoner
-Logg inn.
-Trykk på meny knapp oppe til høyre.
-Velg “Oversikt”.
-Trykk på “Serviceskjema”. 
-Skriv ordrenummeret fra en tidligere opprettet serviceordre. 
-Fyll inn informasjon om service ut ifra serviceordre. 
-Trykk på send inn.
-Forventet resultat
-Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man tilbake til oversiktsiden og ser at det har blitt lagt inn id til skjemaet med serviceordren.  
-Faktisk resultat 
-Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man til en hvit siden. Service Skjemaet ble lagret i oversikt selv om man ikke kom til riktig side. 
+### Oppgave: Serviceskjema
+Beskrivelse: Opprette serviceskjema
+Instruksjoner:
+   - Logg inn.
+   - Trykk på meny knapp oppe til høyre.
+   - Velg “Oversikt”.
+   - Trykk på “Serviceskjema”. 
+   - Skriv ordrenummeret fra en tidligere opprettet serviceordre. 
+   - Fyll inn informasjon om service ut ifra serviceordre. 
+   - Trykk på send inn.
+Forventet resultat:
+   - Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man tilbake til oversiktsiden og ser at det har blitt lagt inn      id til skjemaet med serviceordren.  
+Faktisk resultat:
+   - Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man til en hvit siden. Service Skjemaet ble lagret i oversikt       selv om man ikke kom til riktig side. 
+
+
+### Oppgave: Sjekkliste 
+Beskrivelse: Opprette sjekkliste
+Instruksjoner:
+   - Velg “Oversikt” i meny.
+   - Trykk på “Sjekkliste”. 
+   - Fyll ut generell informasjon.
+   - Trykk på neste.  
+   - Trykk på sjekk boksene ut ifra fullført arbeid ut ifra  hvilken avdeling man hører til.
+   - Signer og send inn. 
+Forventet resultat:
+   - Etter trykket på send inn, vil man komme tilbake til oversiktsiden og se at sjekklisten har blitt lagt til på ordren. 
+Faktisk resultat: 
+   - Etter tykt på send inn, ble man ikke sendt tilbake til oversikt. Sjekkliste var ikke koblet til og dermed ikke oppdatert på oversiktsiden 
+
+
+### Oppgave: Deler
+Beskrivelse: Legge til/ endre og slette deler.  
+Instruksjoner:
+   - Legg til nytt deler: 
+         - Velg “Deler” fra meny.
+         - Trykk på “Legg til” knapp.
+         - Skriv inn nødvendig info. 
+         - Trykk på “Lagre”. 
+   - Endre antall deler: 
+         - Velg “Deler” fra meny.
+         - Trykk på tannhjul knapp ved siden av ønsket deler å endre.
+         - Skriv inn nødvendig info. 
+         - Trykk på “Oppdater”. 
+   - Slett deler: 
+         - Velg “Deler” fra meny.
+         - Trykk på knappen “Slett”
+         - Skriv inn ID og trykk slett igjen. 
+Forventet resultat:
+   - Når man har lagt til, endret eller slettet vil man kunne se resultatet med engang på tabellen med Deler. 
+Faktisk resultat:
+   - Resultatet ble som forventet resultat. 
+
+
+### Oppgave: Utstyr 
+Beskrivelse: Legge inn og slette deler på utstyr. 
+Instruksjoner:
+   - Legg til nytt utstyr: 
+         - Velg “Utstyr” fra meny.
+         - Trykk på “Legg til” knapp.
+         - Skriv inn nødvendig info. 
+         - Trykk på “Lagre”. 
+   - Slett utstyr: 
+         - Velg “Utstyr” fra meny.
+         - Trykk på knappen “Slett”
+         - Skriv inn ID og trykk slett igjen. 
+Forventet resultat:
+   - Når man har lagt til eller slettet vil man kunne se resultatet med engang på tabellen med utstyr. 
+Faktisk resultat: 
+   - Resultatet ble som forventet resultat. 
+
+
+### Oppgave: Brukeroversikt
+Beskrivelse: Legge inn, endre og slette en bruker. 
+Instruksjoner:
+   - Legge til ny bruker: 
+         - Velg “Brukeroversikt” i meny.
+         - Trykk på knappen “Legg til bruker”.
+         - Fyll inn informasjon om brukeren.
+         - Trykk på “Registrer” for å registrere ordren. 
+         - Den nyansatte vil da komme opp på brukeroversikt. 
+   - Slette bruker: 
+         - Velg “Brukeroversikt” i meny.
+         - Trykk på tannhjul knappen som er ved siden av hver ansatt.
+         - Velg “slett” på den ønsket bruker .
+         - Ansatte vil da bli slettet fra systemet. 
+   - Endre bruker: 
+         - Velg “Brukeroversikt” i meny.
+         - Trykk på tannhjul knappen som er ved siden av hver ansatt.
+         - Fyll ut ønsket data som skal endres.
+         - Trykk på “oppdater” for å oppdatere ansatte. 
+Forventet resultat:
+   - Når man har lagt til, endret eller slettet bruker vil man kunne se resultatet med engang på tabellen med brukeroversikt. 
+     Hvis man skal søke etter en spesifikk bruker kan man bruke søke baren til å finne enkelt frem til hvilken som helst bruker.
+Faktisk resultat: 
+   - Resultatet ble som forventet resultat med at man kunne slette, endre og opprette ny bruker. Det som ikke fungerte som forventet er sidebaren.      Det gikk ikke å søke etter bruker. 
 
 
 
-
-Oppgave 
-Sjekkliste 
-Beskrivelse 
-Opprette sjekkliste
-Instruksjoner
-Velg “Oversikt” i meny.
-Trykk på “Sjekkliste”. 
-Fyll ut generell informasjon.
-Trykk på neste.  
-Trykk på sjekk boksene ut ifra fullført arbeid ut ifra  hvilken avdeling man hører til.
-Signer og send inn. 
-Forventet resultat
-Etter trykket på send inn, vil man komme tilbake til oversiktsiden og se at sjekklisten har blitt lagt til på ordren. 
-Faktisk resultat 
-Etter tykt på send inn, ble man ikke sendt tilbake til oversikt. Sjekkliste var ikke koblet til og dermed ikke oppdatert på oversiktsiden 
-
-
-
-Oppgave 
-Deler
-Beskrivelse 
-Legge til/ endre og slette deler.  
-Instruksjoner
-Legg til nytt deler: 
-Velg “Deler” fra meny.
-Trykk på “Legg til” knapp.
-Skriv inn nødvendig info. 
-Trykk på “Lagre”. 
-Endre antall deler: 
-Velg “Deler” fra meny.
-Trykk på tannhjul knapp ved siden av ønsket deler å endre.
-Skriv inn nødvendig info. 
-Trykk på “Oppdater”. 
-
-Slett deler: 
-Velg “Deler” fra meny.
-Trykk på knappen “Slett”
-Skriv inn ID og trykk slett igjen. 
-Forventet resultat
-Når man har lagt til, endret eller slettet vil man kunne se resultatet med engang på tabellen med Deler. 
-Faktisk resultat 
-Resultatet ble som forventet resultat. 
-
-
-
-Oppgave 
-Utstyr 
-Beskrivelse 
-Legge inn og slette deler på utstyr. 
-Instruksjoner
-Legg til nytt utstyr: 
-Velg “Utstyr” fra meny.
-Trykk på “Legg til” knapp.
-Skriv inn nødvendig info. 
-Trykk på “Lagre”. 
-
-Slett utstyr: 
-Velg “Utstyr” fra meny.
-Trykk på knappen “Slett”
-Skriv inn ID og trykk slett igjen. 
-Forventet resultat
-Når man har lagt til eller slettet vil man kunne se resultatet med engang på tabellen med utstyr. 
-Faktisk resultat 
-Resultatet ble som forventet resultat. 
-
-
-
-Oppgave 
-Brukeroversikt
-Beskrivelse 
-Legge inn, endre og slette en bruker. 
-Instruksjoner
-Legge til ny bruker: 
-Velg “Brukeroversikt” i meny.
-Trykk på knappen “Legg til bruker”.
-Fyll inn informasjon om brukeren.
-Trykk på “Registrer” for å registrere ordren. 
-Den nyansatte vil da komme opp på brukeroversikt. 
-
-Slette bruker: 
-Velg “Brukeroversikt” i meny.
-Trykk på tannhjul knappen som er ved siden av hver ansatt.
-Velg “slett” på den ønsket bruker .
-Ansatte vil da bli slettet fra systemet. 
-
-endre bruker: 
-Velg “Brukeroversikt” i meny.
-Trykk på tannhjul knappen som er ved siden av hver ansatt.
-Fyll ut ønsket data som skal endres.
-Trykk på “oppdater” for å oppdatere ansatte. 
- 
-Forventet resultat
-Når man har lagt til, endret eller slettet bruker vil man kunne se resultatet med engang på tabellen med brukeroversikt. 
-Hvis man skal søke etter en spesifikk bruker kan man bruke søke baren til å finne enkelt frem til hvilken som helst bruker.
-Faktisk resultat 
-Resultatet ble som forventet resultat med at man kunne slette, endre og opprette ny bruker. Det som ikke fungerte som forventet er sidebaren. Det gikk ikke å søke etter bruker. 
-
-
-
-Hvordan applikasjonen brukes (brukesanvisning)
+# Hvordan applikasjonen brukes (brukesanvisning)
 
 Alle ansatte må logge seg inn med sin bruker, de vil da få tilgang til siden og det de har adgang til. For å navigere seg gjennom sidene brukes hamburger meny knappen oppe til høyre. 
 
-Administrator/kundebehandler: 
+## Administrator/kundebehandler: 
 administrator kan opprette serviceordre, legge til på  deler, slette, endre og opprettet bruker.
-Opprette serviceordre: 
+
+### Opprette serviceordre: 
 Velg “Oversikt” i meny.
 Trykk på knappen “Serviceordre”.
 Fyll inn informasjon om kunde og produkt.
 Trykk på send inn for å registrere ordren. 
 Velg oversikt igjen for å se de nye ordene. 
 
-Legge til ny bruker: 
+### Legge til ny bruker: 
 Velg “Brukeroversikt” i meny.
 Trykk på knappen “Legg til bruker”.
 Fyll inn informasjon om brukeren.
 Trykk på “Registrer” for å registrere ordren. 
 Den nyansatte vil da komme opp på brukeroversikt. 
 
-Slette bruker: 
+### Slette bruker: 
 Velg “Brukeroversikt” i meny.
 Trykk på tannhjul knappen som er ved siden av hver ansatt.
 Velg “slett” på den ønsket bruker .
 Ansatte vil da bli slettet fra systemet. 
 
-endre bruker: 
+### Endre bruker: 
 Velg “Brukeroversikt” i meny.
 Trykk på tannhjul knappen som er ved siden av hver ansatt.
 Fyll ut ønsket data som skal endres.
 Trykk på “oppdater” for å oppdatere ansatte. 
 
-Legg til nytt deler: 
+### Legg til nytt deler: 
 Velg “Deler” fra meny.
 Trykk på “Legg til” knapp.
 Skriv inn nødvendig info. 
 Trykk på “Lagre”. 
 
-Endre antall deler: 
+### Endre antall deler: 
 Velg “Deler” fra meny.
 Trykk på tannhjul knapp ved siden av ønsket deler å endre.
 Skriv inn nødvendig info. 
 Trykk på “Oppdater”. 
 
 
-Slett deler: 
+### Slett deler: 
 Velg “Deler” fra meny.
 Trykk på knappen “Slett”
 Skriv inn ID og trykk slett igjen. 
 
-Reparatør: 
+## Reparatør: 
 Repreatørene kan fylle ut serviceskjema, sjekkliste, utstyr. 
 
-Opprette serviceskjema:
+### Opprette serviceskjema:
 Velg “Oversikt” i meny.
 Trykk på “Serviceskjema”. 
 Skriv ordrenummeret fra en tidligere opprettet serviceordre. 
@@ -404,7 +383,7 @@ Fyll inn informasjon om service ut i fra serviceordre.
 Trykk på send inn.
 
 Reparatørene har tre avdelinger i seg, det er mekanisk, hydraulisk og elektro. sjekklisten er delt opp i tre deler der hver av disse avdelingene kan fylle ut sin del uten å fylle på de andres deler. 
-Opprette sjekkliste:
+### Opprette sjekkliste:
 Velg “Oversikt” i meny.
 Trykk på “Sjekkliste”. 
 Fyll ut generell informasjon.
@@ -412,13 +391,13 @@ Trykk på neste.
 Trykk på sjekk boksene ut ifra fullført arbeid ut ifra  hvilken avdeling man hører til.
 Signer og send inn. 
 
-Legg til nytt utstyr: 
+### Legg til nytt utstyr: 
 Velg “Utstyr” fra meny.
 Trykk på “Legg til” knapp.
 Skriv inn nødvendig info. 
 Trykk på “Lagre”. 
 
-Slett utstyr: 
+### Slett utstyr: 
 Velg “Utstyr” fra meny.
 Trykk på knappen “Slett”
 Skriv inn ID og trykk slett igjen. 
