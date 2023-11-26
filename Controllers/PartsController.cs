@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Entities;
 using Prosjekt.Models.Parts;
+using Prosjekt.Models.Equipment;
 
 
 namespace Prosjekt.Controllers
@@ -41,6 +42,35 @@ namespace Prosjekt.Controllers
                 ViewData["List"] = list;
 
             }
+
+
+            var EquipmentDB = _context.Equipment.ToList();
+
+
+            
+
+
+            List<EquimentViewModel> EquipmentList = new List<EquimentViewModel>();
+
+            // Convert the fetched data to the view model type
+            foreach (var e in EquipmentDB)
+            {                     
+                var EqiupmentObj = new EquimentViewModel
+                {
+                    Id_int = e.Id_int,
+                    Availability = e.Availability,
+                    Name_str = e.Name_str
+                };
+
+                EquipmentList.Add(EqiupmentObj);
+            }
+
+            if (EquipmentList.Count > 0)
+            {
+                ViewData["Equipment"] = EquipmentList;
+
+            }
+
             return View();
         }
 
@@ -71,7 +101,6 @@ namespace Prosjekt.Controllers
             {
                 var partsObj = new PartsModel
                 {
-                    PartID_int = model.PartID_int,
                     PartName_str = model.PartName_str,
                     Quantity_available_int = model.Quantity_available_int,
                     EquipmentID_int = equipment.Id_int
@@ -84,8 +113,9 @@ namespace Prosjekt.Controllers
                 if (result == null)
                 {
                     ModelState.AddModelError(string.Empty, "Klarte ikke � lage service order");
-                    return RedirectToAction("Parts");
+                    return RedirectToAction("AddPart");
                 }
+                _context.SaveChanges();
 
             }
 
