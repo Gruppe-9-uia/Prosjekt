@@ -158,48 +158,56 @@ Legge til, endre eller slette data. Dette blir brukt på sidene “brukeroversik
 # Logikken av applikasjonen (koden)
 
 Teknologisk Oversikt
+
 Programmeringsspråk: C#
+
 Frontend Teknologier: HTML, CSS, JavaScript
+
 Backend Rammeverk: ASP.NET Core
+
 ORM (Object-Relational Mapping): Entity Framework Core
+
 Databaseteknologi: MariaDB, administrert via Docker.
+
 Sikkerhet: Implementering av ASP.NET Core Identity for autentisering og autorisasjon, samt bruk av anti-forgery tokens.
 
 MVC Arkitektur
 
-Modell: Definert i C# klasser. 
+Modell er definert i C# klasser.  { get; set; }
+
+Visning brukes Razor CSHTML. 
+Kobler razor mot modell via @model.
+@model 
+{
+ViewData["Title"]  = " ";
+
+Kobler razor med controlleren gjennom http, asp-action, form 
+
+Kontrolleren håndterer bruker forespørsler, samhandler med modeller og returnerer visninger. 
 
 
+Database Interaksjon:
 
-Visning: Razor CSHTML.
-
-
-
-Kontroller: Håndterer bruker forespørsler, samhandler med modeller og returnerer visninger. 
-
-Database Interaksjon
-
-
-
-
-
+private readonly Prosjektcontext_context; 
 
 Kontrolleren bruker _context for å hente data fra databasen, og denne dataen blir passert til visningene (views) for å generere den endelige HTML som brukeren ser.
 
 “OnModelCreating” definerer og skal konfigurere modeller og deres relasjoner i databasen.
 
 
-
-
 Autentisering og Sikkerhet
 ASP.NET Core Identity. Tilbyr autentisering og autorisasjon funksjonalitet. Håndtering med brukere, dets registrering, innlogging, og tilgangskontroll.
+
 Anti-forgery tokens har blitt integrert i forskjellige steder som razor CSHTML eller i controller for å forhindre CSRF-angrep.
 
 
 Migrasjoner
 Det gjør det mulig å oppdatere databasen slik at det reflekteres i modellen gjennom å kjøre kommandoen i terminalen: 
+
 dotnet ef migrations add 
+
 InitialCreated dotnet ef database update
+
 
 
 # Unit testing scenarier type tester f. eks. UI test (test kode/skripter og resultater)
