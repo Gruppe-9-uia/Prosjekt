@@ -119,19 +119,19 @@ I tilknytting med applikasjonen, så blir CRUD-operasjoner (Create, Read, Update
 
 
 
-Bildet ovenfor er et eksempel på Create-operasjon i “AddEquipment”-metoden. HTTP POST-metoden tar inn data fra et “AddEquipmentModel”-objekt. Mens den gjør det, så sjekker den om det allerede eksisterer et utstyrs-objekt med det samme navnet ved å kalle ‘_equipmentRepository.getEquipmentByName(model.Name_str)’. Dersom objektet ikke eksisterer, så oppretter den et nytt “EquipmentModel”-objekt basert på modellen og bestemmer tilgjengeligheten basert på ‘model.Availability’, og deretter legger til dette utstyret i databasen ved å kalle ‘_equipmentRepository.InsertEquipment(EquipmentObj).
+I filen EquipmentController.cs, så blir det vist et eksempel på en Create-operasjon i “AddEquipment”-metoden. HTTP POST-metoden tar inn data fra et “AddEquipmentModel”-objekt. Mens den gjør det, så sjekker den om det allerede eksisterer et utstyrs-objekt med det samme navnet ved å kalle ‘_equipmentRepository.getEquipmentByName(model.Name_str)’. Dersom objektet ikke eksisterer, så oppretter den et nytt “EquipmentModel”-objekt basert på modellen og bestemmer tilgjengeligheten basert på ‘model.Availability’, og deretter legger til dette utstyret i databasen ved å kalle ‘_equipmentRepository.InsertEquipment(EquipmentObj).
 
 
 
-Bildet over viser til en Read-operasjon i metoden “Employees”. metoden henter alle brukerne fra ‘_employeeRepository’ og deretter oppretter en liste av objektene i ‘BrukerOversiktViewModel’ for å representere informasjonen til brukerne. I tillegg, for hver bruker i ‘employeeList’, utføres det Read-operasjonen ved å opprette et ‘BrukerOversiktViewModel’-objekt og legger det til i listen. Resultatet av dette sendes da til visning i “Employees”. 
+Samtlig, i EmployeesController.cs, så blir det tatt i bruk en Read-operasjon i metoden “Employees”. metoden henter alle brukerne fra ‘_employeeRepository’ og deretter oppretter en liste av objektene i ‘BrukerOversiktViewModel’ for å representere informasjonen til brukerne. I tillegg, for hver bruker i ‘employeeList’, utføres det Read-operasjonen ved å opprette et ‘BrukerOversiktViewModel’-objekt og legger det til i listen. Resultatet av dette sendes da til visning i “Employees”. 
 
 
 
-Bildet ovenfor viser en Update-operasjon i “UpdateEmployee”-metoden. Metoden tar inn data fra et ‘EmployeeUpdateModel’-objekt og oppdaterer en eksisterende bruker i databasen med de nye dataene. For å utføre denne oppdateringen, så blir det brukt ‘_employeeRepository’-metoder som ‘getUserByEmail’, ‘updateUserRole’ og ‘updateUser’. Brukeren blir deretter omdirigert tilbake til “Employee”-siden etter oppdateringen av informasjonen har gått gjennom.
+EmployeesController.cs inneholder også en Update-operasjon i “UpdateEmployee”-metoden. Metoden tar inn data fra et ‘EmployeeUpdateModel’-objekt og oppdaterer en eksisterende bruker i databasen med de nye dataene. For å utføre denne oppdateringen, så blir det brukt ‘_employeeRepository’-metoder som ‘getUserByEmail’, ‘updateUserRole’ og ‘updateUser’. Brukeren blir deretter omdirigert tilbake til “Employee”-siden etter oppdateringen av informasjonen har gått gjennom.
 
 
 
-Et relativt enkelt eksempel på en Delete-operasjon blir vist i bildet over, hvor ‘RemoveEmployee’-metoden tar inn data fra ‘BrukerOversiktViewModel’ og bruker en ‘_employeeRepository’-metode, ‘DeleteUser’ for å slette en bruker fra databasen. Deretter blir brukeren omdirigert tilbake til “Employee”-siden.
+I tillegg, i EmployeesController.cs, så ser man et eksempel på en Delete-operasjon, hvor ‘RemoveEmployee’-metoden tar inn data fra ‘BrukerOversiktViewModel’ og bruker en ‘_employeeRepository’-metode, ‘DeleteUser’ for å slette en bruker fra databasen. Deretter blir brukeren omdirigert tilbake til “Employee”-siden.
 
 De viktigste klassene i applikasjonen er så å si knyttet til hverandre, hvorav en hver klasse er tett knyttet til en annen, for håndtering av data. For eksempel, representerer “Customer” og “Postal_Code” informasjonen om kunden, og er sentral for håndteringen av kundeinformasjon i sammenheng med serviceordre.
 
