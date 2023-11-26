@@ -211,7 +211,7 @@ Gruppen testet scenario på ung alder målgruppe. Denne målgruppen har noen dat
 ### Oppgave: Serviceordre
 Beskrivelse: Opprette serviceordre.
 
-Instruksjoner:
+### Instruksjoner:
    - Logg inn.
    - Trykk på meny knapp oppe til høyre.
    - Velg “Oversikt”.
@@ -231,7 +231,8 @@ Faktisk resultat:
 
 ### Oppgave: Serviceskjema
 Beskrivelse: Opprette serviceskjema.
-Instruksjoner:
+
+### Instruksjoner:
    - Logg inn.
    - Trykk på meny knapp oppe til høyre.
    - Velg “Oversikt”.
@@ -239,64 +240,78 @@ Instruksjoner:
    - Skriv ordrenummeret fra en tidligere opprettet serviceordre. 
    - Fyll inn informasjon om service ut ifra serviceordre. 
    - Trykk på send inn.
+
 Forventet resultat:
-   - Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man tilbake til oversiktsiden og ser at det har blitt lagt inn      id til skjemaet med serviceordren.  
+   - Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man tilbake til oversiktsiden og ser at det har blitt lagt inn      id til skjemaet med serviceordren.
+  
 Faktisk resultat:
    - Etter trykt på send inn, og fylt inn eventuelle deler som har blitt brukt, kom man til en hvit siden. Service Skjemaet ble lagret i oversikt       selv om man ikke kom til riktig side. 
 
 
 ### Oppgave: Sjekkliste 
 Beskrivelse: Opprette sjekkliste
-Instruksjoner:
+
+### Instruksjoner:
    - Velg “Oversikt” i meny.
    - Trykk på “Sjekkliste”. 
    - Fyll ut generell informasjon.
    - Trykk på neste.  
    - Trykk på sjekk boksene ut ifra fullført arbeid ut ifra  hvilken avdeling man hører til.
-   - Signer og send inn. 
+   - Signer og send inn.
+
 Forventet resultat:
-   - Etter trykket på send inn, vil man komme tilbake til oversiktsiden og se at sjekklisten har blitt lagt til på ordren. 
+   - Etter trykket på send inn, vil man komme tilbake til oversiktsiden og se at sjekklisten har blitt lagt til på ordren.
+     
 Faktisk resultat: 
    - Etter tykt på send inn, ble man ikke sendt tilbake til oversikt. Sjekkliste var ikke koblet til og dermed ikke oppdatert på oversiktsiden 
 
 
 ### Oppgave: Deler
 Beskrivelse: Legge til/ endre og slette deler.  
-Instruksjoner:
-   - Legg til nytt deler: 
-         - Velg “Deler” fra meny.
-         - Trykk på “Legg til” knapp.
-         - Skriv inn nødvendig info. 
-         - Trykk på “Lagre”. 
-   - Endre antall deler: 
-         - Velg “Deler” fra meny.
-         - Trykk på tannhjul knapp ved siden av ønsket deler å endre.
-         - Skriv inn nødvendig info. 
-         - Trykk på “Oppdater”. 
-   - Slett deler: 
-         - Velg “Deler” fra meny.
-         - Trykk på knappen “Slett”
-         - Skriv inn ID og trykk slett igjen. 
+
+### Instruksjoner:
+Legg til nytt deler: 
+   - Velg “Deler” fra meny.
+   - Trykk på “Legg til” knapp.
+   - Skriv inn nødvendig info. 
+   - Trykk på “Lagre”.
+     
+Endre antall deler: 
+   - Velg “Deler” fra meny.
+   - Trykk på tannhjul knapp ved siden av ønsket deler å endre.
+   - Skriv inn nødvendig info. 
+   - Trykk på “Oppdater”.
+      
+Slett deler: 
+   - Velg “Deler” fra meny.
+   - Trykk på knappen “Slett”
+   - Skriv inn ID og trykk slett igjen.
+     
 Forventet resultat:
-   - Når man har lagt til, endret eller slettet vil man kunne se resultatet med engang på tabellen med Deler. 
+   - Når man har lagt til, endret eller slettet vil man kunne se resultatet med engang på tabellen med Deler.
+     
 Faktisk resultat:
    - Resultatet ble som forventet resultat. 
 
 
 ### Oppgave: Utstyr 
 Beskrivelse: Legge inn og slette deler på utstyr. 
-Instruksjoner:
-   - Legg til nytt utstyr: 
-         - Velg “Utstyr” fra meny.
-         - Trykk på “Legg til” knapp.
-         - Skriv inn nødvendig info. 
-         - Trykk på “Lagre”. 
-   - Slett utstyr: 
-         - Velg “Utstyr” fra meny.
-         - Trykk på knappen “Slett”
-         - Skriv inn ID og trykk slett igjen. 
+
+#### Instruksjoner:
+Legg til nytt utstyr: 
+   - Velg “Utstyr” fra meny.
+   - Trykk på “Legg til” knapp.
+   - Skriv inn nødvendig info. 
+   - Trykk på “Lagre”.
+
+Slett utstyr: 
+   - Velg “Utstyr” fra meny.
+   - Trykk på knappen “Slett”
+   - Skriv inn ID og trykk slett igjen.
+     
 Forventet resultat:
-   - Når man har lagt til eller slettet vil man kunne se resultatet med engang på tabellen med utstyr. 
+   - Når man har lagt til eller slettet vil man kunne se resultatet med engang på tabellen med utstyr.
+     
 Faktisk resultat: 
    - Resultatet ble som forventet resultat. 
 
@@ -304,26 +319,30 @@ Faktisk resultat:
 ### Oppgave: Brukeroversikt
 Beskrivelse: Legge inn, endre og slette en bruker.
 
-Instruksjoner:
-   - Legge til ny bruker: 
-         - Velg “Brukeroversikt” i meny.
-         - Trykk på knappen “Legg til bruker”.
-         - Fyll inn informasjon om brukeren.
-         - Trykk på “Registrer” for å registrere ordren. 
-         - Den nyansatte vil da komme opp på brukeroversikt. 
-   - Slette bruker: 
-         - Velg “Brukeroversikt” i meny.
-         - Trykk på tannhjul knappen som er ved siden av hver ansatt.
-         - Velg “slett” på den ønsket bruker .
-         - Ansatte vil da bli slettet fra systemet. 
-   - Endre bruker: 
-         - Velg “Brukeroversikt” i meny.
-         - Trykk på tannhjul knappen som er ved siden av hver ansatt.
-         - Fyll ut ønsket data som skal endres.
-         - Trykk på “oppdater” for å oppdatere ansatte. 
+#### Instruksjoner:
+Legge til ny bruker: 
+   - Velg “Brukeroversikt” i meny.
+   - Trykk på knappen “Legg til bruker”.
+   - Fyll inn informasjon om brukeren.
+   - Trykk på “Registrer” for å registrere ordren. 
+   - Den nyansatte vil da komme opp på brukeroversikt.
+
+Slette bruker: 
+   - Velg “Brukeroversikt” i meny.
+   - Trykk på tannhjul knappen som er ved siden av hver ansatt.
+   - Velg “slett” på den ønsket bruker .
+   - Ansatte vil da bli slettet fra systemet.
+     
+Endre bruker: 
+   - Velg “Brukeroversikt” i meny.
+   - Trykk på tannhjul knappen som er ved siden av hver ansatt.
+   - Fyll ut ønsket data som skal endres.
+   - Trykk på “oppdater” for å oppdatere ansatte.
+     
 Forventet resultat:
    - Når man har lagt til, endret eller slettet bruker vil man kunne se resultatet med engang på tabellen med brukeroversikt. 
      Hvis man skal søke etter en spesifikk bruker kan man bruke søke baren til å finne enkelt frem til hvilken som helst bruker.
+
 Faktisk resultat: 
    - Resultatet ble som forventet resultat med at man kunne slette, endre og opprette ny bruker. Det som ikke fungerte som forventet er sidebaren.      Det gikk ikke å søke etter bruker. 
 
