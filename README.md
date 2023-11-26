@@ -226,7 +226,7 @@ Faktisk resultat:
 
 
 ### Oppgave: Serviceskjema
-Beskrivelse: Opprette serviceskjema
+Beskrivelse: Opprette serviceskjema.
 Instruksjoner:
    - Logg inn.
    - Trykk på meny knapp oppe til høyre.
