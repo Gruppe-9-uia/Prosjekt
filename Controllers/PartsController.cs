@@ -105,6 +105,8 @@ namespace Prosjekt.Controllers
                 partsObj.PartName_str = model.PartName_str;
                 partsObj.Quantity_available_int = model.Quantity_available_int;
 
+
+                // Check if equipments FK should be add to partsObj
                 var equipment = _partsRepository.findPartsByEquipmentName(model.EquipmentName);
                 if (equipment != null)
                 {
@@ -124,15 +126,16 @@ namespace Prosjekt.Controllers
         [HttpPost]
         public IActionResult DeletePart(int partId)
         {
-            /*
-            var part = _context.Parts.FirstOrDefault(p => p.PartID_int == partId);
-            if (part != null)
+            if (!ModelState.IsValid)
             {
-                _context.Parts.Remove(part);
-                _context.SaveChanges();
+                //_logger.Log("Model state was not true");
+                return View();
             }
 
-            */
+            //Delect parts if id exists
+            _partsRepository.DeleteParts(partId);
+            _partsRepository.Save();
+
             return RedirectToAction("Parts");
         }
     }
