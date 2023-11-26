@@ -14,19 +14,19 @@
                 margin-bottom: 20px;
             }
         
-            /* Set the background color for question headings */
+            /* Bakgrunnsfarge for Spørsmål Overskrift */
             .panel-default > .panel-heading {
                 background-color: #FF944c;
                 padding: 15px; 
                 margin-bottom: 0; 
             }
         
-            /* Style for the collapsed state of the accordion items */
+            /* Stil for lukket tilstand av accordion items */
             .panel-title a b {
                 color: #fff; 
             }
         
-            /* Style for the expanded state of the accordion items */
+            /* Stil for the åpnet tilstand av the accordion items */
             .panel-title a.b {
                 color: #333; 
             }
@@ -350,6 +350,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<!--Javascript for at FAQ kan åpnes og lukkes-->
 <script>
     $(document).ready(function () {
         // Add event listener for accordion buttons
@@ -357,7 +358,7 @@
             // Toggle the clicked accordion item
             $(this).find('b').toggleClass('collapsed');
 
-            // Close all other accordion items
+            // Lukke alle andre accordion items
             $('.panel-title a').not(this).find('b').removeClass('collapsed');
         });
     });
