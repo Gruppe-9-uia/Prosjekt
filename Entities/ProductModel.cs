@@ -2,6 +2,7 @@
 {
     public class ProductModel
     {
+        //henter og setter verdi til en egenskap
         [StringLength(100)]
         public string SerialNr_str {  get; set; }
         [StringLength(50)]

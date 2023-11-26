@@ -7,7 +7,8 @@ namespace Prosjekt.Controllers
     public class ServiceordreController : Controller
     {
         private readonly ProsjektContext _context;
-
+        
+        // Constructor for ServiceordreContorller
         public ServiceordreController(ProsjektContext context)
         {
             _context = context;
@@ -18,11 +19,13 @@ namespace Prosjekt.Controllers
 
             return View();
         }
-
+        
+        // Action metode for haandtering av form-innsendelse og lagrer ServiceOrder data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Save(ServicesOrderViewModel ServiceOrder)
         {
+            // Validerer model state før den prosesserer form data
             if (!ModelState.IsValid)
             {
                 return View("Serviceordre");
@@ -30,8 +33,10 @@ namespace Prosjekt.Controllers
 
             try
             {
+                // Sjekker om produktet allerede finnes
                 var product = _context.Product.Where(p => p.SerialNr_str.Equals(ServiceOrder.SerialNr)).FirstOrDefault();
-
+                
+                // Hvis produktet ikke finnes, legges det til i databasen
                 if (product == null)
                 {
                     var productDB = new ProductModel
@@ -51,9 +56,10 @@ namespace Prosjekt.Controllers
 
                 }
 
-
+                // Sjekker om postkoden allerede eksisterer
                 var postalCode = _context.Postal_Code.Where(p => p.Postal_Code_str.Equals(ServiceOrder.PostalCode)).FirstOrDefault();
-
+                
+                // Hvis postkoden ikke eksisterer, legges den til i databasen
                 if (postalCode == null)
                 {
                     var postalCodeDB = new PostalCode
@@ -73,8 +79,10 @@ namespace Prosjekt.Controllers
                     }
                 }
 
-
+                // Sjekker om kunden eksisterer
                 var customer = _context.Customer.Where(c => c.Email_str.Equals(ServiceOrder.Email)).FirstOrDefault();
+                
+                // Hvis kunden ikke eksisterer, legges dem til i databasen
                 if (customer == null)
                 {
 
@@ -105,9 +113,10 @@ namespace Prosjekt.Controllers
 
 
 
-                //Warranty
+                // Sjekker om Warranty allerede eksisterer 
                 var warranty = _context.Warranty.Where(w => w.WarrantyName_str == ServiceOrder.WarrantyName).FirstOrDefault();
-
+                
+                // Hvis warranty ikke eksisterer, legges det til i databasen
                 if (warranty == null)
                 {
                     var warrantyDB = new WarrantyModel { WarrantyName_str = ServiceOrder.WarrantyName };
@@ -119,13 +128,16 @@ namespace Prosjekt.Controllers
                         return View("Serviceordre");
                     }
                 }
+                
+                // Lagrer endringene til databasen
                 _context.SaveChanges();
-                //CustomerProduct
+                // CustomerProduct - henter de nødvendige IDene for å lage CustomerProduct logg
                 var customerID = _context.Customer.Where(c => c.Email_str.Equals(ServiceOrder.Email)).FirstOrDefault();
                 var warrantyID = _context.Warranty.Where(w => w.WarrantyName_str == ServiceOrder.WarrantyName).FirstOrDefault();
                 var productID = _context.Product.Where(p => p.SerialNr_str.Equals(ServiceOrder.SerialNr)).FirstOrDefault();
                 var CustomerProduct = _context.Customer_Product.Where(c => c.CustomerID_int == customerID.ID_int).FirstOrDefault();
 
+                // Hvis CustomerPrroduct loggen ikke eksisterer, legges den til i databasen
                 if (CustomerProduct == null)
                 {
 
@@ -145,14 +157,16 @@ namespace Prosjekt.Controllers
                         return View("Serviceordre");
                     }
                 }
-
+                
+                // Lagrer endringene til databasen
                 _context.SaveChanges();
 
-                //Serviceorder
+                // Serviceorder - henter de nødvendige IDene fo å lage ServiceOrder logg
                 var CustomerProductID = _context.Service_ordre.Where(c => c.CustomerID_int == customerID.ID_int).FirstOrDefault();
                 Console.WriteLine(CustomerProductID);
                 Console.WriteLine("test");
 
+                // Hvis ServiceOrder loggen ikke eksisterer, legges den til i databasen
                 if (CustomerProductID == null)
                 {
                     var serviceOrderDB = new ServiceOrderModel
@@ -164,7 +178,8 @@ namespace Prosjekt.Controllers
                         Received_Date = ServiceOrder.Received_Date,
                         SerialNr_str = ServiceOrder.SerialNr
                     };
-
+                    
+                    // Henter den latest ID (hvis logger eksisterer)
                     int latestIdSservice = _context.Service_ordre.Any() ? _context.Service_ordre.Max(so => so.OrderID_int) + 1 : 1;
                     serviceOrderDB.OrderID_int = latestIdSservice;
 
@@ -181,6 +196,7 @@ namespace Prosjekt.Controllers
                     }
                 }
 
+                // Lagrer endringene tli databasen
                 _context.SaveChanges();
 
                 return RedirectToAction("Oversikt", "Oversikt");

@@ -3,8 +3,8 @@
 @{
     ViewData["Title"] = "Oversikt";
 }
+<!-- henter script -->
 <script src="~/js/Oversikt.js"></script>
-<!--<div class="container mt-5">-->
 <div class="card mx-auto p-0" id="cardOversikt">
     <div class="card-header" id="cardheaderoversikt">
         <h1 class="text-center " style="margin-bottom: 20px; margin-top: 20px; color: white;">Oversikt</h1>
@@ -28,7 +28,7 @@
           }
         </script>
 
-    <div class="row"> <!-- justify-content-center-->
+    <div class="row">
 
         <div class="col-6" id="colonneOversikt">
             <input oninput="myFunctionOversikt()" id="søkebarOversikt" type="text" class="form-control" placeholder="Søk på order ID..." aria-label="Search" aria-describedby="button-addon2">
@@ -37,12 +37,11 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-11 m-3">
-            <div class="table-responsive custom-table-scroll custom-table-scroll-y"> <!--style="max-width: 90%; margin-left: auto; margin-right: auto;" -->
-                <!-- Tabell -->
+            <div class="table-responsive custom-table-scroll custom-table-scroll-y"> 
+                <!-- oppretter Tabell -->
                 <table class="table table-striped table-hover table-sm mx-auto" id="partsTable">
                     <thead>
                     <tr>
-                        <!-- Gjør ID-kolonnen mindre på små skjermer -->
                         <th class="text-center">Order ID</th>
                         <th class="text-center">Serienummer</th>
                         <th class="text-center">Garanti</th>
@@ -57,6 +56,9 @@
                     <tbody>
                     @if (ViewData["list"] != null)
                     {
+                        // Sjekk om ViewData["list"] er ikke-null
+                        // Hvis ikke-null, gjennomgå hvert element i listen og generer HTML for hver rad i tabellen
+
                         @foreach (var item  in ViewData["list"] as List<OversiktViewModel>)
                         {
                             <tr>
@@ -78,7 +80,7 @@
         </div>
     </div>
 </div>
-    <!--</div>-->
+    
 
 
 
