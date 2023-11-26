@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Models.Oversikt;
 
-
 namespace Prosjekt.Controllers
 {
     public class OversiktController : Controller
