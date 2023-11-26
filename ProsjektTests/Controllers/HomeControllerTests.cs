@@ -16,9 +16,7 @@ namespace Prosjekt.Controllers.Tests
         [TestMethod()]
         public void PrivacyTest()
         {
-            var controller = new HomeController();
-            var result = controller.Privacy() as ViewResult;
-            Assert.AreEqual("Personvern", result.ViewData["Title"]);
+            Assert.Fail();
         }
     }
 }

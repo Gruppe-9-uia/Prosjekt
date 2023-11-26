@@ -4791,6 +4791,35 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ProsjektNosted/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.10",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.23",
+          "Microsoft.AspNetCore.Identity.UI": "6.0.23",
+          "Microsoft.AspNetCore.Session": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.23",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.23",
+          "Microsoft.Extensions.Caching.Memory": "7.0.0",
+          "Microsoft.Owin.Security.OAuth": "4.2.2",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.5",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
+          "MySqlConnector": "2.2.7",
+          "NSubstitute": "5.1.0",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProsjektNosted.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProsjektNosted.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -13328,6 +13357,11 @@
       "type": "project",
       "path": "../Prosjekt/Prosjekt.csproj",
       "msbuildProject": "../Prosjekt/Prosjekt.csproj"
+    },
+    "ProsjektNosted/1.0.0": {
+      "type": "project",
+      "path": "../ProsjektNosted/ProsjektNosted.csproj",
+      "msbuildProject": "../ProsjektNosted/ProsjektNosted.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13337,6 +13371,7 @@
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "Moq >= 4.20.69",
       "Prosjekt >= 1.0.0",
+      "ProsjektNosted >= 1.0.0",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -13373,6 +13408,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\ANDRI\\Documents\\Prosjekt\\ProsjektNosted\\ProsjektNosted.csproj": {
+              "projectPath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\ProsjektNosted\\ProsjektNosted.csproj"
+            },
             "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj": {
               "projectPath": "C:\\Users\\ANDRI\\Documents\\Prosjekt\\Prosjekt\\Prosjekt.csproj"
             }
