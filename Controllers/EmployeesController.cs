@@ -1,68 +1,84 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Prosjekt.Models.Employee;
+using Prosjekt.Repository;
 
 namespace Prosjekt.Controllers
 {
     public class EmployeesController : Controller
     {
-        private readonly ProsjektContext _context;
+        private IEmployeeRepository _employeeRepository;
+        private readonly ILogger<EmployeesController> _logger;
 
-        public EmployeesController(ProsjektContext context)
+        public EmployeesController(IEmployeeRepository employeeRepository, ILogger<EmployeesController> logger) 
         {
-            _context = context;
+            _employeeRepository = employeeRepository;
+            _logger = logger;
         }
         // GET: /<controller>/
         public IActionResult Employees()
         {
-            try
+            var employeeList = _employeeRepository.getAllUsers();
+
+            //make a list of users in the system
+            List<BrukerOversiktViewModel> list = new List<BrukerOversiktViewModel>();
+            foreach (var e in employeeList)
             {
-                var employeeList = _context.Employees.ToList();
+                //Getinng the role to user
+                var userRoleId =_employeeRepository.getUserRole(e.Id);
 
-                List<BrukerOversiktViewModel> list = new List<BrukerOversiktViewModel>();
-
-                // Convert the fetched data to the view model type
-                foreach (var e in employeeList)
+                var employeeObj = new BrukerOversiktViewModel
                 {
-                    var userRoleId = _context.UserRoles.Where(x => x.UserId.Equals(e.Id)).FirstOrDefault();
-                    if (userRoleId == null)
-                    {
-                        ModelState.AddModelError(string.Empty, "Feil å hente rolle");
-                    }
+                    ID_int = e.Id,
+                    FirstName_str = e.FirstName_str,
+                    LastName_str = e.LastName_str,
+                    Department = userRoleId.RoleId,
+                    Phone = e.PhoneNumber,
+                    Email = e.Email
 
-                    var employeeObj = new BrukerOversiktViewModel
-                    {
-                        ID_int = e.Id,
-                        FirstName_str = e.FirstName_str,
-                        LastName_str = e.LastName_str,
-                        Department = userRoleId.RoleId,
-                        Phone = e.PhoneNumber,
-                        Email = e.Email
+                };
 
-                    };
-                    list.Add(employeeObj);
-                }
-
-                if (list.Count > 0)
-                {
-                    ViewData["List"] = list;
-
-                }
-                return View();
-
+                list.Add(employeeObj);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return View();
-            }
+
+            ViewData["List"] = list;
+
+            return View();
 
         }
 
         [HttpPost]
-        public IActionResult UpdateEmployee(BrukerOversiktViewModel model)
+        public IActionResult UpdateEmployee(EmployeeUpdateModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                //_logger.Log("Model state was not true");
+                return View();
+            }
 
+            var userUpdate = _employeeRepository.getUserByEmail(model.Email);
+            if (userUpdate != null)
+            {
+                userUpdate.Email = model.Email;
+                userUpdate.UserName = model.Email;
+                userUpdate.NormalizedEmail = model.Email.ToUpper();
+                userUpdate.NormalizedEmail = model.Email.ToUpper();
+                userUpdate.FirstName_str = model.FirstName_str;
+                userUpdate.PhoneNumber = model.Phone;
+
+                var newRole = new IdentityUserRole<string>
+                {
+                    RoleId = model.Department,
+                    UserId = userUpdate.Id
+                };
+                _employeeRepository.updateUserRole(newRole);
+                _employeeRepository.UpdateUser(userUpdate);
+                _employeeRepository.Save();
+
+
+            }
+            /*
             var employeeDB = _context.Employees.Where(x => x.Id.Equals(model.ID_int)).FirstOrDefault();
 
             if (employeeDB != null)
@@ -86,7 +102,7 @@ namespace Prosjekt.Controllers
 
                 _context.SaveChanges();
             }
-            
+            */
             return RedirectToAction("Employees");
 
         }
@@ -95,14 +111,14 @@ namespace Prosjekt.Controllers
         public IActionResult RemoveEmployee(BrukerOversiktViewModel model)
         {
 
-
+            /*
             var employeeDB = _context.Employees.Where(x => x.Id.Equals(model.ID_int)).FirstOrDefault();
             if(employeeDB != null)
             {
                 _context.Employees.Remove(employeeDB);
                 _context.SaveChanges();
             }
-
+            */
             return RedirectToAction("Employees");
         }
 

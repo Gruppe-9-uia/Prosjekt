@@ -43,7 +43,6 @@
   <ItemGroup>
     <Content Remove="wwwroot\css\FAQ %28copy%29.css" />
     <Content Remove="wwwroot\css\FAQ %28another copy%29.css" />
-    <Folder Include="Models\Employee\" />
   </ItemGroup>
 
   <ItemGroup>

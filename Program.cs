@@ -16,7 +16,7 @@ public class Program
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
         builder.Services.AddScoped<IPartsRepository, PartsRepository>();
-
+        builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
         SetupDataConnections(builder);
 

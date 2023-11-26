@@ -1,5 +1,5 @@
 ﻿@using Prosjekt.Models.Employee;
-@model Prosjekt.Models.Employee.BrukerOversiktViewModel;
+@model Prosjekt.Models.Employee.EmployeeUpdateModel;
 @{
 }
 
@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="col">
                             <label for="EmployeeId"><b>Id</b></label>
-                            <input type="text" class="form-control"  id="EmployeeId" asp-for="@Model.ID_int" readonly>
+                            <input type="text" class="form-control"  id="EmployeeId" readonly>
                             <label for="editStilling"><b>Stilling</b></label>
                             <input type="text" class="form-control" id="editStilling" asp-for="@Model.Department">
 
