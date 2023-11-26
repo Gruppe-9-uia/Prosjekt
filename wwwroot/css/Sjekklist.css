@@ -63,14 +63,7 @@
     margin-bottom: 0.5rem; 
 }
 
-.outer-container {
-    border: 2px solid #ddd; 
-    padding: 20px; 
-    margin: 20px 0; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til en lett skygge for dybde */
-    border-radius: 8px; 
-    
-}
+
 
 
 .cust-margin {
