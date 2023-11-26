@@ -18,7 +18,7 @@
 11. Kjører dockerfile i jetbrains
 12. Tilsutt kjør prosjekt i jetbrains
 
-
+startup og build er hentet fra https://github.com/espenlimi
 ### Mac
 
 1. kjører build.csh 
