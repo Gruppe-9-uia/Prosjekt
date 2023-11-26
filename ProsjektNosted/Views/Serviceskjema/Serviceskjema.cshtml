@@ -1,0 +1,94 @@
+﻿@using Prosjekt.Models.Services;
+@model Prosjekt.Models.Services.FormViewModel;
+@{
+    ViewData["Title"] = "Serviceskjema";
+}
+
+<div class="card w-75 mx-auto">
+<div class="skjemaouter-container"> 
+ <a href="javascript:history.back()" class="btn btn-link back-link">
+            <i class="bi bi-arrow-left" style="color: #000000;"></i> 
+        </a>
+    <h1 style="margin-bottom: 30px; text-align:  center; font-weight:  bold;">Serviceskjema</h1>
+    
+    @using (Html.BeginForm("SaveForm", "ServiceSkjema", FormMethod.Post, new { id = "formSkjema", onsubmit = "return confirm('Er du sikker på du ønsker å sende inn serviceskjema?');" }))
+    {
+        <!--  beskytte mot CSRF-angrep -->
+        @Html.AntiForgeryToken()
+
+        <div class="søkebar" style="margin-bottom: 50px;">
+            <!-- denne koden har jeg tatt fra nettet-->
+            <div class="row height d-flex justify-content-center align-items-center">
+                <div class="col-md-12">
+                    <div class="search text-center">
+                        <input type="number" class="form-control" placeholder="Order nummer" asp-for="OrderNr">
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        <div class="card">
+            <div class="form-row my-0">
+                <div class="form-group col-md-12">
+                    <label for="reperasjonsbeskrivelse">Reperasjons beskrivelse:</label>
+                    <textarea class="form-control" id="reperasjonsbeskrivelse" style="height: 100px;"placeholder="Skriv her..." asp-for="Repairdescription_str" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-row my-0">
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="ferdigDato">Ferdigstilt dato:</label>
+                    <input type="date" class="form-control" id="ferdigDato" asp-for="ServiceCompleted_date" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="ServiceCompleted_date">Service ferdig dato:</label>
+                    <input type="date" class="form-control" id="ServiceCompleted_date" asp-for="ServiceCompleted_date" required>
+                </div>
+            </div>
+            <div class="form-row my-0">
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="AgreedDelivery_date">Avtalt levering dato:</label>
+                    <input type="date" class="form-control" id="AgreedDelivery_date" asp-for="AgreedDelivery_date" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="label-i" for="ProduktMotatt">Produkt mottat dato:</label>
+                    <input type="date" class="form-control" id="produktMotatt" asp-for="BookedServiceWeek_int" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="BookedServiceWeek_int">Booket serivce uke:</label>
+                    <input type="number" class="form-control" id="BookedServiceWeek_int" asp-for="BookedServiceWeek_int" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Working_Hours_int">Arbeidstimer:</label>
+                    <input type="number" class="form-control" id="Working_Hours_int" asp-for="Working_Hours_int" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ShippingMethod_str">Forsendelsemåte:</label>
+                    <input type="text" class="form-control" id="ShippingMethod_str" asp-for="ShippingMethod_str" required>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center" style="margin-top: 30px;">
+            <button type="reset" class="btn btn-danger button-spacing" onclick="confirmReset()">Reset</button>
+            <button type="submit" class="btn btn-primary button-spacing">Neste</button> 
+        </div>
+        <script>
+                function confirmReset() {
+                    var ok = confirm("Er du sikker på du ønsker å resette serviceskjemaet?");
+                    if (ok) {
+                    // hvis brukeren trykker på ok, vil alt bli resettet.
+                    document.getElementById("formSkjema").reset();
+                    }
+                }
+
+               
+            </script>
+    }
+
+</div>
+</div>
+

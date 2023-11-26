@@ -1,0 +1,83 @@
+﻿.active .bs-stepper-circle {
+    background-color: #FF6700 !important;
+}
+
+.bs-stepper .step-trigger:focus {
+    color: #060623 !important;
+}
+
+
+.form-check-input:checked {
+    background-color: orange; 
+    border-color: orange; 
+    
+}
+
+.form-check-input:checked::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 1.5em;
+}
+
+.form-check-input[type="radio"] {
+    width: 25px; 
+    height: 25px; 
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Sentrer radioknappene innenfor sine bokser */
+.form-check-input[type="radio"] + label::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cm-container {
+    border: 2px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til en lett skygge for dybde */
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 10px auto; 
+    max-width: 90%; 
+    width: auto;
+}
+
+
+.check-header h5 {
+    color: #060623; 
+    font-weight: bold; 
+    background-color: #FFC107; 
+    padding: 5px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Litt skygge for dybde */
+}
+
+
+.col-4 h6 {
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 0.5rem; 
+}
+
+
+.outer-container {
+    border: 2px solid #ddd; 
+    padding: 20px; 
+    margin: 20px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til en lett skygge for dybde */
+    border-radius: 8px;
+}
+
+#sjekklistCol {
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.cust-margin {
+    margin-top: 30px; 
+}

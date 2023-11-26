@@ -1,0 +1,119 @@
+﻿@using Prosjekt.Models.Employee;
+@model Prosjekt.Models.Employee.EmployeeUpdateModel;
+@{
+}
+<script src="~/js/Oversikt.js"></script>
+<div class="container text-center mt-5">
+    <header>
+        <h1 class="h1-bo">Brukeroversikt</h1>
+    </header>
+</div>
+
+<div class="container text-center mt-4 mb-4 flex-grow-1 m-5">
+    <!--<form class="searchbar" action="/search" method="get">-->
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6" id="colonneBrukeroversikt">
+                <input oninput="myFunctionBrukerOversikt()" id="brukeroversiktInput" type="text" class="form-control" placeholder="Søk på Navn..." aria-label="Search" aria-describedby="button-addon2">
+            </div>
+            <!--<div class="col-md-8 col-lg-6">
+                <div class="input-group">
+                    <input type="search" class="form-control" name="q" id="search-box-bo" placeholder="AnsattID, Fullt navn, Stilling...">
+                    <button type="submit" class="btn btn-primary" id="searchbutton-bo">Søk</button> 
+                </div>
+            </div>-->
+        </div>
+   <!-- </form>-->
+</div>
+
+<div class="text-center mb-4">
+    <a class="btn btn-primary" id="btn-bruker-bo" role="button" asp-area="Identity" asp-page="/Account/Register">Legg til bruker</a>
+</div>
+<!-- Tabell -->
+<table class="table table-striped table-hover table-sm mx-auto mb-4" id="partsTable" style="width: 85%">
+    <thead>
+        <tr>
+            <!-- Gjør ID-kolonnen mindre på små skjermer -->
+            <th class="col-2 col-md-2 text-center">ID</th>
+            <th class="col-4 col-md-6">Navn</th>
+            <th class="col-3 col-md-2 text-center">Avdeling</th>
+            <th class="col-3 col-md-2 text-center">Handling</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewData["list"] != null)
+        {
+            @foreach (var employee in ViewData["list"] as List<BrukerOversiktViewModel>)
+            {
+                <tr>
+                    <td>@employee.ID_int</td>
+                    <td>@(employee.FirstName_str + " " + employee.LastName_str)</td>
+                    <td>@employee.Department</td>
+                    <td class="text-center">
+  
+                        <button type="submit" class="btn btn-secondary btn-sm" onclick="openModal('@employee.ID_int', '@employee.FirstName_str', '@employee.LastName_str', '@employee.Phone', '@employee.Email', '@employee.Department')">
+                            <i class="bi bi-gear"></i>
+                        </button>
+                        
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+<!-- Endre antall -->
+<div class="modal fade" id="updateQuantityModal" tabindex="-1" role="dialog" aria-labelledby="updateQuantityModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateQuantityModalLabel">Endre Antall</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form for å endre en ansatt sin informasjon-->
+                <form id="updateForm" asp-controller="Employees" asp-action="UpdateEmployee" method="post">
+                    <img src="~/Images/fram.png" alt="profilbilde-modal" id="modal-pfp-bo">
+                    <div class="row">
+                        <div class="col">
+                            <label for="EmployeeId"><b>Id</b></label>
+                            <input type="text" class="form-control"  id="EmployeeId" readonly>
+                            <label for="editStilling"><b>Stilling</b></label>
+                            <input type="text" class="form-control" id="editStilling" asp-for="@Model.Department">
+
+                            <label for="editEpost"><b>E-post</b></label>
+                            <input type="email" class="form-control" id="editEpost" asp-for="@Model.Email">
+
+                            <label for="editTlf"><b>Telefonnummer</b></label>
+                            <input type="tel" class="form-control" id="editTlf" asp-for="@Model.Phone">
+
+                            <label for="editTlf"><b>Fornavn</b></label>
+                            <input type="tel" class="form-control" id="editFornavn" asp-for="@Model.FirstName_str">
+
+                            <label for="editTlf"><b>Etternavn</b></label>
+                            <input type="tel" class="form-control" id="editLastname" asp-for="@Model.LastName_str">
+                            <button type="submit" class="btn btn-primary">Oppdater</button>
+                            <button type="submit" class="btn btn-primary" asp-controller="Employees" asp-action="RemoveEmployee">Slett</button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function openModal(Id, Firstname, Lastname, Phone, Email, Department) {
+            document.getElementById('EmployeeId').value = Id;
+            document.getElementById('editEpost').value = Email;
+            document.getElementById('editTlf').value = Phone;
+            document.getElementById('editStilling').value = Department;
+            document.getElementById('editFornavn').value = Firstname;
+            document.getElementById('editLastname').value = Lastname;
+            $('#updateQuantityModal').modal('show');
+        }
+
+    </script>
+}
+

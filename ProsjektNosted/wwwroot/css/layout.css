@@ -1,0 +1,156 @@
+﻿body, html {
+    height: 100%;
+    background-color: #FBFBFF;
+}
+
+
+.navbar, footer {
+    background-color: #0A1214 !important;
+    /*background-color: #060623 !important;*/
+}
+
+.navbar-brand img {
+    width: 140px; 
+    height: auto; 
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.footer-brand img {
+    max-height: 42px; 
+    width: 150px;
+    margin-top: 20px !important;
+    margin-left: 10px;
+}
+
+.social-icon img {
+    width: 42px;
+    height: auto;
+    display: flex;
+    margin-top: 20px !important;
+}
+
+.text-lighter-white {
+    color: #FFFFFFB2 
+}
+
+
+.border-bottom {
+    border-bottom: solid 4px #FF6700!important;
+}
+
+.border-top {
+    border-top: solid 4px #FF6700 !important;
+}
+a:link {
+    text-decoration: none;
+}
+
+
+.hamburger {
+    display: grid;
+    position: relative;
+    height: 45px;
+    margin: 10px;
+    z-index: 121;
+    cursor: pointer;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+}
+
+    .hamburger span {
+        width: 40px;
+        height: 5px;
+        margin-top: 7px;
+        background-color: #FFA500;
+        border-radius: 3px;
+        transition: 0.2s ease-in-out;
+    }
+
+#toggle {
+    display: none;
+}
+
+    #toggle:checked + label .hamburger .top {
+        transform: rotate(-45deg);
+        margin-top: 22.5px;
+    }
+
+    #toggle:checked + label .hamburger .middle {
+        transform: rotate(45deg);
+        margin-top: -5px;
+    }
+
+    #toggle:checked + label .hamburger .bottom {
+        transform: scale(0);
+    }
+
+.menu {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    padding-top: 175px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 120;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s;
+    overflow-y: auto;
+    list-style: none;
+}
+
+#toggle:checked ~ .menu {
+    right: 0;
+}
+
+/* styling for home siden*/
+.carousel .carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.carousel .carousel-indicators li.active {
+    background-color: #FFA500;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.76), rgba(68, 82, 140, 0.1));
+}
+
+#buttonHome:hover {
+    color: black;
+    background-color: #FF6700 !important;
+    border-color: #FF6700 !important;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.carousel-item {
+    height: 100vh; /* Setter høyden på hvert karusellelement til full viewport-høyde */
+}
+
+.carousel-item img {
+    height: 100%; /* Sørger for at bildene strekker seg for å fylle karusellelementet */
+    object-fit: cover; /* Sørger for at bildet dekker hele området uten å miste aspektforhold */
+}
+
+
+.carousel-header {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+

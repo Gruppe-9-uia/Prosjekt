@@ -1,0 +1,52 @@
+
+#nature.d-block {
+    filter: brightness(50%);
+   
+}
+
+#displaylogin {
+    height: 100%; /* Set the container height to 100% of the viewport height */
+    width: 100%; 
+}
+
+#cardlogg.card {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.6) !important; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%;
+    max-width: 400px; 
+    min-width: 300px; 
+   
+}
+   
+
+#forgot-password, #registrer-ny-bruker, #resend-confirmation  {
+    color: #0f374e;
+}
+
+#forgot-password:hover, #registrer-ny-bruker:hover, #resend-confirmation:hover {
+    color: #FF6700;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #displaylogin {
+       background-color: #0A1214 !important;
+    }
+    
+    #cardlogg.card {
+        width: 100%; /* Adjust the width for smaller screens */
+        max-width: none; /* Remove the maximum width for smaller screens */
+        min-width: 300px;
+        margin: 0;
+    }
+    #nature.d-block {
+        height: 100% !important; /* Stretch the image in height to fill its container */
+        width: 100% !important;
+    }
+}

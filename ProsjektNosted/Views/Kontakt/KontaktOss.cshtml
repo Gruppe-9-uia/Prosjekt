@@ -1,0 +1,300 @@
+﻿@model KontaktFormModel;
+@{
+    ViewData["Title"] = "Kontakt oss";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+    <div class="container">
+        <h1 class="text-center mt-4">Kontakt oss</h1>
+        <div class="col" style="position: absolute; z-index: 0; display: flex; justify-content: center; align-items: center; opacity: 0.5;">
+        <img src="~/Images/kart2.png" alt="kart" class="img-responsive" style="width: 1000px; height: 575px; margin-right: 40px;">
+ </div>
+        
+    
+    @using (Html.BeginForm("SumbitKontaktForm", "Kontakt", FormMethod.Post, new { id = "kontaktForm"}))
+                    {
+                            @Html.AntiForgeryToken()
+        <div class="w-75 m-auto" style="position: relative; z-index: 1;">
+        <div class=" d-flex flex-row w-100" style="z-index: 1;">
+            <div class="col">
+                <div class="form-group">
+                    <label for="navn">
+                        <h5>Navn</h5>
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="telefon">
+                            <h5>Telefon</h5>
+                        </label>
+                        </div>
+                </div>
+            </div>
+
+        <div class=" d-flex flex-row w-100 p-0">
+            <div class="col">
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="navn" asp-for="navn" placeholder="Fullt navn" required>
+                    </div>
+                </div>
+
+            <div class="col align-items-center">
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="telefon" asp-for="telefon" placeholder="+47 123 45 678" required>
+                    </div>
+                </div>
+            </div>
+        <div class=" d-flex flex-row w-100">
+            <div class="col">
+                <div class="form-group">
+                    <label for="email">
+                        <h5>Email</h5>
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-gr">
+                    <div class="form-group">
+                        <label for="email">
+                            <h5>Land</h5>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class=" d-flex flex-row w-100 p-0 mb-3">
+            <div class="col align-items-center">
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="email" asp-for="email" placeholder="eksempel@gmail.com" required>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="region" asp-for="land" placeholder="Norge" required>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="form-group text-center m-auto">
+                    <label for="melding">
+                        <h5 style="font-style: italic;">Send inn din henvendelse:</h5>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class=" d-flex flex-row w-100 p-0 justify-content-md-center">
+            <div class="col align-items-center">
+            <div class="form-group">
+                    <textarea class="form-control  align-items-center w-100" rows="5" id="melding" asp-for="melding" required></textarea>
+                </div>
+            </div>
+            </div>
+        <div class=" d-flex flex-row w-100 m-3">
+            <div class="col align-items-center">
+            <div class="d-grid gap-2 m-auto w-25">
+                <button class="btn btn-primary font-weight-bold" type="submit">Send</button>
+            </div>
+            </div>
+            </div>
+        </div>
+        }
+</div>
+
+<div class="container vw-100" style="position: relative; z-index: 1;">
+    <div class="text-center align-content-center">
+        <h2>Kontorer</h2>
+        <p>Kom i kontakt med et av våre globale kontorer!</p>
+    </div>
+
+    <div class="d-flex flex-wrap float-left">
+        
+        <div class="row w-100">
+            <hr class="mt-2 mb-3" />
+            <h3>Mandal, Norge (hovedkontor)</h3>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-map-50.png" alt="kart ikon">
+                    <a href="https://www.google.com/maps/search/Gr%C3%B8nviksveien%208%204515,%20Mandal,%20Norway">
+                        Grønviksveien 8, 4515 Mandal, Norway
+                    </a>
+                </p>
+            </div>
+            <div>
+                <P>
+                    <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
+                    +47 382 72 550
+                </P>
+            </div>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-email-50.png" alt="email ikon">
+                    post@bosted.com
+                </p>
+            </div>
+        </div>
+
+        <div class="row w-100">
+            <hr class="mt-2 mb-3" />
+            <h3>Igland verksted og servicesenter, Mandal</h3>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-map-50.png" alt="kart ikon">
+                    <a href="https://www.google.com/maps/search/Doneheia%2017,%20Mandal,%20Norway">
+                        Doneheia 17
+                    </a>
+                </p>
+            </div>
+            <div>
+                <P>
+                    <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
+                    +47 372 56 200
+                </P>
+            </div>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-email-50.png" alt="email ikon">
+                    coporazte@igland-as.com
+                </p>
+            </div>
+        </div>
+
+        <div class="row w-100">
+            <hr class="mt-2 mb-3" />
+            <h3>Kragerø, Norge</h3>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-map-50.png" alt="kart ikon">
+                    <a href="https://www.google.com/maps/search/Krager%C3%B8%20%20Industriveien%202%20%203766%20Sannidal">
+                        Industriveien 2 3766 Sannidal, Norway
+                    </a>
+                </p>
+            </div>
+            <div>
+                <P>
+                    <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
+                    +47 372 56 200
+                </P>
+            </div>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-email-50.png" alt="email ikon">
+                    Fram@framlink.no
+                </p>
+            </div>
+        </div>
+
+        <div class="row w-100">
+            <hr class="mt-2 mb-3" />
+            <h3>Utena, Lithuania</h3>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-map-50.png" alt="kart ikon">
+                    <a href="https://www.google.com/maps/search/J.%20Basanavi%C4%8Diaus%20str.%20114,%20LT-28214%20Utena.%20%20Ph,%20Lithuania">
+                        J. Basanavičiaus str. 114, LT-28214 Utena. Ph, Lithuania
+                    </a>
+                </p>
+            </div>
+            <div>
+                <P>
+                    <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
+                    +37 033 961 916
+                </P>
+            </div>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-email-50.png" alt="email ikon">
+                    info@nosted.com
+                </p>
+            </div>
+        </div>
+
+        <div class="row w-100">
+            <hr class="mt-2 mb-3" />
+            <h3>USA</h3>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-map-50.png" alt="kart ikon">
+                    <a href="https://www.google.com/maps/search/%20Bonners%20Ferry,%20%20ID%2083805%20USA">
+                        PO Box 869 Bonners Ferry, ID 83805 USA
+                    </a>
+                </p>
+            </div>
+            <div>
+                <P>
+                    <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
+                    +1 (208) 267-6215
+                </P>
+            </div>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-email-50.png" alt="email ikon">
+                    dave.trygg@gmail.com
+                </p>
+            </div>
+        </div>
+
+        <div class="row w-100">
+            <hr class="mt-2 mb-3" />
+            <h3>Quebec, Canada</h3>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-map-50.png" alt="kart ikon">
+                    <a href="https://www.google.com/maps/search/5495,%20rue%20Saint-Roch%20Drummondville%20%20(Quebec)%20J2B%206V4%20Canada">
+                        5495, rue Saint-Roch Drummondville (Quebec) J2B 6V4 Canada
+                    </a>
+                </p>
+            </div>
+            <div>
+                <P>
+                    <img src="~/icons/icons8-headset-50.png" alt="headset ikon">
+                    +1 (888) 478-2426
+                </P>
+            </div>
+            <div>
+                <p>
+                    <img src="~/icons/icons8-email-50.png" alt="email ikon">
+                    christian.tracy@nosted.com
+                </p>
+            </div>
+            <hr class="mt-2 mb-3" />
+        </div>
+    </div>
+</div>
+
+<script>
+// validering av form-et, med confimation
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('kontaktForm');
+        
+        form.addEventListener('submit', function (event) {
+            if (!validateForm()) {
+                event.preventDefault();
+                alert('Vennligst fyll inn alle feltene.');
+            } else {
+                alert('Hendvendelsen har blitt sendt inn! Du hører fra oss så snart vi har fått behandlet den.');
+            }
+        });
+        
+        function validateForm() {
+        var requiredFields = form.querySelectorAll('[required]');
+        for (var i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].value.trim()) {
+                return false;
+            }
+        }
+        return true;
+       }
+    });
+</script>
+

@@ -1,0 +1,139 @@
+﻿
+@model Prosjekt.Models.Services.ServicesOrderViewModel;
+@{
+    ViewData["Title"] = "Serviceordre";
+}
+
+
+<div class="serviceouter-container">
+    <!-- Tilbake-lenke -->
+    <div class="back-link-container">
+        <a href="javascript:history.back()" class="btn btn-link back-link">
+            <i class="bi bi-arrow-left" style="color: #000000;"></i>
+        </a>
+    </div>
+
+    <div class="card w-75 mx-auto mt-5">
+        <!-- Tittel -->
+        <h1 class="titleservice">Serviceordre</h1>
+    @using (Html.BeginForm("Save", "Serviceordre", FormMethod.Post, new { id = "myForm",onsubmit = "return confirm('Er du sikker på du ønsker å sende inn serviceskjema?');" })) 
+        {
+            @Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+            <h3>Produkt </h3>
+            <hr class="mt-2 mb-3" />
+        <div class="form-group">
+            <label for="ProductName_str">Produktnavn:</label>
+            <input type="text" class="form-control" id="ProductName_str" asp-for="ProductName_str" placeholder="Produktnavn" required>
+        </div>
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <label for="Product_Type_str">Produkttype:</label>
+                    <input type="text" class="form-control" id="Product_Type_str" asp-for="Product_Type_str" placeholder="Produkttype" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="Received_Date">Motatt dato:</label>
+                    <input type="date" class="form-control" id="Received_Date" asp-for="Received_Date">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Model_Year">Årsmodell:</label>
+                    <input type="text" class="form-control" id="Model_Year" asp-for="Model_Year" placeholder="Årsmodell" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="SerialNr_str">Serienummer:</label>
+                    <input type="text" class="form-control" id="SerialNr_str" asp-for="SerialNr" placeholder="Serienummer" required>
+                </div>
+            </div>
+
+            <h3>Kunde</h3>
+            <hr class="mt-2 mb-3" />
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fornavn">Fornavn:</label>
+                    <input type="text" class="form-control" id="fornavn" asp-for="FirstName" placeholder="Fornavn" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Ettternavn">Etternavn:</label>
+                    <input type="text" class="form-control" id="Ettternavn" asp-for="LastName" placeholder="Etternavn" required>
+                </div>
+            </div>
+            <div class="form-row"> 
+                <div class="form-group col-md-6">
+                    <label for="adresse">Adresse:</label>
+                    <input type="text" class="form-control" id="adresse" asp-for="StreetAddress" placeholder="Adresse" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="postnummer">Postnummer:</label>
+                <input type="text" class="form-control" id="postnummer" asp-for="PostalCode" placeholder="Postnummer" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Land">Land:</label>
+                    <input type="text" class="form-control" id="Land" asp-for="Country" placeholder="Land" required>
+                </div>
+            <div class="form-group col-md-6">
+                <label for="State">Kommune:</label>
+                <input type="text" class="form-control" id="State" asp-for="State" placeholder="Kommune" required>
+            </div>
+                <div class="form-group col-md-6">
+                    <label for="By">By:</label>
+                    <input type="text" class="form-control" id="By" asp-for="City" placeholder="By" required>
+                </div>
+      
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="epost">E-post:</label>
+                    <input type="email" class="form-control" id="epost" asp-for="Email" placeholder="E-post" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="mobilnummer">Mobilnummer:</label>
+                    <input type="tel" class="form-control" id="mobilnummer" asp-for="Phone" placeholder="Mobilnummer" required>
+                </div>
+            </div>
+            <h3>Garanti</h3>
+            <hr class="mt-2 mb-3" />
+                <div class="form-group">
+                    <label for="WarrantyName_str">Garanti:</label>
+                    <input type="text" class="form-control" id="WarrantyName_str" asp-for="WarrantyName" placeholder="Garanti" required>
+            </div>
+            <h3>Order informasjon</h3>
+            <hr class="mt-2 mb-3" />
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Order_type_str">Service/rep:</label>
+                    <input type="text" class="form-control" id="Order_type_str" asp-for="Order_type_str" placeholder="Service/rep" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Received_Date">Mottatt dato:</label>
+                <input type="date" class="form-control" id="Received_Date" asp-for="Received_Date" placeholder="Årsmodell" required>
+                </div>
+            
+                <div class="form-group col-md-12">
+                    <label for="beskrivelse">Hva som er avtalt med kunden:</label>
+                    <textarea class="form-control mb-50" style="height: 100px;" id="beskrivelse" asp-for="Description_From_Customer_str" placeholder="Skriv her..." required></textarea>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center" style="margin-top: 25px;">
+                <button type="reset" class="btn btn-danger button-spacing" id="resetB" onClick="resetPopup()">Reset</button>
+                <button type="submit" class="btn btn-primary button-spacing" id="sendB">Send inn</button>
+            </div>
+
+            <!--  script under for å få en fungerende popup når man trykker på knappene-->
+            <!--  function resetPopup, lager en bekreftelse boks som kommer opp når man trykker på reset-->
+            <script>
+        
+        function resetPopup() {
+            var ok = confirm("Er du sikker på du ønsker å resette serviceordreren?");
+            if (ok) {
+            // hvis brukeren trykker på ok, vil alt bli resettet.
+            document.getElementById("myForm").reset();
+            }
+        }
+    </script>
+        } 
+</div>
+</div>

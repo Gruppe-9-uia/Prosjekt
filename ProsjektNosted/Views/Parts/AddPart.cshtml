@@ -1,0 +1,32 @@
+﻿@using Prosjekt.Models.Equipment;
+@model Prosjekt.Models.Parts.AddPartsModel;
+
+@{
+}
+
+@using (Html.BeginForm("AddPart", "Parts", FormMethod.Post, null))
+{
+
+    <div class="form-group">
+        <label name="PartID_int">Navn</label>
+        <input type="text" class="form-control" asp-for="PartName_str" name="PartName_str" required />
+    </div>
+    <div class="form-group">
+        <label name="Quantity_available_int">Antall</label>
+        <input type="number" class="form-control" asp-for="Quantity_available_int" name="Quantity_available_int" required />
+    </div>
+    <div class="form-floating">
+        <select asp-for="EquipmentName" class="form-control" autocomplete="Eqipment" aria-required="true">
+            <option selected>Velg Utsyr...</option>
+            @if (ViewData["Equipment"] != null)
+            {
+                @foreach (var e in ViewData["Equipment"] as List<EquimentViewModel>)
+                {
+                    <option>@e.Name</option>
+                }
+            }
+            <option>Ingen</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Lagre</button>
+}
