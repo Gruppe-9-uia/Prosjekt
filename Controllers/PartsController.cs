@@ -28,12 +28,20 @@ namespace Prosjekt.Controllers
             foreach (var e in PartsList)
             {
                 var equipment = _context.Equipment.Where(x=> x.Id_int == e.EquipmentID_int).FirstOrDefault();
+               
                 var partsObj = new PartsViewModel { 
                     PartID_int = e.PartID_int, 
                     PartName_str = e.PartName_str, 
                     Quantity_available_int = e.Quantity_available_int,
-                    EquipmentName = equipment.Name_str
                     };
+
+                if(equipment == null)
+                {
+                    partsObj.EquipmentName = null;
+                } else
+                {
+                    partsObj.EquipmentName = equipment.Name_str;
+                }
                 list.Add(partsObj);
             }
 
@@ -95,16 +103,23 @@ namespace Prosjekt.Controllers
             var PartsDB = _context.Parts.Where(e => e.PartName_str.Equals(model.PartName_str)).FirstOrDefault();
 
             //TODO: f�r ikke hente equipment
-            var equipment = _context.Equipment.Where(e => e.Name_str.Equals(model.EquipmentName)).FirstOrDefault();
             Console.WriteLine(model.EquipmentName);
-            if(PartsDB == null &&  equipment != null)
+            if(PartsDB == null)
             {
                 var partsObj = new PartsModel
                 {
                     PartName_str = model.PartName_str,
                     Quantity_available_int = model.Quantity_available_int,
-                    EquipmentID_int = equipment.Id_int
                 };
+
+                if (!model.EquipmentName.Equals("Ingen"))
+                {
+                    var equipment = _context.Equipment.Where(e => e.Name_str.Equals(model.EquipmentName)).FirstOrDefault();
+                    partsObj.EquipmentID_int = equipment.Id_int;
+                } else
+                {
+                    partsObj.EquipmentID_int = null;
+                }
 
                 int latestId = _context.Parts.Any() ? _context.Parts.Max(e => e.PartID_int) + 1 : 1;
                 partsObj.PartID_int = latestId;

@@ -212,7 +212,8 @@ namespace Prosjekt.Data
             modelBuilder.Entity<EquipmentModel>()
                 .HasOne(e => e.Parts)
                 .WithOne(p => p.Equipment)
-                .HasForeignKey<PartsModel>(p => p.EquipmentID_int);
+                .HasForeignKey<PartsModel>(p => p.EquipmentID_int)
+                .IsRequired(false); 
 
             //UsedParts
             modelBuilder.Entity<UsedPartModel>()
