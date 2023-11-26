@@ -2,7 +2,7 @@
 @model Prosjekt.Models.Employee.EmployeeUpdateModel;
 @{
 }
-
+<script src="~/js/Oversikt.js"></script>
 <div class="container text-center mt-5">
     <header>
         <h1 class="h1-bo">Brukeroversikt</h1>
@@ -10,16 +10,19 @@
 </div>
 
 <div class="container text-center mt-4 mb-4 flex-grow-1 m-5">
-    <form class="searchbar" action="/search" method="get">
+    <!--<form class="searchbar" action="/search" method="get">-->
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
+            <div class="col-md-8 col-lg-6" id="colonneBrukeroversikt">
+                <input oninput="myFunctionBrukerOversikt()" id="brukeroversiktInput" type="text" class="form-control" placeholder="Søk på Navn..." aria-label="Search" aria-describedby="button-addon2">
+            </div>
+            <!--<div class="col-md-8 col-lg-6">
                 <div class="input-group">
                     <input type="search" class="form-control" name="q" id="search-box-bo" placeholder="AnsattID, Fullt navn, Stilling...">
-                    <button type="submit" class="btn btn-primary" id="searchbutton-bo">Søk</button> <!-- søkeknapp- må finne ut hvordan man kan filtrere søkene KONTROLLER -->
+                    <button type="submit" class="btn btn-primary" id="searchbutton-bo">Søk</button> 
                 </div>
-            </div>
+            </div>-->
         </div>
-    </form>
+   <!-- </form>-->
 </div>
 
 <div class="text-center mb-4">

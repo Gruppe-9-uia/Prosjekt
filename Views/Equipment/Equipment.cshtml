@@ -79,6 +79,7 @@
     </thead>
     <tbody id="equiptable">
       @if (ViewData["list"] != null)
+      {
             @foreach (var equipment in ViewData["list"] as List<EquimentViewModel>)
             {
                 <tr>
