@@ -1,7 +1,7 @@
 ﻿@using Prosjekt.Models.Equipment;
 @model Prosjekt.Models.Equipment.EquimentViewModel;
 @{
-    ViewBag.Title = "Equipment";
+    ViewBag.Title = "Utstyr";
 }
 <div class="container-fluid mt-4 flex-grow-1">
     <h2 class="text-center mb-2">Utstyrsoversikt</h2> <!-- Redusert margin-bottom for overskriften -->
@@ -71,7 +71,6 @@
 <table class="table table-striped table-hover table-sm mx-auto" id="partsTable" style="width: 85%;">
     <thead>
         <tr>
-            <!-- Gjør ID-kolonnen mindre på små skjermer -->
             <th class="col-2 col-md-2 text-center">ID</th>
             <th class="col-4 col-md-6">Navn</th>
             <th class="col-3 col-md-2 text-center">Lager</th>
@@ -79,19 +78,18 @@
         </tr>
     </thead>
     <tbody id="equiptable">
-    @if (ViewData["list"] != null)
-{
-    @foreach (var equipment in ViewData["list"] as List<EquimentViewModel>)
-    {
-        <tr>
-            <td class="text-center">@equipment.Id_int</td>
-            <td>@equipment.Name_str</td>
-            <td class="text-center">@equipment.Availability stk</td>
-            <td class="text-center">
-                <button type="button" class="btn btn-secondary btn-sm" onclick="openModal(@equipment.Id_int, '@equipment.Name_str', @equipment.Availability)">
-                    <i class="bi bi-gear"></i>
-                </button>
-            </td>
+      @if (ViewData["list"] != null)
+            @foreach (var equipment in ViewData["list"] as List<EquimentViewModel>)
+            {
+                <tr>
+                    <td class="text-center">@equipment.Id</td>
+                    <td>@equipment.Name</td>
+                    <td class="text-center">@equipment.Availability stk</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="openModal(@equipment.Id, '@equipment.Name', @equipment.Availability)">
+                            <i class="bi bi-gear"></i>
+                        </button>
+                    </td>
         </tr>
     }
 }

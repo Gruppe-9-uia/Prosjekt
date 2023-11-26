@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Prosjekt.Entities;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Immutable;
+using Prosjekt.Repository;
 using Prosjekt.Models.Equipment;
 
 namespace Prosjekt.Controllers
@@ -9,37 +8,52 @@ namespace Prosjekt.Controllers
     [Controller]
     public class EquipmentController : Controller
     {
-        private readonly ProsjektContext _context;
+        private IEquipmentRepository _equipmentRepository;
+        private readonly ILogger<EquipmentController> _logger;
 
-        public EquipmentController(ProsjektContext context)
+        public EquipmentController(IEquipmentRepository equipmentRepository, ILogger<EquipmentController> logger)
         {
-
-            _context = context;
+            _equipmentRepository = equipmentRepository;
+            _logger = logger;
         }
         [HttpGet]
         public IActionResult Equipment( )
         {
-            var equipmentList = _context.Equipment.ToList();
 
+            var equipmentList = _equipmentRepository.getAllEquipment();
+
+            // Add the relevant data to view model
             List<EquimentViewModel> list = new List<EquimentViewModel>();
-
-            // Convert the fetched data to the view model type
             foreach (var e in equipmentList)
             {
-                var equipmentObj = new EquimentViewModel { Id_int = e.Id_int, Availability = e.Availability, Name_str = e.Name_str };
+                var equipmentObj = new EquimentViewModel
+                { 
+                    Id = (int)e.Id_int, 
+                    Availability = e.Availability, 
+                    Name = e.Name_str
+                };
+
                 list.Add(equipmentObj);
             }
 
+            //Sett the lire viewData attribute 
             ViewData["List"] = list;
-            return View( );
+           
+            return View();
+            
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddEquipment(EquimentViewModel model)
+        public IActionResult AddEquipment(AddEquimentModel model)
         {
-            var EquipmentDB = _context.Equipment.Where(e => e.Name_str.Equals(model.Name_str)).FirstOrDefault();
-            if (EquipmentDB == null)
+            if (!ModelState.IsValid) {
+                //_logger.Log("Model state was not true");
+               return View();
+            }
+
+            //Check if there allerede existe equiment with that name
+            if(_equipmentRepository.getEquipmentByName(model.Name_str) == null)
             {
                 var EquipmentObj = new EquipmentModel
                 {
@@ -47,31 +61,27 @@ namespace Prosjekt.Controllers
                     Name_str = model.Name_str,
                 };
 
-                int latestId = _context.Equipment.Any() ? _context.Equipment.Max(e => e.Id_int) + 1 : 1;
-                EquipmentObj.Id_int = latestId;
-
-                var result = _context.Equipment.Add(EquipmentObj);
-                if (result == null)
-                {
-                    ModelState.AddModelError(string.Empty, "Klarte ikke å lage service order");
-                    return RedirectToAction("Equipment");
-                }
+                _equipmentRepository.InsertEquipment(EquipmentObj);
+                _equipmentRepository.Save();
             }
 
-            _context.SaveChanges();
             return RedirectToAction("Equipment");
         }
 
-        public IActionResult DeleteEquipment(EquimentViewModel model)
+        public IActionResult DeleteEquipment(RemoveEquipmentModel model)
         {
-            var equipmentToDelete = _context.Equipment.Where(x => x.Id_int == model.Id_int).FirstOrDefault();
-            if (equipmentToDelete == null)
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                //_logger.Log("Model state was not true");
+                return View();
             }
 
-            _context.Equipment.Remove(equipmentToDelete);
-            _context.SaveChanges();
+            //check if the equipment id exists if yes, then remove
+            if(_equipmentRepository.getEquipmentByID(model.id) != null)
+            {
+                _equipmentRepository.DeleteEquipment(model.id);
+                _equipmentRepository.Save();
+            }
 
             return RedirectToAction("Equipment");
         }

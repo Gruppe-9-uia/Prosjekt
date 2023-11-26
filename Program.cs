@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Prosjekt.Entities;
 using Prosjekt.Services;
+using Prosjekt.Repository;
 
 public class Program
 {
@@ -13,6 +14,9 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
+        builder.Services.AddScoped<IPartsRepository, PartsRepository>();
+
 
         SetupDataConnections(builder);
 

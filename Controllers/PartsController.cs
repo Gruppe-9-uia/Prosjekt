@@ -1,46 +1,69 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Prosjekt.Entities;
+using Prosjekt.Models.Equipment;
 using Prosjekt.Models.Parts;
-
+using Prosjekt.Repository;
 
 namespace Prosjekt.Controllers
 {
     public class PartsController : Controller
     {
-        private readonly ProsjektContext _context;
+        private IPartsRepository _partsRepository;
+        private IEquipmentRepository _equipmentRepository;
+        private readonly ILogger<EquipmentController> _logger;
 
-        public PartsController(ProsjektContext context)
+
+        public PartsController(IPartsRepository partsRepository, IEquipmentRepository equipmentRepository, ILogger<EquipmentController> logger)
         {
-            _context = context;
+            _partsRepository = partsRepository;
+            _equipmentRepository = equipmentRepository;
+            _logger = logger;
         }
 
 
         public IActionResult Parts()
         {
-            var PartsList = _context.Parts.ToList();
-            
 
-
+            var PartsList = _partsRepository.getAllParts();
             List<PartsViewModel> list = new List<PartsViewModel>();
 
             // Convert the fetched data to the view model type
             foreach (var e in PartsList)
             {
-                var equipment = _context.Equipment.Where(x=> x.Id_int == e.EquipmentID_int).FirstOrDefault();
-                var partsObj = new PartsViewModel { 
-                    PartID_int = e.PartID_int, 
-                    PartName_str = e.PartName_str, 
+                var partsObj = new PartsViewModel
+                {
+                    PartID_int = e.PartID_int,
+                    PartName_str = e.PartName_str,
                     Quantity_available_int = e.Quantity_available_int,
-                    EquipmentName = equipment.Name_str
-                    };
+                };
+
+                //check if tehere a equiment connect to a part
+                var equipment = _partsRepository.findPartsByEquipmentId(e.EquipmentID_int);
+                var equipmentName = (equipment == null) ? null : equipment.Name_str;
+                partsObj.EquipmentName = equipmentName;
+
                 list.Add(partsObj);
             }
 
-            if(list.Count > 0)
+            // create a list of equipments for drop menu
+            var EquipmentListDB = _equipmentRepository.getAllEquipment();
+            List<EquimentViewModel> EquipmentList = new List<EquimentViewModel>();
+            foreach (var e in EquipmentListDB)
             {
-                ViewData["List"] = list;
+                var EqiupmentObj = new EquimentViewModel
+                {
+                    Id = e.Id_int,
+                    Availability = e.Availability,
+                    Name = e.Name_str
+                };
 
+                EquipmentList.Add(EqiupmentObj);
             }
+
+
+            ViewData["Equipment"] = EquipmentList;
+            ViewData["List"] = list;
             return View();
         }
 
@@ -48,11 +71,19 @@ namespace Prosjekt.Controllers
         [HttpPost]
         public IActionResult UpdateQuantity(int PartID_int, int NewQuantity)
         {
-            var part = _context.Parts.FirstOrDefault(p => p.PartID_int == PartID_int);
-            if (part != null)
+            if (!ModelState.IsValid)
             {
-                part.Quantity_available_int = NewQuantity;
-                _context.SaveChanges();
+                //_logger.Log("Model state was not true");
+                return View();
+            }
+
+            //Check if parts exist, if yes, then update
+            var partUpdate = _partsRepository.getPartsByID(PartID_int);
+            if (partUpdate != null)
+            {
+                partUpdate.Quantity_available_int = NewQuantity;
+                _partsRepository.UpdateParts(partUpdate);
+                _partsRepository.Save();
             }
 
             return RedirectToAction("Parts");
@@ -60,35 +91,32 @@ namespace Prosjekt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddPart(PartsViewModel model)
+        public IActionResult AddPart(AddPartsModel model)
         {
-            var PartsDB = _context.Parts.Where(e => e.PartName_str.Equals(model.PartName_str)).FirstOrDefault();
-
-            //TODO: f�r ikke hente equipment
-            var equipment = _context.Equipment.Where(e => e.Name_str.Equals(model.EquipmentName)).FirstOrDefault();
-            Console.WriteLine(model.EquipmentName);
-            if(PartsDB == null &&  equipment != null)
+            if (!ModelState.IsValid)
             {
-                var partsObj = new PartsModel
-                {
-                    PartID_int = model.PartID_int,
-                    PartName_str = model.PartName_str,
-                    Quantity_available_int = model.Quantity_available_int,
-                    EquipmentID_int = equipment.Id_int
-                };
-
-                int latestId = _context.Parts.Any() ? _context.Parts.Max(e => e.PartID_int) + 1 : 1;
-                partsObj.PartID_int = latestId;
-
-                var result = _context.Parts.Add(partsObj);
-                if (result == null)
-                {
-                    ModelState.AddModelError(string.Empty, "Klarte ikke � lage service order");
-                    return RedirectToAction("Parts");
-                }
-
+                //_logger.Log("Model state was not true");
+                return View();
             }
 
+            if(_partsRepository.getPartsByName(model.PartName_str) == null)
+            {
+                var partsObj = new PartsModel();
+                partsObj.PartName_str = model.PartName_str;
+                partsObj.Quantity_available_int = model.Quantity_available_int;
+
+                var equipment = _partsRepository.findPartsByEquipmentName(model.EquipmentName);
+                if (equipment != null)
+                {
+                    partsObj.EquipmentID_int = equipment.Id_int;
+
+                } else {
+                    partsObj.EquipmentID_int = null;
+                }
+
+                _partsRepository.InsertParts(partsObj);
+                _partsRepository.Save();
+            }
 
             return RedirectToAction("Parts");
         }
@@ -96,6 +124,7 @@ namespace Prosjekt.Controllers
         [HttpPost]
         public IActionResult DeletePart(int partId)
         {
+            /*
             var part = _context.Parts.FirstOrDefault(p => p.PartID_int == partId);
             if (part != null)
             {
@@ -103,6 +132,7 @@ namespace Prosjekt.Controllers
                 _context.SaveChanges();
             }
 
+            */
             return RedirectToAction("Parts");
         }
     }

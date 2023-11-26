@@ -2,8 +2,8 @@
 {
     public class EquimentViewModel
     {
-        public int Id_int { get; set; }
-        public string Name_str { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public bool Availability { get; set; }
     }
 }

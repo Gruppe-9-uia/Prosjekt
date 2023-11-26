@@ -206,14 +206,24 @@ namespace Prosjekt.Data
             modelBuilder.Entity<EquipmentModel>()
                 .HasKey(e => e.Id_int);
 
+            modelBuilder.Entity<EquipmentModel>()
+                .HasIndex(x => x.Name_str)
+                .IsUnique();
+
             //Parts
             modelBuilder.Entity<PartsModel>()
                 .HasKey(p => p.PartID_int);
 
+            modelBuilder.Entity<PartsModel>()
+                .HasIndex(x => x.PartName_str)
+                .IsUnique();
+
+
             modelBuilder.Entity<EquipmentModel>()
-                .HasOne(e => e.Parts)
+                .HasMany(e => e.Parts)
                 .WithOne(p => p.Equipment)
-                .HasForeignKey<PartsModel>(p => p.EquipmentID_int);
+                .HasForeignKey(p => p.EquipmentID_int)
+                .IsRequired(false);
 
             //UsedParts
             modelBuilder.Entity<UsedPartModel>()
@@ -256,30 +266,6 @@ namespace Prosjekt.Data
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "Elektro", Name = "Elektro", NormalizedName = "ELEKTRO", ConcurrencyStamp = "Elektro" }
             );
-            modelBuilder.Entity<EmployeeUser>().HasData(
-                new EmployeeUser { 
-                    Id = "8fc73822-d860-4d38-b11c-a399958e661a",
-                    RememberMe =false,
-                    FirstName_str = " Jane",
-                    LastName_str = "Doe",
-                    PhoneNumber = "99453012",
-                    UserName= "JaneDoe@mail.com",
-                    Email = "JaneDoe@mail.com",
-                    NormalizedUserName = "JANEDOE@MAIL.COM", 
-                    NormalizedEmail= "JANEDOE@MAIL.COM", 
-                    EmailConfirmed =false,
-                    PasswordHash= "AQAAAAEAACcQAAAAEJYVFLG47j2WzqsTRkt5gnPc5H8pcOEryz0ZmmgiAdYWuxrqzr1R1ibviQKIkfygbw==",
-                    SecurityStamp= "GSYSD4RSRANZJLYPU2KDSQYVSIZEAU46", ConcurrencyStamp= "07c75ea9-5018-4c2a-ac14-07e7c41129b6",
-                    PhoneNumberConfirmed=false, TwoFactorEnabled=false, LockoutEnd=null, LockoutEnabled=true, AccessFailedCount=0
-                });
-
-            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
-            {
-                RoleId = "Admin",
-                UserId = "8fc73822-d860-4d38-b11c-a399958e661a"
-            });
-            //Legger til employee
-            
             modelBuilder.Entity<EmployeeUser>().HasData(
                 new EmployeeUser { 
                     Id = "8fc73822-d860-4d38-b11c-a399958e661a",
