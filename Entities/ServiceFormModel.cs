@@ -2,7 +2,7 @@
 {
     public class ServiceFormModel
     {
-
+        //henter og setter verdi til en egenskap
         public int FormID_int { get; set; }
         [StringLength(255)]
         public string Repairdescription_str { get; set; }
