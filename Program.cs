@@ -17,6 +17,13 @@ public class Program
         builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
         builder.Services.AddScoped<IPartsRepository, PartsRepository>();
         builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        builder.Services.AddScoped<IProductRepositorty, ProductRepositorty>();
+        builder.Services.AddScoped<IServiceordreRepository, ServiceordreRepository>();
+        builder.Services.AddScoped<IWarrantyRepository, WarrantyRepository>();
+        builder.Services.AddScoped<IPostalCodeRepository, PostalCodeRepository>();
+        builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+
 
         SetupDataConnections(builder);
 
