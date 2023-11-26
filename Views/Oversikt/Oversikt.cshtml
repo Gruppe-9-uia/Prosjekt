@@ -4,43 +4,40 @@
     ViewData["Title"] = "Oversikt";
 }
 <script src="~/js/Oversikt.js"></script>
-<div class="container mt-5">
-    <div class="card mx-auto" id="cardOversikt">
-        <h1 class="text-center mb-4" style="margin-bottom: 10px;">Oversikt</h1>
-  
-        <div class="row justify-content-center" style="margin-top: 10px;">
-            <div class="col-2 ">
-                <button id="buttonHome" type="button" class="btn btn-primary btn-block" onclick="goToPage('../Serviceordre/Serviceordre')">Serviceordre</button>
+<!--<div class="container mt-5">-->
+<div class="card mx-auto p-0" id="cardOversikt">
+    <div class="card-header" id="cardheaderoversikt">
+        <h1 class="text-center " style="margin-bottom: 20px; margin-top: 20px; color: white;">Oversikt</h1>
+        <div class="row" id="testrow">
+            <div class="col" id="colOversik">
+                <button id="button-oversikt" type="button" class="btn btn-primary btn-block" onclick="goToPage('../Serviceordre/Serviceordre')">Serviceordre</button>
             </div>
-            <div class="col-2 ">
-                <button id="buttonHome" type="button" class="btn btn-primary btn-block" onclick="goToPage('../Serviceskjema/Serviceskjema')">Serviceskjema</button>
+            <div class="col" id="colOversik">
+                <button id="button-oversikt" type="button" class="btn btn-primary btn-block" onclick="goToPage('../Serviceskjema/Serviceskjema')">Serviceskjema</button>
             </div>
-            <div class="col-2 ">
-                <button id="buttonHome" type="button" class="btn btn-primary btn-block" onclick="goToPage('../Sjekkliste/Sjekkliste')">Sjekkliste</button>
-            </div>
-        
+            <div class="col" id="colOversik">
+                <button id="button-oversikt" type="button" class="btn btn-primary btn-block" onclick="goToPage('../Sjekkliste/Sjekkliste')">Sjekkliste</button>
+             </div>
         </div>
-    
-        <script>
+    </div>
+   
+
+    <script>
           function goToPage(pageUrl) {
             window.location.href = pageUrl;
           }
         </script>
-    
-        <div class="row justify-content-center" style="margin-top: 20px; margin-bottom: 0;">
-            <div class="col-2" id="colonneOversikt">
-                <input id="søkebarOversikt" onkeyup="myFunctionOversikt()" type="text" class="form-control" placeholder="Søk på order ID..." aria-label="Search" aria-describedby="button-addon2">
-            </div>
-            <div class="col-2" id="colonneOversikt">
-                <button class="btn btn-primary btn-block" type="button" id="button-addon2">Search</button>
-            </div>
-            <div class="col-2" id="colonneOversikt">
-                <button id="button-addon2" type="button" class="btn btn-primary btn-block" onclick="filterDataOversikt()">Filter</button>
-            </div>
+
+    <div class="row"> <!-- justify-content-center-->
+
+        <div class="col-6" id="colonneOversikt">
+            <input oninput="myFunctionOversikt()" id="søkebarOversikt" type="text" class="form-control" placeholder="Søk på order ID..." aria-label="Search" aria-describedby="button-addon2">
         </div>
-        <div class="row justify-content-center" style="margin-top: 0; margin-bottom: 20px;">
-            <div class="col-11 m-3">
-                <div class="table-responsive custom-table-scroll custom-table-scroll-y" > <!--style="max-width: 90%; margin-left: auto; margin-right: auto;" -->
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-11 m-3">
+            <div class="table-responsive custom-table-scroll custom-table-scroll-y"> <!--style="max-width: 90%; margin-left: auto; margin-right: auto;" -->
                 <!-- Tabell -->
                 <table class="table table-striped table-hover table-sm mx-auto" id="partsTable">
                     <thead>
@@ -77,11 +74,12 @@
                     }
                     </tbody>
                 </table>
-                </div>
-             </div>
-             </div>
+            </div>
         </div>
     </div>
+</div>
+    <!--</div>-->
+
 
 
 

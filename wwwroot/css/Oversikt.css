@@ -1,12 +1,18 @@
-
 #cardOversikt.card {
+    border: 2px solid #ddd;
+    /*padding: 20px;*/
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til en lett skygge for dybde */
+    border-radius: 8px;
     width: 90%;
-    background-color: hotpink !important;
+    background-color: white !important;
 }
 
 #colonneOversikt{
-    margin: 0;
+    margin-left: 60px;
+    margin-top: 50px;
     padding: 0;
+    margin-bottom: 0;
 }
 /*
 #button-addon2 {
@@ -17,20 +23,61 @@
     width: 100px;
     
 }*/
+/*
+#button-oversikt{
+    padding: 8px 12px;
+    margin-right: 10px; 
+    cursor: pointer;
+    /*border-radius: 0 !important;
+    height: 70px !important;
+}*/
 
-
-#button-addon2:hover {
+#button-oversikt:hover {
     color: black;
     background-color: #FF6700 !important;
     border-color: #FF6700 !important;
 }
-/*#søkebarOversikt{
-    background-image: url("~/icons/icons8-search-24-2.png"); /* Add a search icon to input 
-    background-position: 10px 12px; 
-    background-repeat: no-repeat; 
-}*/
+#søkebarOversikt{
+    margin-bottom: 0;
+}
 
 #søkebarOversikt:focus{
     box-shadow: none;
     border: 2px solid #FF6700;
+}
+
+#cardheaderoversikt.card-header {
+    background-color: #192134;
+    /*padding: 10px;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px; /* Adjust the gap between the heading and the button container */
+    align-items: center;
+    /*background-color: #792b2b;
+    padding: 0;
+    display: flex;
+    flex-direction: column;*/
+    /*align-items: center;*/
+}
+
+#testrow {
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+}
+#colOversik {
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+}
+
+#button-oversikt {
+    height: 40px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0!important;
+    border-radius: 0!important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    background-color: #11618C !important;
+    
+
 }

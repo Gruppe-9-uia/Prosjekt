@@ -109,8 +109,12 @@ a:link {
 }
 
 /* styling for home siden*/
-.carousel .carousel-indicators li {background-color: rgba(255, 255, 255, 0.50);}
-.carousel .carousel-indicators li.active {background-color: #FFA500;}
+.carousel .carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.carousel .carousel-indicators li.active {
+    background-color: #FFA500;
+}
 
 .gradient-overlay {
     position: absolute;

@@ -132,7 +132,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                 user.FirstName_str = Input.FirstName_str;
                 user.LastName_str = Input.LastName_str;
                 user.PhoneNumber = Input.PhoneNumber;
-                
+
                     var result = await _userManager.CreateAsync(user, Input.Password);
 
                     Console.WriteLine(result.ToString());
