@@ -152,7 +152,8 @@ Funksjonaliteter:
 
 
 
-# Logikken av applikasjonen (koden)
+
+### Logikken av applikasjonen (koden)
 
 Teknologisk Oversikt
 Programmeringsspråk: C#
@@ -164,28 +165,26 @@ Sikkerhet: Implementering av ASP.NET Core Identity for autentisering og autorisa
 
 MVC Arkitektur
 
-Modell: Definert i C# klasser. 
+Modell er definert i C# klasser.  { get; set; }
+
+Visning brukes Razor CSHTML. 
+Kobler razor mot modell via @model.
+@model 
+{
+ViewData["Title"]  = " ";
+
+Kobler controllor mot razor gjennom http, asp-action, form 
+
+Kontrolleren håndterer bruker forespørsler, samhandler med modeller og returnerer visninger. 
 
 
+Database Interaksjon:
 
-Visning: Razor CSHTML.
-
-
-
-Kontroller: Håndterer bruker forespørsler, samhandler med modeller og returnerer visninger. 
-
-Database Interaksjon
-
-
-
-
-
+private readonly Prosjektcontext_context; 
 
 Kontrolleren bruker _context for å hente data fra databasen, og denne dataen blir passert til visningene (views) for å generere den endelige HTML som brukeren ser.
 
 “OnModelCreating” definerer og skal konfigurere modeller og deres relasjoner i databasen.
-
-
 
 
 Autentisering og Sikkerhet
@@ -197,6 +196,7 @@ Migrasjoner
 Det gjør det mulig å oppdatere databasen slik at det reflekteres i modellen gjennom å kjøre kommandoen i terminalen: 
 dotnet ef migrations add 
 InitialCreated dotnet ef database update
+
 
 
 # Unit testing scenarier type tester f. eks. UI test (test kode/skripter og resultater)
