@@ -1,47 +1,65 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Prosjekt.Entities;
-using Prosjekt.Models;
-using System.Linq;
+using Prosjekt.Models.Arbeidsdokument;
+
+public class ServiceFormModel;
+
 
 namespace Prosjekt.Controllers
+
+public class ArbeidsdokumentController : Controller
 {
-    public class ArbeidsdokumentController : Controller
+    private readonly ProsjektContext _context;
+
+    public ArbeidsdokumentController(ProsjektContext context)
     {
-        private readonly ProsjektContext _context;
-
-        public ArbeidsdokumentController(ProsjektContext context)
-        {
-            _context = context;
-        }
-
-        public IActionResult Arbeidsdokument()
-        {
-            /*
-            var arbeidsdokumentModelViews = _context.Service_Form
-                .Include(sf => sf.Customer)
-                .Include(sf => sf.ServiceOrder)
-                .Include(sf => sf.ServiceOrder.CustomerProduct)
-                .Include(sf => sf.ServiceFormEmployee)
-                .Include(sf => sf.ServiceFormSign)
-                .Select(sf => new ArbeidsdokumentModelView
-                {
-                    BooketServiceTilUke = sf.BookedServiceWeek_int.ToString(),
-                    HendelseMotatt = sf.Received_Date,
-                    Orderenummer = sf.FormID_int,
-                    Produkttype = sf.Service_Order.Order_type_str,
-                    BeskrivelseFraKunde = sf.Service_Order.Description_From_Customer_str,
-                    Kundeinfo = sf.Customer.FirstName_str + " " + sf.Customer.LastName_str,
-                    AvtaltLevering = sf.AgreedDelivery_date,
-                    ProduktMotatt = sf.ProductRecived_date,
-                    AvtaltFerdigstillelse = sf.AgreedDelivery_date,
-                    ServiceFerdig = sf.ServiceCompleted_date,
-                    AntallTimerBrukt = sf.AntallTimerBrukt,
-                    ServiceSkjemaFerdig = sf.ServiceSkjemaFerdig
-                })
-                .ToList();
-            */
-            return View("Arbeidsdokument");
-        }
+        _context = context;
     }
+
+    public IActionResult Index()
+    {
+        var serviceOrders = _context.Service_ordre.ToList();
+
+        List<ArbeidsdokumentModelView> list = new List<ArbeidsdokumentModelView>();
+
+        foreach (var serviceOrder in serviceOrders)
+        {
+            var arbeidsdokument = new ArbeidsdokumentModelView();
+            
+            arbeidsdokument.Orderenummer = serviceOrder.OrderID_int;
+            arbeidsdokument.BeskrivelseFraKunde = serviceOrder.Description_From_Customer_str;
+            arbeidsdokument.Produkttype = serviceOrder.Order_type_str;
+            arbeidsdokument.Kundeinfo = serviceOrder.Order_type_str;
+
+            
+            list.Add(arbeidsdokument);
+        }
+        var formViewModels = _context.Service_Form.ToList();
+
+        List<ArbeidsdokumentModelView> list = new List<ArbeidsdokumentModelView>();
+
+        foreach (var FormView in formViewModels)
+        {
+            var arbeidsdokument = new ArbeidsdokumentModelView();
+            
+            arbeidsdokument.BooketServiceTilUke = FormView.BookedServiceWeek_int;
+            arbeidsdokument.HendelseMotatt = FormView.ProductRecived_date;
+            arbeidsdokument.AvtaltLevering = FormView.AgreedDelivery_date;
+            arbeidsdokument.ProduktMotatt = FormView.ProductRecived_date;
+            arbeidsdokument.AvtaltFerdigstillelse = FormView.AgreedDelivery_date;
+            arbeidsdokument.ServiceFerdig = FormView.ServiceCompleted_date;
+            arbeidsdokument.AntallTimerBrukt = FormView.Working_Hours_int;
+            arbeidsdokument.ServiceSkjemaFerdig = FormView. //??;
+            
+            list.Add(arbeidsdokument);
+        }
+
+
+        ViewData["List"] = list;
+        
+        return View();
+    }
+    
 }
+
+
