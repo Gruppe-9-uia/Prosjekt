@@ -159,6 +159,7 @@ Legge til, endre eller slette data. Dette blir brukt på sidene “brukeroversik
 
 Teknologisk Oversikt
 
+
 Programmeringsspråk: C#
 
 Frontend Teknologier: HTML, CSS, JavaScript
@@ -180,6 +181,7 @@ Visning brukes Razor CSHTML.
 Kobler razor mot modell via @model.
 
 @model { 
+
 ViewData["Title"]  = " ";
 
 Kobler razor med controlleren gjennom http, asp-action, form 
