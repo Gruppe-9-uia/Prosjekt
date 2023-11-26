@@ -179,10 +179,7 @@ Visning brukes Razor CSHTML.
 
 Kobler razor mot modell via @model.
 
-@model 
-
-{
-
+@model { 
 ViewData["Title"]  = " ";
 
 Kobler razor med controlleren gjennom http, asp-action, form 
@@ -199,14 +196,14 @@ Kontrolleren bruker _context for å hente data fra databasen, og denne dataen bl
 “OnModelCreating” definerer og skal konfigurere modeller og deres relasjoner i databasen.
 
 
-Autentisering og Sikkerhet
+Autentisering og Sikkerhet:
 
 ASP.NET Core Identity. Tilbyr autentisering og autorisasjon funksjonalitet. Håndtering med brukere, dets registrering, innlogging, og tilgangskontroll.
 
 Anti-forgery tokens har blitt integrert i forskjellige steder som razor CSHTML eller i controller for å forhindre CSRF-angrep.
 
 
-Migrasjoner
+Migrasjoner:
 
 Det gjør det mulig å oppdatere databasen slik at det reflekteres i modellen gjennom å kjøre kommandoen i terminalen: 
 
