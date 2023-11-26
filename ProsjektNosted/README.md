@@ -16,7 +16,9 @@
    1.Database=ProsjektDB
    2.Port=3308
 11. Kjører dockerfile i jetbrains
-12. Tilsutt kjør prosjekt i jetbrains
+12. dotnet ef migrations add InitialCreated - kjører i terminal med path til prosjekt
+13. dotnet ef database update
+14. Tilsutt kjør prosjekt i jetbrains
 
 startup og build er hentet fra https://github.com/espenlimi
 NB! husk åpne ProsjektNosted
@@ -31,10 +33,16 @@ NB! husk åpne ProsjektNosted
    1.Database=ProsjektDB
    2.Port=3308
 11. Kjører dockerfile i jetbrains
-12. Tilsutt kjør prosjekt i jetbrains
+12. dotnet ef migrations add InitialCreated - kjører i terminal med path til prosjekt
+13. dotnet ef database update
+14. Tilsutt kjør prosjekt i jetbrains
 
 
+## Informasjon til å logge inn
+Det er lagt bruker på forhånd siden dette skal simulere system hvor bare admin kan legge til bruker
 
+JaneDoe@mail.com 
+passordet er Test+1234
 
 
 # Applikasjonens oppsett (arkitektur) 
