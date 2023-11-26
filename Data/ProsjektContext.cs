@@ -279,15 +279,30 @@ namespace Prosjekt.Data
                 UserId = "8fc73822-d860-4d38-b11c-a399958e661a"
             });
             //Legger til employee
-            /*
+            
             modelBuilder.Entity<EmployeeUser>().HasData(
-                new EmployeeUser { RememberMe=false, Level_str="High", UserName= "TaylorSwift@mail.com", Email= "TaylorSwift@mail.com",
-                    NormalizedUserName= "TAYLORSWIFT@MAIL.COM", NormalizedEmail= "TAYLORSWIFT@MAIL.COM", EmailConfirmed=false,
-                    PasswordHash= "AQAAAAEAACcQAAAAEI8K1K4qrOE+dIR5nlqc7iN6y7RK4BBwlgeWK+R5KpoYC4l7kZR/B0nNWnCLtnfd0w==",
-                    SecurityStamp= "HJAEUP5XQQP5BCZ66OAZNPRX5EV4NH32", ConcurrencyStamp= "8c81b367-6fc5-4163-98d6-34bb8a7b1ce3",
-                    PhoneNumberConfirmed=false, TwoFactorEnabled=false, LockoutEnd=null, LockoutEnabled=true,AccessFailedCount=0
+                new EmployeeUser { 
+                    Id = "8fc73822-d860-4d38-b11c-a399958e661a",
+                    RememberMe =false,
+                    FirstName_str = " Jane",
+                    LastName_str = "Doe",
+                    PhoneNumber = "99453012",
+                    UserName= "JaneDoe@mail.com",
+                    Email = "JaneDoe@mail.com",
+                    NormalizedUserName = "JANEDOE@MAIL.COM", 
+                    NormalizedEmail= "JANEDOE@MAIL.COM", 
+                    EmailConfirmed =false,
+                    PasswordHash= "AQAAAAEAACcQAAAAEJYVFLG47j2WzqsTRkt5gnPc5H8pcOEryz0ZmmgiAdYWuxrqzr1R1ibviQKIkfygbw==",
+                    SecurityStamp= "GSYSD4RSRANZJLYPU2KDSQYVSIZEAU46", ConcurrencyStamp= "07c75ea9-5018-4c2a-ac14-07e7c41129b6",
+                    PhoneNumberConfirmed=false, TwoFactorEnabled=false, LockoutEnd=null, LockoutEnabled=true, AccessFailedCount=0
                 });
-            */
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "Admin",
+                UserId = "8fc73822-d860-4d38-b11c-a399958e661a"
+            });
+
 
             //Legger til equipment
             modelBuilder.Entity<EquipmentModel>().HasData(

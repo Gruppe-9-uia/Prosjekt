@@ -14,9 +14,6 @@ public class EmployeeUser : IdentityUser
 
     public bool RememberMe { get; set; }
 
-    //TODO: kanskje gjør det om til emun
-    
-
     public ServiceFormSignModel Sign { get; set; }
 
     public ServiceFormEmployeeModel EmployeeForm { get; set; }

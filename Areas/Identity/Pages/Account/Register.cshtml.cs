@@ -107,9 +107,6 @@ namespace Prosjekt.Areas.Identity.Pages.Account
             [Display(Name = "Telefon")]
             public string PhoneNumber { get; set; }
 
-           
-            
-
             [Display(Name = "Avdeling")]
             public string Department { get; set; }
         }
@@ -135,8 +132,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                 user.FirstName_str = Input.FirstName_str;
                 user.LastName_str = Input.LastName_str;
                 user.PhoneNumber = Input.PhoneNumber;
-              
-                
+
                     var result = await _userManager.CreateAsync(user, Input.Password);
 
                     Console.WriteLine(result.ToString());
@@ -164,6 +160,7 @@ namespace Prosjekt.Areas.Identity.Pages.Account
                         }
                         else
                         {
+                        return RedirectToAction("Employees", "Employees");
                             //await _signInManager.SignInAsync(user, isPersistent: false);
                             //return LocalRedirect(returnUrl);
                         }
