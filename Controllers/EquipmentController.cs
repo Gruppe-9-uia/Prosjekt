@@ -70,6 +70,14 @@ namespace Prosjekt.Controllers
                 return NotFound();
             }
 
+
+            // Removing the fk key in parts
+            var partDB = _context.Parts.Where(x => x.EquipmentID_int == model.Id_int).ToList();
+
+            foreach (var part in partDB)
+            {
+                part.EquipmentID_int = null;
+            }
             _context.Equipment.Remove(equipmentToDelete);
             _context.SaveChanges();
 

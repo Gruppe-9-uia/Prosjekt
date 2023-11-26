@@ -8,7 +8,7 @@
         public int Quantity_available_int { get; set; }
         public int? EquipmentID_int { get; set; }
 
-        public EquipmentModel Equipment { get; set; }
+        public ICollection<EquipmentModel> Equipments { get; set; }
         public ICollection<UsedPartModel> UsedParts {  get; set; }
         public ICollection<ReplacedPartsReturnedModel> ReplacedPartsReturned { get; set; }
     }

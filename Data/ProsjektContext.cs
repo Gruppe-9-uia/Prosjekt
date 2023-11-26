@@ -211,8 +211,8 @@ namespace Prosjekt.Data
 
             modelBuilder.Entity<EquipmentModel>()
                 .HasOne(e => e.Parts)
-                .WithOne(p => p.Equipment)
-                .HasForeignKey<PartsModel>(p => p.EquipmentID_int)
+                .WithMany(p => p.Equipments)
+                .HasForeignKey(p => p.Id_int)
                 .IsRequired(false); 
 
             //UsedParts
@@ -309,7 +309,7 @@ namespace Prosjekt.Data
             modelBuilder.Entity<PartsModel>().HasData(
                 new PartsModel { PartID_int=1, EquipmentID_int=8, PartName_str= "Staaltau - 8 mm Metervare", Quantity_available_int= 20});
             modelBuilder.Entity<PartsModel>().HasData(
-                new PartsModel { PartID_int = 2, EquipmentID_int = 4, PartName_str = "Gullkjetting m/ krok og tverrpinne", Quantity_available_int = 40 });
+                new PartsModel { PartID_int = 2, EquipmentID_int = 8, PartName_str = "Gullkjetting m/ krok og tverrpinne", Quantity_available_int = 40 });
             modelBuilder.Entity<PartsModel>().HasData(
                 new PartsModel { PartID_int = 3, EquipmentID_int = 1, PartName_str = "Spesialformet m/ stoppeknaster. 160 mm", Quantity_available_int = 10 });
             modelBuilder.Entity<PartsModel>().HasData(
@@ -326,6 +326,7 @@ namespace Prosjekt.Data
                 new PartsModel { PartID_int = 9, EquipmentID_int = 2, PartName_str = "Toommersaks", Quantity_available_int = 17 });
             modelBuilder.Entity<PartsModel>().HasData(
                 new PartsModel { PartID_int = 10, EquipmentID_int = 5, PartName_str = "Kraftoverf�ringsakselspesialutfoorelse for vinsj", Quantity_available_int = 7 });
+
 
             //legger til postal code
             modelBuilder.Entity<PostalCode>().HasData(
