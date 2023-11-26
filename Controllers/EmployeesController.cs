@@ -57,6 +57,7 @@ namespace Prosjekt.Controllers
                 return View();
             }
 
+            // update user if exists with new data
             var userUpdate = _employeeRepository.getUserByEmail(model.Email);
             if (userUpdate != null)
             {
@@ -67,6 +68,7 @@ namespace Prosjekt.Controllers
                 userUpdate.FirstName_str = model.FirstName_str;
                 userUpdate.PhoneNumber = model.Phone;
 
+                //update the users role
                 var newRole = new IdentityUserRole<string>
                 {
                     RoleId = model.Department,
@@ -78,31 +80,7 @@ namespace Prosjekt.Controllers
 
 
             }
-            /*
-            var employeeDB = _context.Employees.Where(x => x.Id.Equals(model.ID_int)).FirstOrDefault();
 
-            if (employeeDB != null)
-            {
-                employeeDB.Email = model.Email;
-                employeeDB.PhoneNumber = model.Phone;
-                employeeDB.FirstName_str = model.FirstName_str;
-                employeeDB.LastName_str = model.LastName_str;
-
-                var UserRolesDB = _context.UserRoles.Where(x => x.UserId.Equals(model.ID_int)).FirstOrDefault();
-
-                _context.UserRoles.Remove(UserRolesDB);
-
-                _context.SaveChanges();
-                var newRole = new IdentityUserRole<string>
-                {
-                    RoleId = model.Department,
-                    UserId = model.ID_int
-                };
-                _context.UserRoles.Add(UserRolesDB);
-
-                _context.SaveChanges();
-            }
-            */
             return RedirectToAction("Employees");
 
         }
@@ -111,14 +89,10 @@ namespace Prosjekt.Controllers
         public IActionResult RemoveEmployee(BrukerOversiktViewModel model)
         {
 
-            /*
-            var employeeDB = _context.Employees.Where(x => x.Id.Equals(model.ID_int)).FirstOrDefault();
-            if(employeeDB != null)
-            {
-                _context.Employees.Remove(employeeDB);
-                _context.SaveChanges();
-            }
-            */
+            //Removing the user from the database
+            _employeeRepository.DeleteUser(model.Email);
+            _employeeRepository.Save();
+
             return RedirectToAction("Employees");
         }
 

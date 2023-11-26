@@ -18,6 +18,7 @@ namespace Prosjekt.Repository
             var employee = _context.Employees.FirstOrDefault(x => x.Email.Equals(email));
             if (employee != null)
             {
+              _context.SaveChanges();
                 _context.Employees.Remove(employee);
             }
         }
