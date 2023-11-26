@@ -219,7 +219,7 @@ Gruppen testet scenario på ung alder målgruppe. Denne målgruppen har noen dat
 ### Oppgave: Serviceordre
 Beskrivelse: Opprette serviceordre.
 
-### Instruksjoner:
+#### Instruksjoner:
    - Logg inn.
    - Trykk på meny knapp oppe til høyre.
    - Velg “Oversikt”.
@@ -240,7 +240,7 @@ Faktisk resultat:
 ### Oppgave: Serviceskjema
 Beskrivelse: Opprette serviceskjema.
 
-### Instruksjoner:
+#### Instruksjoner:
    - Logg inn.
    - Trykk på meny knapp oppe til høyre.
    - Velg “Oversikt”.
@@ -259,7 +259,7 @@ Faktisk resultat:
 ### Oppgave: Sjekkliste 
 Beskrivelse: Opprette sjekkliste
 
-### Instruksjoner:
+#### Instruksjoner:
    - Velg “Oversikt” i meny.
    - Trykk på “Sjekkliste”. 
    - Fyll ut generell informasjon.
@@ -277,7 +277,7 @@ Faktisk resultat:
 ### Oppgave: Deler
 Beskrivelse: Legge til/ endre og slette deler.  
 
-### Instruksjoner:
+#### Instruksjoner:
 Legg til nytt deler: 
    - Velg “Deler” fra meny.
    - Trykk på “Legg til” knapp.
