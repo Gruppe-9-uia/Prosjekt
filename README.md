@@ -146,9 +146,12 @@ I denne applikasjonen, så er det enkelt å si én klasse som dekker en spesifik
 
 Hensikten med applikasjonene er å gi Nøsted & et system som registrere, mottar og behandler serviceordre. Formålet er å gjøre nåværende arbeidsrutiner digitalisert for å gjøre hverdagen deres enklere og mer effektiv. Med å gjøre systemet digital, vil det gi mange positive innvirkninger, et av de er at digitalisering løser problemet med at i nåværende situasjon er enkelte prosesser repeterende. Dette har gruppen løst med å innføre automatiserte prosesser. 
 Funksjonaliteter: 
--       Automatisk oppdatering på enkelte deler av systemet. Eksempel bruker oversikt siden nettopp dette. Når man oppretter en serviceordre, vil da informasjonen på den automatisk bli fylt inn i oversiktssiden. Samme med serviceskjema og sjekkliste.  Arbeidsdokument er et annet eksempel på automatisering. Arbeidsdokumentet blir oppdatert automatisk når en ordre blir lagt inn. Dette er for at alle ansatte har samme oversikt over serviceordre som er aktive. 
--       Automatisering skjer også i databasen. Når en serviceordre og serviceskjema blir opprettet, genererer den automatisk et unikt id for skjemaene. Med å innføre dette så løser man prosessen som var tidligere repeterende når administrator måtte være den som lagde disse unike id manuelt.  
--       Legge til, endre eller slette data. Dette blir brukt på sidene “brukeroversikt” og “deler”. 
+
+Automatisk oppdatering på enkelte deler av systemet. Eksempel bruker oversikt siden nettopp dette. Når man oppretter en serviceordre, vil da informasjonen på den automatisk bli fylt inn i oversiktssiden. Samme med serviceskjema og sjekkliste.  Arbeidsdokument er et annet eksempel på automatisering. Arbeidsdokumentet blir oppdatert automatisk når en ordre blir lagt inn. Dette er for at alle ansatte har samme oversikt over serviceordre som er aktive. 
+   
+Automatisering skjer også i databasen. Når en serviceordre og serviceskjema blir opprettet, genererer den automatisk et unikt id for skjemaene. Med å innføre dette så løser man prosessen som var tidligere repeterende når administrator måtte være den som lagde disse unike id manuelt. 
+   
+Legge til, endre eller slette data. Dette blir brukt på sidene “brukeroversikt” og “deler”. 
 
 
 
